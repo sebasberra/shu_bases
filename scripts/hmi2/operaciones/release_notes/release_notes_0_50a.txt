@@ -1,0 +1,53 @@
+OPERACIONES
+-----------
+
+
+Release Notes 
+-------------
+
+Version 0.50a		2012-01-30
+------------------------------
+
+	* se crea la tabla "operaciones_titulos" donde se van a cargan los capitulos y titulos de la clasificacion de
+		procedimientos de salud (CPS)
+		
+	* se cargan los capitulos de la lista tabular de procedimientos
+	
+
+Version 0.4a		2012-01-30
+------------------------------
+
+	* Se cargan en la tabla "operaciones_restricciones" los codigos de operaciones que solo
+		corresponden a un sexo determinado
+		
+		
+
+Version 0.3a		2011-10-31
+------------------------------
+
+	* Se detecto que faltan codigos de operaciones debido a que hubo un error cuando se obtuvo
+		la tabla origen de datos, se tomo la tabla "operaciones" del "sihos" en vez de la tabla 
+		"tablaoperaciones" del sihos
+	
+	* Los codigos de operaciones faltantes (30 en total) fueron incluidos a la tabla "operaciones" del "hmi2"
+		con id_operacion>1391
+		
+
+Version 0.2a		2011-05-12
+------------------------------
+
+	* Se encontro que la migracion hecha anteriormente fue realizada con los codigos viejos, de
+		manera que se dropea la tabla "operaciones" y se vuelve a cargar con informacion de la
+		tabla "operaciones" del "sihos" y filtrando el año de vigencia = '2009'
+		
+		
+		
+Version 0.1a		2010-05-13
+------------------------------
+
+	* Se crea la tabla "operaciones" con informacion obtenida de la tabla "operaciones" del "sihos" 
+		y filtrando el año de vigencia = '2008'
+		
+	* Se crea la tabla de "restricciones_operaciones" (vacia) para poder crear restricciones a
+		las operaciones. La estructura tomada es similar a la actual para las restricciones del
+		cie 10

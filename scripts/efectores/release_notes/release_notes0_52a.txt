@@ -1,0 +1,244 @@
+EFECTORES
+---------
+
+Release Notes 
+-------------
+
+
+Version 0.52a		31/08/2011
+------------------------------
+
+	* Se actualiza la estructura, aunque no hay campos nuevos, si se cambian los nombre de las restricciones de clave ajena, 
+		nombres de indices y se agregan comentarios descriptivos a las tablas
+		
+	* Se realiza un dump con fecha 31/08/2011 de las tablas "d_establecimiento" y "d_subregion" de la
+		base de datos "bs_mod_sims" que esta en el servidor	mysql del "10.3.1.193"
+		
+
+Version 0.51a		11/05/2011
+------------------------------
+
+	* Se adopta la version 0.11b de localidades
+	
+
+Version 0.50a		11/05/2011
+------------------------------
+
+	* Se crea el script "actualizacion_subnodos.sql" para actualizar los subnodos
+	
+	* Se hace un dump de la tabla "d_subregion" de "bs_mod_sims" en el servidor "10.3.1.193" para
+		actualizar la tabla "subnodos"
+	
+	* Se agrega el registro a la tabla "subnodo":
+		 "NO DEFINIDO (NODO NO DEFINIDO)" 
+		 para los casos donde no este definido el nodo del efector
+		
+	* Se modifica el campo "id_efector" a entero sin signo pero no auto incremental con la sentencia:
+	
+		ALTER TABLE efectores MODIFY COLUMN id_efector INTEGER UNSIGNED NOT NULL;
+		
+	* Se hace un dump de la tabla "d_establecimiento" de "bs_mod_sims" en el servidor "10.3.1.193" y
+		se actualiza la tabla de "efectores"
+	
+	* Se han incorporado a la tabla fuente ("d_establecimiento") los efectores privados
+	
+	* De ahora en mas se van a tomar los ids de los efectores de la tabla fuente ("d_establecimiento")
+	
+	* "d_establecimiento" para la primer generacion	de id, adopto los ids creados anteriormente por la 
+		tabla "efectores", guardando la correlacion de ids con los que se usan en las tablas de "efectores"
+		de las base "personas" y "hmi"
+		
+	* Con lo hechos de los items anteriores se asegura que los ids de efectores son los mismos entre la 
+		tabla "efectores" y "d_establecimiento" y los nuevos efectores que se creen tendran un id nuevo
+		generado en la tabla "d_establecimiento". Para proximas actualizaciones de la tabla "efectores" de
+		las bases "personas" y "hmi" se usaran los ids de "d_establecimiento", los cuales se ha asegurado
+		correlacion con los ids actuales de "efectores"
+		
+		
+	
+Version 0.41a		20/07/2010
+------------------------------
+
+	* En la version anterior no estaba documentado, pero ya existia un campo "activo" que indicaba si el
+		efector esta activo o dado de baja. Este campo se quito y se reemplazo por el campo "baja"
+		
+		/* quita el campo activo a efectores */
+		ALTER TABLE efectores
+			DROP activo;
+			
+	* Se agrega la tabla "niveles_complejidades" obtenida de la tabla "d_nivel_complejidad" del "mod_sims"
+	
+	* Se agrega el campo "id_nivel_complejidad" a la tabla "efectores" que indica el nivel de complejidad 
+		del efector
+		
+	* Se agrega el campo "internacion" a la tabla "efectores" que indica si el efector tiene internación
+	
+	* Para adaptar los campos nuevos a la tabla "efectores" se realizaron los siguientes comandos. Previamente
+		fue cargada la tabla "niveles_complejidades" a la base de "efectores"
+	
+		/* agrega el campo de id_nivel_complejidad a efectores */
+		ALTER TABLE efectores
+			ADD id_nivel_complejidad
+			TINYINT		UNSIGNED	NULL	COMMENT 'Nivel de complejidad del ejector. Ver tabla niveles_complejidades'
+			AFTER id_regimen_juridico;
+			
+		/* agrega el campo de internacion a efectores */
+		ALTER TABLE efectores
+			ADD internacion
+			BOOLEAN		NULL	;
+			
+		/* agrega el campo baja a efectores */
+		ALTER TABLE efectores
+			ADD baja
+			BOOLEAN		NULL;
+		
+		/* agrega la foreign key de regimen juridico a efectores */	
+		ALTER TABLE efectores
+			ADD FOREIGN KEY fk_id_nivel_complejidad(id_nivel_complejidad)
+				    REFERENCES niveles_complejidades(id_nivel_complejidad)
+				      ON DELETE NO ACTION
+				      ON UPDATE NO ACTION;
+	
+	* Se realiza un dump a la fecha del "10.3.1.193" con la informacion a la fecha y se ejecuta el
+		script "actualizacion_efectores.sql". Luego se modifica los campos nuevos con el siguiente
+		comando:
+		
+		/* pasa a NOT NULL el campo id_nivel_complejidad */
+		ALTER TABLE efectores
+			MODIFY id_nivel_complejidad	
+			TINYINT		UNSIGNED	NOT NULL COMMENT 'Nivel de complejidad del ejector. Ver tabla niveles_complejidades';
+		
+		/* pasa a NOT NULL el campo internacion */
+		ALTER TABLE efectores
+			MODIFY internacion	
+			BOOLEAN		NOT NULL	COMMENT 'Indica si el efector tiene internacion o no';
+			
+		/* pasa a NOT NULL el campo baja */
+		ALTER TABLE efectores
+			MODIFY baja	
+			BOOLEAN		NOT NULL	COMMENT 'Indica si el efector esta activo o fue dado de baja';
+				
+	* Se agrega la primary bey a la tabla "versiones"
+	
+		ALTER TABLE versiones
+			ADD PRIMARY KEY (base);
+			
+	NOTA: se genera de forma paralela dos versiones de "efectores", una con tablas InnoDB que se
+		usa en "hmi2" y la misma version pero con tablas "MyISAM"
+		
+			
+Version 0.4a		29/06/2010
+------------------------------
+
+	* Se agregan las tablas "nodos" y "subnodos" obtenidas de las tablas "d_region" y "d_subregion"
+		del "mod_sims"
+		
+		NOTA: no todos los subnodos de la tabla "d_establecimientos" estan cargados en la tabla de 
+			subnodos. Existe un registro de subnodo no definido por nodo
+		
+	* Se vuelve a generar un dump de "d_establecimiento" del "mod_sims" y se actualiza la base de
+		efectores
+		
+		
+Version 0.35a         20/05/2010 
+--------------------------------
+
+	* Se cambia la definicion del campo "tipo_efector" de la tabla "efectores" permitiendo datos NULL
+	
+		/* pasa el campo tipo_efector a NULL */
+		ALTER TABLE efectores
+			MODIFY tipo_efector	
+			CHAR(1)	NULL COMMENT 'tipo establecimiento para el informe de estadistica';
+			
+	* Se cambia el valor del campo "tipo_efector" que estaba como cadena vacia a NULL para la claveestd=08404445
+	
+	* Se agrega la tabla "regimen_juridico" tomada del mod_sims
+	
+	* Se actualiza la tabla "efectores" agregando el campo "id_regimen_juridico":
+	
+		/* agrega el campo de regimen juridico a efectores */
+		ALTER TABLE efectores
+			ADD id_regimen_juridico	
+			INTEGER		UNSIGNED	NULL
+			AFTER id_dependencia_adm;
+		
+		/* agrega la foreign key de regimen juridico a efectores */	
+		ALTER TABLE efectores
+			ADD FOREIGN KEY fk_id_regimen_juridico(id_regimen_juridico)
+				    REFERENCES regimenes_juridicos(id_regimen_juridico)
+				      ON DELETE NO ACTION
+				      ON UPDATE NO ACTION;
+	
+	* Se realiza un dump a la fecha del "10.3.1.193" con la informacion a la fecha y se ejecuta el
+		script "actualizacion_efectores.sql". Luego se modifica el campo "id_regimen_juridico" con
+		el siguiente comando:
+		
+		/* pasa a NOT NULL el campo id_regimen_juridico en efectores */
+		ALTER TABLE efectores
+			MODIFY id_regimen_juridico	
+			INTEGER		UNSIGNED	NOT NULL;
+
+
+Version 0.3b          30/04/2010
+--------------------------------
+
+	* Se elimina el registro id_efector = 872 que por error entro a la tabla. El error fue porque en el proceso
+		de actualizacion al hacer el dump de la tabla "d_establecimiento" del mod_sims, se trajo en la primer
+		linea los nombres de los campos y el script "actualizacion_efectores.sql" NO ignora la primer linea
+	
+	* Se crea la base de datos "efectores" para siempre tomar de ahi las tablas
+	
+
+Version 0.3a          08/01/2010
+--------------------------------
+
+	* Se separa del versionado de efectores la parte que involucra las tablas de localidades y se
+		crea para ello el archivo de "release_notes0_1.txt" de localidades para comenzar el versionado. 
+		Ver dicho archivo
+		
+	* Se agrega el campo "tipo_efector" a la tabla "efectores" cuyo valor es "coddigest" de la tabla 
+		"d_establecimiento" del mod_sims. Este campo corresponde al campo "tipo_establecimiento" 
+		que aparece en el informe "01" que genera el HMI a estadistica
+	
+	* Para poder adoptar este campo, la metodologia fue:
+		
+		crear el campo "tipo_efector" como NULL
+		
+		correr el script "actualizacion_efectores.sql"
+		
+		modificar "tipo_efector" a NOT NULL
+			
+	* Se actualiza el script "actualizacion_efectores.sql" para adoptar este nuevo campo, se hace un dump
+		al dia de la tabla "d_establecimiento" del mod_sims. Luego se corre el script de actualizacion
+		
+	* Se deja el mantenimiento del script "efectores.sql" por el de "actualizacion_efectores.sql" ya que no se
+		pueden cambiar los ids ya existentes
+		
+	* Se modificaron de NULL a NOT NULL, los campos "claveestd", "nom_efector", "nom_red_efector", "nodo" y
+		"subnodo"
+	
+		
+Version 0.2a          20/11/2009
+--------------------------------
+
+	* Se le cambia el tipo de tabla a InnoDB de las tablas "localidades", "paises", "provincias", "departamentos" 
+		y "efectores" 
+	
+	* Se cambia a VARCHAR(255) el campo "nom_efector" de la tabla "efectores"
+	
+	* Se agregan las provincias y paises que faltaban a lo existente en la base de personas en una base de datos
+		auxiliar para la migracion
+		
+	* Se hace un dump de la info actual en Personas 1.4b para cargar las tablas y mantener los ids de las localidades
+	
+	* Se eliminan los registros "LOCALIDAD NO ESPECIFICADA" que estaban en el dump anterior
+	
+	* Se agrega un unico registro de "LOCALIDAD NO ESPECIFICADA" a la tabla localidades
+	
+	* Se agregan a la tabla localidades las provincias y los paises
+	
+	* Se propone esta version de las tablas mensionadas seran las que se usen en las bases de datos
+		hmi2 y personas
+		
+	* Se establece para poder llevar un control de versiones dentro de las bases de datos, que se generen
+		registros en la tabla "version" de cada base de version de [efectores], [hmi2] y [personas]

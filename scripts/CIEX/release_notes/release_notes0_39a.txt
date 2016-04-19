@@ -1,0 +1,186 @@
+CIEX
+----
+
+
+Release Notes 
+-------------
+
+Version 0.39a		2011-11-02
+------------------------------
+
+	* Se agregan a la tabla de restricciones los siguientes codigos de 3 digitos que no se deben codificar.
+		La nota de estadistica obtenida dice:
+		
+			Estas categorias nunca deberan ser usadas como codigos primarios. Son provistas para usarse solamente
+			como codigos suplementarios o adicionales cuando se desea identificar el antibiotico al cual un agente
+			bacteriano es resistente, en una infeccion bacteriana clasificada en otra parte
+			
+	* Los comandos para agregar estas restricciones del punto anterior son los siguientes:
+	
+		INSERT INTO ciex_restricciones VALUES (0, NULL, 2042, 'U80', NULL, 0, 2, 0, 0, 9, 99, 0);
+		INSERT INTO ciex_restricciones VALUES (0, NULL, 2043, 'U81', NULL, 0, 2, 0, 0, 9, 99, 0);
+		INSERT INTO ciex_restricciones VALUES (0, NULL, 2044, 'U88', NULL, 0, 2, 0, 0, 9, 99, 0);
+		INSERT INTO ciex_restricciones VALUES (0, NULL, 2045, 'U89', NULL, 0, 2, 0, 0, 9, 99, 0);
+		
+		
+Version 0.35a		2011-01-12
+------------------------------
+
+	* Se agrega la tabla "servicios", de servicios nucleares de nacion, obtenida del sipes. se toma para 
+		la prueba parte del script "servicios.sql". notar que en caso de cambiar la tabla de "servicios", se debe
+		reflejar el cambio en ambos script, "servicios.sql" y "ciex.sql"
+		
+	* Se agrega la tabla ciex_frecuentes_servicios
+	
+		- Para la obtencion de los datos se utilizaron las tablas "temp_servicios" y "patologiascomunes" del
+			"bs_sicap" en el 10.3.0.2
+	
+		- "temp_servicios": esta tabla relaciona los codigos viejos con los codigos nuevos de servicios 
+			(servicios de 3 digitos de nacion)
+			
+			NOTA: esta tabla esta armada a pata y no se encuentra completa
+			
+		- "patologiascomunes": esta tabla tiene una lista de codigo (viejo) de servicio con el diagnostico
+			de 4 digitos del cie 10
+	
+		- La definicion de la tabla es la siguiente:
+		
+			
+			CREATE TABLE ciex_frecuentes_servicios (
+			  id_ciex_frecuente_servicio 			INTEGER 		UNSIGNED 	NOT NULL 	AUTO_INCREMENT,
+			  id_servicio 							INTEGER(10) 	UNSIGNED 	NULL,
+			  id_ciex_4 							INTEGER 		UNSIGNED 	NOT NULL,
+			  cod_servicio 							CHAR(3) 					NULL,
+			  cod_3dig 								CHAR(3) 					NOT NULL,
+			  cod_4dig 								CHAR(1) 					NOT NULL,
+			  PRIMARY KEY(id_ciex_frecuente_servicio),
+			  UNIQUE INDEX idx_unique_id_servicio_id_ciex_4(id_servicio, id_ciex_4),
+			  UNIQUE INDEX idx_unique_cod_servicio_cod_3dig_cod_4dig(cod_servicio, cod_3dig, cod_4dig)
+			)
+			ENGINE=InnoDB;		
+			
+			NOTA: el id_servicio y cod_servicio son NULL, porque no todos los codigos viejos se encuentran
+				relacionados con un codigo nuevo en la tabla "temp_servicios"
+				
+			
+			
+Version 0.3a		22/06/2010
+------------------------------
+
+	* Se modifica el campo "id_ciex_titulos" a "id_ciex_titulo" de la tabla "ciex_titulos"
+	
+	* Se modifica la tabla "ciex_restricciones" porque habia un error de interpretacion.
+		Ahora el campo "frecuencia" se pasa a llamar "restriccion", de manera que la sentencia
+		de creacion de la tabla de restricciones es:
+		
+		CREATE TABLE ciex_restricciones (
+			id_ciex_restriccion 				INTEGER 	UNSIGNED 	NOT NULL 	AUTO_INCREMENT,
+			id_ciex_4 							INTEGER 	UNSIGNED 	NULL,
+			id_ciex_3 							INTEGER 	UNSIGNED 	NULL,
+			cod_3dig 							CHAR(3) 				NOT NULL,
+			cod_4dig 							CHAR(1) 				NULL,
+			sexo 								TINYINT 	UNSIGNED 	NOT NULL    COMMENT '0=no tiene restriccion; 1=solo masculino; 2=solo femenino',                
+			frecuencia		 					TINYINT 	UNSIGNED 	NOT NULL 	COMMENT '0=no tiene restriccion; 1=poco frecuente; 2=no puede aparecer',            
+			tipoedad_min 						TINYINT 	UNSIGNED 	NOT NULL    COMMENT '0=no tiene restriccion; 1=años; 2=meses; 3=dias; 4=horas; 5=100 y+',       
+			edad_min 							TINYINT 	UNSIGNED 	NOT NULL,                                                                                             
+			tipoedad_max 						TINYINT 	UNSIGNED 	NOT NULL    COMMENT '1=años; 2=meses; 3=dias; 4=horas; 5=100 y+; 9=no tiene restriccion maxima',
+			edad_max 							TINYINT 	UNSIGNED 	NOT NULL,                                                                                             
+			restriccion_edad 					TINYINT 	UNSIGNED 	NOT NULL 	COMMENT '0=no tiene; 1=puede pasar; 2=no puede pasar',                               
+			PRIMARY KEY(id_ciex_restriccion),
+			UNIQUE INDEX idx_unique_cod_3dig_cod_4dig(cod_3dig, cod_4dig),
+			FOREIGN KEY(id_ciex_3)
+				REFERENCES ciex_3(id_ciex_3)
+					  ON DELETE NO ACTION
+					  ON UPDATE NO ACTION,
+			FOREIGN KEY(id_ciex_4)
+				REFERENCES ciex_4(id_ciex_4)
+					  ON DELETE NO ACTION
+					  ON UPDATE NO ACTION
+		)ENGINE=InnoDB;
+		
+	* Se cambia el INSERT INTO versiones... por REPLACE 
+	
+	* Se agrega el campo "informa_c2" a la tabla "ciex_4" que especifica si el codigo se informa en el parte
+		epidemiologico semanal (c2). Los valores que puede tomar este campo son:
+		
+		0 : no informa
+		
+		1 : informar inmediatamente por telefono u otra via rapida
+		
+		2 : notificar por correo o por via electronica a la jurisdiccion superior inmediata
+		
+	* NOTA: este script contiene la sentencia "DROP TABLE IF EXISTS diagnosticos;", cuya sentencia de creacion
+		esta en el script "hmi2.sql"
+		 	
+		
+Version 0.2a				19/02/2010
+--------------------------------------
+
+	* Se agregaron registros de codigos de 3 digitos en el archivo "ciex3car.txt" que aparecian en el 
+		archivo de registros de	codigos de 4 digitos. La lista de estos codigos esta en el archivo 
+		"codigos_3digitos_faltantes.xml"
+		
+	* Se agregaron los siguientes registros a los titulos en el archivo "tx307.txt"
+	
+		22;00;00;U04;U89;CODIGOS PARA PROPOSITO ESPECIAL                                                                                        
+		22;01;00;U04;U04;ASIGNACION PROVISIONAL DE NUEVAS ENFERMEDADES DE ETIOLOGIA INCIERTA
+		22;02;00;U80;U89;AGENTES BACTERIANOS RESISTENTES A LOS ANTIBIOTICOS
+		
+		NOTA: se reemplazo por "U04" y por "U89" donde en realidad va "U00" y "U99", respetivamente. Los
+			rangos verdaderos son "U00-U99" y "U00-U49".
+			Esto fue asi porque no encontre descripcion para "U00" y "U99"
+
+	* Se agregaron los siguientes registros al archivo de codigo de 3 digitos en el archivo "ciex3car.txt"
+	
+		U04;SINDROME RESPIRATORIO AGUDO SEVERO (SARS)
+		U80;AGENTES RESISTENTES A PENICILINA Y ANTIBIOTICOS RELACIONADOS
+		U81;AGENTES RESISTENTES A VANCOMICINA Y ANTIBIOTICOS RELACIONADOS
+		U88;AGENTE RESISTENTE A MULTIPLES ANTIBIOTICOS
+		U89;AGENTE RESISTENTE A OTROS ANTIBIOTICOS Y ANTIBIOTICOS SIN ESPECIFICAR
+
+	* Se agregaron los siguientes registros al archivo de codigos de 4 digitos en el archivo "catego.txt"
+	
+		U04;9;SINDROME RESPIRATORIO AGUDO SEVERO, SIN ESPECIFICAR.
+		U80;0;AGENTE RESISTENTE A PENICILINA
+		U80;1;AGENTE RESISTENTE A METICILINA
+		U80;8;AGENTE RESISTENTE A OTROS ANTIBIOTICOS RELACIONADOS CON LA PENICILINA
+		U81;0;AGENTE RESISTENTE A VANCOMICINA
+		U81;8;AGENTE RESISTENTE A OTROS ANTIBIOTICOS RELACIONADOS CON LA VANCOMICINA
+		U89;8;AGENTE RESISTENTE A OTRO ANTIBIOTICO ESPECIFICADO
+		U89;9;AGENTE RESISTENTE A ANTIBIOTICO SIN ESPECIFICAR
+		
+	
+	* Se elimino del archivo "catego.txt" el codigo "I5_" que en realidad era el codigo "I51"
+	
+	* Se volvieron a generar las tablas ejecutando "auxiliares.sql" y luego "ciex.sql"
+	
+
+Version 0.1a		03/12/2009
+------------------------------
+
+	* Se crearon las siguientes 4 tablas:
+	
+		* Se agregan las tablas del CIE10
+	
+		- "ciex_4"				contiene los codigos y descripciones de la CIE10 con 4 digitos
+		
+		- "ciex_3"				contiene los codigos y descripciones de la CIE10 con 3 digitos
+		
+		- "ciex_titulos"		contiene las descripciones y rangos de los Capitulos, grupos y subgrupos
+		
+		- "ciex_restricciones"	contiene restricciones especificas para determinadas patologias
+		
+	* Se cargaron los datos con los siguiente problemas:
+		
+		- se encontraron codigos de 3 digitos que figuraban en la tabla "catego", la cual corresponde a las
+			descripciones de 4 digitos, las cuales no aparecen en la tabla "ciex3car" que es la tabla que
+			contiene las descripciones de 3 digitos
+			
+		- se encontraron en la tabla "tx307" que contiene las descripciones de los capitulos, grupos y 
+			subgrupos codigos desde y hasta, de 3 digitos, los cuales no figuran en la tabla "ciexcar" 
+			que es la que contiene las descripciones de codigos de 3 digitos
+			
+		- se eliminaron los registros mensionados anteriormente para migrar los datos y generar correctamente
+			los registros con integridad referencial
+			
+			

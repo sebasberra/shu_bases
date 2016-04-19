@@ -1,0 +1,31 @@
+EFECTORES
+---------
+
+Release Notes 
+-------------
+
+
+Version 0.2a          20/11/2009
+--------------------------------
+
+	* Se le cambia el tipo de tabla a InnoDB de las tablas "localidades", "paises", "provincias", "departamentos" 
+		y "efectores" 
+	
+	* Se cambia a VARCHAR(255) el campo "nom_efector" de la tabla "efectores"
+	
+	* Se agregan las provincias y paises que faltaban a lo existente en la base de personas en una base de datos
+		auxiliar para la migracion
+		
+	* Se hace un dump de la info actual en Personas 1.4b para cargar las tablas y mantener los ids de las localidades
+	
+	* Se eliminan los registros "LOCALIDAD NO ESPECIFICADA" que estaban en el dump anterior
+	
+	* Se agrega un unico registro de "LOCALIDAD NO ESPECIFICADA" a la tabla localidades
+	
+	* Se agregan a la tabla localidades las provincias y los paises
+	
+	* Se propone esta version de las tablas mensionadas seran las que se usen en las bases de datos
+		hmi2 y personas
+		
+	* Se establece para poder llevar un control de versiones dentro de las bases de datos, que se generen
+		registros en la tabla "version" de cada base de version de [efectores], [hmi2] y [personas]

@@ -1,0 +1,471 @@
+   10;INST. DE O.S. DE EJERCITO (I.O.S.E)                                                                                             
+   20;DIRECCION DE O.S. BIENESTAR DE LA ARMADA (D.I.B.A)                                                                              
+   30;DIRECCION DE O.S. DEL SERVICIO PENITENCIARIO FEDERAL                                                                            
+   40;SUPERINTENDENCIA DE BIENESTAR DE LA POLICIA FEDERAL                                                                             
+   50;O.S. DEL CENTRO DE SUBOFICIALES RETIRADOS DEL EJERCITO Y ARERONAUTICA.                                                          
+   60;DIRECCION GENERAL DE SANIDAD-PERSONAL FUERZA AEREA ARGENTINA.                                                                   
+   70;GENDARMERIA NACIONAL.                                                                                                           
+   80;O.S. DEL PODER JUDIACIAL DE LA NACION.                                                                                          
+   90;INST. MUNICIPAL DE O.S. (I.M.O.S)-CAPITAL FEDERAL9                                                                              
+  100;INST. DE OBRA MEDICO ASISTENCIAL (I.O.M.A.) PCIA DE BUENOS AIRES.                                                               
+  110;O.S. DEL EMPLEADO PUBLICO (O.S.E.P.)-CATAMARCA.                                                                                 
+  120;INST. PROVINCIAL DE ATENCION MEDICA-CORDOBA                                                                                     
+  130;INST. DE PREVISION Y SEGURIDAD SOCIAL(I.P.S) CORRIENTES.                                                                        
+  140;INST. DE PREVISION SOCIAL DEL CHACO(I.P.S)                                                                                      
+  150;O.S. FEDERACION MEDICA DEL CHACO.                                                                                               
+  160;O.S. DE LA FEDERACION EMPLEADOS INDUSTRIA AZUCARERA LAS PALMAS-CHACO.                                                           
+  170;O.S. DE LA UNIVERSIDAD NACIONAL DEL NORDESTE CHACO.                                                                             
+  180;O.S. DE LA UNION DE PERSONAL SERVICIOS INVESTIGADORES PRIVADOS-CHACO.                                                           
+  190;O.S. FEDERADA 25 DE JUNIO-CHACO.                                                                                                
+  200;INST. PROVINCIAL DE SEGURIDAD SOCIAL Y SEGUROS (S.E.R.O.)-CHUBUT.                                                               
+  210;INST. DE O.S. DE LA PCIA.DE ENTRE RIOS (I.O.S.P.E.R)                                                                            
+  220;INST. DE ASISTENCIA SOCIAL PARA ENPLEADOS PUBLICOS(I.A.S.E.P)-FORMOSA.                                                          
+  230;INST.T DE SEGUROS DE JUJUY(I.S.J.).                                                                                             
+  240;O.S. DE ALTOS HORNOS ZAPLA-JUJUY.                                                                                               
+  250;SERVICIO MEDICO DE PREVISION(S.E.M.P.R.E.)-LA PAMPA.                                                                            
+  260;INST. PROVINCIAL DE O.S.(I.P.O.S.)- LA RIOJA.                                                                                   
+  270;O.S. DE EMPLEADOS PUBLICOS (O.S.E.P.)- MENDOZA.                                                                                 
+  280;O.S. DE EMPLEADOS DE COMERCIO - MENDOZA                                                                                         
+  290;INST. DE PREVINSION SOCIAL (I.P.S.)- MISIONES.                                                                                  
+  300;INST. DE SEGURIDAD SOCIAL DE NEUQUEN.                                                                                           
+  310;INST. PROVINCIAL DE SEGUROS DE SALUD (I.PRO.S.S.) RIO NEGRO.                                                                    
+  320;INST. PROVINCIAL DE SEGUROS (I.P.S.) SALTA.                                                                                     
+  330;O.S. UNIVERSIDAD NACIONAL DE SALTA (U.N.S.A.)                                                                                   
+  340;O.S. CONFEDERACION EMPRESARIA SALTE#A(S.C.E.S.)                                                                                 
+  350;DIRECCION DE O.S. DE LA PCIA DE SAN JUAN (D.O.S.)                                                                               
+  360;O.S. DE LA UNIVERSIDAD DE SAN JUAN.                                                                                             
+  370;DIRECCION DE O.S. DE EMPLEADOS PROVINCIALES(D.O.S.E.P.)-SAN LUIS.                                                               
+  380;O.S. DE LA UNIVERSIDAD DE SAN LUIS.                                                                                             
+  390;CAJA DE ASISTENCIA SOCIAL (C.A.S.)- SANTA CRUZ.                                                                                 
+  400;INST. AUTARQUICO PROVINCIAL DE O.S. (I.A.P.O.S.) SANTA FE.                                                                      
+  410;INST. DE O.S. DE EMPLEADOS PROVINCIALES (I.O.S.E.P.)-SANTIAGO DEL ESTERO.                                                       
+  420;INST. DE PREVISION Y SEGURIDAD SOCIAL(I.P.S.S.) TUCUMAN.                                                                        
+  430;INST. DE SERV. SOC. DEL TERR. NAC. DE TIERRA DEL FUEGO ANTARTIDA E ISLA DEL ATLANTICO SUR(ISST)                                 
+  440;OTRAS OBRAS SOCIALES.                                                                                         
+ 9980;SISTEMA PRIVADO PREPAGO.                                                                                                        
+ 9990;MUTUALES.                                                                                                                       
+10010;O.S. PARA EL PERS. IND. ACEITERA Y AFINES                                                                                       
+10020;O.S. ACTORES                                                                                                                    
+10030;O.S. TECNICOS DE VUELO DE LINEAS AEREAS                                                                                         
+10040;O.S.PERS. SUPER.Y PROFESIONAL EMP.AEROCOMERCIALES                                                                               
+10050;O.S.PERS. AERONAUTICO                                                                                                           
+10060;O.S.PERS. DE AERONAVEGACION DE ENTES PRIVADOS                                                                                   
+10070;O.S.PERS. TECNICO AERONAUTICO                                                                                                   
+10080;O.S. AERONAVEGANTES                                                                                                             
+10090;O.S. EMPL. DE AGENCIAS DE INFORMES                                                                                              
+10100;O.S.PERS. DE AGUAS GASEOSAS Y AFINES                                                                                            
+10110;O.S. ALFAJOREROS, REPOSTEROS, PIZZEROS Y HELADEROS                                                                              
+10120;O.S.PERS. IND. DE LA ALIMENTACION                                                                                               
+10130;O.S.PERS. DE ARTES GRAFICAS DEL CHACO                                                                                           
+10140;O.S. DEL PERS. DE ARTES GRAFICAS DE SANTA FE.                                                                                   
+10150;O.S. ARTISTAS DE VARIEDADES                                                                                                     
+10160;O.S.PERS. DEL AUTOMOVIL CLUB ARGENTINO                                                                                          
+10170;O.S.PERS. DEL AZ. DE CALIL.                                                                                                     
+10180;O.S.PERS. DEL AZ.DEL ING. LA ESPERANZA                                                                                          
+10190;O.S.PERS. DEL AZ.DEL ING. LEDESMA                                                                                               
+10200;O.S.PERS. DEL AZ.DEL ING. LAS TOSCAS                                                                                            
+10210;O.S.PERS. DEL AZ.DEL ING. RIO GRANDE                                                                                            
+10220;O.S.PERS. DEL AZ.DEL ING. SAN ISIDRO                                                                                            
+10230;O.S.PERS. DEL AZ.DEL ING. SAN MARTIN                                                                                            
+10240;O.S. DEL PERS. DEL AZUCAR DE VILLA OCAMPO.                                                                                      
+10250;O.S. DEL PERS. DEL AZUCAR DEL INGENIO LAS BANDERITAS.                                                                           
+10260;O.S.PERS. DE LA ACTIVIDAD AZUCARERA TUCUMANA                                                                                    
+10270;O.S.PERS. IND. AZUCARERA                                                                                                        
+10280;O.S. DE BANCARIOS.                                                                                                              
+10290;O.S.PERS. DE BARRACAS DE LANAS, CUEROS Y ANEXOS                                                                                 
+10300;O.S.PERS. IND. BOTONERA                                                                                                         
+10310;O.S.PERS. IND. DEL CALZADO                                                                                                      
+10320;O.S. CAMIONEROS Y TRANSPORTE AUTOMOTOR DE CARGAS                                                                                
+10330;O.S.PERS. JUNTA NAC. DE CARNES                                                                                                  
+10340;O.S.PERS. DE CARGA Y DESCARGA                                                                                                   
+10350;O.S. DEL PERS. DE SUPERVISION, VIGILANCIA Y TECNICO DE LA INDUSTRIA DE LA CARNE DE BERISSO.                                     
+10360;O.S.PERS. AUXILIAR DE CASAS PARTICULARES                                                                                        
+10370;O.S.PERS. IND. DEL CAUCHO                                                                                                       
+10380;O.S.PERS. DEL CAUCHO                                                                                                            
+10390;O.S.PERS. IND. DEL CAUCHO DE SANTA FE                                                                                           
+10400;O.S.PERS. DE CEMENTERIOS                                                                                                        
+10410;O.S. CERAMISTAS                                                                                                                 
+10420;O.S.PERS. CERAMICA, SANITARIOS, PORC.MESA Y AFINES                                                                              
+10430;O.S.PERS. DE LA ACTIVIDAD CERVECERA Y AFINES                                                                                    
+10440;O.S.PERS. CINEMATOGRAFICO DE MAR DEL PLATA                                                                                      
+10450;O.S.PERS. IND. CINEMATOGRAFICA                                                                                                  
+10460;O.S. OPERADORES CINEMATOGRAFICOS                                                                                                
+10470;O.S. COLCHONEROS                                                                                                                
+10480;O.S.AZULEJOS,MOSAICOS,GRANITEROS,LUSTRAD.Y LANEROS                                                                              
+10490;O.S.EMPLEADOS DE COMERCIO                                                                                                       
+10500;O.S. COND. NAVALES                                                                                                              
+10510;O.S. CONSIG. MERC. GEN. DE AVELLANEDA                                                                                           
+10520;INST.SER.SOC. PERS. IND. DE LA CONSTRUCCION                                                                                     
+10530;O.S.PERS. ADM.Y TECNICO DE CONSTRUCCION Y AFINES                                                                                
+10540;O.S.PERS. DE LA CONSTRUCCION                                                                                                    
+10550;O.S. CORTADORES INDUMENTARIA                                                                                                    
+10560;O.S.PERS. IND. DEL CUERO Y AFINES                                                                                               
+10570;O.S.PERS. IND. DEL CHACINADO Y AFINES                                                                                           
+10580;O.S. CHOFERES DE CAMIONES                                                                                                       
+10590;O.S. DE CHOFERES PARTICULARES.                                                                                                  
+10600;O.S.PERS. ENTIDADES DEPORTIVAS Y CIVILES                                                                                        
+10610;O.S.EMPL. DE DESPACHANTES DE ADUANA                                                                                             
+10620;O.S.PERS. DE DISTRIBUIDORAS CINEMATOGRAFICAS                                                                                    
+10630;O.S. DOCENTES PARTICULARES                                                                                                      
+10640;O.S.PERS. DE ED.DE RENTA Y HORIZ. DE LA REP.ARG.                                                                                
+10650;O.S.PERS. ED.DE RENTA Y HORIZ. CAP.FED. Y G.B.A.                                                                                
+10660;O.S. ELECTRICISTAS NAVALES                                                                                                      
+10670;O.S. OBR.EMPACADORES DE FRUTAS RIO NEGRO-NEUQUEN                                                                                
+10680;O.S.PERS. DE LA ENSE#ANZA PRIVADA                                                                                               
+10690;O.S.PERS. ESCRIBANIAS DE PROV. DE BUENOS AIRES                                                                                  
+10700;O.S.PERS. DE ESCRIBANOS                                                                                                         
+10710;O.S.PERS. DEL ESPECTACULO PUBLICO                                                                                               
+10720;O.S.PERS.ESTAC.SERV.,GARAGES,PLAYAS ESTAC.,LAV.AUT                                                                              
+10730;O.S. DEL PERS. DEL ESTADO.                                                                                                      
+10740;O.S.PERS. DE FARMACIA                                                                                                           
+10750;O.S.PERS. FERIA INFANTIL                                                                                                        
+10760;O.S.PERS. DE FERMOLAC                                                                                                           
+10770;O.S. FERROVIARIOS                                                                                                               
+10780;O.S.PERS. IND. DEL FIBROCEMENTO                                                                                                 
+10790;O.S.PERS. IND. FIDEERA                                                                                                          
+10800;O.S.PERS. IND. FORESTAL DE SANTIAGO DEL ESTERO                                                                                  
+10810;O.S.PERS. IND. DEL FOSFORO                                                                                                      
+10820;O.S. FOTOGRAFOS                                                                                                                 
+10830;O.S. DEL PERS. DEL FRIGORIFICOS MERCADO NAC. DE HACIENDA DE BUENOS AIRES.                                                       
+10840;O.S.PERS. DE LA ACTIVIDAD FRUTICOLA                                                                                             
+10850;O.S.PERS.MANIPULEO,EMPAQUE,EXPED.FRUTA Y HORT-CUYO                                                                              
+10860;O.S. FUTBOLISTAS                                                                                                                
+10870;O.S. TECNICOS DE FUTBOL                                                                                                         
+10880;O.S.PERS. DE LA ACTIVIDAD HOTELERO GASTRONOMICA                                                                                 
+10890;O.S.PERS. SUPERIOR DE GOOD-YEAR ARGENTINA                                                                                       
+10900;O.S.PERS. GRAFICO                                                                                                               
+10910;O.S. DEL PERS. GRAFICO DE CORRIENTES.                                                                                           
+10920;O.S. GUINCHEROS                                                                                                                 
+10930;O.S.PERS.CONSIGNAT.MERCADO NAC.DE HACIENDA LINIERS                                                                              
+10940;O.S.PERS. IND. DEL HIELO Y MERCADOS PARTICULARES                                                                                
+10950;O.S.PERS. HIPODROMOS DE BUENOS AIRES Y SAN ISIDRO                                                                               
+10960;O.S.PERS.MENS.JOCKEY CLUB BS.AS.,PALERMO,S.ISIDRO                                                                               
+10970;O.S.PERS. DE IMPRENTA                                                                                                           
+10980;O.S. DEL PERS. DEL INGENIO NU#ORCO.                                                                                             
+10990;O.S.PERS. ING. SAN PABLO                                                                                                        
+11000;O.S.PERS. DE JABONEROS                                                                                                          
+11010;O.S.JARDINEROS,PARQUISTAS,VIVERISTAS,FLORICULTORES                                                                              
+11020;O.S.PERS. DEL JOCKEY CLUB DE ROSARIO                                                                                            
+11030;O.S.PERS. LADRILLERO                                                                                                            
+11040;O.S.PERS. IND. LADRILLERA A MAQUINA                                                                                             
+11050;O.S.PERS. IND. LECHERA                                                                                                          
+11060;O.S. LOCUTORES                                                                                                                  
+11070;O.S. LA FED. ARGENTINA DE TRAB. DE LUZ Y FUERZA                                                                                 
+11080;O.S. LOS TRAB. DE LAS EMPRESAS DE ELECTRICIDAD                                                                                  
+11090;O.S.PERS. DE LUZ Y FUERZA DE CORDOBA                                                                                            
+11100;O.S.PERS. IND. MADERERA                                                                                                         
+11110;O.S. DEL PERS. DE LA ACTIVIDAD MADERERA DE CORDOBA.                                                                             
+11120;O.S.PERS. DE MAESTRANZA                                                                                                         
+11130;O.S. MAQUINISTAS DE TEATRO Y TELEVISION                                                                                         
+11140;O.S. CAPIT. ULTRAMAR Y OFIC.DE LA MARINA MERCANTE                                                                               
+11150;O.S. CAPIT.BAQUEANOS FLUVIALES DE MARINA MERCANTE                                                                               
+11160;O.S. EMPL. DE LA MARINA MERCANTE                                                                                                
+11170;O.S. ENCARGADOS APUNTADORES MARITIMOS                                                                                           
+11180;O.S.PERS. MARITIMO                                                                                                              
+11190;O.S. SIND. MECANICOS Y AFINES TRANSP.AUTOMOTOR                                                                                  
+11200;O.S.PERS. SUPERIOR MERCEDES BENZ ARGENTINA                                                                                      
+11210;O.S.PERS. IND. METALURGICA                                                                                                      
+11220;O.S. SUPERV. IND. METAL MECANICA DE REP.ARGENTINA                                                                               
+11230;O.S. O.S. DE MICROS Y OMNIBUS DE MENDOZA                                                                                        
+11240;O.S. LA ACTIVIDAD MINERA                                                                                                        
+11250;O.S. MODELOS ARGENTINOS                                                                                                         
+11260;O.S.PERS. IND. MOLINERA                                                                                                         
+11270;O.S.PERS. MOSAISTA                                                                                                              
+11280;O.S. MUSICOS                                                                                                                    
+11290;O.S. MUSICOS DE CUYO                                                                                                            
+11300;O.S. DE MUSICOS DE MAR DEL PLATA.                                                                                               
+11310;O.S. DEL PERS. ESTATAL NAVAL.                                                                                                   
+11320;O.S. JEFES Y OFIC.NAVALES DE RADIOCOMUNICACIONES                                                                                
+11330;O.S. JEFES Y OFICIALES MAQUINISTAS NAVALES                                                                                      
+11340;O.S.PERS. NAVAL                                                                                                                 
+11350;O.S. DEL PERS. DEL NEGRO DE HUMO.                                                                                               
+11360;O.S.PERS. IND. DEL NEUMATICO                                                                                                    
+11370;O.S.PERS. IND. NAVAL                                                                                                            
+11380;O.S. COMISARIOS NAVALES                                                                                                         
+11390;O.S.PERS. DE PANADERIAS                                                                                                         
+11400;O.S. PANADEROS, PASTELEROS Y FACTUREROS DE E.RIOS                                                                               
+11410;O.S.PERS. DEL PAPEL, CARTON Y QUIMICOS                                                                                          
+11420;O.S. IND. DE PASTAS ALIMENTICIAS                                                                                                
+11430;O.S.PASTELEROS,CONFITEROS,PIZZEROS,ALFAJ. CAP.FED.                                                                              
+11440;O.S. DE PASTELEROS, CONFITEROS, PIZZEROS DE SANTIAGO DEL ESTERO.                                                                
+11450;O.S. PATRONES DE CABOTAJE DE RIOS Y PUERTOS                                                                                     
+11460;O.S. DE PELETEROS.                                                                                                              
+11470;O.S.PERS. DE PELUQUERIA, ESTETICAS Y AFINES                                                                                     
+11480;O.S. OFICIALES PELUQUEROS Y PEINADORES.                                                                                         
+11490;O.S. OFICIALES PELUQUEROS Y PEINADORES DE ROSARIO                                                                               
+11500;O.S.PERS. DE LA ACTIVIDAD PERFUMISTA                                                                                            
+11510;O.S. TRAB. DE PRENSA DE BUENOS AIRES                                                                                            
+11520;O.S.PERS. IND. DEL PESCADO DE MAR DEL PLATA                                                                                     
+11530;O.S. PETROLEROS                                                                                                                 
+11540;O.S.PETROLEO Y GAS PRIVADO                                                                                                      
+11550;O.S. PETROLEROS DE CORDOBA                                                                                                      
+11560;O.S.PERS. IND. PETROQUIMICA                                                                                                     
+11570;O.S. PILOTOS DE LINEAS AEREAS COMERC.Y REGULARES                                                                                
+11580;O.S.PERS. DE FABRICAS DE PINTURA                                                                                                
+11590;O.S. PROF. DE ACADEMIAS P.                                                                                                      
+11600;O.S.PERS. IND. DEL PLASTICO                                                                                                     
+11610;O.S. CAPATACES Y ESTIBADORES PORTUARIOS                                                                                         
+11620;O.S. PORTUARIOS ARGENTINOS                                                                                                      
+11630;O.S. PORTUARIOS DE BAHIA BLANCA                                                                                                 
+11640;O.S. PORTUARIOS DE NECOCHEA Y QUEQUEN                                                                                           
+11650;O.S. PORTUARIOS DE ROSARIO.                                                                                                     
+11660;O.S. PORTUARIOS DE SAN LORENZO.                                                                                                 
+11670;O.S. PORTUARIOS DE PUERTO SAN MARTIN Y BELLA VISTA                                                                              
+11680;O.S. PORTUARIOS PUERTO SAN NICOLAS.                                                                                             
+11690;O.S. PORTUARIOS DE SAN PEDRO.                                                                                                   
+11700;O.S. PORTUARIOS DE SANTA FE.                                                                                                    
+11710;O.S. PORTUARIOS DE VILLA CONSTITUCION.                                                                                          
+11720;O.S.PERS. DE PRENSA DE LA REPUBLICA ARGENTINA                                                                                   
+11730;O.S. DEL PERS. DE PRENSA CAPITAL FEDERAL.                                                                                       
+11740;O.S.PERS. DE PRENSA DE BAHIA BLANCA                                                                                             
+11750;O.S. DEL PERS. DE PRENSA DE CORDOBA.                                                                                            
+11760;O.S.PERS. DE PRENSA DE LA PCIA. DE CHACO                                                                                        
+11770;O.S.PERS. DE PRENSA DE MAR DEL PLATA                                                                                            
+11780;O.S.PERS. DE PRENSA DE MENDOZA                                                                                                  
+11790;O.S. DEL PERS. DE PRENSA DE SANTIAGO DEL ESTERO.                                                                                
+11800;O.S. EMPL. DE PRENSA DE CORDOBA                                                                                                 
+11810;O.S. PROFES.DE O.S. PERS. PAPEL CARTON Y QUIMICOS                                                                               
+11820;O.S. AG.PROP.MEDICA DE LA REPUBLICA ARGENTINA                                                                                   
+11830;O.S. AG.PROP.MEDICA DE CORDOBA                                                                                                  
+11840;O.S. AG.PROP.MEDICA DE ENTRE RIOS                                                                                               
+11850;O.S. AG.PROP.MEDICA DE ROSARIO                                                                                                  
+11860;O.S.PERS. DE LA PUBLICIDAD                                                                                                      
+11870;O.S.PERS. IND.S QUIMICAS Y PETROQUIMICAS                                                                                        
+11880;O.S. RECIBIDORES DE GRANOS Y ANEXOS                                                                                             
+11890;O.S.PERS. DE RECOLECCION Y BARRIDO DE ROSARIO                                                                                   
+11900;O.S.PERS. DE REFINERIAS DE MAIZ                                                                                                 
+11910;O.S. IND. DE MATERIALES REFRACTARIOS Y AFINES                                                                                   
+11920;O.S. RELOJEROS Y JOYEROS                                                                                                        
+11930;O.S.PERS. RURAL Y ESTIBADORES DE REP.ARGENTINA                                                                                  
+11940;O.S. DEL PERS. DE LA INDUSTRIA SALINERA.                                                                                        
+11950;O.S.PERS. DE LA SANIDAD                                                                                                         
+11960;O.S.PERS. DE INSTALACIONES SANITARIAS                                                                                           
+11970;O.S.PERS.SEG.COMERCIAL,IND.INVESTIGACIONES PRIV.                                                                                
+11980;O.S. DEL PERS. DEL SEGURO.                                                                                                      
+11990;O.S. SERENOS DE BUQUES                                                                                                          
+12000;O.S. DEL PERS. DEL SURCO DE VILLA QUINTEROS.                                                                                    
+12010;O.S.PERS. INFORM.Y TELEC.S.A. Y CIMET S.A.(S.ISID.                                                                              
+12020;O.S.PERS. DE STANDARD ELECTRIC                                                                                                  
+12030;O.S.PERS. SUPERVISION DE EMP.SUBTERRANEOS BS.AS.                                                                                
+12040;O.S.PERS. DE DIR.DE EMP. SUBTERRANEOS DE BS.AIRES                                                                               
+12050;O.S.PERS. IND.             DEL TABACO                                                                                           
+12060;O.S. EMPL. DEL TABACO                                                                                                           
+12070;O.S.PERS. TELEFONICO DE LA REPUBLICA ARGENTINA                                                                                  
+12080;O.S. TELEGRAFISTAS Y RADIOTELEGRAFISTAS                                                                                         
+12090;O.S.PERS. DE TELEVISION                                                                                                         
+12100;O.S.PERS. IND. TEXTIL                                                                                                           
+12110;O.S. EMPL. TEXTILES Y AFINES                                                                                                    
+12120;O.S. TINTOREROS SOMBREREROS Y LAVANDEROS                                                                                        
+12130;O.S.PERS. IND. DEL TRACTOR                                                                                                      
+12140;O.S.TRANSPORTE AUTOMOTOR DE ROSARIO                                                                                             
+12150;O.S. IND. DEL TRANSPORTE AUTOMOTOR DE CORDOBA                                                                                   
+12160;O.S. COND. DE TRANSPORTE COLECTIVO DE PASAJEROS                                                                                 
+12170;O.S.PERS. DE LA ACTIVIDAD DEL TURF                                                                                              
+12180;O.S. COND. DE TAXIS DE CORDOBA                                                                                                  
+12190;O.S. VAREADORES                                                                                                                 
+12200;O.S. PARA EL PERS. IND. DEL VESTIDO Y AFINES                                                                                    
+12210;O.S. VIAJANTES                                                                                                                  
+12220;O.S. VIAJANTES DE COMERCIO                                                                                                      
+12230;O.S.PERS. DE LA ACTIVIDAD VIAL                                                                                                  
+12240;O.S. EMPL. IND. DEL VIDRIO                                                                                                      
+12250;O.S.PERS. IND. DEL VIDRIO                                                                                                       
+12260;O.S.PERS. DE LA ACTVIDAD VITIVINICOLA                                                                                           
+12270;O.S.PERS. DE VIALIDAD NAC.                                                                                                      
+12280;O.S.PERS.VIGILANCIA Y SEG.COMERCIAL,INV.PRIV. CBA.                                                                              
+12290;O.S.P. EST.DE SERV., GAR., PLAYA Y LAV. DE STA.FE                                                                               
+12300;O.S.P. EST.DE SERV., GAR., PLAYA, LAV.Y GOM. R.A.                                                                               
+20010;O.S. DE LA SECRETARIA DE AGRICULTURA Y GANADERIA.                                                                               
+20020;O.S. CENTRO REGIONAL DE AGUAS SUBTERRANEAS.                                                                                     
+20030;O.S. DE LA SECRETARIA COMERCIO Y DE LA SECRETARIA DE INDUSTRIA Y MINERIA.                                                       
+20040;O.S. EMP.NAC.CORREOS Y TELEG.Y DE COMUNIC.R.ARG.                                                                                
+20050;O.S. DEL MINISTERIO DE DEFENSA.                                                                                                 
+20060;O.S. FLOTA FLUVIAL DEL ESTADO                                                                                                   
+20070;O.S. GAS DEL ESTADO                                                                                                             
+20080;DIR. GRAL. O.S. MINISTERIO DEL                                                                                                  
+20090;SERVICIOS DE BENEFICIOS SOCIALES DEL MINISTERIO DE JUSTICIA.                                                                    
+20100;O.S. EMP. LINEAS MARIT. ARG.                                                                                                    
+20110;DIR. GRAL. O.S. MIN. REL EXT.                                                                                                   
+20120;O.S. DEL MINISTERIOS DE OBRAS Y SERVICIOS PUBLICOS.                                                                             
+20130;DIR. O. S. EMP. NAC TELEC.                                                                                                      
+20140;O.S. UNIV. DE BUENOS AIRES                                                                                                      
+20150;O.S. DIR. NAC. DE VIALIDAD                                                                                                      
+20160;O.S. INST. NAC. DE VITIVINICULTURA.                                                                                             
+20170;O.S. YACIMIENTOS CARBONIFICOS FISCALES.                                                                                         
+20180;O.S. YACIMIENTOS PETROLIFEROS FISCALES                                                                                          
+30010;O.S. ANISALUD                                                                                                                   
+30020;O.S. AZULEJOS DECORADOS.                                                                                                        
+30030;O.S. BOROQUIMICA S.A.M.I.C.A.F                                                                                                  
+30040;O.S. LA EMPRESA PRIVADA CELULOSA ARGENTINA S.A.                                                                                 
+30050;O.S. CORPORACION CEMENTERA ARGENTINA                                                                                            
+30060;O.S.PERS. CERAMICA SAN LORENZO                                                                                                  
+30070;O.S. CERAS JOHNSON                                                                                                              
+30080;O.S. CALILEGUA S.A.A.I.C.                                                                                                       
+30090;O.S. VOLKSWAGEN ARGENTINA S.A.                                                                                                  
+30100;O.S. DESTILERIA SAN IGNACIO S.A.I.C.                                                                                            
+30110;O.S. DUNLOP ARG. LIMITADA                                                                                                       
+30120;O.S. DUPERIAL ORBEA                                                                                                             
+30130;O.S. COMP. EMBOTELLADORA AR.                                                                                                    
+30140;O.S. ELECTROCLOR S.C.A.                                                                                                         
+30150;O.S. MUTUALIDAD EMPL. FIRESTONE                                                                                                 
+30160;O.S. AUTOLATINA ARGENTINA S.A.                                                                                                  
+30170;O.S. HIRAM WALKER S.A.                                                                                                          
+30180;O.S. SOC. MINERA HIERRO PATAGONICO                                                                                              
+30190;O.S. SERVICIOS ASISTENCIALES DE LA COMPA#IA ITALO ARGENTINA DE ELECTRICIDAD (EX ITALO).                                         
+30200;O.S. INGENIO RIO GRANDE S.A.                                                                                                    
+30210;O.S.DIRECTIVOS,TECNICOS Y EMPL. JOHN DEERE ARGENT.                                                                              
+30220;O.S. LEDESMA S.A.I.                                                                                                             
+30230;O.S. COMPA#IA MINERA AGUILAR S.A.                                                                                               
+30240;O.S. MOLINOS RIO DE LA PLATA                                                                                                    
+30250;O.S. PASA PETROQUIMICA ARGENTINA S.A.                                                                                           
+30260;O.S.COOP.ASISTENC.MUTUA Y TURISMO PERS.SOC.PIRELLI                                                                              
+30270;O.S. COMP. QUIMICA S.A.                                                                                                         
+30280;O.S. REFINERIAS DE MAIZ S.A.I.C.F.                                                                                              
+30290;DIR. GRAL. SER.ASIST. SER.ELECT.                                                                                                
+30300;O.S. SULFACID S.A.I.F.C.                                                                                                        
+30310;O.S. SUPERCO                                                                                                                    
+30320;O.S. EMPRESA PRIVADA WITCEL S.A.I.C.                                                                                            
+30330;O.S. CABOT ARGENTINA                                                                                                            
+40010;O.S.PERS. DIR. DE EMPRESAS DE LA ALIMENTACION                                                                                   
+40020;O.S.PERS. DE DIR. IND. AUTOMOTRIZ ARGENTINA                                                                                     
+40030;O.S.COOP.LTDA.AS.MEDICA,FARM. PERS.SUP.CAUCHO Y AF                                                                              
+40040;O.S.PERS. DE DIR. IND. CERVECERA Y MALTERA                                                                                      
+40050;O.S.ASOC.PERS.DIR. Y JERARQUICO IND. CIGARRILLO                                                                                 
+40060;O.S.PERS. DIRECTIVO IND. DE LA CONSTRUCCION                                                                                     
+40070;O.S. CAMARA IND. CURTIDORA ARGENTINA                                                                                            
+40080;O.S. EJECUTIVOS Y PERS. DE DIR. DE EMPRESAS                                                                                     
+40090;O.S. ACCION SOCIAL DE EMPRESARIOS                                                                                               
+40100;O.S.PERS.DIR.DE EMP.QUE ACTUAN EN FRUTOS DEL PAIS                                                                               
+40110;O.S.PERS. DE DIR. ALFREDO FORTABAT                                                                                              
+40120;O.S. PARA EL PERS. DE DIR. IND. METALURGICA                                                                                     
+40130;O.S. PARA EL PERS. DE DIR. IND. MADERERA                                                                                        
+40140;O.S. PARA EL PERS.  DE DIR. DE LA ACTIVIDAD MINERA                                                                              
+40150;ASOC.PREST.SOC. EMPR.Y PERS.DIR.IND.L,COM.Y SERV.                                                                               
+40160;O.S.PERS. DE DIR. IND. PRIVADA DEL PETROLEO                                                                                     
+40170;O.S. DIRECTIVOS DE EMP. PORTUARIAS Y MARITIMAS                                                                                  
+40180;O.S.ASOC.MUTUAL PERS. PHILIPS ARGENTINA (AMPAR)                                                                                 
+40190;O.S.PERS. DE DIR. DE PERFUMERIA E.W. HOPE                                                                                       
+40200;O.S.PERS. DE DIR. DE LA SANIDAD LUIS PASTEUR                                                                                    
+40210;O.S. ASOC. PERS. DE DIR. IND. SIDERURGICA                                                                                       
+40220;O.S. MUTUALIDAD IND.L TEXTIL ARGENTINA                                                                                          
+40230;O.S.ASOC.PERS.SUPERIOR DE ORGANIZACION TECHINT                                                                                  
+40240;O.S.PERS. DE DIR. IND. VITIVINICOLA Y AFINES                                                                                    
+50010;INST. DE SERV. SOC. BANCARIOS.                                                                                                  
+50020;INST. DE O.S. PARA EL PERS. DE LOS MINISTERIOS DE BIENESTAR SOCIAL Y DE TRABAJO.                                                
+50030;INST. DE SERV. SOC. PARA EL PERS. DE LA INDUSTRIA DE LA CARNE Y AFINES.                                                         
+50040;O.S. PARA EMPLEADOS DE COMERCIO Y ACTIVIDADES CIVILES.                                                                          
+50050;O.S. PARA LA ACTIVIDAD DOCENTE.                                                                                                 
+50060;INST. DE SERV. SOC. PARA EL PERS. FERROVIARIO.                                                                                  
+50070;INST. DE O.S. DE LA SECRETARIA DE ESTADO DE HACIENDA-MINISTERIO DE ECONOMIA.                                                    
+50080;INST.NAC. DE SERV.SOC. JUBILADOS Y PENSIONADOS                                                                                  
+50090;O.S. PARA EL PERS. DE OBRAS SANITARIAS DE LA NACION.                                                                            
+50100;INST. MUNICIPAL DE O.S..                                                                                                        
+50110;INST. DE SERV. SOC. PARA LAS ACTIVIDADES RURALES Y AFINES.                                                                      
+50120;INST. DE SERV. SOC. PARA EL PERS. DE SEGUROS, REASEGUROS, CAPITALIZACION, AHORRO Y PRESTAMO PARA LA VIVIENDA.                   
+50130;INST. DE O.S. PARA CONDUCTORES DE TAXIS.                                                                                        
+50140;INST. S. S. T. N. TIERRA FUEGO ANT.                                                                                             
+50150;INST. DE SERV. SOC. PARA EL PERS. DE LA INDUSTRIA DEL VIDRIO Y AFINES.                                                          
+60010;ASOC. DE O.SOC.DE BAHIA BLANCA                                                                                                  
+60020;ASOC. REGIONAL BARILOCHE DE O.SOC.                                                                                              
+60030;ASOC. DE O.SOC. DE BELLA VISTA                                                                                                  
+60040;ASOC. DE O.SOC. DE COMODORO RIVADAVIA                                                                                           
+60050;ASOC. DE O.SOC. DE CONCORDIA                                                                                                    
+60060;ASOC. O. SOCIALES DE CORONEL SU                                                                                                 
+60070;ASOC. CORRENTINA DE O.SOC.                                                                                                      
+60080;ASOC. DE O.SOC. DE CORONEL DORREGO                                                                                              
+60090;ASOC. DE O.SOC. DE ESPERANZA                                                                                                    
+60100;ASOC. DE O.SOC. DE FIRMAT                                                                                                       
+60110;ASOC. GUALEGUAYCHU DE O.SOC.                                                                                                    
+60120;ASOC. DE O.SOC. DE GUALEGUAY                                                                                                    
+60130;ASOC. DE O.SOC. DE MAR DEL PLATA                                                                                                
+60140;ASOC. O. SOCIALES DE MENDOZA                                                                                                    
+60150;ASOC. DE O.SOC. DE MISIONES                                                                                                     
+60160;ASOC. DE O.SOC. DE NEUQUEN                                                                                                      
+60170;ASOC. DE O.SOC. DEL NORTE DE SANTA FE                                                                                           
+60180;ASOC. NUEVEJULIENSE DE O.SOC.                                                                                                   
+60190;ASOC. PERGAMINO DE O.SOC.                                                                                                       
+60200;ASOC. DE O.S. DE PIGUE.                                                                                                         
+60210;ASOC. DE O.SOC. DE LA RIOJA                                                                                                     
+60220;ASOC. RIO NEGRINA DE O.SOCIALES                                                                                                 
+60230;ASOC. DE O.SOC. DE ROSARIO                                                                                                      
+60240;ASOC. DE O.SOC. DE RUFINO                                                                                                       
+60250;ASOC. DE O.SOC. DE SALTO                                                                                                        
+60260;ASOC. DE O.SOC. DE SAN JORGE                                                                                                    
+60270;ASOC. DE O.SOC. DE SAN JUAN                                                                                                     
+60280;INST. SANRAFAELINO DE O.SOC.                                                                                                    
+60290;ASOC. DE O.SOC. DE SANTA FE                                                                                                     
+60300;ASOC. DE O.SOC. DE TUCUMAN                                                                                                      
+60310;ASOC. DE O.SOC. DE TRELEW                                                                                                       
+60320;ASOC. DE O.S. DE TRES ARROYOS.                                                                                                  
+70010;O.S.PERS. MUNICIPAL DE AVELLANEDA                                                                                               
+70020;O.S. DEL PERS. MUNICIPAL DE COMODORO RIVADAVIA.                                                                                 
+70030;O.S. DEL PERS. MUNICIPAL DE LANUS.                                                                                              
+70040;O.S. DEL PERS. MUNICIPAL DE MERLO.                                                                                              
+70050;O.S. DEL PERS. MUNICIPAL DE SAN ISIDRO.                                                                                         
+70060;O.S. DEL PERS. MUNICIPAL DE QUILMES.                                                                                            
+70070;O.S. DEL PERS. MUNICIPAL DE PUERTO MADRYN.                                                                                      
+70080;O.S.PERS. MUNICIPAL DE LA MATANZA                                                                                               
+70090;O.S. DEL PERS. MUNICIPAL DE GENERAL SARMIENTO.                                                                                  
+70100;O.S.PERS. MUNICIPAL DE TRES DE FEBRERO                                                                                          
+80010;O.S. ATANOR S.A.MIXTA                                                                                                           
+80020;O.S. FORJA ARGENTINA S.A.                                                                                                       
+80030;O.S. PAPEL MISIONERO S.A.I.F. Y C.                                                                                              
+80040;O.S. PETROQUIMICA GENERAL MOSCONI                                                                                               
+80050;O.S. ACEROS PARANA S.A. Y EMPRESAS ANTECESORAS                                                                                  
+90010;O.S. FIAT CONCORD S.A.I.C.                                                                                                      
+90020;O.S. OLIVETTI S.C.A.                                                                                                            
+00010;O.S.PERS. JERAR. IND. GRAFICAS.                                                                                                 
+00020;O.S.PERS. IND. GRAFICA DE LA PCIA. DE CORDOBA                                                                                   
+00030;O.S. PORTUARIOS ARGENTINOS DE MAR DEL PLATA                                                                                     
+00040;O.S.PERS. DEL ORGANISMO DE CONTROL EXTERNO                                                                                      
+00050;O.S. CAPITANES, PILOTOS Y PATRONES DE PESCA                                                                                     
+00060;O.S. AGENTES DE LOTERIAS Y AFINES DE LA R.A.                                                                                    
+00070;MUTUAL PERS. DE AGUA Y ENERGIA ELECTRICA MENDOZA                                                                                
+00080;O.S. YACIMIENTOS PETROLIFEROS FISCALES                                                                                          
+00090;O.S.ACTIVIDAD DE .SEGUROS,REASEG.,CAP.AH.Y PR.VIV                                                                               
+00100;O.S.DEL PERSONAS DE OBRAS Y SERVICIOS SANITARIOS                                                                                
+00110;O.S.PARA LA ACTIVIDAD DOCENTE                                                                                                   
+00120;O.S.PERS.MINISTERIO ECONOMIA Y OBRAS Y SERV.PUBLIC                                                                              
+00130;O.S.PARA EL PERSONAL FERROVIARIO                                                                                                
+00996;O.S. NO COMPRENDIDA EN REGIMEN NAC. DE O.S.                                                                                     
+00997;O.S.PERS. JUDICIAL Y LEGISLATIVO                                                                                                
+00998;O.S.PERS. AUXILIAR CASAS PARTICULARES                                                                                           
+00999;O.S. FUERZAS ARMADAS                                                                                                            
+10001;O.S.PERS. JERARQUICO IND. GRAFICA DE LA R. A.                                                                                   
+12310;O.S. TALLERISTAS A DOMICILIO                                                                                                    
+12320;O.S. BA#EROS Y AFINES DEL PARTIDO GRAL PUEYRREDON                                                                               
+12330;O.S.PERS. DE SOCIEDADES DE AUTORES AFINES                                                                                       
+12340;O.S.PERS. DE PRENSA DE ROSARIO                                                                                                  
+12350;O.S.PERS. DE PRENSA DE TUCUMAN                                                                                                  
+12360;O.S. TRAB. DE PERKINS ARGENTINA S.A.C.I.                                                                                        
+12370;O.S. PEONES DE TAXIS DE LA CAP.FED.                                                                                             
+12380;O.S.PERS. DE GUARDAVIDAS Y AFINES DE LA REP. ARG.                                                                               
+12390;O.S. VENDEDORES AMBULANTES DE LA REP.ARGENTINA                                                                                  
+12400;O.S. BOXEADORES AGREMIADOS DE LA REP.ARGENTINA                                                                                  
+12440;O.S.PERS.EMP.LIMPIEZA,SERV. Y MAESTRANZA MENDOZA                                                                                
+12450;O.S. TRAB. IND. DEL GAS                                                                                                         
+12480;O.S. ARBITROS DE FUTBOL                                                                                                         
+12490;O.S. LA FED. NAC. DE SINDICATOS DE COND. DE TAXI                                                                                
+12500;O.S. DE YACIMIENTOS CARBONIFEROS                                                                                                
+12510;O.S. PROFES. UNIV.DEL AGUA Y ENERGIA ELECTRICA                                                                                  
+12530;O.S. FEDERAL DE LA FED. NAC. DE OBRAS SANITARIAS                                                                                
+12550;FED. ARGENTINA DE TRAB. DE LAS UNIV. NAC.ES                                                                                     
+12560;O.S.PERS. SUPERIOR IND. DEL GAS Y AFINES                                                                                        
+12570;O.S.PERS. CIVIL DE LA NACION                                                                                                    
+12580;O.S.PERS. JERARQUICO DE AGUA Y LA ENERGIA                                                                                       
+12590;O.S. ARBITROS DEPORTIVOS DE LA REP. ARGENTINA                                                                                   
+12600;O.S. FED. GREMIAL IND. DE LA CARNE Y DERIVADOS                                                                                  
+12610;O.S. PARA LOS TRAB. DE LA EDUCACION PRIVADA                                                                                     
+12620;O.S. LOS EMPL. DE COMERCIO Y ACTIVIDADES CIVILES                                                                                
+12630;O.S. BANCARIA ARGENTINA                                                                                                         
+20190;INS. N. O.S. PER. AD. PUB. NAC. ENTE                                                                                            
+30340;O.S.PERS. SHELL-CAPSA                                                                                                           
+30350;O.S.PERS. DE COMPANIA GRAL. DE COMBUSTIBLES S.A.                                                                                
+30360;O.S. IPAKO S. A.                                                                                                                
+30370;O.S.PERS. DE PETROQUIMICA BAHIA BLANCA S.A.I.C.                                                                                 
+30390;O.S.DE FORD ARGENTINA S.A.                                                                                                      
+30400;O.S.DE VOLKSWAGEN S.A.                                                                                                          
+33080;O.S ASOC. ARG. DE ARBITROS.                                                                                                     
+60330;ASOC. MENDOCINA DE O.SOC.                                                                                                       
+70110;O.S.PERS. MUNICIPAL DE SANTIAGO DEL ESTERO                                                                                      
+70120;O.S.TRAB.MUNICIPALES GRAL. PUEYRREDON                                                                                           
+98888;OTRAS NO INCLUIDAS EN TABLA                                                                                                     

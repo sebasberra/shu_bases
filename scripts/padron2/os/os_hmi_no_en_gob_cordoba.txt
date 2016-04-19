@@ -1,0 +1,60 @@
+rnos_hmi	nom_os_hmi
+60200	ASOC. DE O.S. DE PIGUE.                                                                                                         
+60320	ASOC. DE O.S. DE TRES ARROYOS.                                                                                                  
+  390	CAJA DE ASISTENCIA SOCIAL (C.A.S.)- SANTA CRUZ.                                                                                 
+   20	DIRECCION DE O.S. BIENESTAR DE LA ARMADA (D.I.B.A)                                                                              
+  370	DIRECCION DE O.S. DE EMPLEADOS PROVINCIALES(D.O.S.E.P.)-SAN LUIS.                                                               
+  350	DIRECCION DE O.S. DE LA PCIA DE SAN JUAN (D.O.S.)                                                                               
+   30	DIRECCION DE O.S. DEL SERVICIO PENITENCIARIO FEDERAL                                                                            
+   60	DIRECCION GENERAL DE SANIDAD-PERSONAL FUERZA AEREA ARGENTINA.                                                                   
+   70	GENDARMERIA NACIONAL.                                                                                                           
+  400	INST. AUTARQUICO PROVINCIAL DE O.S. (I.A.P.O.S.) SANTA FE.                                                                      
+  220	INST. DE ASISTENCIA SOCIAL PARA ENPLEADOS PUBLICOS(I.A.S.E.P)-FORMOSA.                                                          
+   10	INST. DE O.S. DE EJERCITO (I.O.S.E)                                                                                             
+  410	INST. DE O.S. DE EMPLEADOS PROVINCIALES (I.O.S.E.P.)-SANTIAGO DEL ESTERO.                                                       
+  210	INST. DE O.S. DE LA PCIA.DE ENTRE RIOS (I.O.S.P.E.R)                                                                            
+50130	INST. DE O.S. PARA CONDUCTORES DE TAXIS.                                                                                        
+  100	INST. DE OBRA MEDICO ASISTENCIAL (I.O.M.A.) PCIA DE BUENOS AIRES.                                                               
+  290	INST. DE PREVINSION SOCIAL (I.P.S.)- MISIONES.                                                                                  
+  140	INST. DE PREVISION SOCIAL DEL CHACO(I.P.S)                                                                                      
+  130	INST. DE PREVISION Y SEGURIDAD SOCIAL(I.P.S) CORRIENTES.                                                                        
+  420	INST. DE PREVISION Y SEGURIDAD SOCIAL(I.P.S.S.) TUCUMAN.                                                                        
+  300	INST. DE SEGURIDAD SOCIAL DE NEUQUEN.                                                                                           
+  430	INST. DE SERV. SOC. DEL TERR. NAC. DE TIERRA DEL FUEGO ANTARTIDA E ISLA DEL ATLANTICO SUR(ISST)                                 
+   90	INST. MUNICIPAL DE O.S. (I.M.O.S)-CAPITAL FEDERAL9                                                                              
+  120	INST. PROVINCIAL DE ATENCION MEDICA-CORDOBA                                                                                     
+  260	INST. PROVINCIAL DE O.S.(I.P.O.S.)- LA RIOJA.                                                                                   
+  200	INST. PROVINCIAL DE SEGURIDAD SOCIAL Y SEGUROS (S.E.R.O.)-CHUBUT.                                                               
+  320	INST. PROVINCIAL DE SEGUROS (I.P.S.) SALTA.                                                                                     
+  310	INST. PROVINCIAL DE SEGUROS DE SALUD (I.PRO.S.S.) RIO NEGRO.                                                                    
+  230	INST.T DE SEGUROS DE JUJUY(I.S.J.).                                                                                             
+ 9990	MUTUALES.                                                                                                                       
+33080	O.S ASOC. ARG. DE ARBITROS.                                                                                                     
+  340	O.S. CONFEDERACION EMPRESARIA SALTE#A(S.C.E.S.)                                                                                 
+  240	O.S. DE ALTOS HORNOS ZAPLA-JUJUY.                                                                                               
+  280	O.S. DE EMPLEADOS DE COMERCIO - MENDOZA                                                                                         
+  270	O.S. DE EMPLEADOS PUBLICOS (O.S.E.P.)- MENDOZA.                                                                                 
+  160	O.S. DE LA FEDERACION EMPLEADOS INDUSTRIA AZUCARERA LAS PALMAS-CHACO.                                                           
+  180	O.S. DE LA UNION DE PERSONAL SERVICIOS INVESTIGADORES PRIVADOS-CHACO.                                                           
+  360	O.S. DE LA UNIVERSIDAD DE SAN JUAN.                                                                                             
+  380	O.S. DE LA UNIVERSIDAD DE SAN LUIS.                                                                                             
+  170	O.S. DE LA UNIVERSIDAD NACIONAL DEL NORDESTE CHACO.                                                                             
+   50	O.S. DEL CENTRO DE SUBOFICIALES RETIRADOS DEL EJERCITO Y ARERONAUTICA.                                                          
+  110	O.S. DEL EMPLEADO PUBLICO (O.S.E.P.)-CATAMARCA.                                                                                 
+10250	O.S. DEL PERS. DEL AZUCAR DEL INGENIO LAS BANDERITAS.                                                                           
+   80	O.S. DEL PODER JUDIACIAL DE LA NACION.                                                                                          
+  150	O.S. FEDERACION MEDICA DEL CHACO.                                                                                               
+  190	O.S. FEDERADA 25 DE JUNIO-CHACO.                                                                                                
+00999	O.S. FUERZAS ARMADAS                                                                                                            
+00996	O.S. NO COMPRENDIDA EN REGIMEN NAC. DE O.S.                                                                                     
+  330	O.S. UNIVERSIDAD NACIONAL DE SALTA (U.N.S.A.)                                                                                   
+30090	O.S. VOLKSWAGEN ARGENTINA S.A.                                                                                                  
+00998	O.S.PERS. AUXILIAR CASAS PARTICULARES                                                                                           
+30350	O.S.PERS. DE COMPANIA GRAL. DE COMBUSTIBLES S.A.                                                                                
+10001	O.S.PERS. JERARQUICO IND. GRAFICA DE LA R. A.                                                                                   
+00997	O.S.PERS. JUDICIAL Y LEGISLATIVO                                                                                                
+98888	OTRAS NO INCLUIDAS EN TABLA                                                                                                     
+  440	OTRAS OBRAS SOCIALES.                                                                                         
+  250	SERVICIO MEDICO DE PREVISION(S.E.M.P.R.E.)-LA PAMPA.                                                                            
+ 9980	SISTEMA PRIVADO PREPAGO.                                                                                                        
+   40	SUPERINTENDENCIA DE BIENESTAR DE LA POLICIA FEDERAL                                                                             

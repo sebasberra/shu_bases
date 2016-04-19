@@ -1,0 +1,34 @@
+# ------------- Descripcion de Registro de Afiliados -----------------
+
+Posicion (desde/hasta) - Longitud   Descripcion del Campo
+
+
+           01/01  _        1       Tipo de documento del titular
+                                      1 = DNI
+                                      2 = L.C/L.E
+                                      3 = C.I Pol. Fed
+                                      4 = C.I Pol. Sta Fe
+                                      5 = Otros
+
+           03/10  -        8       Nro. documento del titular
+
+           12/12  _        1       Tipo documento del beneficiario
+
+           14/21  _        8       Nro. documento del beneficiario
+
+           23/23  -        1       tipo de orden  - A/titular B/cony. C/hijos D/voluntarios E/opcionales
+
+           24/25 -         2       nro. de orden (para Tipos de Orden C ,D y E de item anterior)
+                                 - se establece desde 02 en adelante por orden numerico correlativo)
+
+
+           26/45 -        20       Apellido y nombres
+
+           46/46 -         1       Sexo (1-Masc./ 2-Fem)
+
+           47/54 -         8       Fecha de nacimiento (AAAAMMDD)
+
+           55/58 -         4       Codigo postal    
+
+
+	# -------------------------------------------------------------------- 

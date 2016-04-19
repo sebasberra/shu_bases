@@ -1,0 +1,9 @@
+0|Relacion de Dependencia|
+1|Empleado de Monotributista|
+2|Jubilado|
+3|Adherente|
+4|Monotributistas Autonomos|
+5|Empleado de Servicio Domestico|
+6|No registrado en el Sistema|
+7|Jubilado no contributivo|
+8|Beneficio por Desempleo|

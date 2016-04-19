@@ -1,0 +1,126 @@
+PADRON2
+-------
+
+Release Notes 
+-------------
+Version 0.11b         05/03/2010
+--------------------------------
+
+	* Se modifica el script de integracion de IAPOS para consideran los numeros de documentos 
+		que comienzan con 'M' o 'F', los cuales se graban en la tabla de "afiliados_iapos", en
+		el campo "nro_doc" (numerico), pero sin la letra
+		
+		NOTA: tambien se encontro un registro que comienza con la letra 'K'
+		
+	* Se modifica el script de integracion de IAPOS para considerar documentos encontrados con
+		la letra 'A' al final del campo 'nrodocbenef' de la tabla 'padron_iapos'
+		
+		
+Version 0.11a         02/03/2010
+--------------------------------
+
+	* Se incluye la tabla "versiones" que se usa en "localidades" y en las otras bases de datos, para
+		llevar el versionado
+	
+	* Se agrega PRIMARY KEY (base) a la tabla "versiones"
+		
+	* Se actualiza la base de datos de obras sociales con informacion obtenida del archivo 
+		de PROFE (profe.mdb) y haciendo una exportacion de la tabla con dicha informacion al
+		archivo "obras_sociales_profe.csv"
+		
+	* Se quita la tabla "dpto_loc" y se trae la version MyISAM de la base "localidades v 0.1b"
+	
+	* Se cambia la definicion del campo "sexo" de la tabla "afiliados" por:
+	
+			sexo 			ENUM			('M','F','D') 	NOT NULL
+		
+	* Se cambia el nombre y la estructura de "tipos_documento" a "tipos_documentos"
+	
+		/* tipos_documentos */
+		CREATE TABLE tipos_documentos (
+			id_tipo_doc 		TINYINT 		UNSIGNED 	NOT NULL,
+			nom_tipo_doc 		CHAR(3) 					NOT NULL,
+			nom_largo_tipo_doc	VARCHAR(255)				NOT NULL,
+			PRIMARY KEY(id_tipo_doc)
+		)ENGINE=MyISAM;
+	
+		y se carga con los siguientes registros:
+	
+		INSERT INTO tipos_documentos (id_tipo_doc,nom_tipo_doc,nom_largo_tipo_doc) VALUES (1,'DNI','Documento Nacional de Identidad');
+		INSERT INTO tipos_documentos (id_tipo_doc,nom_tipo_doc,nom_largo_tipo_doc) VALUES (2,'LE','Libreta de enrolamiento');
+		INSERT INTO tipos_documentos (id_tipo_doc,nom_tipo_doc,nom_largo_tipo_doc) VALUES (3,'LC','Libreta civica');
+		INSERT INTO tipos_documentos (id_tipo_doc,nom_tipo_doc,nom_largo_tipo_doc) VALUES (4,'CI','Cedula de identidad');
+		INSERT INTO tipos_documentos (id_tipo_doc,nom_tipo_doc,nom_largo_tipo_doc) VALUES (5,'OTR','Otros');
+		INSERT INTO tipos_documentos (id_tipo_doc,nom_tipo_doc,nom_largo_tipo_doc) VALUES (9,'DNR','Dato no registrado');
+		
+	* Se comienza la edicion del script de migracion de afiliados del profe "migra_padron2_profe.sql"
+	
+	* Se crean 4 tablas con identica estructura: 
+	
+		- afiliados
+		
+		- afiliados_nacionales
+		
+		- afiliados_iapos
+		
+		- afiliados_profe 
+	
+		donde "afiliados_xxxxxx" son tablas "MyISAM" y "afiliados" se define como la union de las
+		otras 3 tablas con siguiente sentencia:
+		
+			CREATE TABLE afiliados (
+				id_afiliado 		INTEGER(11) 					NOT NULL 	AUTO_INCREMENT,
+				id_prov 			TINYINT 		UNSIGNED		NOT NULL,
+				id_condicion 		TINYINT 		UNSIGNED 		NOT NULL,
+				id_obra_social 		SMALLINT 		UNSIGNED 		NOT NULL,
+				id_tipo_doc 		TINYINT 		UNSIGNED 		NOT NULL,
+				sexo	 			ENUM			('M','F','D') 	NOT NULL,
+				nro_doc 			INTEGER 		UNSIGNED 		NOT NULL,
+				apellido 			VARCHAR(255) 					NOT NULL,
+				nombre 				VARCHAR(255) 					NOT NULL,
+				fecha_nac 			DATE 							NOT NULL,
+				codigo_postal 		VARCHAR(8) 						NOT NULL,
+				periodo_aporte 		CHAR(6)							NOT NULL,
+				cuil_titular 		BIGINT 			UNSIGNED 		NULL,
+				cuit_empresa 		BIGINT 			UNSIGNED 		NULL,
+				PRIMARY KEY(id_afiliado),
+				INDEX idx_apellido(apellido),
+				INDEX idx_nombre(nombre),
+				INDEX idx_id_obra_social(id_obra_social),
+				INDEX idx_id_prov(id_prov),
+				INDEX idx_nro_doc(nro_doc)
+			)ENGINE=MERGE UNION=(afiliados_iapos,afiliados_nacionales,afiliados_profe);
+			
+				
+	* Se comienza la edicion del script de migracion de afiliados del iapos "migra_padron2_iapos.sql"
+	
+	* Se carga la tabla "condiciones_os" con los siguientes registros:
+	
+		INSERT INTO condiciones_os (id_condicion,nom_condicion) VALUES (1,'TITULAR');
+		INSERT INTO condiciones_os (id_condicion,nom_condicion) VALUES (2,'CONYUGE');
+		INSERT INTO condiciones_os (id_condicion,nom_condicion) VALUES (3,'HIJOS');
+		INSERT INTO condiciones_os (id_condicion,nom_condicion) VALUES (4,'VOLUNTARIOS');
+		INSERT INTO condiciones_os (id_condicion,nom_condicion) VALUES (5,'OPCIONALES');
+		INSERT INTO condiciones_os (id_condicion,nom_condicion) VALUES (6,'ADHERENTE');
+		INSERT INTO condiciones_os (id_condicion,nom_condicion) VALUES (7,'CONCUBINO/A');
+		INSERT INTO condiciones_os (id_condicion,nom_condicion) VALUES (8,'HIJO SOLTERO MENOR DE 21 AÑOS');
+		INSERT INTO condiciones_os (id_condicion,nom_condicion) VALUES (9,'HIJO SOLTERO ENTRE 21/25 AÑOS ESTUDIANTE');
+		INSERT INTO condiciones_os (id_condicion,nom_condicion) VALUES (10,'HIJO DEL CONYUGE SOLTERO MENOR DE 21 AÑOS');
+		INSERT INTO condiciones_os (id_condicion,nom_condicion) VALUES (11,'HIJO DEL CONYUGE ENTRE 21/25 AÑOS ESTUDIANTE');
+		INSERT INTO condiciones_os (id_condicion,nom_condicion) VALUES (12,'MENOR BAJO GUARDA O TUTELA');
+		INSERT INTO condiciones_os (id_condicion,nom_condicion) VALUES (13,'FAMILIAR A CARGO');
+		INSERT INTO condiciones_os (id_condicion,nom_condicion) VALUES (14,'MAYOR DE 21 AÑOS DISCAPACITADOS');
+		INSERT INTO condiciones_os (id_condicion,nom_condicion) VALUES (15,'SIN INFORMACION');
+		
+		
+Version 0.1a          24/02/2010
+--------------------------------
+
+	* Se arma la nueva estructura del padron2 con el DBDesigner 4 en el archivo "padron2.xml"
+	
+	* Se crea el script para la carga inicial de las tablas "padron2.sql"
+	
+	* Se crea el script para la carga de datos de afiliados nacionales(informacion proveniente de la
+		superintendencia de salud) "migra_padron2_nacionales.sql"
+		
+		

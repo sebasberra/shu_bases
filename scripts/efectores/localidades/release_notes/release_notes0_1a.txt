@@ -1,0 +1,50 @@
+LOCALIDADES
+-----------
+
+Release Notes 
+-------------
+
+	
+Version 0.1a          08/01/2010
+--------------------------------
+
+	* Ver el archivo de "release_notes0_3a.txt" de "efectores"
+	
+	* Se arreglan los nombre de paises con errores de eñes.
+	
+	* Se actualizaron las descripciones del tipo:
+	
+		TERRITORIO VINCULADOS AL REINO UNIDO 
+		
+		agregando el continente entre parentesis, por ejemplo:
+		
+		TERRITORIO VINCULADOS AL REINO UNIDO (EUROPA)
+	
+	* Se cambio la descripcion del pais:
+	
+		YUGOSLAVIA por:
+		
+		YUGOSLAVIA (SERVIA, MONTENEGRO)
+	
+	* Se crea el siguiente indice unico:
+	
+		- CREATE UNIQUE INDEX idx_unique_cod_loc_cod_dpto_cod_prov_cod_pais ON localidades (cod_loc,cod_dpto,cod_prov,cod_pais);
+		
+		
+	* Se crea el script de actualizacion para las localidades "actualizacion_localidades.sql", el cual
+		actualiza los nombres de las localidades, ya que la primer migracion tenia los acentos y las ñ
+		con caracteres raros
+		
+	* Para criterio de actualizacion se basa en el indice unico creado anteriormente, entonces el script
+		ejecuta un insert con un select donde (ver el script "actualizacion_localidades.sql"):
+	
+		d_localidad.coddpto	=	localidades.cod_dpto
+		d_localidad.codloc 	=	localidades.cod_loc
+		d_localidad.codprov	=	localidades.cod_prov
+		200					=	localidades.cod_pais
+			
+	* Se vuelven a generar los archivos los cuales crean las estructuras y la carga de datos de las tablas
+		paises, provincias, departamentos y localidades, respectivamente:
+	
+		localidades_estructura.sql
+		localidades_datos.sql

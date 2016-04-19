@@ -1,0 +1,218 @@
+SERVICIOS
+---------
+
+
+Release Notes 
+-------------
+
+
+Version 0.40a		15/03/2011
+------------------------------
+
+	* se considera el caso de la NEO del hospital de niños Alassia, donde la cama , en este caso la cuna, se 
+		traslada de habitacion. Entonces seria un pase de servicio pero con la misma cama y la cama se traslada
+		a otra habitacion.
+		En la base se comenzaria a guardar en la tabla "pases" el "id_habitacion" y cuando se traslade la cama o
+		cuna se le modifica el "id_habitacion" en el registro de la tabla "camas"
+		
+		tabla "pases"
+		
+			...
+			id_habitacion
+			...
+			
+	* se agregan los indices a la tabla "internaciones"
+
+		...
+			
+			FOREIGN KEY fk_ing_id_servicio_estadistica (ing_id_servicio_estadistica)
+			REFERENCES servicios_estadistica(id_servicio_estadistica)
+				ON DELETE NO ACTION
+				ON UPDATE NO ACTION,
+			FOREIGN KEY fk_egr_id_servicio_estadistica (egr_id_servicio_estadistica)
+				REFERENCES servicios_estadistica(id_servicio_estadistica)
+					ON DELETE NO ACTION
+					ON UPDATE NO ACTION,
+		...
+		
+			
+Version 0.35a		12/01/2011
+------------------------------
+
+	* se agrega el campo "fecha_modificacion" a las siguientes tablas:
+	
+		- pases
+		- efectores_servicios
+		- subservicios
+		- servicios_salas
+		- censos_diarios
+		
+		con la siguiente definicion:
+		
+			fecha_modificacion			TIMESTAMP				NOT NULL	DEFAULT 
+																			CURRENT_TIMESTAMP 
+																		ON UPDATE CURRENT_TIMESTAMP
+
+																		
+Version 0.31a		06/12/2010
+------------------------------
+																					
+	* se cambian los campos "existencia_0", "existencia_24" y "pacientes_dia" de la tabla
+		"censos_diarios" a SMALLINT con signo porque puede darse que cuando se equivoquen y quieran 
+		arreglan censos mal hechos, alguno de dichos campos queden en negativo hasta que se corrijan 
+		por los datos correctos
+		
+	* Se agrega en el comentario del campo "tipo_salida" de la tabla "pases" lo siguiente:
+		
+		tipo_salida ... COMMENT 'A=alta medica; O=obito; P=pase a; I=inconcluso (altas donde el paciente no se retiro del hospital);'
+		
+		
+	* se cambia el tipo de dato del campo "observacion_pase" de la tabla "pases" a TEXT
+	
+		ALTER TABLE pases 
+			MODIFY COLUMN observacion_pase		TEXT 	NULL;
+			
+	* se agrega el campo de descripcion nombre de servicio de estadistica a la tabla "efectores_servicios" para 
+		facilitar la programacion
+		
+		...
+		nom_servicio_estadistica	VARCHAR(255)	NOT NULL	COMMENT 'Nombre del servicio de estadistica. Este campo se agrego para facilitar los select y reportes en programacion'
+		...
+		
+	* se arregla el registro en el archivo "servicios_estadistica_sipes.txt" 
+	
+		236;3;5;NUEROCIRUGIA PEDIATRICA                                                  ;1
+		
+		a
+		
+		236;3;5;NEUROCIRUGIA PEDIATRICA                                                  ;1
+		
+	* se agregan los campos "total_camas_salas" y "baja" a la tabla "censos_diarios":
+	
+		...
+		total_camas_salas			SMALLINT	UNSIGNED	NOT NULL	DEFAULT 0,
+		camas_disponibles 			SMALLINT 	UNSIGNED 	NOT NULL	DEFAULT 0,
+		baja						BOOLEAN					NOT NULL	DEFAULT 0,
+		...
+	* Se elimina el registro "208;REUMATOLOGIA" del archivo "servicios_nuclear_sipes.txt" porque por error
+		estaba. El verdadero codigo para reumatologia es el 280
+		
+	* Se elimina el registro "208;3;5;REUMATOLOGIA;1" del archivo "servicios_estadistica_sipes.txt"
+	
+	* Se agrega el campo "dias_estada" a la tabla "censos_diarios"
+	
+	...
+	* queda ver el servicio de estadistica "320 3 5"
+		
+
+Version 0.3a		18/06/2010
+------------------------------
+
+	* Se agrega el campo "baja" a la tabla "censos_diarios":
+	
+		...
+		baja						BOOLEAN					NOT NULL	DEFAULT 0
+		...
+		
+	* Se agrega el campo "fecha_censo" a la tabla "censos_diarios" y el indice unico 
+		"idx_unique_fecha_censo_id_sala_id_efector_servicio"
+		
+		UNIQUE INDEX idx_unique_fecha_censo_id_sala_id_efector_servicio (fecha_censo,id_sala,id_efector_servicio)
+		
+	* Se quitan los campos "id_pase_de" y "id_pase_a" de la tabla "pases"
+	
+	* Se agrega el campo "id_censo_diario" a la tabla "pases"
+	
+	* Se agrega la tabla "censos_diarios" con la siguiente estructura:
+	
+		/* censos_diarios */
+		CREATE TABLE censos_diarios (
+			id_censo_diario 			INTEGER 	UNSIGNED 	NOT NULL 	AUTO_INCREMENT,
+			id_sala 					INTEGER 	UNSIGNED 	NOT NULL,
+			id_efector_servicio			INTEGER 	UNSIGNED 	NULL,
+			existencia_0 				SMALLINT 	UNSIGNED 	NOT NULL,
+			ingresos 					SMALLINT 	UNSIGNED 	NOT NULL,
+			pases_de 					SMALLINT 	UNSIGNED 	NOT NULL,
+			altas 						SMALLINT 	UNSIGNED 	NOT NULL,
+			defunciones_menos_48 		SMALLINT 	UNSIGNED 	NOT NULL,
+			defunciones_mas_48 			SMALLINT 	UNSIGNED 	NOT NULL,
+			pases_a 					SMALLINT 	UNSIGNED 	NOT NULL,
+			existencia_24 				SMALLINT 	UNSIGNED 	NOT NULL,
+			entradas_salidas_dia 		SMALLINT 	UNSIGNED 	NOT NULL,
+			pacientes_dia 				SMALLINT 	UNSIGNED 	NOT NULL	DEFAULT NULL,
+			camas_disponibles 			SMALLINT 	UNSIGNED 	NOT NULL,
+			PRIMARY KEY(id_censo_diario),
+			FOREIGN KEY fk_id_sala (id_sala)
+				REFERENCES salas(id_sala)
+					ON DELETE NO ACTION
+					ON UPDATE NO ACTION,
+			FOREIGN KEY fk_id_efector_servicio (id_efector_servicio)
+				REFERENCES efectores_servicios(id_efector_servicio)
+					ON DELETE NO ACTION
+					ON UPDATE NO ACTION
+		)
+		ENGINE=InnoDB;
+	
+	* Se agrega la tabla "subservicios" la cual relaciona los servicios de 3 digitos (especialidades) con los
+		servicios de estadistica habilitados en el efector. Esto seria util para consultorio externo, no para 
+		internacion, ya que la especialidad se tomaria del profesional (medico) que realiza la internacion
+		
+		
+Version 0.2a		27/01/2010
+------------------------------
+
+	* Se modifica la tabla "pases":
+	
+		- se modifica el campo "id_servicio_sala" por el nombre "id_servicio_sala_entrada"
+		
+		- se modifica el campo "fecha_pase" por el nombre "fecha_entrada"
+		
+		- se agregan los campos "id_servicio_sala_salida" y "fecha_salida"
+		
+	* Se actualiza el concepto de "estado_pase" a:
+	
+		P=pase pendiente; A=ingreso o pase aceptado; I= ingreso en transito; C=pase confirmado; E=egresado
+		
+		
+Version 0.1a		06/01/2010
+------------------------------
+
+	* Crea la tabla "pases"
+	
+	* Crea la tabla "servicios_salas"
+	
+	* Crea la tabla "servicios", la cual tiene los servicios con los codigos nucleares (3 digitos) establecidos
+		desde nacion a partir del año 2008. Dicha tabla se carga con informacion obtenida del "sipes"
+		
+	* Crea la tabla "servicios_estadistica", la cual contiene los codigos de servicios de 5 digitos que usa
+		estadistica de la provincia. Esta tabla se carga con informacion obtenida del "sipes"
+		
+	* Crea la tabla "efectores_servicios", la cual contiene los servicios de estadisticas que estan habilitados
+		en cada efector. Esta tabla se carga con informacion obtenida del "sipes"
+		
+		- Se encontro en el archivo de los servicios de consultorio externo del "sipes" 
+			(efectores_servicios_ce_sipes.txt), el registro claveestd ="08404259" con el 
+			servicios "423" "3" "4", pero "4" es de internacion, de manera que no
+			puede estar dicho registro en el archivo. Para la generar la tabla se elimino este registro, ya que no
+			existe en la tabla de servicios de estadistica
+			
+	* Se carga la tabla "salas" (generada con el script "hmi2.sql") con los registros de servicios de internacion
+		del "sipes" (efectores_servicios_int_sipes.txt) cuyos codigos de area servicio (cod_servicio_ares) son 
+		igual '000', usando como nombre para la sala la descripcion	del servicio de estadistica
+		
+		NOTA: se agregaron los siguientes registros al dump de servicios de internacion obtenido del "sipes"
+		
+			245;2;4;000;10500180;0;1;01;01;2008;00;00;0000;
+			
+			155;2;4;000;08402111;0;1;01;01;2008;00;00;0000;
+			
+			240;3;4;000;08402111;0;1;01;01;2008;00;00;0000;
+				
+	* Se carga la tabla "servicios_salas" con los servicios de internacion obtenidos del "sipes"
+		
+		NOTA: se ignoraron los servicios asignados a un area (caso del hospital centenario), los cuales
+			no esten habilitados para informar en dicho hospital
+	
+		
+		
+			

@@ -1,0 +1,566 @@
+HMI 2
+-----
+
+
+Release Notes 
+-------------
+
+Version 0.72a		18/06/2010
+------------------------------
+
+	* se quitan los campos "ip_server", "soporte_resolucion" y "rueda_mouse" de la tabla "configuraciones_sistemas". 
+		La gestión de estas variables se hacen con el archivo "hmi2.ini"
+	
+	* se modifica el campo "id_cama" de la tabla "pases" a NOT NULL
+	
+	* se modifica el campo "diag_presuntivo_id_ciex_4" a NULL
+	
+	* se agrega el campo "nro_informe" a la tabla "internaciones"
+	
+		...
+		nro_informe		INTEGER		UNSIGNED	NOT NULL	COMMENT 'Numero de informe de hospitalizacion',
+		...
+		
+	* se actualiza la estructura de efectores a la version 0.35a. Ver archivo de release_notes0_35a.txt de
+		efectores
+		
+	* se crea el archivo "realease_notes_0_1a.txt" para "operaciones". ver version 0.1a
+	
+	* se agregan los campos "deriv1_claveestd" y "deriv2_claveestd" en la tabla "internaciones" que
+		corresponden al establecimiento derivador y al establecimiento al que se deriva, respectivamente
+
+	* se agrega el campos "soporte_resolucion" a la tabla "configuraciones_sistemas"
+		que activa el soporte de resolucion para los formularios
+		
+		...
+		soporte_resolucion			BOOLEAN			NOT NULL		COMMENT 'Activa o desactiva el soporte de 
+																				resolucion para formularios" 
+		...
+		
+	* se agrega el campo "rueda_mouse" a la tabla "configuraciones_sistemas" que activa o desactiva la 
+		captura de eventos de la rueda del mouse para, hasta el momento, las grillas. Esto se 
+		hizo así porque en el IDE de VB6 se tilda cuando ocurre un error en la ejecucion:
+		
+		...
+		rueda_mouse			BOOLEAN			NOT NULL		COMMENT 'Activa o desactiva la rueda del mouse - 
+																	Desactivar para hacer debug en el IDE de vb6'
+		...
+		
+Version 0.71a		14/05/2010
+------------------------------
+
+	
+	* se reemplaza en la tabla "camas", el campo "ocupada" por:
+	
+		estado	CHAR(1)	NOT NULL	COMMENT 'L=libre; O=ocupada; F=fuera de servicio; R=en reparacion'
+		
+	* Luego de varias modificaciones, la estructura definitiva hasta el momento de la tabla "internaciones"
+		quedaria de la siguiente manera:
+		
+		/* internaciones */
+		CREATE TABLE internaciones (
+			id_internacion						INTEGER		UNSIGNED	NOT NULL	AUTO_INCREMENT,
+			id_localidad						INTEGER		UNSIGNED	NOT NULL	COMMENT 'id_localidad del paciente',
+			deriv1_id_efector 					INTEGER		UNSIGNED	NULL		COMMENT 'Establecimiento derivador',
+			diag_presuntivo_id_ciex_4			INTEGER		UNSIGNED	NOT NULL	COMMENT 'ciex_4.id_ciex_4 de diagnostico presuntivo',
+			causa_ext_id_ciex_4					INTEGER 	UNSIGNED	NULL		COMMENT 'ciex_4.id_ciex_4 de causa externa',
+			deriv2_id_efector					INTEGER		UNSIGNED	NULL		COMMENT 'Establecimiento al que se deriva',
+			claveestd 							CHAR(8) 				NOT NULL	COMMENT 'Codigo de establecimiento que genera el informe',
+			nom_efector 						VARCHAR(255) 			NOT NULL	COMMENT 'Nombre del establecimiento que genera el informe',
+			cod_dpto 							CHAR(3) 				NOT NULL	COMMENT 'Codigo de dpto. del estab. que genera el informe',
+			nodo 								TINYINT 	UNSIGNED 	NOT NULL	COMMENT 'Nodo del estab. que genera el informe',
+			cod_dep_adm 						CHAR(1) 				NOT NULL	COMMENT 'Codigo dependencia administrativa del estab. que genera el informe',
+			id_paciente							INTEGER		UNSIGNED	NOT NULL	COMMENT 'Paciente internado. id_paciente de la tabla diagnose.paciente',
+			apellido							VARCHAR(255)			NOT NULL,
+			nombre								VARCHAR(255)			NOT NULL,
+			dom_calle		 					VARCHAR(255) 			NOT NULL	COMMENT 'Residencia habitual del paciente',
+			dom_nro			 					VARCHAR(20)			 	NOT NULL,
+			dom_piso		 					VARCHAR(10)				NULL,
+			dom_dpto		 					VARCHAR(10) 			NULL,
+			dom_telefono		 				VARCHAR(80) 			NULL,
+			dom_barrio			 				VARCHAR(255) 			NULL,
+			dom_cod_loc			 				CHAR(2) 				NOT NULL,
+			dom_cod_dpto 						CHAR(3) 				NOT NULL,
+			dom_cod_prov 						CHAR(2) 				NOT NULL,
+			dom_cod_pais 						CHAR(3)		 			NOT NULL,
+			os_asociado_a						CHAR(1)					NOT NULL 	COMMENT '1=obra social; 2=plan de salud priv. o laboral; 3=plan o seguro publico; 4=mas de uno; 5=ninguno; 6=se ignora',
+			os_nombre		 					VARCHAR(255) 			NULL		COMMENT 'Nombre de la obra social del paciente',
+			os_rnos			 					CHAR(6) 				NULL		COMMENT 'Codigo de RNOS de la obra social del paciente',
+			os_condicion					 	CHAR(1)					NULL 		COMMENT 'Condicion del paciente en la obra social',
+			situacion_laboral			 		CHAR(1)					NOT NULL 	COMMENT '1=trabaja o esta de licencia; 2=busca trabajo; 3=no busca trabajo',
+			instruccion			 				CHAR(2) 				NOT NULL 	COMMENT 'Ver tabla "codigos_hmi"',
+			ocupacion_habitual					CHAR(5)					NOT NULL	DEFAULT '99999'		COMMENT 'No existe hasta el momento una tabla de ocupacion habitual, de completa con 99999',
+			ing_hospitalizado_por				CHAR(1)					NOT NULL	COMMENT '1=consultorio externo; 2=emergencia; 4=sala de parto; 5=otros',
+			ing_fecha_hora				 		DATETIME				NOT NULL,
+			ing_edad			 				TINYINT 	UNSIGNED 	NOT NULL,
+			ing_tipo_edad						CHAR(1)					NOT NULL	COMMENT '1=años; 2=meses; 3=dias; 4=horas; 5=minutos; 6=se ignora',
+			ing_derivado			 			BOOLEAN		 			NOT NULL	COMMENT 'Indica si el paciente ingresa derivado de otro establecimiento o no',
+			ing_medio_traslado			 		CHAR(1) 				NULL		COMMENT '1=DIPAES; 2=ambulancia privada; 3=ambulancia comunal; 4=otros; 5=sin especificar',
+			deriv1_cod_dep_adm 					CHAR(1) 				NULL		COMMENT 'deriv1 = info del establecimiento derivador',
+			deriv1_cod_loc 						CHAR(2) 				NULL,
+			deriv1_cod_dpto 					CHAR(3) 				NULL,
+			deriv1_cod_prov 					CHAR(2) 				NULL,
+			deriv1_cod_pais 					CHAR(3) 				NULL,
+			diag_presuntivo_texto 				VARCHAR(255) 			NOT NULL,
+			egr_fecha_hora 						DATETIME 				NULL,
+			egr_total_dias_estada				SMALLINT 	UNSIGNED 	NULL,
+			egr_prorroga 						BOOLEAN		 			NULL		COMMENT 'Indica si por otras circunstancias se prolonga la internacion (caso social)',
+			egr_dias_prorroga	 				SMALLINT 	UNSIGNED 	NULL,
+			egr_tipo 							CHAR(1)		 			NULL		COMMENT '1=alta medica; 2=traslado otro establecimiento; 3=alta transitoria; 4=retiro voluntario; 5=defuncion; 6=otros',
+			egr_medio_traslado 					CHAR(1) 				NULL		COMMENT '1=DIPAES; 2=ambulancia privada; 3=ambulancia comunal; 4=otros; 5=sin especificar',
+			egr_autopsia 						BOOLEAN		 			NULL		COMMENT 'El tipo de egreso (egr_tipo) debe ser = 5 (defuncion)',
+			egr_completo						BOOLEAN					NOT NULL	COMMENT 'Bandera que indica si esta completa la info de egreso',
+			causa_ext_producido_por				CHAR(1)					NULL		COMMENT '1=Accidente; 2=Lesiones autoinfligidas; 3=Agresiones; 4=Se ignora',
+			causa_ext_lugar						CHAR(1)					NULL		COMMENT 'Lugar donde ocurrio la causa externa',
+			causa_ext_descripcion				VARCHAR(255)			NULL		COMMENT 'Descripcion de la circunstancia o situacion en la que acontecio el hecho',
+			deriv2_cod_dep_adm 					CHAR(1) 				NULL		COMMENT 'deriv2 = info del establecimiento al que se deriva',
+			deriv2_cod_loc 						CHAR(2) 				NULL,
+			deriv2_cod_dpto 					CHAR(3) 				NULL,
+			deriv2_cod_prov 					CHAR(2) 				NULL,
+			deriv2_cod_pais 					CHAR(3) 				NULL,
+			nac_fecha 							DATE	 				NULL		COMMENT 'Fecha de terminacion del embarazo',
+			nac_semanas_gest					TINYINT 	UNSIGNED 	NULL		COMMENT 'Semanas de gestacion',
+			nac_paridad 						TINYINT 	UNSIGNED 	NULL		COMMENT 'Total nacimientos anteriores al presente',
+			nac_parto_multiple					BOOLEAN					NULL		COMMENT 'False = simple; True = multiple',
+			esp_pred_cod_servicio				CHAR(3)					NULL		COMMENT 'Especialidad predominante (servicios.cod_servicio)',
+			medico_idperson						INTEGER		UNSIGNED	NULL		COMMENT 'Medico interviniente. IdPerson de la tabla diagnose.person',
+			PRIMARY KEY(id_internacion),
+			FOREIGN KEY fk_id_efector_derivador (deriv1_id_efector)
+				REFERENCES efectores(id_efector)
+					ON DELETE NO ACTION
+					ON UPDATE NO ACTION,
+			FOREIGN KEY fk_id_efector_derivado (deriv2_id_efector)
+				REFERENCES efectores(id_efector)
+					ON DELETE NO ACTION
+					ON UPDATE NO ACTION,
+			FOREIGN KEY fk_id_localidad (id_localidad)
+				REFERENCES localidades(id_localidad)
+					ON DELETE NO ACTION
+					ON UPDATE NO ACTION,
+			FOREIGN KEY fk_diag_presuntivo_id_ciex_4 (diag_presuntivo_id_ciex_4)
+				REFERENCES ciex_4(id_ciex_4)
+					ON DELETE NO ACTION
+					ON UPDATE NO ACTION,
+			FOREIGN KEY fk_causa_ext_id_ciex_4 (causa_ext_id_ciex_4)
+				REFERENCES ciex_4(id_ciex_4)
+					ON DELETE NO ACTION
+					ON UPDATE NO ACTION,
+			INDEX idx_apellido (apellido),
+			INDEX idx_nombre (nombre),
+			INDEX idx_ing_fecha_hora (ing_fecha_hora),
+			INDEX idx_egr_fecha_hora (egr_fecha_hora),
+			INDEX idx_esp_pred_cod_servicio (esp_pred_cod_servicio)
+		);
+
+		Más abajo de detallan solo algunos de los cambios hechos a "internaciones"
+		
+	* Se quita el campo "diag_presuntivo_codigo" de la tabla "internaciones" y se considera en la tabla "diagnosticos"
+		como el registro con valor "0" en el campo "nro_orden"
+		
+	* Se modificaron los campos "nac_fecha", "nac_edad_gest", "nac_paridad" y "nac_tipo_parto" de la 
+		tabla "internaciones" por:
+	
+		nac_fecha 							DATE	 				NULL	COMMENT 'Fecha de terminacion del embarazo',
+		nac_semanas_gest					TINYINT 	UNSIGNED 	NULL	COMMENT 'Semanas de gestacion',
+		nac_paridad 						TINYINT 	UNSIGNED 	NULL	COMMENT 'Total nacimientos anteriores al presente',
+		nac_parto_multiple					BOOLEAN					NULL	COMMENT 'False = simple; True = multiple', 
+	
+	* Se modifica la tabla "internaciones_operaciones"
+	
+		- se cambia el campo "fecha_intervecion DATETIME" por "fecha_operacion DATE"
+		
+		- se agrega el campo "dias_preparatoria TINYINT"
+		
+		- se agrega un indice unico para "id_internacion" y "nro_orden"
+		
+		quedando la declaracion de la tabla de la siguiente forma:
+		
+			CREATE TABLE internaciones_operaciones (
+				id_internacion_operacion 	INTEGER 	UNSIGNED 	NOT NULL 	AUTO_INCREMENT,
+				id_internacion 				INTEGER 	UNSIGNED 	NOT NULL,
+				id_operacion 				INTEGER 	UNSIGNED 	NOT NULL,
+				nro_orden 					TINYINT 	UNSIGNED 	NOT NULL COMMENT '0 = operacion principal',
+				fecha_operacion 			DATE	 				NULL,
+				dias_preparatoria			TINYINT 	UNSIGNED 	NULL,
+				PRIMARY KEY(id_internacion_operacion),
+				FOREIGN KEY fk_id_internacion (id_internacion)
+					REFERENCES internaciones(id_internacion)
+						ON DELETE NO ACTION
+						ON UPDATE NO ACTION,
+				FOREIGN KEY fk_id_operacion (id_operacion)
+					REFERENCES operaciones(id_operacion)
+						ON DELETE NO ACTION
+						ON UPDATE NO ACTION,
+				UNIQUE INDEX idx_unique_id_internacion_id_operacion_fecha_operacion
+						(id_internacion, id_operacion, fecha_operacion),
+				UNIQUE INDEX idx_unique_id_internacion_nro_orden
+						(id_internacion, nro_orden)
+			);
+
+	* Se modifica en la tabla "internaciones", las descripciones de los siguientes campos:
+	
+		dom_localidad_paciente 				VARCHAR(255) 			NOT NULL,
+		dom_deptoprov_paciente 				VARCHAR(255) 			NOT NULL,
+		dom_provincia_paciente 				VARCHAR(255) 			NOT NULL,
+		dom_pais_paciente 					VARCHAR(255) 			NOT NULL,
+		
+		por:
+		
+		dom_cod_loc			 				CHAR(2) 				NOT NULL,
+		dom_cod_dpto 						CHAR(3) 				NOT NULL,
+		dom_cod_prov 						CHAR(2) 				NOT NULL,
+		dom_cod_pais 						CHAR(3)		 			NOT NULL,
+		
+	
+	* Se cambia el registro de tipo de edad en la tabla de "codigos_hmi", cambiando el registro de
+		"100 o mas" por "minutos"
+		
+			(0,'5','minutos',10,'tipo edad'),
+			
+	* Se agrega el registro de sexo a la tabla de "codigos_hmi":
+	
+		/* sexo */
+		INSERT INTO codigos_hmi VALUES	(0,'1','masculino',12,'sexo'),
+										(0,'2','femenino',12,'sexo'),
+										(0,'3','indefinido',12,'sexo');
+		
+	
+
+
+Version 0.7a		12/04/2010 
+------------------------------
+
+	* Se modififica la definicion de la tabla "nacimientos" quedando de la siguiente forma:
+	
+		/* nacimientos */
+		CREATE TABLE nacimientos (
+			id_nacimiento 						INTEGER 	UNSIGNED 	NOT NULL 	AUTO_INCREMENT,
+			id_internacion 						INTEGER 	UNSIGNED 	NOT NULL,
+			peso 								SMALLINT	UNSIGNED	NOT NULL	COMMENT 'Peso al nacer en gramos',
+			condicion_al_nacer	 				TINYINT 	UNSIGNED 	NOT NULL	COMMENT '1=nacido vivo; 2=defuncion fetal',
+			terminacion 						TINYINT 	UNSIGNED 	NOT NULL	COMMENT '1=vaginal; 2=cesarea',
+			sexo 								TINYINT 	UNSIGNED 	NOT NULL	COMMENT '1=masculino; 2=femenino; 3=indeterminado',
+			PRIMARY KEY(id_nacimiento),
+			FOREIGN KEY fk_id_internacion (id_internacion)
+				REFERENCES internaciones(id_internacion)
+					ON DELETE NO ACTION
+					ON UPDATE NO ACTION
+		);
+
+	* Se agrega el campo "egr_completo" a la tabla "internaciones" que especifica si se completo el
+		informe de egreso
+		
+			egr_completo		BOOLEAN			NOT NULL
+			
+	* Se modifica la estructura de la tabla "pases" a la siguiente:
+	
+		CREATE TABLE pases (
+			id_pase 					INTEGER 	UNSIGNED 	NOT NULL 	AUTO_INCREMENT,
+			id_internacion 				INTEGER 	UNSIGNED 	NOT NULL,
+			id_servicio_sala_entrada	INTEGER 	UNSIGNED 	NOT NULL,
+			fecha_entrada				DATETIME				NOT NULL,
+			tipo_entrada				CHAR(1)					NOT NULL	COMMENT 'I=ingreso; P=pase de',
+			id_pase_de					INTEGER 	UNSIGNED 	NULL		COMMENT 'id_pase de donde viene (solo pases)',
+			id_servicio_sala_salida		INTEGER 	UNSIGNED 	NULL,
+			fecha_salida				DATETIME				NULL,
+			tipo_salida					CHAR(1)					NULL		COMMENT 'A=alta medica; O=obito; P=pase a',
+			id_pase_a					INTEGER 	UNSIGNED 	NULL		COMMENT 'id_pase a donde va (solo pases)',
+			estado_pase 				CHAR(1) 				NOT NULL 	COMMENT 'P=pendiente; A=aceptado; E=egresado',
+			id_cama 					INTEGER 	UNSIGNED 	NULL 		COMMENT 'No debe restringir el ingreso si la cama esta ocupada',
+			observacion_pase 			VARCHAR(255) NULL,
+			PRIMARY KEY(id_pase),
+			FOREIGN KEY fk_id_internacion (id_internacion)
+				REFERENCES internaciones(id_internacion)
+					ON DELETE NO ACTION
+					ON UPDATE NO ACTION,
+			FOREIGN KEY fk_id_servicio_sala_entrada (id_servicio_sala_entrada)
+				REFERENCES servicios_salas(id_servicio_sala)
+					ON DELETE NO ACTION
+					ON UPDATE NO ACTION,
+			FOREIGN KEY fk_id_servicio_sala_salida (id_servicio_sala_salida)
+				REFERENCES servicios_salas(id_servicio_sala)
+					ON DELETE NO ACTION
+					ON UPDATE NO ACTION,
+			FOREIGN KEY fk_id_cama (id_cama)
+				REFERENCES camas(id_cama)
+					ON DELETE NO ACTION
+					ON UPDATE NO ACTION,
+			FOREIGN KEY fk_id_pase_de (id_pase_de)
+				REFERENCES pases(id_pase)
+					ON DELETE NO ACTION
+					ON UPDATE NO ACTION,
+			FOREIGN KEY fk_id_pase_a (id_pase_a)
+				REFERENCES pases(id_pase)
+					ON DELETE NO ACTION
+					ON UPDATE NO ACTION
+		);
+		
+		NOTAS:
+		------
+			
+				Se agregan los campos "id_pase_a" y "id_pase_de" para guardar de donde viene o a donde fue el
+			paciente para cada uno de los dos tipos de pases, de esta forma se puede obtener el registro del
+			pase previo o posterior directamente sin tener que hacer una consulta por "id_internacion"
+			
+			
+			Escenarios (tipo_entrada y tipo_salida):
+			---------------------------------------
+			
+				Si "tipo_entrada" es "I" (ingreso) y "tipo_salida" es NULL -> es un ingreso que puede estar:
+					
+					"estado_pase" ->
+					
+						"P" pendiente: todavia no fue aceptado por el secretario de sala o esta en camino
+						
+						"A" aceptado : el paciente fue aceptado por el secretario de sala
+						
+						"E" egresado : no puede tomar este valor
+					
+				Si "tipo_entrada" es "P" (pase de) y "tipo_salida" es NULL -> es un pase de:
+				
+					"estado_pase" ->
+				
+						"P" pendiente: es un "pase de" que no tiene ingresado un "pase a". Puede que un paciente
+							llegue a la sala, pero no se halla ingresado el pase a
+							
+						"A" aceptado : el secretario de sala acepta el pase de
+
+											
+				Si "tipo_salida" NO es NULL, entonces el campo "estado_pase" especifica el estado del tipo
+					de salida y solo puede tomar el valor de "E" (egresado)
+					
+				Si "tipo_salida" es "A" (alta medica) -> es un alta o un traslado
+					
+				Si "tipo_salida" es "O" (obito) -> es alta por defuncion
+				
+				Si "tipo_salida" es "P" (pase a) -> es un pase a	
+				
+			El campo "estado_pase" refleja el estado del pase de entrada ("tipo_entrada") cuando el "tipo_salida" 
+				es NULL. Si	"tipo_salida" no es NULL, entonces "estado_pase" solo puede ser "E" que determina que
+				el paciente fue egresado de la sala, por un pase a, un alta medica o por defuncion.
+				
+
+	* Se agrega la PRIMARY KEY (base) a la tabla versiones
+	
+	* Se agrega el campo "observaciones" a la tabla "configuraciones_sistemas" y se agregan varios registros 
+		a la tabla
+	
+	* Se agregan los codigos de documentos a la tabla "codigos_hmi". Se utiliza el siguiente comando sql:
+	
+		INSERT INTO codigos_hmi VALUES	
+								(0,'1','DNI',11,'tipo de documento'),
+								(0,'2','LC',11,'tipo de documento'),
+								(0,'3','LE',11,'tipo de documento'),
+								(0,'4','CI',11,'tipo de documento'),
+								(0,'5','OTR',11,'tipo de documento'),
+								(0,'9','DNR',11,'tipo de documento');
+								
+									
+	* Se cambian en la tabla "internaciones" a NULL los campos:
+	
+		egr_fecha_hora 						DATETIME 				NULL,
+		egr_cant_dias 						INTEGER 	UNSIGNED 	NULL,
+		egr_prorroga 						VARCHAR(255) 			NULL,
+		egr_cant_dias_prorroga 				INTEGER 	UNSIGNED 	NULL,
+		egr_tipo 							VARCHAR(255) 			NULL,
+		egr_codigo_hmi_medio_traslado 		CHAR(2) 				NULL,
+		egr_autopsia 						VARCHAR(255) 			NULL,
+		deriv2_cod_dep_adm 					CHAR(1) 				NULL,
+		deriv2_cod_loc 						CHAR(2) 				NULL,
+		deriv2_cod_dpto 					CHAR(3) 				NULL,
+		deriv2_cod_prov 					CHAR(2) 				NULL,
+		deriv2_cod_pais 					CHAR(3) 				NULL,
+		nac_fecha 							DATETIME 				NULL,
+		nac_edad_gest 						INTEGER 	UNSIGNED 	NULL,
+		nac_paridad 						INTEGER 	UNSIGNED 	NULL,
+		nac_tipo_parto 						INTEGER 	UNSIGNED 	NULL
+		
+			
+	* Se corre el script servicios.sql v 0.3a
+	
+	NOTA: se deben ejecutar hmi2.sql y luego servicios.sql para que se ejecuten los DROPS de tablas correctamente
+	
+	* Se agrega el campo "id_paciente" en la tabla "internaciones"
+	
+	* Se arregla el error ortografico del campo "condigo_hmi_situacion_laboral" y se reemplazó 
+		por "codigo_hmi_situacion_laboral"
+		
+		
+Version 0.62a		11/01/2010
+------------------------------
+	
+	* Se agrega el campo "id_efector" a la tabla "salas"
+	
+	* Se agrega el indice unico "idx_unique_id_efector_servicio_id_sala" a la tabla "servicios_salas" para no
+		permitir que se repita el servicio para cada sala
+		
+	* Se quita del script la generacion de las tablas "servicios_salas" y "pases", y se generan a partir de 
+		ahora con el script "servicios.sql", el cual se comienza a versionar
+		
+	* A partir de ahora las tablas "servicios_estadistica", "efectores_servicios" y "salas" se
+		cargaran con los datos obtenidos del sipes con el script "servicios.sql"
+		
+	* Se modifica el indice unico "idx_unique_nombre" por "idx_unique_id_efector_nombre" y se agrega el
+		"id_efector" al indice, de manera que, no se repita el mismo "nombre" de "sala" por "efector"
+		
+	* Se cambia la definicion del campo "nombre" de la tabla "salas" a VARCHAR(255)
+	
+	
+Version 0.61a		14/12/2009
+-------------------------------------
+
+	* Se agregan las tablas del CIE10
+	
+		- "ciex_4"				contiene los codigos y descripciones de la CIE10 con 4 digitos
+		
+		- "ciex_3"				contiene los codigos y descripciones de la CIE10 con 3 digitos
+		
+		- "ciex_titulos"		contiene las descripciones y rangos de los Capitulos, grupos y subgrupos
+		
+		- "ciex_restricciones"	contiene restricciones especificas para determinadas patologias
+		
+		- Se cargaron los diagnosticos de la CIE 10 obtenidas de los archivos de textos actualizados al dia
+			de la fecha del HMI. Al migrar se encontraron codigos de 4 digitos que pertenecian a grupos de
+			3 digitos no existentes. Estos datos no pudieron integrarse al fallar la foreign key correspondiente
+				
+	* Se agrega la tabla "diagnosticos" que relaciona la internacion con un codigo del CIE10 de 4 digitos
+	
+	
+	
+		
+Version 0.6a		01/12/2009
+------------------------------
+
+	* Se agrega la tabla "configuraciones_sistemas" que tendra la configuracion
+		donde el sistema estara funcionando
+		
+	* Se agrega el campo "ocupada" en la tabla "camas"
+	
+	* Se agrega la tabla "internaciones"
+	
+	* Se agrega la tabla "nacimientos"
+	
+	* Se agrega la tabla "internaciones_operaciones"
+	
+	* Se agrega la tabla pases
+	
+	
+		estados:
+			
+			- pendiente 		"P" : la "sala/servicio" tiene un "ingreso" o un "pase de" pendiente a confirmar
+			
+			- aceptado  		"A" : la "sala/servicio" confirmo el "ingreso" o el "pase de"
+			
+			- en transito 		"T" : la "sala/servicio" realizo un "pase a"
+			
+			- pase confirmado 	"C" : la "sala/servicio" a la cual se le hizo el "pase a", confirmo el "pase de"
+			
+			- egresado 			"E" : la "sala/servicio" confirmo el egreso por el motivo que corresponda
+			
+	* Se comienza el estudio de las tablas CIE10 (chequear si codifican con 3 o con 4 digitos)
+	
+	* Se cambia el nombre de la tabla "version" a "versiones"
+	
+			
+Version 0.4a		24/11/2009
+------------------------------
+
+	* Se eliminan las tablas de codigos terminadas con "hmi" y se agrega la tabla "codigos_hmi" con
+		la siguiente estructura:
+		
+			id_codigo_hmi			INTEGER UNSIGNED
+			codigo_hmi				CHAR(2)			
+			descripcion				VARCHAR(50)		
+			tipo_codigo				INTEGER			
+			desc_tipo_codigo		VARCHAR(50)
+			
+	* Se cargan los codigos hmi existentes en la tabla anterior
+	
+
+Version 0.2b		20/11/2009
+------------------------------
+
+	* Se crean los scripts para crear las tablas "efectores" y "dependencias_administrativas", junto
+		con las tablas de "localidades", "departamentos", "provincias" y "paises" como tablas
+		InnoDB para poder trabajar con claves foraneas, ya que han sido trabajadas como
+		MyISAM en la base de personas v1.4b
+		VER release_notes_0_2a.txt de [efectores]
+		
+	* Se crea la tabla "efectores_servicios" y se carga la información de los servicios de
+		internacion y consultorio externo obtenidos del sipes. Tiene la siguiente estructura:
+		
+			id_efector_servicio				INTEGER    
+		    id_efector 						INTEGER	         
+		    id_servicio_estadistica			INTEGER	
+		    claveestd						CHAR(8)	           
+		    cod_servicio					CHAR(3)	         
+		    sector							CHAR(1)	             
+		    subsector						CHAR(1)	           
+		    fecha_apertura					DATE	          
+		    fecha_cierre					DATE	            
+		
+				
+		
+	* Se agrega la tabla "condicion_os_hmi" con los datos correspondientes
+	
+	* Se agrega la relacion entre la tabla "servicios_salas" y "efectores_servicios" unidas
+		por el campo "id_efector_servicio"
+		
+			
+Version 0.2a		18/11/2009
+------------------------------
+
+	* Se quito la relacion entre "servicios_salas" y la tabla "common" del diagnose
+		
+	* Se agregan las tabla "operaciones" con codigos 2008 obtenida del sistema "sihos". Dentro
+		de esta tabla se creo un campo "nom_red_operacion" que se inicializó cortando el nombre
+		original en 30 caracteres sin tomar un criterio
+		
+	* Se copian las tablas de "efectores", "dependencias_administrativas", "localidades", 
+		"departamentos", "provincias" y	"paises" de la base de datos personas v1.4b
+		nota: estas tablas son MyISAM
+		
+	* Se crea tabla "servicios" con los codigos y descripciones del servicio nuclear establecido por nacion
+	
+		- se genera la tabla "servicios" con codigos 2008 obtenida del sistema sihos, con 
+			los siguientes campos:
+			
+				id_servicio			integer
+				cod_servicio		char(3)
+				nom_servicio		varchar(255)
+				nom_red_servicio	varchar(30)
+	
+		- se carga el campo "nom_red_servicio" cortando la descripcion que se utiliza en el campo 
+			"nom_servicio", sin tomar ningun criterio. Este campo debe ser cargado con una descripcion
+			adecuada
+
+	* Se crea la tabla "servicios_estadistica" con los codigos de servicio, sector y subsector que
+		maneja la direccion de estadistica de la provincia con los siguientes campos:
+		
+			id_servicio_estadistica			integer		pk
+			id_servicio						integer		fk
+			cod_servicio					char(3)
+			sector							char(1)
+			subsector						char(1)
+			nom_servicio_estadistica		varchar(255)
+			nom_red_servicio_estadistica	varchar(30)
+			
+			unique index idx_unique_cod_sector_subsector (cod_servicio,sector,subsector)
+		
+	
+
+Version 0.0a
+------------
+
+	* Se define el motor de base de datos MySql y el tipo de tablas InnoDB para trabajar
+	
+	* Se crearon las tablas "camas", "habitaciones", "salas", "servicios_salas" para
+		manejo de la configuracion edilicia
+	
+	* Se crearon la tablas de codigo "instruccion_hmi", "situacion_laboral_hmi",
+		"asociado_hmi", "tipo_edad"
+		
+	* Se creo una tabla "version" donde se guarda la version y la fecha de creacion
+		de la base de datos
+	
+	* Se cargo la tabla "common" para prueba con la información a la fecha del Cullen

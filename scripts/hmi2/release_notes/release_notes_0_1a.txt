@@ -1,0 +1,53 @@
+HMI 2
+-----
+
+
+Release Notes 
+-------------
+
+Version 0.2a		18/11/2009
+------------------------------
+
+	* Se agregan las tabla "operaciones" con codigos 2008 obtenida del sistema "sihos". Dentro
+		de esta tabla se creo un campo "nom_red_operacion" que se inicializó cortando el nombre
+		original en 30 caracteres sin tomar un criterio
+		
+	* Se agregan las tablas de "efectores", "dependencias_administrativas", "localidades", 
+		"departamentos", "provincias" y	"paises" de la base de datos personas v1.4b
+		
+	* tabla "servicios" con los codigos y descripciones del servicio nuclear establecido por nacion
+	
+		- se genera la tabla "servicios" con codigos 2008 obtenida del sistema sihos, con 
+			los siguientes campos:
+			
+				id_servicio			integer
+				cod_servicio		char(3)
+				nom_servicio		varchar(255)
+				nom_red_servicio	varchar(30)
+	
+		- se carga el campo "nom_red_servicio" cortando la descripcion que se utiliza en el campo 
+			"nom_servicio", sin tomar ningun criterio. Este campo debe ser cargado con una descripcion
+			adecuada
+
+	* Se crea la tabla "servicios_estadistica" con los codigos de servicio, sector y subsector que
+		maneja la direccion de estadistica de la provincia con los siguientes campos:
+		
+			
+		
+		
+		
+	
+
+Version 0.0a
+------------
+
+	* Se crearon las tablas "camas", "habitaciones", "salas", "servicios_salas" para
+		manejo de la configuracion edilicia
+	
+	* Se crearon la tablas de codigo "instruccion_hmi", "situacion_laboral_hmi",
+		"asociado_hmi", "tipo_edad"
+		
+	* Se creo una tabla "version" donde se guarda la version y la fecha de creacion
+		de la base de datos
+	
+	* Se cargo la tabla "common" para prueba con la información a la fecha del Cullen

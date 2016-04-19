@@ -1,0 +1,36 @@
+CIEX
+----
+
+
+Release Notes 
+-------------
+
+Version 0.1a		03/12/2009
+------------------------------
+
+	* Se crearon las siguientes 4 tablas:
+	
+		* Se agregan las tablas del CIE10
+	
+		- "ciex_4"				contiene los codigos y descripciones de la CIE10 con 4 digitos
+		
+		- "ciex_3"				contiene los codigos y descripciones de la CIE10 con 3 digitos
+		
+		- "ciex_titulos"		contiene las descripciones y rangos de los Capitulos, grupos y subgrupos
+		
+		- "ciex_restricciones"	contiene restricciones especificas para determinadas patologias
+		
+	* Se cargaron los datos con los siguiente problemas:
+		
+		- se encontraron codigos de 3 digitos que figuraban en la tabla "catego", la cual corresponde a las
+			descripciones de 4 digitos, las cuales no aparecen en la tabla "ciex3car" que es la tabla que
+			contiene las descripciones de 3 digitos
+			
+		- se encontraron en la tabla "tx307" que contiene las descripciones de los capitulos, grupos y 
+			subgrupos codigos desde y hasta, de 3 digitos, los cuales no figuran en la tabla "ciexcar" 
+			que es la que contiene las descripciones de codigos de 3 digitos
+			
+		- se eliminaron los registros mensionados anteriormente para migrar los datos y generar correctamente
+			los registros con integridad referencial
+			
+			

@@ -1,0 +1,17 @@
+PADRON2
+-------
+
+Release Notes 
+-------------
+
+Version 0.1a          24/02/2010
+--------------------------------
+
+	* Se arma la nueva estructura del padron2 con el DBDesigner 4 en el archivo "padron2.xml"
+	
+	* Se crea el script para la carga inicial de las tablas "padron2.sql"
+	
+	* Se crea el script para la carga de datos de afiliados nacionales(informacion proveniente de la
+		superintendencia de salud) "migra_padron2_nacionales.sql"
+		
+		

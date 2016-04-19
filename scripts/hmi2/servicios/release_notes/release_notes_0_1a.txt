@@ -1,0 +1,49 @@
+SERVICIOS
+---------
+
+
+Release Notes 
+-------------
+
+Version 0.1a		06/01/2010
+------------------------------
+
+	* Crea la tabla "pases"
+	
+	* Crea la tabla "servicios_salas"
+	
+	* Crea la tabla "servicios", la cual tiene los servicios con los codigos nucleares (3 digitos) establecidos
+		desde nacion a partir del año 2008. Dicha tabla se carga con informacion obtenida del "sipes"
+		
+	* Crea la tabla "servicios_estadistica", la cual contiene los codigos de servicios de 5 digitos que usa
+		estadistica de la provincia. Esta tabla se carga con informacion obtenida del "sipes"
+		
+	* Crea la tabla "efectores_servicios", la cual contiene los servicios de estadisticas que estan habilitados
+		en cada efector. Esta tabla se carga con informacion obtenida del "sipes"
+		
+		- Se encontro en el archivo de los servicios de consultorio externo del "sipes" 
+			(efectores_servicios_ce_sipes.txt), el registro claveestd ="08404259" con el 
+			servicios "423" "3" "4", pero "4" es de internacion, de manera que no
+			puede estar dicho registro en el archivo. Para la generar la tabla se elimino este registro, ya que no
+			existe en la tabla de servicios de estadistica
+			
+	* Se carga la tabla "salas" (generada con el script "hmi2.sql") con los registros de servicios de internacion
+		del "sipes" (efectores_servicios_int_sipes.txt) cuyos codigos de area servicio (cod_servicio_ares) son 
+		igual '000', usando como nombre para la sala la descripcion	del servicio de estadistica
+		
+		NOTA: se agregaron los siguientes registros al dump de servicios de internacion obtenido del "sipes"
+		
+			245;2;4;000;10500180;0;1;01;01;2008;00;00;0000;
+			
+			155;2;4;000;08402111;0;1;01;01;2008;00;00;0000;
+			
+			240;3;4;000;08402111;0;1;01;01;2008;00;00;0000;
+				
+	* Se carga la tabla "servicios_salas" con los servicios de internacion obtenidos del "sipes"
+		
+		NOTA: se ignoraron los servicios asignados a un area (caso del hospital centenario), los cuales
+			no esten habilitados para informar en dicho hospital
+	
+		
+		
+			

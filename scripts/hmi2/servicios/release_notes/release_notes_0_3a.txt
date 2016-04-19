@@ -1,0 +1,118 @@
+SERVICIOS
+---------
+
+
+Release Notes 
+-------------
+
+Version 0.3a		18/06/2010
+------------------------------
+
+	* Se agrega el campo "baja" a la tabla "censos_diarios":
+	
+		...
+		baja						BOOLEAN					NOT NULL	DEFAULT 0
+		...
+		
+	* Se agrega el campo "fecha_censo" a la tabla "censos_diarios" y el indice unico 
+		"idx_unique_fecha_censo_id_sala_id_efector_servicio"
+		
+		UNIQUE INDEX idx_unique_fecha_censo_id_sala_id_efector_servicio (fecha_censo,id_sala,id_efector_servicio)
+		
+	* Se quitan los campos "id_pase_de" y "id_pase_a" de la tabla "pases"
+	
+	* Se agrega el campo "id_censo_diario" a la tabla "pases"
+	
+	* Se agrega la tabla "censos_diarios" con la siguiente estructura:
+	
+		/* censos_diarios */
+		CREATE TABLE censos_diarios (
+			id_censo_diario 			INTEGER 	UNSIGNED 	NOT NULL 	AUTO_INCREMENT,
+			id_sala 					INTEGER 	UNSIGNED 	NOT NULL,
+			id_efector_servicio			INTEGER 	UNSIGNED 	NULL,
+			existencia_0 				SMALLINT 	UNSIGNED 	NOT NULL,
+			ingresos 					SMALLINT 	UNSIGNED 	NOT NULL,
+			pases_de 					SMALLINT 	UNSIGNED 	NOT NULL,
+			altas 						SMALLINT 	UNSIGNED 	NOT NULL,
+			defunciones_menos_48 		SMALLINT 	UNSIGNED 	NOT NULL,
+			defunciones_mas_48 			SMALLINT 	UNSIGNED 	NOT NULL,
+			pases_a 					SMALLINT 	UNSIGNED 	NOT NULL,
+			existencia_24 				SMALLINT 	UNSIGNED 	NOT NULL,
+			entradas_salidas_dia 		SMALLINT 	UNSIGNED 	NOT NULL,
+			pacientes_dia 				SMALLINT 	UNSIGNED 	NOT NULL	DEFAULT NULL,
+			camas_disponibles 			SMALLINT 	UNSIGNED 	NOT NULL,
+			PRIMARY KEY(id_censo_diario),
+			FOREIGN KEY fk_id_sala (id_sala)
+				REFERENCES salas(id_sala)
+					ON DELETE NO ACTION
+					ON UPDATE NO ACTION,
+			FOREIGN KEY fk_id_efector_servicio (id_efector_servicio)
+				REFERENCES efectores_servicios(id_efector_servicio)
+					ON DELETE NO ACTION
+					ON UPDATE NO ACTION
+		)
+		ENGINE=InnoDB;
+	
+	* Se agrega la tabla "subservicios" la cual relaciona los servicios de 3 digitos (especialidades) con los
+		servicios de estadistica habilitados en el efector. Esto seria util para consultorio externo, no para 
+		internacion, ya que la especialidad se tomaria del profesional (medico) que realiza la internacion
+		
+		
+Version 0.2a		27/01/2010
+------------------------------
+
+	* Se modifica la tabla "pases":
+	
+		- se modifica el campo "id_servicio_sala" por el nombre "id_servicio_sala_entrada"
+		
+		- se modifica el campo "fecha_pase" por el nombre "fecha_entrada"
+		
+		- se agregan los campos "id_servicio_sala_salida" y "fecha_salida"
+		
+	* Se actualiza el concepto de "estado_pase" a:
+	
+		P=pase pendiente; A=ingreso o pase aceptado; I= ingreso en transito; C=pase confirmado; E=egresado
+		
+		
+Version 0.1a		06/01/2010
+------------------------------
+
+	* Crea la tabla "pases"
+	
+	* Crea la tabla "servicios_salas"
+	
+	* Crea la tabla "servicios", la cual tiene los servicios con los codigos nucleares (3 digitos) establecidos
+		desde nacion a partir del año 2008. Dicha tabla se carga con informacion obtenida del "sipes"
+		
+	* Crea la tabla "servicios_estadistica", la cual contiene los codigos de servicios de 5 digitos que usa
+		estadistica de la provincia. Esta tabla se carga con informacion obtenida del "sipes"
+		
+	* Crea la tabla "efectores_servicios", la cual contiene los servicios de estadisticas que estan habilitados
+		en cada efector. Esta tabla se carga con informacion obtenida del "sipes"
+		
+		- Se encontro en el archivo de los servicios de consultorio externo del "sipes" 
+			(efectores_servicios_ce_sipes.txt), el registro claveestd ="08404259" con el 
+			servicios "423" "3" "4", pero "4" es de internacion, de manera que no
+			puede estar dicho registro en el archivo. Para la generar la tabla se elimino este registro, ya que no
+			existe en la tabla de servicios de estadistica
+			
+	* Se carga la tabla "salas" (generada con el script "hmi2.sql") con los registros de servicios de internacion
+		del "sipes" (efectores_servicios_int_sipes.txt) cuyos codigos de area servicio (cod_servicio_ares) son 
+		igual '000', usando como nombre para la sala la descripcion	del servicio de estadistica
+		
+		NOTA: se agregaron los siguientes registros al dump de servicios de internacion obtenido del "sipes"
+		
+			245;2;4;000;10500180;0;1;01;01;2008;00;00;0000;
+			
+			155;2;4;000;08402111;0;1;01;01;2008;00;00;0000;
+			
+			240;3;4;000;08402111;0;1;01;01;2008;00;00;0000;
+				
+	* Se carga la tabla "servicios_salas" con los servicios de internacion obtenidos del "sipes"
+		
+		NOTA: se ignoraron los servicios asignados a un area (caso del hospital centenario), los cuales
+			no esten habilitados para informar en dicho hospital
+	
+		
+		
+			

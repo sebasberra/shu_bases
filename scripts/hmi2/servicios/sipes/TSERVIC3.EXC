@@ -1,0 +1,149 @@
+005;ABLACION E IMPLANTE DE ORGANOS                                           ; ;1
+006;ABLACION E IMPLANTE DE ORGANOS EN PEDIATRIA                              ; ;1
+010;ADOLESCENCIA                                                             ; ;1
+015;ALERGIA                                                                  ; ;1
+016;ALERGIA PEDIATRICA                                                       ; ;1
+020;ANESTESIOLOGIA                                                           ; ;1
+025;ANGIOLOGIA                                                               ; ;1
+030;ARTROSCOPIA                                                              ; ;1
+031;ARTROSCOPIA PEDIATRICA                                                   ; ;1
+035;CARDIOLOGIA                                                              ; ;1
+036;CARDIOLOGIA PEDIATRICA                                                   ; ;1
+040;CIRUGIA CARDIACA                                                         ; ;1
+041;CIRUGIA CARDIACA PEDIATRICA                                              ; ;1
+045;CIRUGIA CARDIOVASCULAR                                                   ; ;1
+046;CIRUGIA CARDIOVASCULAR PEDIATRICA                                        ; ;1
+050;CIRUGIA DE CABEZA Y CUELLO                                               ; ;1
+051;CIRUGIA DE CABEZA Y CUELLO EN PEDIATRIA                                  ; ;1
+055;CIRUGIA DE MANO                                                          ; ;1
+056;CIRUGIA DE MANO EN PEDIATRIA                                             ; ;1
+060;CIRUGIA PLASTICA DE QUEMADOS                                             ; ;1
+061;CIRUGIA PLASTICA DE QUEMADOS EN PEDIATRIA                                ; ;1
+065;CIRUGIA DENTOMAXILAR                                                     ; ;1
+070;CLINICA QUIRURGICA - CIRUGIA GENERAL                                     ; ;1
+071;CIRUGIA PEDIATRICA                                                       ; ;1
+072;CIRUGIA NEONATOLOGICA - CIRUGIA DEL RECIEN NACIDO                        ; ;1
+075;CIRUGIA LAPAROSCOPICA                                                    ; ;1
+076;CIRUGIA LAPAROSCOPICA PEDIATRICA                                         ; ;1
+080;CIRUGIA MAXILO FACIAL                                                    ; ;1
+085;CIRUGIA REPARADORA - PLASTICA                                            ; ;1
+090;CIRUGIA POR LASER                                                        ; ;1
+091;CIRUGIA PEDIATRICA POR LASER                                             ; ;1
+095;CIRUGIA DE TORAX Y CARDIOVASCULAR                                        ; ;1
+096;CIRUGIA TORACICA PEDIATRICA                                              ; ;1
+100;CLINICA MEDICA                                                           ; ;1
+101;PEDIATRIA                                                                ; ;1
+105;CRIOCIRUGIA                                                              ; ;1
+110;DERMATOLOGIA                                                             ; ;1
+111;DERMATOLOGIA PEDIATRICA                                                  ; ;1
+115;EMERGENCIA - URGENCIAS                                                   ; ;1
+120;ENDOCRINOLOGIA                                                           ; ;1
+121;ENDOCRINOLOGIA PEDIATRICA                                                ; ;1
+125;ENFERMEDADES TROPICALES                                                  ; ;1
+130;ESTOMATOLOGIA                                                            ; ;1
+135;FERTILIDAD - ESTERILIDAD CONYUGAL                                        ; ;1
+140;GASTROENTEROLOGIA                                                        ; ;1
+141;GASTROENTEROLOGIA PEDIATRICA                                             ; ;1
+145;GENETICA                                                                 ; ;1
+146;GENETICA PEDIATRICA                                                      ; ;1
+150;GERIATRIA                                                                ; ;1
+155;GINECOLOGIA                                                              ; ;1
+156;GINECOLOGIA PEDIATRICA                                                   ; ;1
+160;HEMATOLOGIA                                                              ; ;1
+161;HEMATOLOGIA PEDIATRICA                                                   ; ;1
+165;HEPATOLOGIA                                                              ; ;1
+166;HEPATOLOGIA PEDIATRICA                                                   ; ;1
+170;HOMEOPATIA                                                               ; ;1
+175;INFECTOLOGIA                                                             ; ;1
+176;INFECTOLOGIA PEDIATRICA                                                  ; ;1
+180;INMUNOLOGIA                                                              ; ;1
+181;INMUNOLOGIA PEDIATRICA                                                   ; ;1
+185;INMUNOHEMATOLOGIA                                                        ; ;1
+190;MEDICINA DEL DEPORTE                                                     ; ;1
+195;MEDICINA FAMILIAR - GENERALISTA DE FAMILIA                               ; ;1
+200;CLINICA GENERAL - MEDICINA GENERAL                                       ; ;1
+205;MEDICINA LEGAL                                                           ; ;1
+208;REUMATOLOGIA                                                             ; ;1
+210;MEDICINAS ALTERNATIVAS                                                   ; ;1
+215;MICROCIRUGIA                                                             ; ;1
+220;CLINICA RENAL                                                            ; ;1
+221;NEFROLOGIA PEDIATRICA                                                    ; ;1
+225;NEONATOLOGIA                                                             ; ;1
+230;NEUMONOLOGIA                                                             ; ;1
+231;NEUMONOLOGIA PEDIATRICA                                                  ; ;1
+235;NEUROCIRUGIA                                                             ; ;1
+236;NEUROCIRUGIA PEDIATRICA                                                  ; ;1
+237;NEUROCIRUGIA NEONATAL                                                    ; ;1
+240;NEUROLOGIA                                                               ; ;1
+241;NEUROLOGIA PEDIATRICA                                                    ; ;1
+245;OBSTETRICIA (INCLUYE PARTOS, MATERNIDAD)                                 ; ;1
+250;OFTALMOLOGIA                                                             ; ;1
+251;OFTALMOLOGIA PEDIATRICA                                                  ; ;1
+255;ONCOLOGIA                                                                ; ;1
+256;ONCOLOGIA PEDIATRICA                                                     ; ;1
+260;GARGANTA, NARIZ Y OIDO - ORL - OTORRINOLARINGOLOGIA                      ; ;1
+261;OTORRINOLARINGOLOGIA PEDIATRICA                                          ; ;1
+265;PATOLOGIA REGIONAL                                                       ; ;1
+270;PROCTOLOGIA                                                              ; ;1
+275;QUEMADOS                                                                 ; ;1
+276;QUEMADOS EN PEDIATRIA                                                    ; ;1
+280;REUMATOLOGIA                                                             ; ;1
+281;REUMATOLOGIA PEDIATRICA                                                  ; ;1
+285;TOCOGINECOLOGIA                                                          ; ;1
+290;TOXICOLOGIA                                                              ; ;1
+291;TOXICOLOGIA PEDIATRICA                                                   ; ;1
+295;TRAUMATOLOGIA                                                            ; ;1
+296;TRAUMATOLOGIA PEDIATRICA                                                 ; ;1
+300;UROLOGIA - URINARIAS                                                     ; ;1
+301;UROLOGIA PEDIATRICA                                                      ; ;1
+305;VASCULAR PERIFERICO                                                      ; ;1
+310;AUTOCUIDADO                                                              ; ;1
+315;TERAPIA INTERMEDIA                                                       ; ;1
+316;TERAPIA INTERMEDIA PEDIATRICA                                            ; ;1
+317;TERAPIA INTERMEDIA RECIEN NACIDOS                                        ; ;1
+320;TERAPIA INTENSIVA                                                        ; ;1
+321;TERAPIA INTENSIVA PEDIATRICA                                             ; ;1
+322;TERAPIA INTENSIVA NEONATAL                                               ; ;1
+325;TERAPIA INTENSIVA DE NEUROCIRUGIA                                        ; ;1
+330;UNIDAD CORONARIA                                                         ; ;1
+350;CRECIMIENTO Y DESARROLLO                                                 ; ;1
+360;GERONTOLOGIA                                                             ; ;1
+370;MEDICINA FISICA Y REHABILITACION                                         ; ;1
+371;FISIATRIA INFANTIL                                                       ; ;1
+380;MEDICINA RURAL                                                           ; ;1
+390;NUTRICION                                                                ; ;1
+391;NUTRICION EN PEDIATRIA                                                   ; ;1
+400;PRIMEROS AUXILIOS                                                        ; ;1
+410;SALUD COMUNITARIA                                                        ; ;1
+420;SALUD MENTAL                                                             ; ;1
+421;SALUD MENTAL EN PEDIATRIA                                                ; ;1
+422;SALUD MENTAL (AGUDOS AGUDO AVILA)                                        ; ;1
+423;PSIQUIATRIA (INTERNACIN DE TRANSITO)                                     ; ;1
+430;SALUD REPRODUCTIVA                                                       ; ;1
+500;ODONTOLOGIA                                                              ; ;1
+501;ODONTOPEDIATRIA                                                          ; ;1
+510;ENDODONCIA                                                               ; ;1
+520;PERIODONCIA                                                              ; ;1
+530;ORTODONCIA Y ORTOPEDIA                                                   ; ;1
+540;IMPLANTES DE ODONTOLOGIA                                                 ; ;1
+550;PSICOLOGIA                                                               ; ;1
+551;PSICOLOGIA PEDIATRICA                                                    ; ;1
+620;CUIDADOS PALIATIVOS                                                      ; ;2
+646;ENDOSCOPIAS                                                              ; ;1
+650;ESTIMULACION TEMPRANA                                                    ; ;1
+655;FONOAUDIOLOGIA                                                           ; ;2
+675;KINESIOLOGIA                                                             ; ;2
+710;REHABILITACION                                                           ; ;2
+725;TERAPIA DEL DOLOR                                                        ; ;1
+730;TERAPIA OCUPACIONAL                                                      ; ;2
+735;RADIOTERAPIA                                                             ; ;2
+740;ALCOHOLISMO                                                              ; ;1
+805;INTERNACION DOMICILIARIA                                                 ; ;2
+830;HOSPITAL DE DIA                                                          ; ;1
+831;HOSPITAL DIA PEDIATRICO                                                  ; ;2
+833;HOSPITAL DIA  ONCOHEMATOLOGIA                                            ; ;1
+834;HOSPITAL DIA PSIQUIATRICO                                                ; ;2
+840;PODOLOGIA                                                                ; ;2
+845;RECONOCIMIENTOS MEDICOS                                                  ; ;1
+910;SERVICIO SOCIAL                                                          ; ;3
+999;IGNORADO                                                                 ; ;1

@@ -1,0 +1,141 @@
+010;3;5;ADOLESCENCIA                                                             ;1
+015;3;5;ALERGIA                                                                  ;1
+016;3;5;ALERGIA INFANTIL                                                         ;1
+020;3;5;ANESTESIOLOGIA                                                           ;1
+035;3;4;CARDIOLOGIA                                                              ;1
+035;3;5;CARDIOLOGIA                                                              ;1
+036;3;5;CARDIOLOGIA INFANTIL                                                     ;1
+050;3;5;CIRUGIA CABEZA Y CUELLO                                                  ;1
+060;3;5;CIRUGIA PLASTICA Y QUEMADOS                                              ;1
+061;3;5;CIRUGIA PLASTICA PEDIATRICA                                              ;1
+070;1;4;CIRUGIA GENERAL VARONES                                                  ;1
+070;2;4;CIRUGIA GENERAL MUJERES                                                  ;1
+070;3;4;CIRUGIA GENERAL CLINICA QUIRURGICA                                       ;1
+070;3;5;CIRUGIA GENERAL                                                          ;1
+071;3;4;CIRUGIA PEDIATRICA                                                       ;1
+071;3;5;CIRUGIA PEDIATICA                                                        ;1
+080;3;5;CIRUGIA MAXILOFACIAL                                                     ;1
+085;3;4;CIRUGIA PLASTICA                                                         ;1
+085;3;5;CIRUGIA PLASTICA                                                         ;1
+095;3;5;CIRUGIA DE TORAX                                                         ;1
+100;1;4;CLINICA MEDICA VARONES                                                   ;1
+100;2;4;CLINICA MEDICA MUJERES                                                   ;1
+100;3;4;CLINICA MEDICA                                                           ;1
+100;3;5;CLINICA MEDICA                                                           ;1
+101;3;4;PEDIATRIA  CLINICA MEDICA INFANTIL                                       ;1
+101;3;5;PEDIATRIA                                                                ;1
+110;3;4;DERMATOLOGIA                                                             ;1
+110;3;5;DERMATOLOGIA                                                             ;1
+111;3;5;DERMATOLOGIA PEDIATRICA                                                  ;1
+115;3;4;GUARDIA - EMERGENCIA                                                     ;1
+115;3;5;GUARDIA Y EMERGENCIAS                                                    ;1
+120;3;5;ENDOCRINOLOGIA                                                           ;1
+121;3;5;ENDOCRINOLOGIA PEDIATRICA                                                ;1
+135;3;5;ESTERELIDAD CONYUGAL                                                     ;1
+140;3;4;GASTROENTEROLOGIA                                                        ;1
+140;3;5;GASTROENTEROLOGIA                                                        ;1
+141;3;5;GASTROENTEROLOGIA PEDIATRICA                                             ;1
+150;1;4;GERIATRIA VARONES                                                        ;1
+150;2;4;GERIATRIA MUJERES                                                        ;1
+150;3;4;GERIATRIA                                                                ;1
+150;3;5;GERIATRIA MIXTO                                                          ;1
+155;2;4;GINECOLOGIA                                                              ;1
+155;2;5;GINECOLOGIA                                                              ;1
+156;2;5;GINECOLOGIA PEDIATRICA                                                   ;1
+160;3;5;HEMATOLOGIA MIXTA                                                        ;1
+161;3;5;HEMATOLOGIA PEDIATRICA                                                   ;1
+165;3;5;HEPATOLOGIA                                                              ;1
+166;3;5;HEPATOLOGIA INFANTIL                                                     ;1
+175;3;5;INFECCIOSAS                                                              ;1
+176;3;5;INFECTOLOGIA PEDIATRICA                                                  ;1
+181;3;5;INMUNOLOGIA INFANTIL                                                     ;1
+200;1;4;MEDICINA GENERAL VARONES                                                 ;1
+200;2;4;MEDICINA GENERAL MUJERES                                                 ;1
+200;3;4;MEDICINA GENERAL                                                         ;1
+200;3;5;MEDICINA GENERAL                                                         ;1
+205;3;5;MEDICINA LABORAL                                                         ;1
+220;3;4;NEFROLOGIA                                                               ;1
+220;3;5;NEFROLOGIA                                                               ;1
+221;3;5;NEFROLOGIA PEDIATRICA                                                    ;1
+225;3;4;NEONATOLOGIA                                                             ;1
+225;3;5;NEONATOLOGIA                                                             ;1
+230;1;4;TISIOLOGIA VARONES  NEUMONOLOGIA VARONES                                 ;1
+230;2;4;TISIOLOGIA MUJERES  NEUMONOLOGIA MUJERES                                 ;1
+230;3;5;VIAS RESPIRATORIAS NEUMONOLOGIA TISIOLOGIA                               ;1
+231;3;5;NEUMONOLOGIA INFANTIL                                                    ;1
+235;3;4;NEUROCIRUGIA                                                             ;1
+235;3;5;NEUROCIRUGIA                                                             ;1
+236;3;5;NEUROCIRUGIA PEDIATRICA                                                  ;1
+240;3;4;NEUROLOGIA                                                               ;1
+240;3;5;NEUROLOGIA                                                               ;1
+241;3;5;NEUROLOGIA INFANTIL                                                      ;1
+245;2;4;OBSTETRICIA                                                              ;1
+245;2;5;OBSTETRICIA                                                              ;1
+250;3;4;OFTALMOLOGIA                                                             ;1
+250;3;5;OFTALMOLOGIA                                                             ;1
+251;3;5;OFTALMOLOGIA PEDIATRICA                                                  ;1
+255;1;4;ONCOLOGIA VARONES                                                        ;1
+255;2;4;ONCOLOGIA MUJERES                                                        ;1
+255;3;4;ONCOLOGIA                                                                ;1
+255;3;5;ONCOLOGIA MIXTO                                                          ;1
+256;3;5;ONCOLOGIA PEDIATRICA                                                     ;1
+260;3;4;OTORRINOLARINGOLOGIA  GARGANTA, NARIZ Y OIDO  O.R.L.                     ;1
+260;3;5;OTORRINOLARINGOLOGIA                                                     ;1
+261;3;5;OTORRINOLARINGOLOGIA PEDIATRICA                                          ;1
+270;3;5;PROCTOLOGIA MIXTO                                                        ;1
+275;3;4;QUEMADOS                                                                 ;1
+280;3;5;REUMATOLOGIA                                                             ;1
+281;3;5;REUMATOLOGIA PDIATRICA                                                   ;1
+285;2;4;TOCOGINECOLOGIA                                                          ;1
+285;2;5;TOCOGINECOLOGIA                                                          ;1
+290;3;5;TOXICOLOGIA                                                              ;1
+295;3;4;TRAUMATOLOGIA                                                            ;1
+295;3;5;TRAUMATOLOGIA                                                            ;1
+296;3;5;TRAUMATOLOGIA PEDIATRICA                                                 ;1
+300;3;4;UROLOGIA  URINARIAS                                                      ;1
+300;3;5;UROLOGIA                                                                 ;1
+301;3;5;UROLOGIA PEDIATRICA                                                      ;1
+305;3;5;FLEBOLOGIA                                                               ;1
+310;3;4;CUIDADOS MINIMOS                                                         ;1
+315;3;4;CUIDADOS INTERMEDIOS                                                     ;1
+320;3;4;TERAPIA INTENSIVA  CUIDADOS INTENSIVOS                                   ;1
+320;3;5;NEONATOLOGIA                                                             ;1
+321;3;4;TERAPIA INTENSIVA INFANTIL CUIDADOS ESPECIALES INFANTILES                ;1
+322;3;4;TERAPIA INTENSIVA NEONATOLOGICA                                          ;1
+330;3;4;UNIDAD CORONARIA                                                         ;1
+370;3;4;FISIATRIA                                                                ;1
+370;3;5;FISIATRIA                                                                ;1
+371;3;5;FISIATRIA INFANTIL                                                       ;1
+390;3;5;NUTRICION Y DIETETICA                                                    ;1
+391;3;5;NUTICION Y DIETETICA INFANTIL                                            ;1
+420;1;4;PSIQUIATRIA VARONES                                                      ;1
+420;2;4;PSIQUIATRIA MUJERES                                                      ;1
+420;3;4;PSIQUIATRIA MIXTA                                                        ;1
+420;3;5;PSIQUIATRIA                                                              ;1
+421;1;4;PSQUIATRIA INFANTIL                                                      ;1
+421;3;4;PSIQUIATRIA INFANTIL                                                     ;1
+421;3;5;PSIQUIATRIA INFANTIL                                                     ;1
+422;3;4;OTRA PSIQUIATRIA                                                         ;1
+423;3;4;PSIQUIATRIA (INTERNACION DE TRANSITO)                                    ;1
+430;2;5;SALUD REPRODUCTIVA                                                       ;1
+430;3;5;PLANIFICACION FAMILIAR MIXTA                                             ;1
+500;3;5;ODONTOLOGIA                                                              ;1
+501;3;5;ODONTOLOGIA PEDIATRICA                                                   ;1
+550;3;5;PSICOLOGIA                                                               ;1
+551;3;5;PSICOLOGIA PEDIATRICA                                                    ;1
+646;3;5;ENDOSCOPIAS                                                              ;1
+650;3;5;ESTIMULACION TEMPRANA                                                    ;1
+725;3;5;TERAPIA DEL DOLOR                                                        ;1
+735;1;4;RADIOTERAPIA VARONES                                                     ;2
+735;2;4;RADIOTERAPIA MUJERES                                                     ;2
+735;3;4;RADIOTERAPIA MIXTA                                                       ;2
+735;3;5;RADIOTERAPIA                                                             ;1
+740;3;5;ALCOHOLISMO                                                              ;1
+805;3;4;INTERNACION DOMICILIARIA                                                 ;2
+805;3;5;INTERNACION DOMICILIARIA                                                 ;1
+805;3;6;ATENCION DOMICILIARIA                                                    ;1
+830;3;4;HOSPITAL DIA                                                             ;2
+831;3;4;HOSPITAL DIA PEDIATRICO                                                  ;2
+833;3;4;HOSPITAL DIA ONCOHEMATOLOGIA                                             ;1
+834;3;4;HOSPITAL DIA PSIQUIATRICO                                                ;2
+845;3;5;RECONOCIMIENTOS MEDICOS                                                  ;1

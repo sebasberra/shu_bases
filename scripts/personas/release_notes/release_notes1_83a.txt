@@ -1,0 +1,602 @@
+PERSONAS
+--------
+
+Release Notes 
+-------------
+
+
+Version 1.83a	18/11/2010
+--------------------------
+
+
+	* Se integro sihos de Galvez
+	
+	
+	
+Version 1.82a	12/11/2010
+--------------------------
+
+	* Se migra con los script nuevos del HMI los pacientes del Samco de Ceres y del Hospital Centenario de
+		Rosario	
+	
+	* Se crean los archivos scripts para las migraciones del "diagnose" a la base "personas". Los archivos son
+		"migra_diagnose.sql" que se repartira a los efectores para que lo ejecuten eventualmente, y el archivo
+		"migra_personas_diagnose.sql" que se utilizara en el proceso de unificacion del diagnose a personas
+		
+	* Se agrega el campo "nr0_hc_diagnose" a la tabla "hc_personas" con el siguiente comando:
+	
+		ALTER TABLE	hc_personas	ADD COLUMN nr0_hc_diagnose		INTEGER 	NULL;
+		
+		CREATE UNIQUE INDEX idx_unique_id_efector_nr0_hc_diagnose ON hc_personas  (id_efector,nr0_hc_diagnose);
+	
+	* Se ha encontrado que en los hospitales se actualiza la informacion de tipo y numero de documento, y
+		la forma en la que se hallo este cambio fue a traves del numero de historia clinica del paciente.
+		Como en la tabla "hc_personas" se crearon indices unicos por numero de historia clinica y efector, por
+		cada sistema, fue asi que saltaron los errores; porque al ingresar una persona que ya existia en la 
+		tabla persona, pero con otro tipo y numero de documento (por ejemplo: en la primer integracion del
+		centenario), esta persona entro a la tabla "hc_personas" con un numero de historia clinica de internacion
+		del hmi para ese efector. Si se modifico posterior a la integracion a la base persona el tipo y numero
+		de documento de esta persona en el hmi de dicho efector, en la proxima integracion del centenario esta
+		persona ingresara a la tabla de "personas" con otro id porque el tipo y numero de documento fue 
+		modificado. Pero al intentar ingresar a la tabla de historias clinicas "hc_personas" el indice unico
+		no te permite ingresar la persona porque la historia clinica ya existe en dicha tabla, pero apunta a la
+		persona (otro id_persona) antes de la modificacion de tipo y numero de documento hecha desde el hmi.
+		Un caso de modificacion de tipo y nro de documento de cierta historia clinica es cuando se reutiliza
+		un nro de historia clinica para otro paciente.
+		
+		Para tratar este problema y ademas para tareas de limpieza, se agrega el campo "baja" a la tabla
+		"personas". lo cual marca al registro como valido o no valido. La ventaja de crear este campo, es 
+		que en vez de eliminar los registros incorrectos, es la de que en sucesivas migraciones no se vuelva a 
+		generar	un "id_persona" no valido
+		
+		El comando para agregar el campo es el siguiente:
+		
+			ALTER TABLE personas ADD COLUMN baja TINYINT(1) NOT NULL DEFAULT 0;
+	
+			
+	
+		El proceso para la deteccion de estas diferencias es:
+		
+			- Buscar a travez del numero de historia clinica diferencias entre los documentos se una 
+				migracion anterior y la actual
+				
+			- Cargar una tabla con la informacion de estas diferencias, la cual queda en la base de datos
+				para poder consultar. Esta tabla tiene el id_efector
+			
+			
+		La informacion generada en esta tabla de diferencias puede ser consultada en el efector de donde es la 
+			informacion para que sean confirmados los datos correctos
+				
+				
+		NOTA: los script no actualizarian el campo "baja" ya que la diferencia puede darse por la reutilizacion
+			de un numero de historia clinica y no por una modificacion de un documento mal cargado, ni tampoco
+			se modificaria el id_persona de la tabla de historias clinicas
+			
+	* Lo explicado en el item anterior no ha pasado en sucesivas integraciones del SICAP, pero puede ser que no 
+		halla ocurrido porque la tabla "hc_personas" no tiene indice unico por historia clinica. La historia de
+		este fue que como en un principio se migraba por unica vez (lo cual no es asi) y que el SICAP tiene
+		numero de historia clinica unica, sin depender del efector, en teoria no podria pasar que se repitan
+		las historias clinicas. De manera que se tendra que probar si hay historias clinicas repetidas, o sea,
+		mismo numero de historia clinica, pero distinto id de persona, para los pacientes del SICAP
+		
+		Primero se probara crear el indice unico para el campo "numero_paciente_sicap" de la tabla "hc_personas"
+		
+			ALTER TABLE hc_personas 
+				ADD UNIQUE INDEX idx_unique_id_efector_numero_grupo_familiar_historia_personal 
+					(id_efector,numero_grupo_familiar_sicap,historia_personal_sicap);
+		
+		Despues de lanzar el comando, se encontro que efectivamente, existen casos en el SICAP donde se ha
+		actualizado el tipo y numero de documento de algun paciente
+		
+		Tambien se debera considerar estos casos para proximas migraciones del SICAP, ademas de tener que identificar
+		las historias clinicas repetidas, editarlas y luego generar el indice unico para "hc_personas" antes descrito
+	
+		
+			SELECT * FROM hc_personas WHERE numero_paciente_sicap=256665;
+			SELECT * FROM hc_personas WHERE numero_paciente_sicap=257419;
+			SELECT * FROM hc_personas WHERE numero_paciente_sicap=257546;
+			SELECT * FROM hc_personas WHERE numero_paciente_sicap=257567;
+			SELECT * FROM hc_personas WHERE numero_paciente_sicap=256665;
+			SELECT * FROM hc_personas WHERE numero_paciente_sicap=256665;
+			
+			SELECT * FROM efectores WHERE id_efector=270;
+			
+			SELECT * FROM personas WHERE id_persona=900035;
+			SELECT * FROM personas WHERE id_persona=3020980;
+			
+			SELECT nom_loc FROM localidades WHERE id_localidad=397;
+			SELECT nom_loc FROM localidades WHERE id_localidad=133;
+			
+			SELECT numero_paciente_sicap,COUNT(*) AS cant FROM hc_personas GROUP BY numero_paciente_sicap
+			HAVING cant>1 AND numero_paciente_sicap IS NOT NULL
+			LIMIT 0,10;	
+			
+			
+		NOTA: se ha comprobado que hay numero de historias clinicas repetidas, y que no es posible en las condiciones
+			actuales crear un proceso como se hace con el HMI y el Diagnose
+			
+	* Se crea el archivo "personas_diferentes.sql" que crea las estructuras de las tablas auxiliares para
+		tratar los cambios en los documentos
+	
+		El script crea las siguientes tablas
+	
+	
+	
+			CREATE TABLE IF NOT EXISTS hc_personas_hmi_diferentes (
+				id_hc_persona				INTEGER		UNSIGNED 	NOT NULL COMMENT 'id de historia clinica en cuestion',
+				id_efector					INTEGER 	UNSIGNED 	NOT NULL COMMENT 'id del efector de donde es la historia clinica',
+				id_persona_anterior 		INTEGER		UNSIGNED 	NOT NULL COMMENT 'id de persona anterior',
+				tipo_doc_anterior			CHAR(3) 				NOT NULL COMMENT 'tipo y nro de documento anterior',
+				nro_doc_anterior			INTEGER 	UNSIGNED 	NOT NULL,
+				apellido_anterior			VARCHAR(255)			NOT NULL,
+				nombre_anterior				VARCHAR(255)			NOT NULL,
+				fecha_nac_anterior			DATE					NULL,
+				id_persona_nuevo			INTEGER		UNSIGNED	NULL,
+				tipo_doc_nuevo 				CHAR(3) 				NOT NULL COMMENT 'tipo y nro de documento nuevo',
+				nro_doc_nuevo 				INTEGER 	UNSIGNED 	NOT NULL,
+				apellido_nuevo				VARCHAR(255)			NOT NULL,
+				nombre_nuevo				VARCHAR(255)			NOT NULL,
+				fecha_nac_nuevo				DATE					NULL,
+				his_cli_internacion_hmi 	INTEGER 	UNSIGNED 	NULL COMMENT 'Historia clinica en cuestion',
+				his_cli_ce_hmi 				INTEGER 	UNSIGNED 	NULL,
+				PRIMARY KEY pk_id_hc_persona (id_hc_persona),
+				FOREIGN KEY fk_id_hc_persona (id_hc_persona)
+				    REFERENCES hc_personas(id_hc_persona)
+				      ON DELETE RESTRICT
+				      ON UPDATE RESTRICT,
+				FOREIGN KEY fk_id_persona_anterior (id_persona_anterior)
+				    REFERENCES personas(id_persona)
+				      ON DELETE RESTRICT
+				      ON UPDATE RESTRICT,
+				FOREIGN KEY fk_id_hc_persona (id_hc_persona)
+				    REFERENCES hc_personas(id_hc_persona)
+				      ON DELETE RESTRICT
+				      ON UPDATE RESTRICT,
+				FOREIGN KEY fk_id_efector (id_efector)
+				    REFERENCES efectores(id_efector)
+				      ON DELETE RESTRICT
+				      ON UPDATE RESTRICT,
+				UNIQUE INDEX idx_id_efector_his_cli_internacion_hmi (id_efector,his_cli_internacion_hmi),
+				UNIQUE INDEX idx_id_efector_his_cli_ce_hmi (id_efector,his_cli_ce_hmi)
+			) ENGINE=MyISAM;
+				
+					
+			CREATE TABLE IF NOT EXISTS hc_personas_diagnose_diferentes (
+				id_hc_persona				INTEGER(10) UNSIGNED 	NOT NULL COMMENT 'id de historia clinica en cuestion',
+				id_efector					INTEGER 	UNSIGNED 	NOT NULL COMMENT 'id del efector de donde es la historia clinica',
+				id_persona_anterior 		INTEGER(10) UNSIGNED 	NOT NULL COMMENT 'id de persona anterior',
+				tipo_doc_anterior			CHAR(3) 				NOT NULL COMMENT 'tipo y nro de documento anterior',
+				nro_doc_anterior			INTEGER 	UNSIGNED 	NOT NULL,
+				apellido_anterior			VARCHAR(255)			NOT NULL,
+				nombre_anterior				VARCHAR(255)			NOT NULL,
+				fecha_nac_anterior			DATE					NULL,
+				id_persona_nuevo			INTEGER		UNSIGNED	NULL,
+				tipo_doc_nuevo 				CHAR(3) 				NOT NULL COMMENT 'tipo y nro de documento nuevo',
+				nro_doc_nuevo 				INTEGER 	UNSIGNED 	NOT NULL,
+				apellido_nuevo				VARCHAR(255)			NOT NULL,
+				nombre_nuevo				VARCHAR(255)			NOT NULL,
+				fecha_nac_nuevo				DATE					NULL,
+				nr0_hc 						INTEGER 	UNSIGNED 	NOT NULL COMMENT 'Historia clinica en cuestion',
+				PRIMARY KEY pk_id_hc_persona (id_hc_persona),
+				FOREIGN KEY fk_id_hc_persona (id_hc_persona)
+				    REFERENCES hc_personas(id_hc_persona)
+				      ON DELETE RESTRICT
+				      ON UPDATE RESTRICT,
+				FOREIGN KEY fk_id_persona_anterior (id_persona_anterior)
+				    REFERENCES personas(id_persona)
+				      ON DELETE RESTRICT
+				      ON UPDATE RESTRICT,
+				FOREIGN KEY fk_id_hc_persona (id_hc_persona)
+				    REFERENCES hc_personas(id_hc_persona)
+				      ON DELETE RESTRICT
+				      ON UPDATE RESTRICT,
+				FOREIGN KEY fk_id_efector (id_efector)
+				    REFERENCES efectores(id_efector)
+				      ON DELETE RESTRICT
+				      ON UPDATE RESTRICT,
+				UNIQUE INDEX idx_id_efector_nr0_hc (id_efector,nr0_hc)
+			) ENGINE=MyISAM;
+		
+			
+	
+	* Se actualiza el script "migra_hmi.sql" que toma los datos de los archivos de texto obtenidos del HMI para
+		que hagan las conversiones de tipo de documento y numero de historias clinicas a los formatos que estan
+		en la base personas. El fin es que en las sentencias SQL que se usan para tratar el tema de los cambios de
+		documentos no se usen conversiones dentro de dichas consultas que alenta el proceso. Tambien se agrega un
+		indice a la tabla auxiliar "dg_pacientes_hmi" al campo "s1hiscli"	
+		
+	* Se encontraron algunos registros de historias clinicas "hc_personas" con valor el campo 
+		"his_cli_ce_hmi" = 2020202. Se actualizo la tabla con el siguiente comando
+		
+			UPDATE hc_personas SET his_cli_ce_hmi = NULL WHERE his_cli_ce_hmi=2020202;
+	
+	* Se borraron los datos de pacientes del hospital reconquista y se volvieron a migrar con datos actualizados
+		los pacientes de dicho hospital
+	
+
+
+Version 1.80a	04/08/2010
+--------------------------
+
+	
+	
+	* Debido al uso de la base de personas en cada implementacion
+		de diagnose en los diferentes hospitales de la provincia, y que en cada efector
+		esto implica el reemplazado de algun sistema local vigente. Esto asociado a que
+		cada sistema local de cada efector tiene una nomina de pacientes, la cual no debe
+		perderse, se creo una tabla para los sistemas propietarios
+		
+		Esto no solo implica la creacion de una nueva tabla, si no tambien la migracion de
+		los sistemas propietarios que ya existian en la tabla "hc_personas" a esta nueva tabla
+		
+		Los numeros de historias clinicas migrados son:
+		
+			- his_cli_turnos_evaperon
+			
+			- his_cli_hosp_reconquista
+			
+			- nro_paciente_turnos_venadotuerto
+		
+		Para esta migracion se creo el script "migra_hc_evaperon_hosp_reconquista_turnos_venadotuerto.sql"
+		
+		Los detalles de este script es:
+		
+			- Se crea la tabla "sistemas_propietarios" con la siguiente estructura:
+	
+				CREATE TABLE IF NOT EXISTS sistemas_propietarios (
+					id_sistema_propietario 		TINYINT 		UNSIGNED	NOT NULL,
+					nom_corto 					VARCHAR(25) 				NOT NULL,
+					nom_largo					VARCHAR(255)				NOT NULL,
+					observacion					VARCHAR(255)				NULL,
+					PRIMARY KEY(id_sistema_propietario),
+					UNIQUE INDEX idx_unique_nom_corto(nom_corto),
+					UNIQUE INDEX idx_unique_nom_largo(nom_largo)
+				)ENGINE=MyISAM;
+		
+			- Se ingresaron registros en la tabla "sistemas_propietarios" para los sistemas propietarios que estan 
+			en la base personas del Hospital Eva Peron, del hospital de Reconquista y el de Venado Tuerto
+			
+			- Se agregan los siguientes campos e indice a "hc_personas"
+				
+				ALTER TABLE hc_personas
+					ADD COLUMN id_sistema_propietario TINYINT UNSIGNED NULL
+					AFTER id_persona;
+			
+				ALTER TABLE hc_personas
+					ADD COLUMN his_cli_sistema_propietario INTEGER UNSIGNED NULL;
+		
+				CREATE UNIQUE INDEX idx_unique_id_sistema_propietario_his_cli_sistema_propietario
+					ON hc_personas (id_sistema_propietario,his_cli_sistema_propietario);
+			
+			- Se migraron los numeros de historias clinicas contenidas en los campos
+				"his_cli_turnos_evaperon", "his_cli_hosp_reconquista" y 
+					"nro_paciente_turnos_venadotuerto" a los campos nuevos
+					
+			- Se dropearon dichos campos migrados de la tabla "hc_personas"	
+			
+	
+	* Se crea el script "migra_personas_hosp_ninos_zona_norte_rosario.sql" para migrar los datos de
+		dicho hospital
+		
+	* Se agrega el siguiente registro a la tabla "origen_info":
+		
+			INSERT IGNORE INTO origen_info(id_origen_info, origen_info) VALUES (9,"HOSPITAL DE NIÑOS ZONA NORTE ROSARIO");
+			
+	* Se agrega el siguiente registro a la tabla "sistemas_propietarios":
+	
+			INSERT IGNORE INTO sistemas_propietarios
+				(id_sistema_propietario, nom_corto, nom_largo, observacion) 
+			VALUES 
+				(4,
+				'H. NIÑOS ZONA NOR ROSARIO',
+				'HOSPITAL DE NIÑOS ZONA NORTE ROSARIO',
+				'Migración de los pacientes del sistema del hospital de niños zona norte rosario 30/07/2010');
+					
+	* Se migra los pacientes del Hospital San Javier del HMI
+	
+			
+Version 1.75a	20/07/2010
+--------------------------
+
+	* Se adopta la version myisam de la base "efectores v0.41a". Ver el release notes correspondiente de efectores
+		para ver los cambios
+		
+	* Se volvio a migrar los pacientes del hospital de reconquista porque se encontro que al tomar los datos
+		de los archivos del sistema del hospital, estaban codificados con cp850 y no con latin1. Esto hizo que
+		las eñes queden con simbolos raros
+		
+	* Se agregan las personas del sistema de turnos del hospital de venado tuerto.
+	
+		- Se crea el script "migra_turnos_venadotuerto.sql" para cargar los pacientes obtenidos en un txt
+			del sistema de venado tuerto a una tabla auxiliar para la migracion "pacientes_turnos_venadotuerto"
+			
+		- Se crea el script "migra_personas_turnos_venadotuerto.sql" para migrar de la tabla auxiliar anterior
+			a las tablas "personas" y "hc_personas"
+			
+		- Se agrega el siguiente registro a la tabla "origen_info":
+		
+			INSERT IGNORE INTO origen_info(id_origen_info, origen_info) VALUES (8,"TURNOS VENADO TUERTO");
+			
+		- Se agrega el campo "nro_paciente_turnos_venadotuerto" a la tabla "hc_personas" que referencia al campo
+			"Nropaciente" de la tabla "paciente_turnos_venadotuerto" del sistema de turnos de venado tuerto. 
+			Como no se encontro el numero de historia clinica, y el diagnose filtra por efector los pacientes, 
+			es que se agrego el numero de paciente de venado tuerto a la tabla de historias clinicas "hc_personas"
+			de la base "personas"
+		
+		- Se agrega el indice unico de "idx_unique_efector_nro_paciente_turnos_venadotuerto" a la tabla "hc_personas"
+			
+		- Se ejecutaron los siguientes comandos para la generacion de dicho campo e indice:
+			
+				ALTER TABLE hc_personas ADD COLUMN nro_paciente_turnos_venadotuerto INTEGER UNSIGNED NULL;
+
+				CREATE UNIQUE INDEX idx_unique_efector_nro_paciente_turnos_venadotuerto 
+							ON hc_personas (id_efector,nro_paciente_turnos_venadotuerto); 
+			
+		- Se hallaron 1785 documentos = 0 en la base de venado tuerto
+
+	
+
+		
+Version 1.72a	07/06/2010
+--------------------------
+
+	* Se modificó el script "migra_personas_turnos_evaperon.sql" para adoptar los datos de personas
+		fallecidas y se migro informacion del base de datos del eva peron a la fecha
+		
+	* Se volvio a correr el script "migra_personas_hosp_reconquista.sql" con informacion de junio 2010
+	
+		
+Version 1.71a	04/05/2010
+--------------------------
+
+	* se elimina el registro de la tabla "efectores" con id_efector=872, que por error entro a la base. ver
+		release 0.3b de efectores
+		
+	* se agregan los tipo_doc "DUF" y "DUM" que corresponden a "documento unico femenino" y 
+		"documento unico masculino" para cubrir los casos donde se migren datos de documentos
+		que tengan la letra "M" o "F" delante del nro de documento (solo migracion sicap).
+		
+		NOTA: el HMI no soporta numero de documentos con letras
+	
+	* se modifico el script "migra_personas_sicap.sql" para aceptar la nueva estructura y para poder ser
+		ejecutado para actualizacion. Tambien se agrega la informacion de personas fallecidas del
+		sicap al script tomando como marca "LEFT(CodEstadoReg,1) = 'F'" y considerando a las personas
+		activas las que tienen la marca "LEFT(CodEstadoReg,1)<>'B'"
+	
+	* se modifico el script "migra_personas_sihos.sql" para guardar las historias clinicas.
+		NOTA: debido a que se repiten los numeros de historias clinicas, solo se guarda el primer
+		registro encontrado, luego se ignoran
+		
+	* se hizo un dump de las tablas "paciente" e "historiasclinicas" el día 29/04/2010 y se ejecuto
+		el script "migra_personas_sicap.sql"
+	
+	* se agrega a la migración las bases de "sihos" de "san cristobal" y "laguna paiva"
+	
+	* se vuelve a la version 1.5a de personas, y de ahi el proceso de actualizacion y migracion fue
+		en el siguiente orden:
+		
+		"migra_personas_sicap.sql" con dump el dia 29/04/2010
+		"migra_personas_sihos.sql" con
+
+		
+	
+Version 1.7a	30/04/2010
+--------------------------
+		
+	* se modifico en el script "migra_personas_sihos.sql" tomando como modelo el nuevo script mencionado 
+		en el siguiente item
+	
+	* se crea el script "migra_personas_hosp_reconquista.sql" para la migracion del hospital de Reconquista
+	
+	* se agrega el campo "his_cli_hosp_reconquista" a la tabla "hc_personas" y se agrega el indice
+		unico "idx_unique_efector_his_cli_hosp_reconquista" a dicha tabla para la migracion del
+		sistema del hospital de Reconquista
+	
+		Se ejecutan los siguientes comandos:
+	
+			ALTER TABLE hc_personas ADD COLUMN his_cli_hosp_reconquista INTEGER UNSIGNED NULL;
+
+			CREATE UNIQUE INDEX idx_unique_efector_his_cli_hosp_reconquista 
+							ON hc_personas (id_efector,his_cli_hosp_reconquista); 
+							
+	* se agrega el registro "HOSPITAL RECONQUISTA" en la tabla "origen_info"
+	
+	* al igual que la migracion hecha con para el sistema de turnos del "Eva Peron", para la obtencion de 
+		las fecha julianas se utiliza la fecha "28/12/1800". La funcion MySql para
+		transformar las fechas quedo:
+	
+		DATE_ADD('1800-12-28',INTERVAL %fecha_juliana% DAY)
+		
+	* se encontro que los pacientes que siguen la regla:
+			
+		RIGHT(arc_nombre,6)='-OBITO'
+		
+		son los pacientes fallecidos
+		
+		
+	
+Version 1.6a 		16/02/2010
+------------------------------
+	
+	* se crea el script "migra_personas_sihos.sql" para la migracion del Sihos
+	
+	* se agrega el campo "his_cli_sihos" a la tabla "hc_personas" y se agrega el indice
+		unico "idx_unique_efector_his_cli_sihos" a dicha tabla para la migracion del
+		sistema SiHos
+	
+		Se ejecutan los siguientes comandos:
+	
+			ALTER TABLE hc_personas ADD COLUMN his_cli_sihos INTEGER UNSIGNED NULL;
+
+			CREATE UNIQUE INDEX idx_unique_efector_his_cli_sihos 
+							ON hc_personas (id_efector,his_cli_sihos); 
+							
+	* se agrega el registro "SIHOS" en la tabla "origen_info"
+	
+	* se hizo una prueba de la migracion del sihos con la base de datos de Arequito
+	
+	* se encontro que el sihos permite mismos numeros de historia clinicas para diferentes personas. En la
+		migracion se guarda en la tabla "hc_personas" el primer numero de historia clinica que se encuentre, para
+		el caso antes mencionado
+	
+	
+
+Version 1.5a		09/02/2010
+------------------------------
+
+* se agrega el campo "his_cli_turnos_evaperon" a la tabla "hc_personas" y se agrega el indice
+	unico "idx_unique_efector_his_cli_turnos_evaperon" a dicha tabla para la migracion del
+	sistema de turnos del hospital "Eva Peron"
+	
+	Se ejecutan los siguientes comandos:
+	
+		ALTER TABLE hc_personas ADD COLUMN his_cli_turnos_evaperon INTEGER UNSIGNED NULL;
+
+		CREATE UNIQUE INDEX idx_unique_efector_his_cli_turnos_evaperon 
+						ON hc_personas (id_efector,his_cli_turnos_evaperon);
+	
+* se agrega la migracion de pacientes del sistema de turnos del hospital "eva peron". Para la
+	migracion se crea en la carpeta "shu_inicio/scripts/personas/personas/" el archivo 
+	"migra_personas_turnos_evaperon.sql"
+	
+* se hace un dump de lo migrado del sql server de la base de turnos del hospital "eva peron" y se
+	guardan estructuras y datos en la carpeta "shu_inicio/scripts/personas/turnos_eva_peron", en 
+	el archivo "dump_turnos_evaperon.sql"
+
+* para la obtencion de las fecha julianas se utiliza la fecha "28/12/1800". La funcion MySql para
+	transformar las fechas quedo:
+	
+		DATE_ADD('1800-12-28',INTERVAL %fecha_juliana% DAY)
+	
+* se agrega el registro "TURNOS EVA PERON" en la tabla "origen_info"
+
+* se le crea indice unico al campo "origen_info" en la tabla "origen_info"
+
+* se cambia la tabla "version" por la estructura de la tabla "versiones" del hmi2
+
+* se adopta las tablas de "efectores" y de "localidades" del hmi2
+
+	ver efectores: release notes 0.3b
+	
+	ver localidades: release notes 0.1b
+	
+	pero en vez de usar las tabla como InnoDB, se pasan a MyISAM. 
+	Se crearon 2 bases de datos "efectores_myisam" y "localidades_myisam" para copiar las tablas
+
+* se cambiaron los registros de "personas" que tengan en el campo "estado_civil" igual a "" por
+	el valor de NULL
+	
+* se toma como descripciones estandar para estado civil las siguientes, las cuales vienen del SICAP
+
+	"NULL"
+	"dato no registrado"
+	"soltero"
+	"viudo"
+	"casado"
+	"separado"
+	"divorciado"
+	
+
+	
+Version 1.4b          25/11/2009
+--------------------------------
+ 
+* se agregan los campos "cod_prov" y "cod_pais" a la tabla "localidades"
+	
+* se elimina la tabla "servicios" y la tabla "efectores_servicios" porque ahora se van
+	a incluir en la base "hmi2"
+	
+* luego de la integracion se ejecuta un script para limpieza que realiza lo siguiente:
+	
+	- elimina las personas que vengan del padron electoral con tipo_doc = "DNR" y el nro_doc 
+		ya existe en la tabla personas
+	
+	- elimina documentos menores de 6 digitos que no sean "cedula de identidad" que sean del padron o del 
+		sistema de turnos del cullen
+		
+	- elimina las personas que tengan mismo nro_doc, mismo apellido, nombre, pero distinto tipo_doc y 
+		que sean del turnos del cullen o del padron electoral. El filtro se aplica entre registros que
+		provengan del HMI o del SICAP contra los registros del turnos de cullen y del padron electoral
+	
+	- elimina las personas que tengan mismo nro_doc, mismo apellido y nombre y distinto tipo_doc y sean
+		del hmi de un lado y del sicap del otro, asegurando que no se pierda la historia clinica correspondiente.
+		El criterio del registro que queda de la tabla "personas" es que sea del HMI y tipo_doc = 'DNI' y que tenga
+		un tipo_doc<>'DNI' en el SICAP
+		
+	- limpia los registros que empiecen con nombre = "* ". Estos registros se dieron porque en el iturraspe
+		se ha usado el asterisco para separar el apellido del nombre en el HMI
+		
+ 
+
+Version 1.4a
+--------------------------------
+
+* se agrega el cod_dpto, que es el codigo de departamento de mod_sims, a las localidades.
+
+* se agrega la tabla "dependencias_administrativas" que corresponde a la tabla "d_depenadm"
+	del "mod_sims"
+	
+* se agrega el campo "id_dependencia_adm" a la tabla "efectores" que identifica la dependencia administrativa del
+	del establecimiento(efector)
+ 
+* se agrega como prueba la tabla "efectores_servicios" y se inician las pruebas de migración.
+	se encontraron valores duplicados para la combinacion efector-servicio
+
+* se agrega el indice unico "idx_unique_servicios" al campo "cod_servicio" de la tabla "servicios". Este
+	campo corresponde al codigo de 3 digitos que se usa para estadistica.
+
+
+Version 1.2b
+--------------------------------
+
+* Se cambia el campo "fallecido_fecha" por "fecha_ultima_cond" de la tabla
+	"personas", que contiene el campo concatenado y transformado a tipo fecha 
+	de los campos FCANIO, FCMES y FCDIA del HMI.
+	Estos campos corresponden a la fecha de última condición, de manera que
+	en los casos que la persona tenga la marca de fallecida, este campo
+	tiene la fecha de defuncion y en caso contrario será la fecha de última
+	atención.
+
+* Se cambia tipo de dato del campo "tipo_doc" de la tabla "personas" a CHAR(3)
+
+* Se agregan los siguientes indices:
+
+	tabla "personas":
+		"idx_fallecido" para el campo "fallecido" 
+		"idx_fecha_ultima_cond" para el campo "fecha_ultima_cond"
+		
+	tabla "hc_personas"
+		indice único "idx_unique_efector_his_cli_internacion_hmi" para los campos 
+			"id_efector" y "his_cli_internacion_hmi"
+		indice único "idx_unique_efector_his_cli_ce_hmi" para los campos 
+			"id_efector" y "his_cli_ce_hmi"
+		
+* Debido a que se han encontrado números de historia clínica repetidos en el HMI para un mismo
+	hospital, esta versión ignorará los duplicados, de manera, que se guardará el primer
+	número de historia clinica encontrado para el caso mencionado.
+	
+* Se cambian en la tabla "hc_personas" los campos "his_cli_internacion_hmi" y 
+	"his_cli_ce_hmi" por la siguiente definición:
+	
+	his_cli_internacion_hmi		INTEGER UNSIGNED NULL,
+  	his_cli_ce_hmi 				INTEGER UNSIGNED NULL
+  	
+* Se cambia en el proceso de importación del HMI el tratamiento de los números 
+	de historias clinicas correspondiente a los campos S1HISCLI y S3HISCLICE,
+	donde a partir de esta versión, para valores '00000000' de dichos campos,
+	de pasará NULL a los campos de "hc_personas": "his_cli_internacion_hmi" y
+	"his_cli_ce_hmi", respectivamente. 
+
+* Se agrega la tabla "origen_info" que contiene la tabla de codigo de los diferentes
+	origenes de los datos integrados
+	
+* Se agrega el campo "id_origen" a la tabla "personas"
+
+* Se agrega la tabla "version" que tiene informacion de la creación de la base vigente. 
+	Posee los campos "version" y "fecha" que especifican lo dicho.
+	
+* Se corrigieron los nombres de indices de las tablas "personas" y "hc_personas" usando
+	la nombreclatura: 
+		idx_nombre_de_campo: para indices comunes
+		idx_unique_nombre_de_campo: para indices unicos
+		fk_nombre_de_campo: para indices de clave ajena

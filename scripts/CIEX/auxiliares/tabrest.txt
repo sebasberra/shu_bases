@@ -1,0 +1,49 @@
+      *Descripcion: Tabla de Restricciones de Decima Revision.        
+      *Nombre: tabrest.dat
+      *Organizacion: indexada.
+      *Acceso: dinamico.
+      *Clave primaria: R-CODIGO   <Clave principal>
+      *Variable de estado: FS-TABREST.  
+
+      *FD TABREST.
+      *01  REG-TABREST.
+           05 R-CODIGO.
+              10 R-CODIGO-3DIG               PIC X(3).
+              10 R-CODIGO-4DIG               PIC X.
+      *      <Clave primaria>
+      *      <Los codigos que aparecen aqui tienen restricciones de 
+      *      algun tipo, los que aparacen con los 4 digitos, la restric.
+      *      es unicamente para esa causa, pero si aparece unicamente 
+      *      los 3 digitos la restric. es para todos los 4tos digitos 
+      *      incluidos.> 
+           05 R-SEXO                         PIC X.    
+      *      <Los valores pueden ser: 0 - No tiene restriccion 
+      *                               1 - Exclusiva sexo masculino 
+      *                               2 - Exclusiva sexo femenino.>
+           05 R-FRECUENCIA                   PIC X.
+      *      <Los valores pueden ser: 0 - No tiene restriccion 
+      *                               1 - Enf. poco frecuente
+      *                               2 - No puede aparecer.>
+           05 R-EDADMIN.                               
+              10 R-EMTIPO                       PIC X.        
+      *      <Los valores pueden ser: 0 - No tiene restriccion minima
+      *                               1 - A#os
+      *                               2 - Meses
+      *                               3 - Dias 
+      *                               4 - Horas 
+      *                               5 - 100 y + .>
+              10 R-EMNRO                        PIC XX.
+           05 R-EDADMAX.                               
+              10 R-EXTIPO                       PIC X.        
+      *      <Los valores pueden ser: 1 - A#os
+      *                               2 - Meses
+      *                               3 - Dias 
+      *                               4 - Horas 
+      *                               5 - 100 y + 
+      *                               9 - No tiene restriccion maxima.>
+              10 R-EXNRO                        PIC XX.
+              10 R-FRECEDAD                     PIC X.
+      *      <Los valores pueden ser: 0 - No tiene. 
+      *                               1 - Puede pasar.       
+      *                               2 - No puede pasar.    
+

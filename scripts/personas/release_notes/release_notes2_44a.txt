@@ -1,0 +1,2961 @@
+PERSONAS
+--------
+
+Release Notes 
+-------------
+
+
+Version 2.44a 02/11/2012
+------------------------
+
+	* Sistema turnos propietario Hospital Anselmo Gamen, Villa Gdor Galvez
+	
+			id_efector = 168
+				
+			id_origen_info = 18
+			id_sistema_propietario = 11
+			
+			Pacientes nuevos = 13590
+			
+			Pacientes actualizados = 7631
+			
+			Historia clinicas nuevas = 16857
+			
+			Documentos con inconsistencias del efector = 1326
+			
+			
+			Total pacientes = 1642941
+			Total hc		= 1489778
+		
+		
+	* Sistema de turnos propietario de Villa Ocampo (tenian instalado el mismo sistema que
+		tenia el Hospital de Reconquista)
+  		
+			id_efector = 8
+		
+			id_origen_info = 17
+			id_sistema_propietario = 10
+			
+			Pacientes nuevos = 20207
+			
+			Pacientes actualizados = 6165
+			
+			Historia clinicas nuevas = 26451
+			
+			
+			Total pacientes = 1629351
+			Total hc		= 1472921
+  			
+  			
+
+Version 2.43a 30/10/2012
+------------------------
+
+
+		* Se migra el SIHOS de:
+  	
+  			 ------------------------------
+  			· SAMCO TOSTADO		 2012
+  			 ------------------------------
+  			
+  			id_origen_info = 6
+  			id_efector = 159
+  			
+  			
+  			Pacientes nuevos = 1807
+  		
+  			Historias clinicas nuevas = 2715
+  			
+  			Documentos con inconsistencias del efector = 206
+  			
+  			
+  			Total pacientes = 1609144
+  			Total hc		= 1446470
+  			
+  			
+
+Version 2.42a 19/10/2012
+------------------------
+
+	
+	* Se migra HMI del Alassia
+	
+			 -------------------------------------------
+  			· Hospital Alassia		 DUMP 18/10/2012
+  			 -------------------------------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 121
+  			
+  			
+  			Pacientes nuevos = 1925
+  		
+  			Historias clinicas nuevas = 3440
+  			
+  			Documentos con inconsistencias del efector = 1112
+  			
+  			Historias clinicas duplicadas del efector = 38
+  			
+  			Historias clinicas con documentos diferentes = 46
+  			
+  			Total pacientes = 1607337
+  			Total hc		= 1443755
+  			
+  			
+  	
+Version 2.41a 25/07/2012
+------------------------
+
+	* Se realiza la migracion del sistema propietario de Samco de Villa Constitucion
+	
+		- Se agrega en "origen_info" el registro:
+	
+			INSERT IGNORE INTO origen_info(id_origen_info, origen_info) VALUES (16,"SAMCO VILLA CONSTITUCION DR. JUAN E. MILICH");
+
+		- Se agrega en "sistemas_propietarios"
+		
+			INSERT IGNORE INTO sistemas_propietarios
+					(id_sistema_propietario, nom_corto, nom_largo, observacion) 
+				VALUES 
+					(9,
+					'SAMCO VILLA CONSTITUCION',
+					'SAMCO VILLA CONSTITUCION DR. JUAN E. MILICH',
+					'Migración de los pacientes del sistema de Villa Constitución 24/07/2012');
+					
+		- Resultados de la migracion, sistema propietario:
+		
+			 ------------------------------------------
+  			· SAMCO VILLA CONSTITUCION		 24/07/2012
+  			 ------------------------------------------
+  			
+  			id_origen_info = 16
+  			id_sistema_propietario = 9
+  			id_efector = 500
+  			
+  			
+  			Pacientes nuevos = 21229
+  		
+  			Historias clinicas nuevas = 24933
+  			
+  			Documentos con inconsistencias del efector = 838
+  			
+  			Historias clinicas duplicadas del efector = 0
+  			
+  			Total pacientes = 1594709
+  			Total hc		= 1433272
+  			
+		
+  	* Se migra el SIHOS de:
+  	
+  			 ------------------------------------------
+  			· SAMCO VILLA CONSTITUCION		 24/07/2012
+  			 ------------------------------------------
+  			
+  			id_origen_info = 16
+  			id_efector = 500
+  			
+  			
+  			Pacientes nuevos = 5063
+  		
+  			Historias clinicas nuevas = 17
+  			
+  			Documentos con inconsistencias del efector = 337
+  			
+  			
+  			Total pacientes = 1599772
+  			Total hc		= 1433289
+  			
+  			
+  			
+  			 ----------------------------------
+  			· SAMCO ESPERANZA		 24/07/2012
+  			 ----------------------------------
+  			
+  			id_origen_info = 16
+  			id_efector = 123
+  			
+  			
+  			Pacientes nuevos = 5640
+  		
+  			Historias clinicas nuevas = 7026
+  			
+  			Documentos con inconsistencias del efector = 250
+  			
+  			
+  			Total pacientes = 1605412
+  			Total hc		= 1440315
+  			
+			
+	* Se actualizan lo tipos de sexo 'D' (desconocido) a 'I' (indeterminado) quedando solo 3 posibles valores
+		
+		'M' masculino
+		'F' femenino
+		'I' indeterminado
+
+
+
+
+
+Version 2.40a 06/06/2012
+------------------------
+
+	* Se migra HMI del protomedico
+	
+			 -------------------------------------------
+  			· Hospital Protomedico		 DUMP 27/06/2012
+  			 -------------------------------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 63
+  			
+  			
+  			Pacientes nuevos = 76
+  		
+  			Historias clinicas nuevas = 270
+  			
+  			Documentos con inconsistencias del efector = 384
+  			
+  			Historias clinicas duplicadas del efector = 140
+  			
+  			Historias clinicas con documentos diferentes = 12
+  			
+  			Total pacientes = 1573480
+  			Total hc		= 1408339
+  			
+  			
+
+Version 2.39a 06/06/2012
+------------------------
+
+	* Se migra SICAP
+	
+		- Se implemento la funcion es_documento para la migracion
+		
+		- Dump origen: salud.santa-fe.gov.ar		Fecha:	04/06/2012 1:40 p:m
+
+  		- Cantidad de historias clinicas encontradas por establecimiento tomado de la base de datos del SICAP
+  		
+  			SELECT 
+				hc.id_efector, 
+				e.claveestd,
+				e.nom_efector,
+				COUNT(*) AS cant
+			FROM
+				hc_personas hc
+			LEFT JOIN
+				efectores e
+			ON
+				hc.id_efector = e.id_efector
+			WHERE
+				numero_paciente_sicap IS NOT NULL
+			GROUP BY
+				id_efector;
+			
+				id_efector	claveestd	nom_efector											cant
+					NULL	NULL		NULL												39
+					1		04900222	SAMCO MALABRIGO										5
+					5		04900273	HOSP DRA OLGA STUCKY								17
+					6		04900290	CS DR JORGE CANIZA									4
+					7		04900303	SAMCO DR BARTOLOME B PARMA							1
+					8		04900311	SAMCO VILLA OCAMPO									11
+					18		04900435	CS BARRIO EL OMBUSAL EMA BEATRIZ CABRAL				18
+					29		04900613	CS BARRIO ITATI - RECONQUISTA						19
+					48		05600281	CS BARRIO PARQUE									2
+					58		06300052	CS LA GUARDIA										4
+					61		06300087	SAMCO LAGUNA PAIVA									1
+					62		06300095	CS BARRIO BARRANQUITAS OESTE						4
+					71		06300273	HOSP DR JOSE MARIA CULLEN							28
+					83		06300559	CS MONTE VERA										1542
+					84		06300567	CS QUILMES											1
+					87		06301351	CS SAN AGUSTIN - LA CAPITAL							3
+					104		06301750	CS PADRE COBO										2
+					120		06309288	CS ALTOS DE NOGUERAS								2
+					123		07000281	SAMCO ESPERANZA										2
+					127		07000346	SAMCO GERIATRICO J VIONET							3
+					137		07000478	CS SAA PEREYRA										1
+					141		07000516	CS SAN CARLOS SUR									2
+					160		07700101	SAMCO VILLA MINETTI									1
+					161		07700119	CS POZO BORRADO										2
+					163		08400011	SAMCO ACEBAL										1
+					169		08400127	SAMCO CORONEL BOGADO								37
+					174		08400500	CS IBARLUCEA										420
+					181		08401824	HOSP DE NIÑOS ZONA NORTE							2
+					183		08402111	HOSP PROVINCIAL CENTENARIO							2
+					185		08402430	CS CORONEL DOMINGUEZ								1
+					188		08402472	CS NRO 7 REMANSO VALERIO							76
+					193		08403088	CENTRO DE SALUD NRO. 7- B. 12 DE OCTUBRE ROSARIO	11
+					195		08403100	CS NRO 20 LA ESPERANZA								16
+					203		08403185	CS NRO 15 JUAN DOMINGO PERON						12
+					208		08403304	CS NRO 26 DE LA COMUNIDAD ORGANIZADA				1
+					219		08404551	CS SANTA RITA										833
+					226		09100135	SAMCO CERES											1031
+					230		09100321	SAMCO HERSILIA										2817
+					235		09100381	CS BARRIO PELLEGRINI								1
+					250		09800048	SAMCO ROMANG										7
+					270		10500121	SAMCO GALVEZ										2565
+					271		10500147	HOSP FEDERICO MEROY									4
+					278		10500244	CS DESVIO ARIJON									1
+					289		11200066	CS NARE												4
+					297		11200163	CS BARRIO REYES										5
+					321		12600068	SAMCO COLONIA BELGRANO								1
+					331		12600165	SAMCO SAN JORGE										1
+					341		13300084	SAMCO LA GALLARETA									1
+					368		10500457	CS EVA PERON BARRIO OESTE							2
+					398		04900761	CS BARRIO VIRGEN DE GUADALUPE						97
+					404		06301296	CS CENTENARIO - S VIEJO								1
+					416		04201219	CS DR VIDALLE										1
+					421		06301814	CS ALICIA MOREAU DE JUSTO							2
+					425		00700016	SAMCO ARMSTRONG										1
+					431		01400016	SAMCO AREQUITO										4
+					434		01400041	HOSP SAN CARLOS										1
+					435		01400075	SAMCO MARIA EVA DUARTE DE PERON						1
+					436		01400091	SAMCO CHAÑAR LADEADO								2
+					442		01400156	CS SANFORD											64
+					448		02100288	CENTRO DE SALUD MARIA JUANA							1
+					449		02100318	CS NRO 5 MARTIN M GUEMES							2
+					460		02100563	CS NRO 1 - RAFAELA									3
+					472		02100776	CS ESTACION CLUCELLAS								1
+					475		02100806	CS PRESIDENTE ROCA									2
+					477		02100849	CS NRO 6 BARRIO AMANCAY								1
+					488		02800018	SAMCO ALCORTA DR. J. J . MAIZTEGUI					7
+					490		02800034	CS CAÑADA RICA										147
+					495		02800085	CS JUNCAL											609
+					498		02800115	CS PEYRANO											82
+					499		02800123	CS SANTA TERESA										450
+					500		02800131	SAMCO VILLA CONSTITUCION DR. JUAN E. MILICH			2
+					515		04200018	CS AARON CASTELLANOS								1
+					531		04200280	CS SAN EDUARDO										1
+					532		04200298	SAMCO SAN GREGORIO									1
+					557		04900133	CS EL RABON											1
+					566		08414176	CS DR ERNESTO CHE GUEVARA							319
+					574		08400071	CS DR BERNARDO HOUSSAY								1
+					577		08400364	CS DR ROQUE PEREZ									2
+					586		08403678	CENTRO DE SALUD RAMON CARRILLO						112
+					588		08403708	CS SOLDINI											33
+					605		11900289	CS BARRIO LOS PINOS									3
+					611		08401671	CS CASIANO CASAS									1
+					623		08402031	CS JEAN HENRY DUNNANT								1
+					632		08401999	CS LUIS PASTEUR										1
+					636		08402553	CS RUBEN NARANJO (EX LAS HERAS)						2
+					646		08404372	CS ASISTENCIAL A LA COMUNIDAD						1065
+					651		08404321	CS EL GAUCHO										25
+					653		08404305	CS EVA DUARTE										3
+					657		08402057	HOSP DE NIÑOS VILELA								1
+					660		08402286	HOSPITAL ROQUE SAENZ PEÑA							1
+					663		08402278	HOSP DR JUAN BAUTISTA ALBERDI						2
+					688		06309397	CS GUADALUPE CENTRAL PADRE TRUCCO					2
+					704		04901783	CENTRO ASISTENCIAL NUEVA FE							1
+					707		04901810	CIC BARRIO AMERICA									4
+					767		06301881	CENTRO COMUN BARRIO LOS HORNOS						2
+					832		08417511	CS DISTRITO NOROESTE								1
+					897		06309129	CS PRESIDENTE RAUL R ALFONSIN						10
+					898		04902234	CS BARRIO SUR										2
+					899		08422857	CAF HOSP EVA PERON									1359
+			
+				
+			id_origen_info = 2
+  			id_sistema_propietario = NULL
+  			
+  			Pacientes nuevos = 115896
+  		
+  			Historias clinicas nuevas = 7790
+  			
+  			Total pacientes = 1569317
+  			Total hc		= 1400554
+  			
+  			
+	* Se agregan los siguientes registros a la tabla de "origen_info" y "sistemas_propietarios", respectivamente:
+	
+		/* inserta en "origen_info" */
+		INSERT IGNORE INTO origen_info(id_origen_info, origen_info) VALUES (15,"HOSP SAN JOSE - CAÑADA DE GOMEZ");
+		
+		/* inserta en "sistemas_propietarios" */
+		INSERT IGNORE INTO sistemas_propietarios
+		(id_sistema_propietario, nom_corto, nom_largo, observacion) 
+		VALUES 
+			(8,
+			'HOSP SAN JOSE',
+			'HOSP SAN JOSE - CAÑADA DE GOMEZ',
+			'Migración de los pacientes del sistema de Cañada de Gomez 27/04/2012');
+
+	* Se migra el sistema de turnos del hospital de Cañada de Gomez
+
+			id_origen_info = 15
+  			id_sistema_propietario = 9
+  			id_efector = 38
+  			
+  			
+  			Pacientes nuevos = 4087
+  		
+  			Historias clinicas nuevas = 7515
+  			
+  			Documentos con inconsistencias del efector = 322
+  			
+  			Total pacientes = 1573404
+  			Total hc		= 1408069
+  			
+  			
+  			
+  	
+
+
+Version 2.38a 08/05/2012
+------------------------
+
+	* Se migra el HMI 1 del iturraspe
+	
+	
+		 	-------------------------------------------
+  			· Hospital Iturraspe		 	- 04/05/2012
+  			 -------------------------------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 72
+  			
+  			
+  			Pacientes nuevos = 351
+  		
+  			Historias clinicas nuevas = 638
+  			
+  			Documentos con inconsistencias del efector = 3396
+  			
+  			Historias clinicas duplicadas del efector = 18
+  			
+  			Historias clinicas con documentos diferentes = 32
+  			
+  			Total pacientes = 1453421
+  			Total hc		= 1392764
+  			
+  			
+
+Version 2.37a 11/04/2012
+------------------------
+
+	* Se agregan los siguientes registros a la tabla de "origen_info" y "sistemas_propietarios", respectivamente:
+	
+		/* inserta en "origen_info" */
+		INSERT IGNORE INTO origen_info(id_origen_info, origen_info) VALUES (14,"SAN JUSTO HOSPITAL");
+		
+		/* inserta en "sistemas_propietarios" */
+		INSERT IGNORE INTO sistemas_propietarios
+				(id_sistema_propietario, nom_corto, nom_largo, observacion) 
+			VALUES 
+				(7,
+				'H. SAN JUSTO',
+				'SAN JUSTO HOSPITAL',
+				'Migración de los pacientes del sistema del hospital San Justo 01/04/2012');
+
+	* Se migra el sistema de turnos del hospital san justo
+
+			id_origen_info = 14
+  			id_sistema_propietario = 7
+  			id_efector = 292
+  			
+  			
+  			Pacientes nuevos = 2939
+  		
+  			Historias clinicas nuevas = 4107
+  			
+  			Documentos con inconsistencias del efector = 402
+  			
+  			Historias clinicas duplicadas del efector = 50
+  			
+  			Total pacientes = 1453070
+  			Total hc		= 1392126
+	
+			
+
+Version 2.36a 27/03/2012
+------------------------
+
+	* Se migran los siguientes HMI:
+
+			 -------------------------------------------
+  			· Hospital de Niños Alassia 	- 20/03/2012
+  			 -------------------------------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 121
+  			
+  			
+  			Pacientes nuevos = 4353
+  		
+  			Historias clinicas nuevas = 6251
+  			
+  			Documentos con inconsistencias del efector = 1096
+  			
+  			Historias clinicas duplicadas del efector = 34
+  			
+  			Historias clinicas con documentos diferentes = 40
+  			
+  			Total pacientes = 1426359
+  			Total hc		= 1347938
+  			
+  			
+  			 -------------------------------------------
+  			· Hospital Cullen			 	- 20/03/2012
+  			 -------------------------------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 71
+  			
+  			
+  			Pacientes nuevos = 2813
+  		
+  			Historias clinicas nuevas = 5480
+  			
+  			Documentos con inconsistencias del efector = 2194
+  			
+  			Historias clinicas duplicadas del efector = 0
+  			
+  			Historias clinicas con documentos diferentes = 132 
+  			
+  			Total pacientes = 1429172
+  			Total hc		= 1353418
+  			
+
+  			
+  			
+  			 -------------------------------------------
+  			· Hospital Eva Peron		 	- 20/03/2012
+  			 -------------------------------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 167
+  			
+  			
+  			Pacientes nuevos = 1543
+  		
+  			Historias clinicas nuevas = 2556
+  			
+  			Documentos con inconsistencias del efector = 1292
+  			
+  			Historias clinicas duplicadas del efector = 585
+  			
+  			Historias clinicas con documentos diferentes = 248
+  			
+  			Total pacientes = 1430715
+  			Total hc		= 1355974
+  			
+  			
+  			 -------------------------------------------
+  			· Hospital de Hersilia		 	- 20/03/2012
+  			 -------------------------------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 230
+  			
+  			
+  			Pacientes nuevos = 215
+  		
+  			Historias clinicas nuevas = 351
+  			
+  			Documentos con inconsistencias del efector = 73
+  			
+  			Historias clinicas duplicadas del efector = 293
+  			
+  			Historias clinicas con documentos diferentes = 13
+  			
+  			Total pacientes = 1430930
+  			Total hc		= 1356325
+  			
+  			
+  			 -------------------------------------------
+  			· Hospital Iturraspe		 	- 20/03/2012
+  			 -------------------------------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 72
+  			
+  			
+  			Pacientes nuevos = 4387
+  		
+  			Historias clinicas nuevas = 8463
+  			
+  			Documentos con inconsistencias del efector = 3385
+  			
+  			Historias clinicas duplicadas del efector = 18
+  			
+  			Historias clinicas con documentos diferentes = 26
+  			
+  			Total pacientes = 1435317
+  			Total hc		= 1364788
+  			
+  			
+  			 -------------------------------------------
+  			· Hospital Protomedico		 	- 20/03/2012
+  			 -------------------------------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 63
+  			
+  			
+  			Pacientes nuevos = 249
+  		
+  			Historias clinicas nuevas = 631
+  			
+  			Documentos con inconsistencias del efector = 378
+  			
+  			Historias clinicas duplicadas del efector = 135
+  			
+  			Historias clinicas con documentos diferentes = 9
+  			
+  			Total pacientes = 1435566
+  			Total hc		= 1365419
+  			
+  			
+  			 -------------------------------------------
+  			· Hospital Mira y Lopez		 	- 20/03/2012
+  			 -------------------------------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 73
+  			
+  			
+  			Pacientes nuevos = 198
+  		
+  			Historias clinicas nuevas = 424
+  			
+  			Documentos con inconsistencias del efector = 64
+  			
+  			Historias clinicas duplicadas del efector = 0
+  			
+  			Historias clinicas con documentos diferentes = 9
+  			
+  			Total pacientes = 1435764
+  			Total hc		= 1365843
+  			
+  			
+  			 -------------------------------------------
+  			· Hospital de San Javier	 	- 20/03/2012
+  			 -------------------------------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 251
+  			
+  			
+  			Pacientes nuevos = 226
+  		
+  			Historias clinicas nuevas = 409
+  			
+  			Documentos con inconsistencias del efector = 1288
+  			
+  			Historias clinicas duplicadas del efector = 564
+  			
+  			Historias clinicas con documentos diferentes = 28
+  			
+  			Total pacientes = 1435990
+  			Total hc		= 1366252
+  			
+  			
+  			 -------------------------------------------
+  			· Hospital San Justo		 	- 20/03/2012
+  			 -------------------------------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 292
+  			
+  			
+  			Pacientes nuevos = 12729
+  		
+  			Historias clinicas nuevas = 18994
+  			
+  			Documentos con inconsistencias del efector = 286
+  			
+  			Historias clinicas duplicadas del efector = 469
+  			
+  			Historias clinicas con documentos diferentes = 0
+  			
+  			Total pacientes = 1448719
+  			Total hc		= 1385246
+  			
+  			
+  			 -------------------------------------------
+  			· Hospital Totoras			 	- 20/03/2012
+  			 -------------------------------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 45
+  			
+  			
+  			Pacientes nuevos = 1412
+  		
+  			Historias clinicas nuevas = 2773
+  			
+  			Documentos con inconsistencias del efector = 42
+  			
+  			Historias clinicas duplicadas del efector = 55
+  			
+  			Historias clinicas con documentos diferentes = 0
+  			
+  			Total pacientes = 1450131
+  			Total hc		= 1388019
+  			
+  			
+Version 2.35a 13/10/2011
+------------------------
+
+	* Se migran los siguientes HMI:
+	
+			
+			---------------------------------------
+  			· Hospital Cañada de Gomez - 05/11/2011
+  			 --------------------------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 38
+  			
+  			
+  			Pacientes nuevos = 8969
+  		
+  			Historias clinicas nuevas = 18785
+  			
+  			Documentos con inconsistencias del efector = 187
+  			
+  			Historias clinicas duplicadas del efector = 559
+  			
+  			Historias clinicas con documentos diferentes = 0
+  			
+  			Total pacientes = 1421174
+  			Total hc		= 1340546
+		
+
+  		
+  			---------------------------------------------
+  			· Hospital Centenario de Rosario - 05/11/2011
+  			 --------------------------------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 38
+  			
+  			
+  			Pacientes nuevos = 9801
+  		
+  			Historias clinicas nuevas = 19926
+  			
+  			Documentos con inconsistencias del efector = 6198
+  			
+  			Historias clinicas duplicadas del efector = 366
+  			
+  			Historias clinicas con documentos diferentes = 22
+  			
+  			Total pacientes = 1422006
+  			Total hc		= 1341687
+  			
+  			
+  	* Se incorpora la version 0.54a de la base de "efectores"
+  	
+  			
+  		
+Version 2.34a 13/10/2011
+------------------------
+
+	* Se crea el script "migra_personas_reconquista_informe.sql" con la finalidad de generar informacion extra a la ultima migracion del
+		sistema de reconquista (version 2_32a)
+		
+	* Se crean 2 tablas para el volcado de la informacion del punto anterior: "personas_reconquista_docs_inconsistentes" y
+		"hc_personas_reconquista_diferentes"
+		
+		. En la primer tabla "personas_reconquista_docs_inconsistentes" se volcaron los documentos no validos 
+		
+		. En la segunda tabla se volcaron los datos de pacientes que se le halla modificado el documento (sea tipo o numero) 
+			entre la migracion de la version 2.0a y la 2.32a. Para hacer este volcado de pacientes se utilizo el numero de
+			historia clinica. En otras palabras, para la misma historia clinica de una migracion y la otra, se busco diferencia 
+			de tipo y numero de	documento
+			
+
+Version 2.33a 12/10/2011
+------------------------
+
+	* Se realiza la migracion del sistema de turnos del hospital de san lorenzo. Para ello se crean los scripts "migra_sanlorenzo.sql" y 
+		"migra_personas_sanlorenzo.sql"
+		
+	* Se agrega el siguiente registro a la tabla "origen_info"
+		
+			INSERT IGNORE INTO origen_info(id_origen_info, origen_info) VALUES (13,"HOSPITAL SAN LORENZO");
+		
+	* Se agrega un registro a la tabla de "sistemas_propietarios" con el siguiente comando:
+	
+		
+			INSERT IGNORE INTO sistemas_propietarios
+				(id_sistema_propietario, nom_corto, nom_largo, observacion) 
+			VALUES 
+				(6,
+				'H. SAN LORENZO',
+				'SAMCO GRANADEROS A CABALLO',
+				'Migración de los pacientes del sistema del hospital San Lorenzo 28/09/2011');
+							
+	
+	* Se realizo la migracion del hospital San Lorenzo, obteniendo los siguientes resultados:
+				
+		-------------------------
+		- Migracion San Lorenzo -
+		-------------------------
+	
+		- se creo un tabla "personas_sanlorenzo_docs_hc_inconsistentes" donde se volcaron los datos de pacientes
+			con las siguientes caracteristicas y cantidades:
+			
+				. historias clinicas 'BIS'
+				
+					SELECT COUNT(*) 
+						FROM personas_sanlorenzo_docs_hc_inconsistentes 
+						WHERE 
+							clincod LIKE '%bis%';
+					
+					-> 559
+				
+				. documentos 0 e historia clinica <> 'BIS'
+				
+					SELECT COUNT(*) 
+						FROM personas_sanlorenzo_docs_hc_inconsistentes 
+						WHERE 
+							nro_doc=0
+						AND	clincod NOT LIKE '%bis%';
+				
+					-> 13906
+					
+				. documentos con inconsistencias, distintos de 0 e historia clinica <> 'BIS'
+				
+					SELECT COUNT(*) 
+						FROM personas_sanlorenzo_docs_hc_inconsistentes 
+						WHERE 
+							nro_doc<>0 
+						AND es_documento('DNI',nro_doc,fecha_nac) = 0
+						AND	clincod NOT LIKE '%bis%';
+						
+					-> 726
+					
+				. Total de registros de la tabla
+				
+					SELECT COUNT(*) FROM personas_sanlorenzo_docs_hc_inconsistentes;
+					
+					-> 15191
+	
+		- Se cruzo la informacion de los pacientes de San Lorenzo con la informacion ya cargada
+			de pacientes de la base de personas en busca de fallecidos. Los resultados son 
+			los siguientes:
+			
+				. Personas fallecidas con historia clinica en San Lorenzo
+				
+					SELECT COUNT(*) 
+						FROM personas p, hc_personas hc
+						WHERE 
+							p.fallecido=TRUE 
+						AND p.id_persona=hc.id_persona
+						AND hc.id_sistema_propietario=6;
+						
+					-> 382
+					
+				. Personas no fallecidas con historia clinica en San Lorenzo
+				
+					SELECT COUNT(*) 
+						FROM personas p, hc_personas hc
+						WHERE 
+							p.fallecido=FALSE 
+						AND p.id_persona=hc.id_persona
+						AND hc.id_sistema_propietario = 6;
+						
+					-> 48955
+					
+				. Total de historias clinicas de San Lorenzo
+				
+					SELECT COUNT(*)
+						FROM hc_personas
+						WHERE
+							id_sistema_propietario = 6;
+				
+					-> 49337
+			
+	* Totales globales de version de personas:
+	
+		Personas obtenidas o actualizadas por esta migracion (San Lorenzo) = 49310
+		
+		Total global de personas = 1412205
+		
+		Total global de historias clinicas = 1321761
+		
+		Personas nuevas = 28617
+		
+		Historias clinicas nuevas = 49337
+		
+	* Se actualiza el campo "sexo" de la tabla personas unificando los registros con los siguientes valores
+	
+		'M' -> masculino
+		'F' -> femenino
+		'I' -> Indeterminado o ignorado (dato no registrado)
+		
+		Se utilizo el siguiente comando:
+		
+			UPDATE personas
+				SET sexo = 'I'
+				WHERE 
+					sexo<>'M'
+				AND	sexo<>'F';
+				
+			-> (7403 row(s) affected)
+					
+	
+Version 2.32a 28/09/2011
+------------------------
+
+	* Se modifica la funcion es_documento: retorna FALSE para numeros de documentos menores a 10000, sin tener en cuenta los 
+		otros parametros
+	
+	* Se hace nuevamente la migracion del Hospital de Reconquista
+	
+			NOTA IMPORTANTE: debida a la complejidad de los casos donde a numeros de historias clinicas 
+		se le halla modificado informacion del tipo y numero de documento del paciente de dicha 
+		historia, el comando para la ultima migracion de reconquista es del tipo INSERT IGNORE 
+		contra la tabla de "hc_personas" de historias clinicas 
+		Un problema de esto puede ser que pacientes que tengan historias clinicas en otros efectores 
+		y hallan obtenido una historia clinica en reconquista entre 01/2011 y 09/2011 no esten en la 
+		base de datos. Ademas de que esta informacion de un antes y despues no queda registrada 
+		Otro caso importante de esta migracion es no quedan registrados los casos donde al mismo 
+		numero de historia clinica se le halla cambiado al dueño de la misma (fusion de historias clinicas)
+		
+		* Informacion de cantidades de personas e historias clinicas ANTES de la migracion generales y del Hosp. Reconquista (Dra. Stucky)
+		
+			SELECT COUNT(*) FROM personas;
+			
+				1382193
+			
+			SELECT COUNT(*) FROM hc_personas;
+			
+				1270559
+			
+			SELECT COUNT(*) FROM hc_personas 
+				WHERE id_efector = 5 ;
+			
+				91836
+			
+			SELECT COUNT(*) FROM hc_personas 
+				WHERE id_efector = 5 AND id_sistema_propietario = 2 ;
+			
+				91834
+			
+			SELECT COUNT(*) FROM hc_personas 
+				WHERE id_efector = 5 AND id_sistema_propietario IS NULL;
+			
+				2
+			
+			SELECT COUNT(*) FROM hc_personas 
+				WHERE id_efector = 5 
+					AND (his_cli_internacion_hmi IS NOT NULL 
+					OR his_cli_ce_hmi IS NOT NULL 
+					OR his_cli_sihos IS NOT NULL);
+				0
+				
+				
+		* DESPUES de la migracion se obtuvieron las siguientes cantidades
+			
+			Personas nuevas = 1395
+			
+			Historias clinicas nuevas = 1865
+			
+			Historias clinicas nuevas del efector (reconquista) = 1865
+			
+			Historias clinicas totales del efector (reconquista) = 93699
+			
+			
+		* Los totales generales quedaron:
+		
+			Total global de personas = 1383588
+			
+			Total global de historias clinicas = 1272424
+			
+
+			
+Version 2.31a 01/09/2011
+------------------------
+
+	* Se informo que habia un error en el "id_efector" de casilda. Las tablas actualizadas son: 
+		"hc_personas", "hc_hmi_duplicadas", "hc_personas_hmi_diferentes", "personas_hmi_docs_inconsistentes".
+		Los comandos de actualizacion ejecutados son:
+	
+		UPDATE hc_personas SET id_efector=434 WHERE id_efector=334;
+		
+		(18739 row(s) affected)
+		
+		UPDATE hc_hmi_duplicadas SET id_efector=434 WHERE id_efector=334;
+		
+		(321 row(s) affected)
+		
+		UPDATE hc_personas_hmi_diferentes SET id_efector=434 WHERE id_efector=334;
+		
+		(0 row(s) affected)
+
+		UPDATE personas_hmi_docs_inconsistentes SET id_efector=434 WHERE id_efector=334;
+		
+		(361 row(s) affected)
+		
+	* Se actualiza la version de la base de "efectores" a la version "0.52a" de la misma
+	
+	* Se eliminan las tablas de la base de "servicios" porque no eran necesarias y estaban desactualizadas
+	
+	* Se migran actualizaciones de bases del hmi
+	
+			-------------------------------
+  			· Hospital San Carlos - Casilda. Fecha de los archivos fuente 30/08/2011
+  			 ------------------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 434
+  			
+  			
+  			Pacientes nuevos = 845
+  		
+  			Historias clinicas nuevas = 1018
+  			
+  			Documentos con inconsistencias del efector = 369
+  			
+  			Historias clinicas duplicadas del efector = 428
+  			
+  			Historias clinicas con documentos diferentes = 15
+  			
+  			Total pacientes = 1381837
+  			Total hc		= 1269976
+  			
+  				
+		
+  			-------------------------------
+  			· Hospital San Javier. Fecha de los archivos fuente 30/08/2011
+  			 ------------------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 251
+  			
+  			
+  			Pacientes nuevos = 356
+  		
+  			Historias clinicas nuevas = 583
+  			
+  			Documentos con inconsistencias del efector = 1151
+  			
+  			Historias clinicas duplicadas del efector = 514
+  			
+  			Historias clinicas con documentos diferentes = 16
+  			
+  			Total pacientes = 1382193
+  			Total hc		= 1270559
+  			
+Version 2.30a 24/08/2011
+------------------------
+
+	* Se migran actualizaciones de bases del hmi
+	
+			-------------------
+  			· Hospital San Jorge. Fecha de los archivos fuente 12/08/2011
+  			 -------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 331
+  			
+  			
+  			Pacientes nuevos = 261
+  		
+  			Historias clinicas nuevas = 310
+  			
+  			Documentos con inconsistencias del efector = 158
+  			
+  			Historias clinicas duplicadas del efector = 1158
+  			
+  			Historias clinicas con documentos diferentes = 4
+  			
+  			Total pacientes = 1363028
+  			Total hc		= 1243342
+  			
+  			
+
+  			 ----------------------
+  			· Hospital Mira y Lopez. Fecha de los archivos fuente 22/07/2011
+  			 ----------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 73
+  			
+  			
+  			Pacientes nuevos = 270
+  		
+  			Historias clinicas nuevas = 764
+  			
+  			Documentos con inconsistencias del efector = 54
+  			
+  			Historias clinicas duplicadas del efector = 0
+  			
+  			Historias clinicas con documentos diferentes = 4
+  			
+  			
+  			Total pacientes = 1363298
+  			Total hc		= 1244106
+  			
+  
+  			 ----------------------
+  			· Hospital Protomedico. Fecha de los archivos fuente 21/07/2011
+  			 ----------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 63
+  			
+  			
+  			Pacientes nuevos = 10007
+  		
+  			Historias clinicas nuevas = 23324
+  			
+  			Documentos con inconsistencias del efector = 374
+  			
+  			Historias clinicas duplicadas del efector = 120
+  			
+  			Historias clinicas con documentos diferentes = 0
+  			
+  			
+  			Total pacientes = 1373305
+  			Total hc		= 1267430
+  			
+	* Se crea el script "migra_proto-sayago-ml.sql" de migracion para la base de pacientes del "Protomedico-Sayago-MirayLopez"
+	
+	* Se agregan 1 registro a la tabla "origen_info" para la migracion de estos sistemas
+	
+		INSERT INTO origen_info VALUES (12,"PROTOMEDICO-SAYAGO-MIRA Y LOPEZ");
+	
+	* Se crea una tabla "personas_proto_sayago_ml_docs_inconsistentes" con los documentos donde se encotraron irregularidades
+		para la migracion del descrita en el punto anterior	
+		
+	* Se crea el script "migra_personas_proto-sayago-ml.sql" para las migraciones de los sistemas propietarios 
+		del Protomedico - Sayago - Mira y Lopez que usan para facturacion
+	
+		 --------------------------------------
+		· Hospital Protomedico Manuel Rodriguez - Fecha de obtencion de datos 17/08/2011
+		 --------------------------------------
+  			
+  			id_origen_info = 12
+  			id_efector = 63
+  			
+  			
+  			Pacientes nuevos = 6810
+  		
+  			Historias clinicas nuevas = 0
+  			
+  			Documentos con inconsistencias del efector = 135
+  			
+  			
+  			Total pacientes = 1380115
+  			Total hc		= 1267430
+			
+  	
+  	* Se obtienen actualizaciones del HMI:
+  	
+  		 	--------------------
+  			· Hospital Vera		. Fecha de los archivos fuente 23/08/2011
+  			 -------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 340
+  			
+  			
+  			Pacientes nuevos = 800
+  		
+  			Historias clinicas nuevas = 1312
+  			
+  			Documentos con inconsistencias del efector = 193
+  			
+  			Historias clinicas duplicadas del efector = 1473
+  			
+  			Historias clinicas con documentos diferentes = 65
+  			
+  			
+  			Total pacientes = 1380915
+  			Total hc		= 1268742
+  			
+  			
+  			
+  			---------------------
+  			· Hospital Santo Tome . Fecha de los archivos fuente 23/08/2011
+  			 --------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 86
+  			
+  			
+  			Pacientes nuevos = 77
+  		
+  			Historias clinicas nuevas = 216
+  			
+  			Documentos con inconsistencias del efector = 53
+  			
+  			Historias clinicas duplicadas del efector = 14
+  			
+  			Historias clinicas con documentos diferentes = 1
+  			
+  			
+  			Total pacientes = 1380992
+  			Total hc		= 1268958
+  			
+  			
+	* Se habilitan los indices de la tabla "personas_agudoavila_docs_inconsistentes" 
+		
+		ALTER TABLE personas_agudoavila_docs_inconsistentes ENABLE KEYS;	
+		
+		
+	* Se modifica el nombre del id de la tabla de documentos inconsistentes del agudo avila
+		
+		ALTER TABLE personas_agudoavila_docs_inconsistentes
+			CHANGE 
+				id_persona_hmi_doc_inconsistente 
+				id_persona_agudoavila_doc_inconsistente INT(10) 	UNSIGNED    			NOT NULL AUTO_INCREMENT;
+				
+		
+Version 2.2a	03/08/2011
+--------------------------
+
+	* -------------------------------------------- *
+	* Se realiza la migracion Hospital Agudo Avila *
+	* -------------------------------------------- *
+	
+		- Se agrega un registro a "origen_info" y otro a "sistemas_propietarios"
+		
+			INSERT INTO origen_info VALUES (11,"AGUDO AVILA");
+			
+			INSERT INTO sistemas_propietarios 
+				VALUES
+					(5,
+					'H. AGUDO AVILA',
+					'CENTRO REGIONAL DE SALUD MENTAL AGUDO AVILA',
+					'Migración de los pacientes del sistema del hospital Agudo Avila 28/07/2011');
+	
+		- Se crea el script de migracion para el Agudo Avila "migra_personas_turnos_agudoavila.sql" para la migracion del
+			sistema propietario de dicho hospital. Para la migracion de datos de toma un dump de la base fuente
+			del dia 28 de julio 2011 pasado por Andrea
+		
+		- Se crea una tabla "personas_agudoavila_docs_inconsistentes" con los documentos donde se encotraron irregularidades
+			para la migracion del descrita en el punto anterior
+		
+		- Se realiza la migracion de Sihos de dicho hospital con un dump de la tabla "ihegresos" hecho el mismo dia
+
+			
+			· Totales de personas antes de la migracion:
+			
+				Personas = 1356752
+				
+				Historias clinicas = 1235191
+		
+
+				
+		Detalles de la migracion:
+		
+							
+		===================
+		= Migracion Sihos =
+		===================
+	
+					
+			
+			 ---------------------------------------------
+			· Hospital Agudo Avila Dump del dia 28/07/2011
+			 ---------------------------------------------
+  			
+  			id_origen_info = 11
+  			id_efector = 218
+  			
+  			
+  			Pacientes nuevos = 618
+  		
+  			Historias clinicas nuevas = 15
+  			
+  			Documentos con inconsistencias = 56
+  			
+  			  			
+  			
+  			Total pacientes = 1357370
+  			Total hc		= 1235206
+  			
+  		
+  		===================================
+  		= Sistema propietario Agudo Avila =
+  		===================================
+		
+			id_origen_info = 11
+  			id_sistema_propietario = 5
+  			
+  			
+  			Pacientes nuevos = 5397
+  			
+  			Historias clinicas nuevas = 7826
+  			
+  			Documentos con inconsistencias del efector = 2429
+  			
+  			
+  			Total pacientes = 1362767
+  			Total hc		= 1243032
+  			
+	
+
+Version 2.1a	30/03/2011
+--------------------------
+
+	* Se agregan como parte de base personas las siguientes funciones que son usadas en las migraciones:
+	
+		
+	* Se agrega el indice "idx_fecha_nac" a la tabla "personas" sobre el campo "fecha_nac"
+	
+		ALTER TABLE personas ADD INDEX idx_fecha_nac (fecha_nac);
+	
+	* Se agrega la tabla "hc_hmi_duplicadas" la cual contiene por efector los numeros de historias clinicas
+		duplicadas tanto de consultorio externo como de internacion en los procesos de migracion del HMI
+			
+	* A partir de ahora se intentara validar el documento, aunque este codigo para chequear los documentos
+		esta hecho a prueba y error, se utilizara para evitar ingresar documentos no validos a la tabla de
+		personas. Este control se realiza junto con el dato de fecha de nacimiento, por lo cual puede ser
+		que documentos sean inconsistentes por un mal tipeo del numero de documento o por una fecha de 
+		nacimiento mal ingresada. Esta validacion se hace con la funcion "es_documento" la cual tiene que 
+		actualizarse a medida que se encuentren combinaciones de informacion donde se deduzca que un documento 
+		no sea valido
+		
+	* Se agregan las tablas "personas_hmi_docs_incosistentes", "personas_diagnose_docs_incosistentes",
+		"personas_sicap_docs_incosistentes" y "personas_sihos_docs_inconsistentes" donde se cargaran los 
+		pacientes que tengan inconsistencias en los datos de tipo y numero de documento y la fecha de nacimiento
+		
+		Cada una de estas tablas contiene el id_efector y el numero de historia clinica correspondiente
+		a cada sistema
+		
+	* Se continua con la migracion de cero que se inicio en la version anterior (ver version 2.0a)
+	
+		=====
+		- HMI 
+		=====
+		
+			 ------------------------------------
+			· Hospital de Niños Alassia (Santa Fe) Dump del dia 23/02/2011
+			 ------------------------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 121
+  			
+  			
+  			Pacientes nuevos = 100389
+  		
+  			Historias clinicas nuevas = 107396
+  			
+  			Documentos con inconsistencias = 1037
+  			
+  			Historias clinicas duplicadas = 32
+  			
+  			
+  			Total pacientes = 736084
+  			Total hc		= 394405
+  			
+  			Pacientes con 2 historias clinicas(*) = 7014
+  			
+  			Pacientes con 3 historias clinicas(*) = 55
+  			
+  			Pacientes con 4 historias clinicas(*) = 1
+
+
+  			 --------
+  			· Casilda. Fecha de los archivos fuente 23/02/2011
+  			 --------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 334
+  			
+  			errata: id_efector = 434 Ver version 2.31
+  			
+  			
+  			Pacientes nuevos = 17428
+  		
+  			Historias clinicas nuevas = 18739
+  			
+  			Documentos con inconsistencias del efector = 361
+  			
+  			Historias clinicas duplicadas del efector = 321
+  			
+  			
+  			Total pacientes = 753512
+  			Total hc		= 413144
+  			
+  			Pacientes con 2 historias clinicas(*) = 7610
+  			
+  			Pacientes con 3 historias clinicas(*) = 66
+  			
+  			Pacientes con 4 historias clinicas(*) = 1
+  			
+  			
+  			 -------------------
+  			· Centenario Rosario. Fecha de los archivos fuente 25/02/2011
+  			 -------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 183
+  			
+  			
+  			Pacientes nuevos = 216470
+  			
+  			Pacientes actualizados = 
+  		
+  			Historias clinicas nuevas = 252543
+  			
+  			Documentos con inconsistencias del efector = 6092
+  			
+  			Historias clinicas duplicadas del efector = 366
+  			
+  			
+  			Total pacientes = 969982
+  			Total hc		= 665687
+  			
+  			Pacientes con 2 historias clinicas(*) = 34280
+  			
+  			Pacientes con 3 historias clinicas(*) = 1000
+  			
+  			Pacientes con 4 historias clinicas(*) = 10
+  			
+  			Pacientes con 5 historias clinicas(*) = 1
+  			
+  			
+  			 ------
+  			· Ceres. Fecha de los archivos fuente 28/02/2011
+  			 ------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 226
+  			
+  			
+  			Pacientes nuevos = 12063
+  		
+  			Historias clinicas nuevas = 14445
+  			
+  			Documentos con inconsistencias del efector = 347
+  			
+  			Historias clinicas duplicadas del efector = 115
+  			
+  			
+  			Total pacientes = 982045
+  			Total hc		= 680132
+  			
+  			Pacientes con 2 historias clinicas(*) = 35410
+  			
+  			Pacientes con 3 historias clinicas(*) = 1053
+  			
+  			Pacientes con 4 historias clinicas(*) = 12
+  			
+  			Pacientes con 5 historias clinicas(*) = 1
+
+  			
+  			 ----------------
+  			· Hospital Cullen. Fecha de los archivos fuente 23/02/2011
+  			 ----------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 71
+  			
+  			
+  			Pacientes nuevos = 117542
+  		
+  			Historias clinicas nuevas = 141888
+  			
+  			Documentos con inconsistencias del efector = 1980
+  			
+  			Historias clinicas duplicadas del efector = 0
+  			
+  			
+  			Total pacientes = 1099587
+  			Total hc		= 822020
+  			
+  			Pacientes con 2 historias clinicas(*) = 44916
+  			
+  			Pacientes con 3 historias clinicas(*) = 1440
+  			
+  			Pacientes con 4 historias clinicas(*) = 31
+  			
+  			Pacientes con 5 historias clinicas(*) = 2
+  			
+  			
+  			 -------------------
+  			· Hospital Eva Peron. Fecha de los archivos fuente 23/02/2011
+  			 -------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 71
+  			
+  			
+  			Pacientes nuevos = 17049
+  		
+  			Historias clinicas nuevas = 19229
+  			
+  			Documentos con inconsistencias del efector = 1195
+  			
+  			Historias clinicas duplicadas del efector = 330
+  			
+  			
+  			Total pacientes = 1116636
+  			Total hc		= 841249
+  			  			
+  			
+  			 ------------------
+  			· Hospital Hersilia. Fecha de los archivos fuente 28/02/2011
+  			 ------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 167
+  			
+  			
+  			Pacientes nuevos = 1690
+  		
+  			Historias clinicas nuevas = 2242
+  			
+  			Documentos con inconsistencias del efector = 60
+  			
+  			Historias clinicas duplicadas del efector = 205
+  			
+  			
+  			Total pacientes = 1118326
+  			Total hc		= 843491
+  			
+  			Pacientes con 2 historias clinicas(*) = 47038
+  			
+  			Pacientes con 3 historias clinicas(*) = 1542
+  			
+  			Pacientes con 4 historias clinicas(*) = 35
+  			
+  			Pacientes con 5 historias clinicas(*) = 2
+  			
+  			
+  			· Hospital Iturraspe. Fecha de los archivos fuente 20/02/2011
+  			 -------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 72
+  			
+  			
+  			Pacientes nuevos = 90070
+  		
+  			Historias clinicas nuevas = 170380
+  			
+  			Documentos con inconsistencias del efector = 3202
+  			
+  			Historias clinicas duplicadas del efector = 19
+  			
+  			
+  			Total pacientes = 1208396
+  			Total hc		= 1013871
+  			
+  			Pacientes con 2 historias clinicas(*) = 102803
+  			
+  			Pacientes con 3 historias clinicas(*) = 4397
+  			
+  			Pacientes con 4 historias clinicas(*) = 113
+  			
+  			Pacientes con 5 historias clinicas(*) = 8
+  			
+  			Pacientes con 6 historias clinicas(*) = 1
+  			
+  			
+  			 ----------------------
+  			· Hospital Maria Susana. Fecha de los archivos fuente 28/02/2011
+  			 ----------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 329
+  			
+  			
+  			Pacientes nuevos = 1772
+  		
+  			Historias clinicas nuevas = 1864
+  			
+  			Documentos con inconsistencias del efector = 14
+  			
+  			Historias clinicas duplicadas del efector = 0
+  			
+  			
+  			Total pacientes = 1210168
+  			Total hc		= 1015735
+  			
+  			Pacientes con 2 historias clinicas(*) = 102876
+  			
+  			Pacientes con 3 historias clinicas(*) = 4400
+  			
+  			Pacientes con 4 historias clinicas(*) = 115
+  			
+  			Pacientes con 5 historias clinicas(*) = 8
+  			
+  			Pacientes con 6 historias clinicas(*) = 1
+  			
+  			
+  			 ---------------
+  			· Hospital Pilar. Fecha de los archivos fuente 03/03/2011
+  			 ---------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 127
+  			
+  			
+  			Pacientes nuevos = 2317
+  		
+  			Historias clinicas nuevas = 2581
+  			
+  			Documentos con inconsistencias del efector = 16
+  			
+  			Historias clinicas duplicadas del efector = 0
+  			
+  			
+  			Total pacientes = 1212485
+  			Total hc		= 1018316
+  			
+  			Pacientes con 2 historias clinicas(*) = 103058
+  			
+  			Pacientes con 3 historias clinicas(*) = 4429
+  			
+  			Pacientes con 4 historias clinicas(*) = 115
+  			
+  			Pacientes con 5 historias clinicas(*) = 8
+  			
+  			Pacientes con 6 historias clinicas(*) = 1
+  			
+  			
+  			 --------------------
+  			· Hospital Provincial. Fecha de los archivos fuente 01/03/2011
+  			 --------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 184
+  			
+  			
+  			Pacientes nuevos = 40216
+  		
+  			Historias clinicas nuevas = 56996
+  			
+  			Documentos con inconsistencias del efector = 1386
+  			
+  			Historias clinicas duplicadas del efector = 2
+  			
+  			
+  			Total pacientes = 1252701
+  			Total hc		= 1075312
+  			
+  			Pacientes con 2 historias clinicas(*) = 114856
+  			
+  			Pacientes con 3 historias clinicas(*) = 5710
+  			
+  			Pacientes con 4 historias clinicas(*) = 189
+  			
+  			Pacientes con 5 historias clinicas(*) = 13
+  			
+  			Pacientes con 6 historias clinicas(*) = 0
+  			
+  			Pacientes con 7 historias clinicas(*) = 1
+  			
+  			
+  			 -----------------
+  			· Hospital Rafaela. Fecha de los archivos fuente 23/02/2011
+  			 -----------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 450
+  			
+  			
+  			Pacientes nuevos = 16489
+  		
+  			Historias clinicas nuevas = 22839
+  			
+  			Documentos con inconsistencias del efector = 409
+  			
+  			Historias clinicas duplicadas del efector = 8
+  			
+  			
+  			Total pacientes = 1269190
+  			Total hc		= 1098151
+  			
+  			Pacientes con 2 historias clinicas(*) = 117934
+  			
+  			Pacientes con 3 historias clinicas(*) = 6299
+  			
+  			Pacientes con 4 historias clinicas(*) = 263
+  			
+  			Pacientes con 5 historias clinicas(*) = 20
+  			
+  			Pacientes con 6 historias clinicas(*) = 2
+  			
+  			Pacientes con 7 historias clinicas(*) = 0
+  			
+  			Pacientes con 8 historias clinicas(*) = 1
+  			
+  			
+  			 --------------------
+  			· Hospital Santo Tome. Fecha de los archivos fuente 23/02/2011
+  			 --------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 86
+  			
+  			
+  			Pacientes nuevos = 1308
+  		
+  			Historias clinicas nuevas = 4259
+  			
+  			Documentos con inconsistencias del efector = 50
+  			
+  			Historias clinicas duplicadas del efector = 0
+  			
+  			
+  			Total pacientes = 1270498
+  			Total hc		= 1102410
+  			
+  			Pacientes con 2 historias clinicas(*) = 119238
+  			
+  			Pacientes con 3 historias clinicas(*) = 6975
+  			
+  			Pacientes con 4 historias clinicas(*) = 291
+  			
+  			Pacientes con 5 historias clinicas(*) = 20
+  			
+  			Pacientes con 6 historias clinicas(*) = 2
+  			
+  			Pacientes con 7 historias clinicas(*) = 0
+  			
+  			Pacientes con 8 historias clinicas(*) = 1
+  			
+  			
+  			 ----------------
+  			· Hospital Sastre. Fecha de los archivos fuente 28/02/2011
+  			 ----------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 333
+  			
+  			
+  			Pacientes nuevos = 4145
+  		
+  			Historias clinicas nuevas = 4657
+  			
+  			Documentos con inconsistencias del efector = 132
+  			
+  			Historias clinicas duplicadas del efector = 0
+  			
+  			
+  			Total pacientes = 1274643
+  			Total hc		= 1107067
+  			
+  			Pacientes con 2 historias clinicas(*) = 119532
+  			
+  			Pacientes con 3 historias clinicas(*) = 7021
+  			
+  			Pacientes con 4 historias clinicas(*) = 295
+  			
+  			Pacientes con 5 historias clinicas(*) = 20
+  			
+  			Pacientes con 6 historias clinicas(*) = 2
+  			
+  			Pacientes con 7 historias clinicas(*) = 0
+  			
+  			Pacientes con 8 historias clinicas(*) = 1
+  			
+  			
+  			 ----------------------
+  			· Hospital Mira y Lopez. Fecha de los archivos fuente 28/02/2011
+  			 ----------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 73
+  			
+  			
+  			Pacientes nuevos = 1082
+  		
+  			Historias clinicas nuevas = 3696
+  			
+  			Documentos con inconsistencias del efector = 38
+  			
+  			Historias clinicas duplicadas del efector = 0
+  			
+  			
+  			Total pacientes = 1275725
+  			Total hc		= 1110763
+  			
+  			Pacientes con 2 historias clinicas(*) = 120473
+  			
+  			Pacientes con 3 historias clinicas(*) = 7597
+  			
+  			Pacientes con 4 historias clinicas(*) = 321
+  			
+  			Pacientes con 5 historias clinicas(*) = 22
+  			
+  			Pacientes con 6 historias clinicas(*) = 2
+  			
+  			Pacientes con 7 historias clinicas(*) = 0
+  			
+  			Pacientes con 8 historias clinicas(*) = 1
+  			
+  			
+  			 --------------------
+  			· Hospital San Javier. Fecha de los archivos fuente 28/02/2011
+  			 --------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 251
+  			
+  			
+  			Pacientes nuevos = 6411
+  		
+  			Historias clinicas nuevas = 15788
+  			
+  			Documentos con inconsistencias del efector = 1167
+  			
+  			Historias clinicas duplicadas del efector = 428
+  			
+  			
+  			Total pacientes = 1282136
+  			Total hc		= 1126551
+  			
+  			Pacientes con 2 historias clinicas(*) = 123232
+  			
+  			Pacientes con 3 historias clinicas(*) = 8250
+  			
+  			Pacientes con 4 historias clinicas(*) = 352
+  			
+  			Pacientes con 5 historias clinicas(*) = 23
+  			
+  			Pacientes con 6 historias clinicas(*) = 1
+  			
+  			Pacientes con 7 historias clinicas(*) = 1
+  			
+  			Pacientes con 8 historias clinicas(*) = 1
+  			
+  			
+  			 -------------------
+  			· Hospital San Jorge. Fecha de los archivos fuente 24/02/2011
+  			 -------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 331
+  			
+  			
+  			Pacientes nuevos = 9450
+  		
+  			Historias clinicas nuevas = 11004
+  			
+  			Documentos con inconsistencias del efector = 151
+  			
+  			Historias clinicas duplicadas del efector = 1046
+  			
+  			
+  			Total pacientes = 1291586
+  			Total hc		= 1137555
+  			
+  			Pacientes con 2 historias clinicas(*) = 124325
+  			
+  			Pacientes con 3 historias clinicas(*) = 8411
+  			
+  			Pacientes con 4 historias clinicas(*) = 376
+  			
+  			Pacientes con 5 historias clinicas(*) = 26
+  			
+  			Pacientes con 6 historias clinicas(*) = 1
+  			
+  			Pacientes con 7 historias clinicas(*) = 1
+  			
+  			Pacientes con 8 historias clinicas(*) = 1
+  			
+  			
+  			 ----------------------
+  			· Hospital Villa Eloisa. Fecha de los archivos fuente 28/02/2011
+  			 ----------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 47
+  			
+  			
+  			Pacientes nuevos = 2184
+  		
+  			Historias clinicas nuevas = 2419
+  			
+  			Documentos con inconsistencias del efector = 50
+  			
+  			Historias clinicas duplicadas del efector = 0
+  			
+  			
+  			Total pacientes = 1293770
+  			Total hc		= 1139974
+  			
+  			Pacientes con 2 historias clinicas(*) = 124440
+  			
+  			Pacientes con 3 historias clinicas(*) = 8416
+  			
+  			Pacientes con 4 historias clinicas(*) = 381
+  			
+  			Pacientes con 5 historias clinicas(*) = 26
+  			
+  			Pacientes con 6 historias clinicas(*) = 1
+  			
+  			Pacientes con 7 historias clinicas(*) = 1
+  			
+  			Pacientes con 8 historias clinicas(*) = 1
+  			
+  			
+  			 --------------
+  			· Hospital Vera. Fecha de los archivos fuente 23/02/2011
+  			 --------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 340
+  			
+  			
+  			Pacientes nuevos = 9000
+  		
+  			Historias clinicas nuevas = 13651
+  			
+  			Documentos con inconsistencias del efector = 196
+  			
+  			Historias clinicas duplicadas del efector = 641
+  			
+  			
+  			Total pacientes = 1302770
+  			Total hc		= 1153625
+  			
+  			Pacientes con 2 historias clinicas(*) = 127172
+  			
+  			Pacientes con 3 historias clinicas(*) = 9040
+  			
+  			Pacientes con 4 historias clinicas(*) = 477
+  			
+  			Pacientes con 5 historias clinicas(*) = 34
+  			
+  			Pacientes con 6 historias clinicas(*) = 1
+  			
+  			Pacientes con 7 historias clinicas(*) = 1
+  			
+  			Pacientes con 8 historias clinicas(*) = 1
+  			
+  			
+  			 ------------------------
+  			· Hospital Vera Candiotti. Fecha de los archivos fuente 25/02/2011
+  			 ------------------------
+  			
+  			id_origen_info = 1
+  			id_sistema_propietario = NULL
+  			id_efector = 74
+  			
+  			
+  			Pacientes nuevos = 920
+  		
+  			Historias clinicas nuevas = 1844
+  			
+  			Documentos con inconsistencias del efector = 18
+  			
+  			Historias clinicas duplicadas del efector = 0
+  			
+  			
+  			Total pacientes = 1303690
+  			Total hc		= 1155469
+  			
+  			Pacientes con 2 historias clinicas(*) = 127474
+  			
+  			Pacientes con 3 historias clinicas(*) = 9263
+  			
+  			Pacientes con 4 historias clinicas(*) = 521
+  			
+  			Pacientes con 5 historias clinicas(*) = 37
+  			
+  			Pacientes con 6 historias clinicas(*) = 1
+  			
+  			Pacientes con 7 historias clinicas(*) = 1
+  			
+  			Pacientes con 8 historias clinicas(*) = 1
+  			
+  			
+  			
+  		========	
+  		- SIHos
+  		========
+  		
+  			· Venado Tuerto Dump del dia 17/03/2011
+  			
+  			id_origen_info = 6
+  			id_sistema_propietario = NULL
+  			
+  			Pacientes nuevos = 3268
+  			
+  			Historias clinicas nuevas = 43
+  			
+  			Documentos con inconsistencias del efector = 230
+  			
+  			
+  			Total pacientes = 1306958
+  			Total hc		= 1155512
+  			
+  			
+  			Pacientes con 2 historias clinicas(*) = 127480
+  			
+  			Pacientes con 3 historias clinicas(*) = 9264
+  			
+  			Pacientes con 4 historias clinicas(*) = 521
+  			
+  			Pacientes con 5 historias clinicas(*) = 37
+  			
+  			Pacientes con 6 historias clinicas(*) = 1
+  			
+  			Pacientes con 7 historias clinicas(*) = 1
+  			
+  			Pacientes con 8 historias clinicas(*) = 1
+  			
+  			
+  			
+  		==========	
+  		- Diagnose
+  		==========
+  		
+  			· Provincial Dump del dia 01/03/2011
+  			
+  			id_origen_info = 10
+  			id_sistema_propietario = NULL
+  			
+  			Pacientes nuevos = 31265
+  			
+  			Historias clinicas nuevas = 41559
+  			
+  			Documentos con inconsistencias del efector = 2255
+  			
+  			
+  			Total pacientes = 1338223
+  			Total hc		= 1197071
+  			
+  			
+  			Pacientes con 2 historias clinicas(*) = 133687
+  			
+  			Pacientes con 3 historias clinicas(*) = 9946
+  			
+  			Pacientes con 4 historias clinicas(*) = 553
+  			
+  			Pacientes con 5 historias clinicas(*) = 41
+  			
+  			Pacientes con 6 historias clinicas(*) = 1
+  			
+  			Pacientes con 7 historias clinicas(*) = 1
+  			
+  			Pacientes con 8 historias clinicas(*) = 1
+  			
+  			
+  			
+  			
+  			· Iturraspe Dump del dia 28/02/2011
+  			
+  			id_origen_info = 10
+  			id_sistema_propietario = NULL
+  			
+  			Pacientes nuevos = 10327
+  			
+  			Historias clinicas nuevas = 18634
+  			
+  			Documentos con inconsistencias del efector = 996
+  			
+  			
+  			Total pacientes = 1348550
+  			Total hc		= 1215705
+  			
+  			
+  			Pacientes con 2 historias clinicas(*) = 138919
+  			
+  			Pacientes con 3 historias clinicas(*) = 10347
+  			
+  			Pacientes con 4 historias clinicas(*) = 559
+  			
+  			Pacientes con 5 historias clinicas(*) = 43
+  			
+  			Pacientes con 6 historias clinicas(*) = 1
+  			
+  			Pacientes con 7 historias clinicas(*) = 1
+  			
+  			Pacientes con 8 historias clinicas(*) = 1
+  			
+  			
+  			
+  			
+  			· Cullen Dump del dia 15/03/2011
+  			
+  			id_origen_info = 10
+  			id_sistema_propietario = NULL
+  			
+  			Pacientes nuevos = 8202
+  			
+  			Historias clinicas nuevas = 19486
+  			
+  			Documentos con inconsistencias del efector = 669
+  			
+  			
+  			Total pacientes = 1356752
+  			Total hc		= 1235191
+  			
+  			
+  			Pacientes con 2 historias clinicas(*) = 145834
+  			
+  			Pacientes con 3 historias clinicas(*) = 11826
+  			
+  			Pacientes con 4 historias clinicas(*) = 623
+  			
+  			Pacientes con 5 historias clinicas(*) = 49
+  			
+  			Pacientes con 6 historias clinicas(*) = 1
+  			
+  			Pacientes con 7 historias clinicas(*) = 1
+  			
+  			Pacientes con 8 historias clinicas(*) = 1
+  			
+  			
+  					
+  		(*) Son historias clinicas en direfentes efectores de un determinado paciente
+  		
+  		
+  		
+  			
+  		
+	
+		
+Version 2.0a	02/03/2011
+--------------------------
+	
+	* Se dropearon las tablas de "personas" y de "hc_personas" para volver a cargarse la informacion de
+		cero y regenerar los id_persona. De ahora en mas los "id_persona" no se cambiaran siendo este 
+		identificativo unico para cada par tipo y nro documento, de manera que cuando se consulte por una
+		persona a traves de su id, se pueden obtener las historias clinicas de esta persona con la 
+		tabla "hc_personas".
+		
+	* Ademas se crearon las tablas "hc_personas_diagnose_diferentes" y "hc_personas_hmi_diferentes" las cuales
+		se actualizaran en los procesos periodicos de actualizacion del "HMI" y del "Diagnose". Estas tablas
+		se cargaran con informacion inconsistentes entre distintas migraciones hechas en el tiempo de cada
+		efector
+		
+	* Luego de esta version de la base personas, migracion que regenera los "id_persona" nuevamente, 
+		solo se haran migraciones periodicas de los sistemas de "HMI", "Diagnose" y "SICAP", 
+		donde para los casos del HMI y del Diagnose son un proceso que genera tambien actualizacion de 
+		las tablas nombradas en el punto anterior, las cuales deben	utilizarse para que cada efector 
+		verificaque y actualice su base de datos local, dejando	de esta forma la informacion inconsistente
+		corregida para la proxima migracion de su hospital a la base personas
+	
+	* Se modifico el campo "origen_info" de la tabla "origen_info" a VARCHAR(50)
+	
+	* Se modifico el campo "tipo_doc" de la tabla "personas" de VARCHAR(15) a CHAR(3)
+	
+	* Se modificaron los campos "tipo_doc_madre" y "nro_doc_madre" por:
+	
+		tipo_doc_madre					CHAR(3)		 		      			NULL,
+  		nro_doc_madre					INT(10) 	UNSIGNED    			NOT NULL,
+  	
+  	* No se migro informacion del padron electoral ni del sistema de turnos del cullen
+  	
+  	* Se tomaron los datos de pacientes con numero de documentos mayor a 10000 en la migracion del
+  		sistema de turnos del Eva Peron y del Hospital de Reconquista
+  		
+  	* Se tomaron los datos de pacientes con numero de documentos mayor a 100000 del sistema de turnos
+  		del Hospital de Venado Tuerto
+  	
+  	* Se tomaron los datos de pacientes con numero de documentos mayor a 10000000 del sistema de turnos
+  		del Hospital de Niños Zona Norte Rosario
+  	
+  	* Consulta para obtener pacientes con mas de una historia clinica
+  	
+  		SELECT id_persona,COUNT(*) AS cant FROM hc_personas
+			GROUP BY id_persona
+			HAVING cant>1;	
+			
+  	* Orden de la migracion y resultados:
+  	
+  	
+  		- Sistema de turnos propietario - Hospital Eva Peron 
+  		
+  			id_origen_info = 5
+  			id_sistema_propietario = 1
+  			
+  			Pacientes nuevos = 136520
+  			
+  			Historias clinicas = 120748
+  		
+  			Total pacientes = 136520
+  			Total hc		= 120748
+  		
+  				
+  		- Sistema de turnos propietario de Reconquista
+  		
+  			id_origen_info = 7
+  			id_sistema_propietario = 2
+  			
+  			Pacientes nuevos = 91229
+  			
+  			Pacientes actualizados = 605
+  			
+  			Historia clinicas nuevas = 91834
+  			
+  			Total pacientes = 227749
+  			Total hc		= 212582
+  			
+  			Pacientes con 2 historias clinicas(*) = 541
+  		
+  				
+  		- Sistema de turnos propietario de Venado Tuerto
+  	
+  			id_origen_info = 8
+  			id_sistema_propietario = 3
+  			
+  			Paciente nuevos = 46366
+  			
+  			Pacientes actualizados = 535
+  			
+  			Historias clinicas nuevas = 46903
+  			
+  			Total pacientes = 274115
+  			Total hc		= 259485
+  			
+  			Pacientes con 2 historias clinicas(*) = 1023
+  			
+  			Pacientes con 3 historias clinicas(*) = 1 -> id_paciente = 105811
+  			  			
+  		
+  		- Sistema de turnos propietario del Hospital de Niños Zona Norte Rosario
+  		
+  			id_origen_info = 9
+  			id_sistema_propietario = 4
+  			
+  			Pacientes nuevos = 18820
+  			
+  			Pacientes actualizados = 3349
+  		
+  			Historias clinicas nuevas = 22169
+  			
+  			Total pacientes = 292935
+  			Total hc		= 281654
+  			
+  			Pacientes con 2 historias clinicas(*) = 3975
+  			
+  			Pacientes con 3 historias clinicas(*) = 15
+  			
+  			Pacientes con 4 historias clinicas(*) = 0
+  			
+  		
+  		- SICAP - Dump origen: salud.santa-fe.gov.ar		Fecha:	02/03/2011 entre las 8:40 y 9:20 hs
+
+  			Se tomaron los pacientes con numero de documento mayor a 1000000
+  			
+  			Cantidad de historias clinicas encontradas por establecimiento tomado de la base de datos del SICAP
+  			  		
+				codestablecimiento      nom_efector                            					cant his cli
+				
+				04200018                CENTRO DE SALUD AARON CASTELLANOS                  		   2                    
+				06309288                CENTRO DE SALUD ALTOS DE NOGUERAS                  		   4                    
+				04900761                CENTRO DE SALUD B. VIRGEN DE GUADALUPE-DR.V.CISERA 		   7                    
+				10500457                CENTRO DE SALUD BARRIO OESTE - EVA PERON GALVEZ    		   2                    
+				11200163                CENTRO DE SALUD BARRIO REYES SAN JUSTO             		   5                    
+				10500261                CENTRO DE SALUD GESSLER                            		   2                    
+				11200066                CENTRO DE SALUD NARE                               		   4                    
+				06300273                HOSPITAL DR. JOSE MARIA CULLEN.                    		   30                   
+				04900435                RECONQUISTA, CENTRO DE SALUD BARRIO EL OMBUSAL.    		   9                    
+				04900273                RECONQUISTA, HOSPITAL CENTRAL DRA. O.STUCKY.       		   17                   
+				10500121                SAMCO  GALVEZ                                      		   2600                 
+				08400011                SAMCO ACEBAL                                       		   1                    
+				12600068                SAMCO COLONIA BELGRANO                             		   1                    
+				09100321                SAMCO HERSILIA                                     		   2338                 
+				06300087                SAMCO LAGUNA PAIVA                                 		   2                    
+				04900222                SAMCO MALABRIGO                                    		   5                    
+				09800048                SAMCO ROMANG                                       		   8                    
+				09100381                SAN CRISTOBAL, CENTRO DE SALUD BARRIO PELLEGRINI.  		   2                    
+  			
+				
+			id_origen_info = 2
+  			id_sistema_propietario = NULL
+  			
+  			Pacientes nuevos = 341934
+  			
+  			Pacientes actualizados = 66152
+  		
+  			Historias clinicas nuevas = 4956
+  			
+  			Total pacientes = 634869
+  			Total hc		= 286610
+  			
+  			Pacientes con 2 historias clinicas(*) = 4111
+  			
+  			Pacientes con 3 historias clinicas(*) = 18
+  			
+  			Pacientes con 4 historias clinicas(*) = 0
+  			
+  		
+  		
+  		- SIHos
+  		
+  			· Galvez Dump del dia 16/02/2011
+  			
+  			id_origen_info = 6
+  			id_sistema_propietario = NULL
+  			
+  			Pacientes nuevos = 826
+  			
+  			Pacientes actualizados = 1268
+  		
+  			Historias clinicas nuevas = 399
+  			
+  			Total pacientes = 635695
+  			Total hc		= 287009
+  			
+  			Pacientes con 2 historias clinicas(*) = 4120
+  			
+  			Pacientes con 3 historias clinicas(*) = 18
+  			
+  			Pacientes con 4 historias clinicas(*) = 0
+  			
+  			
+  			
+  			
+  		(*) Son historias clinicas en direfentes efectores de un determinado paciente
+  			
+  		
+ Version 1.85a	24/01/2011
+--------------------------
+
+	* Se eliminaron los pacientes del hospital de reconquista "id_origen_info = 7" de la tabla "personas"
+		y las historias clinicas "id_sistema_propietario = 2" de la tabla "hc_personas"
+		
+		DELETE FROM personas WHERE id_origen_info = 7;
+		
+		DELETE FROM hc_personas WHERE id_sistema_propietario = 2;
+		
+	
+		Se integraron los pacientes del hospital de reconquista nuevamente con informacion actualizada al 20/01/2011
+		
+
+
+Version 1.84a	30/11/2010
+--------------------------
+
+	* Se elimino de "hc_personas" los registros con "id_efector" = 72 (iturraspe) y se integro
+		informacion de dicho hospital del HMI a la fecha
+		
+
+Version 1.83a	18/11/2010
+--------------------------
+
+
+	* Se integro sihos de Galvez
+	
+	 		
+ Version 1.82a	12/11/2010
+--------------------------
+
+	* Se migra con los script nuevos del HMI los pacientes del Samco de Ceres y del Hospital Centenario de
+		Rosario	
+	
+	* Se crean los archivos scripts para las migraciones del "diagnose" a la base "personas". Los archivos son
+		"migra_diagnose.sql" que se repartira a los efectores para que lo ejecuten eventualmente, y el archivo
+		"migra_personas_diagnose.sql" que se utilizara en el proceso de unificacion del diagnose a personas
+		
+	* Se agrega el campo "nr0_hc_diagnose" a la tabla "hc_personas" con el siguiente comando:
+	
+		ALTER TABLE	hc_personas	ADD COLUMN nr0_hc_diagnose		INTEGER 	NULL;
+		
+		CREATE UNIQUE INDEX idx_unique_id_efector_nr0_hc_diagnose ON hc_personas  (id_efector,nr0_hc_diagnose);
+	
+	* Se ha encontrado que en los hospitales se actualiza la informacion de tipo y numero de documento, y
+		la forma en la que se hallo este cambio fue a traves del numero de historia clinica del paciente.
+		Como en la tabla "hc_personas" se crearon indices unicos por numero de historia clinica y efector, por
+		cada sistema, fue asi que saltaron los errores; porque al ingresar una persona que ya existia en la 
+		tabla persona, pero con otro tipo y numero de documento (por ejemplo: en la primer integracion del
+		centenario), esta persona entro a la tabla "hc_personas" con un numero de historia clinica de internacion
+		del hmi para ese efector. Si se modifico posterior a la integracion a la base persona el tipo y numero
+		de documento de esta persona en el hmi de dicho efector, en la proxima integracion del centenario esta
+		persona ingresara a la tabla de "personas" con otro id porque el tipo y numero de documento fue 
+		modificado. Pero al intentar ingresar a la tabla de historias clinicas "hc_personas" el indice unico
+		no te permite ingresar la persona porque la historia clinica ya existe en dicha tabla, pero apunta a la
+		persona (otro id_persona) antes de la modificacion de tipo y numero de documento hecha desde el hmi.
+		Un caso de modificacion de tipo y nro de documento de cierta historia clinica es cuando se reutiliza
+		un nro de historia clinica para otro paciente.
+		
+		Para tratar este problema y ademas para tareas de limpieza, se agrega el campo "baja" a la tabla
+		"personas". lo cual marca al registro como valido o no valido. La ventaja de crear este campo, es 
+		que en vez de eliminar los registros incorrectos, es la de que en sucesivas migraciones no se vuelva a 
+		generar	un "id_persona" no valido
+		
+		El comando para agregar el campo es el siguiente:
+		
+			ALTER TABLE personas ADD COLUMN baja TINYINT(1) NOT NULL DEFAULT 0;
+	
+			
+	
+		El proceso para la deteccion de estas diferencias es:
+		
+			- Buscar a travez del numero de historia clinica diferencias entre los documentos se una 
+				migracion anterior y la actual
+				
+			- Cargar una tabla con la informacion de estas diferencias, la cual queda en la base de datos
+				para poder consultar. Esta tabla tiene el id_efector
+			
+			
+		La informacion generada en esta tabla de diferencias puede ser consultada en el efector de donde es la 
+			informacion para que sean confirmados los datos correctos
+				
+				
+		NOTA: los script no actualizarian el campo "baja" ya que la diferencia puede darse por la reutilizacion
+			de un numero de historia clinica y no por una modificacion de un documento mal cargado, ni tampoco
+			se modificaria el id_persona de la tabla de historias clinicas
+			
+	* Lo explicado en el item anterior no ha pasado en sucesivas integraciones del SICAP, pero puede ser que no 
+		halla ocurrido porque la tabla "hc_personas" no tiene indice unico por historia clinica. La historia de
+		este fue que como en un principio se migraba por unica vez (lo cual no es asi) y que el SICAP tiene
+		numero de historia clinica unica, sin depender del efector, en teoria no podria pasar que se repitan
+		las historias clinicas. De manera que se tendra que probar si hay historias clinicas repetidas, o sea,
+		mismo numero de historia clinica, pero distinto id de persona, para los pacientes del SICAP
+		
+		Primero se probara crear el indice unico para el campo "numero_paciente_sicap" de la tabla "hc_personas"
+		
+			ALTER TABLE hc_personas 
+				ADD UNIQUE INDEX idx_unique_id_efector_numero_grupo_familiar_historia_personal 
+					(id_efector,numero_grupo_familiar_sicap,historia_personal_sicap);
+		
+		Despues de lanzar el comando, se encontro que efectivamente, existen casos en el SICAP donde se ha
+		actualizado el tipo y numero de documento de algun paciente
+		
+		Tambien se debera considerar estos casos para proximas migraciones del SICAP, ademas de tener que identificar
+		las historias clinicas repetidas, editarlas y luego generar el indice unico para "hc_personas" antes descrito
+	
+		
+			SELECT * FROM hc_personas WHERE numero_paciente_sicap=256665;
+			SELECT * FROM hc_personas WHERE numero_paciente_sicap=257419;
+			SELECT * FROM hc_personas WHERE numero_paciente_sicap=257546;
+			SELECT * FROM hc_personas WHERE numero_paciente_sicap=257567;
+			SELECT * FROM hc_personas WHERE numero_paciente_sicap=256665;
+			SELECT * FROM hc_personas WHERE numero_paciente_sicap=256665;
+			
+			SELECT * FROM efectores WHERE id_efector=270;
+			
+			SELECT * FROM personas WHERE id_persona=900035;
+			SELECT * FROM personas WHERE id_persona=3020980;
+			
+			SELECT nom_loc FROM localidades WHERE id_localidad=397;
+			SELECT nom_loc FROM localidades WHERE id_localidad=133;
+			
+			SELECT numero_paciente_sicap,COUNT(*) AS cant FROM hc_personas GROUP BY numero_paciente_sicap
+			HAVING cant>1 AND numero_paciente_sicap IS NOT NULL
+			LIMIT 0,10;	
+			
+			
+		NOTA: se ha comprobado que hay numero de historias clinicas repetidas, y que no es posible en las condiciones
+			actuales crear un proceso como se hace con el HMI y el Diagnose
+			
+	* Se crea el archivo "personas_diferentes.sql" que crea las estructuras de las tablas auxiliares para
+		tratar los cambios en los documentos
+	
+		El script crea las siguientes tablas
+	
+	
+	
+			CREATE TABLE IF NOT EXISTS hc_personas_hmi_diferentes (
+				id_hc_persona				INTEGER		UNSIGNED 	NOT NULL COMMENT 'id de historia clinica en cuestion',
+				id_efector					INTEGER 	UNSIGNED 	NOT NULL COMMENT 'id del efector de donde es la historia clinica',
+				id_persona_anterior 		INTEGER		UNSIGNED 	NOT NULL COMMENT 'id de persona anterior',
+				tipo_doc_anterior			CHAR(3) 				NOT NULL COMMENT 'tipo y nro de documento anterior',
+				nro_doc_anterior			INTEGER 	UNSIGNED 	NOT NULL,
+				apellido_anterior			VARCHAR(255)			NOT NULL,
+				nombre_anterior				VARCHAR(255)			NOT NULL,
+				fecha_nac_anterior			DATE					NULL,
+				id_persona_nuevo			INTEGER		UNSIGNED	NULL,
+				tipo_doc_nuevo 				CHAR(3) 				NOT NULL COMMENT 'tipo y nro de documento nuevo',
+				nro_doc_nuevo 				INTEGER 	UNSIGNED 	NOT NULL,
+				apellido_nuevo				VARCHAR(255)			NOT NULL,
+				nombre_nuevo				VARCHAR(255)			NOT NULL,
+				fecha_nac_nuevo				DATE					NULL,
+				his_cli_internacion_hmi 	INTEGER 	UNSIGNED 	NULL COMMENT 'Historia clinica en cuestion',
+				his_cli_ce_hmi 				INTEGER 	UNSIGNED 	NULL,
+				PRIMARY KEY pk_id_hc_persona (id_hc_persona),
+				FOREIGN KEY fk_id_hc_persona (id_hc_persona)
+				    REFERENCES hc_personas(id_hc_persona)
+				      ON DELETE RESTRICT
+				      ON UPDATE RESTRICT,
+				FOREIGN KEY fk_id_persona_anterior (id_persona_anterior)
+				    REFERENCES personas(id_persona)
+				      ON DELETE RESTRICT
+				      ON UPDATE RESTRICT,
+				FOREIGN KEY fk_id_hc_persona (id_hc_persona)
+				    REFERENCES hc_personas(id_hc_persona)
+				      ON DELETE RESTRICT
+				      ON UPDATE RESTRICT,
+				FOREIGN KEY fk_id_efector (id_efector)
+				    REFERENCES efectores(id_efector)
+				      ON DELETE RESTRICT
+				      ON UPDATE RESTRICT,
+				UNIQUE INDEX idx_id_efector_his_cli_internacion_hmi (id_efector,his_cli_internacion_hmi),
+				UNIQUE INDEX idx_id_efector_his_cli_ce_hmi (id_efector,his_cli_ce_hmi)
+			) ENGINE=MyISAM;
+				
+					
+			CREATE TABLE IF NOT EXISTS hc_personas_diagnose_diferentes (
+				id_hc_persona				INTEGER(10) UNSIGNED 	NOT NULL COMMENT 'id de historia clinica en cuestion',
+				id_efector					INTEGER 	UNSIGNED 	NOT NULL COMMENT 'id del efector de donde es la historia clinica',
+				id_persona_anterior 		INTEGER(10) UNSIGNED 	NOT NULL COMMENT 'id de persona anterior',
+				tipo_doc_anterior			CHAR(3) 				NOT NULL COMMENT 'tipo y nro de documento anterior',
+				nro_doc_anterior			INTEGER 	UNSIGNED 	NOT NULL,
+				apellido_anterior			VARCHAR(255)			NOT NULL,
+				nombre_anterior				VARCHAR(255)			NOT NULL,
+				fecha_nac_anterior			DATE					NULL,
+				id_persona_nuevo			INTEGER		UNSIGNED	NULL,
+				tipo_doc_nuevo 				CHAR(3) 				NOT NULL COMMENT 'tipo y nro de documento nuevo',
+				nro_doc_nuevo 				INTEGER 	UNSIGNED 	NOT NULL,
+				apellido_nuevo				VARCHAR(255)			NOT NULL,
+				nombre_nuevo				VARCHAR(255)			NOT NULL,
+				fecha_nac_nuevo				DATE					NULL,
+				nr0_hc 						INTEGER 	UNSIGNED 	NOT NULL COMMENT 'Historia clinica en cuestion',
+				PRIMARY KEY pk_id_hc_persona (id_hc_persona),
+				FOREIGN KEY fk_id_hc_persona (id_hc_persona)
+				    REFERENCES hc_personas(id_hc_persona)
+				      ON DELETE RESTRICT
+				      ON UPDATE RESTRICT,
+				FOREIGN KEY fk_id_persona_anterior (id_persona_anterior)
+				    REFERENCES personas(id_persona)
+				      ON DELETE RESTRICT
+				      ON UPDATE RESTRICT,
+				FOREIGN KEY fk_id_hc_persona (id_hc_persona)
+				    REFERENCES hc_personas(id_hc_persona)
+				      ON DELETE RESTRICT
+				      ON UPDATE RESTRICT,
+				FOREIGN KEY fk_id_efector (id_efector)
+				    REFERENCES efectores(id_efector)
+				      ON DELETE RESTRICT
+				      ON UPDATE RESTRICT,
+				UNIQUE INDEX idx_id_efector_nr0_hc (id_efector,nr0_hc)
+			) ENGINE=MyISAM;
+		
+			
+	
+	* Se actualiza el script "migra_hmi.sql" que toma los datos de los archivos de texto obtenidos del HMI para
+		que hagan las conversiones de tipo de documento y numero de historias clinicas a los formatos que estan
+		en la base personas. El fin es que en las sentencias SQL que se usan para tratar el tema de los cambios de
+		documentos no se usen conversiones dentro de dichas consultas que alenta el proceso. Tambien se agrega un
+		indice a la tabla auxiliar "dg_pacientes_hmi" al campo "s1hiscli"	
+		
+	* Se encontraron algunos registros de historias clinicas "hc_personas" con valor el campo 
+		"his_cli_ce_hmi" = 2020202. Se actualizo la tabla con el siguiente comando
+		
+			UPDATE hc_personas SET his_cli_ce_hmi = NULL WHERE his_cli_ce_hmi=2020202;
+	
+	* Se borraron los datos de pacientes del hospital reconquista y se volvieron a migrar con datos actualizados
+		los pacientes de dicho hospital
+	
+
+
+Version 1.80a	04/08/2010
+--------------------------
+
+	
+	
+	* Debido al uso de la base de personas en cada implementacion
+		de diagnose en los diferentes hospitales de la provincia, y que en cada efector
+		esto implica el reemplazado de algun sistema local vigente. Esto asociado a que
+		cada sistema local de cada efector tiene una nomina de pacientes, la cual no debe
+		perderse, se creo una tabla para los sistemas propietarios
+		
+		Esto no solo implica la creacion de una nueva tabla, si no tambien la migracion de
+		los sistemas propietarios que ya existian en la tabla "hc_personas" a esta nueva tabla
+		
+		Los numeros de historias clinicas migrados son:
+		
+			- his_cli_turnos_evaperon
+			
+			- his_cli_hosp_reconquista
+			
+			- nro_paciente_turnos_venadotuerto
+		
+		Para esta migracion se creo el script "migra_hc_evaperon_hosp_reconquista_turnos_venadotuerto.sql"
+		
+		Los detalles de este script es:
+		
+			- Se crea la tabla "sistemas_propietarios" con la siguiente estructura:
+	
+				CREATE TABLE IF NOT EXISTS sistemas_propietarios (
+					id_sistema_propietario 		TINYINT 		UNSIGNED	NOT NULL,
+					nom_corto 					VARCHAR(25) 				NOT NULL,
+					nom_largo					VARCHAR(255)				NOT NULL,
+					observacion					VARCHAR(255)				NULL,
+					PRIMARY KEY(id_sistema_propietario),
+					UNIQUE INDEX idx_unique_nom_corto(nom_corto),
+					UNIQUE INDEX idx_unique_nom_largo(nom_largo)
+				)ENGINE=MyISAM;
+		
+			- Se ingresaron registros en la tabla "sistemas_propietarios" para los sistemas propietarios que estan 
+			en la base personas del Hospital Eva Peron, del hospital de Reconquista y el de Venado Tuerto
+			
+			- Se agregan los siguientes campos e indice a "hc_personas"
+				
+				ALTER TABLE hc_personas
+					ADD COLUMN id_sistema_propietario TINYINT UNSIGNED NULL
+					AFTER id_persona;
+			
+				ALTER TABLE hc_personas
+					ADD COLUMN his_cli_sistema_propietario INTEGER UNSIGNED NULL;
+		
+				CREATE UNIQUE INDEX idx_unique_id_sistema_propietario_his_cli_sistema_propietario
+					ON hc_personas (id_sistema_propietario,his_cli_sistema_propietario);
+			
+			- Se migraron los numeros de historias clinicas contenidas en los campos
+				"his_cli_turnos_evaperon", "his_cli_hosp_reconquista" y 
+					"nro_paciente_turnos_venadotuerto" a los campos nuevos
+					
+			- Se dropearon dichos campos migrados de la tabla "hc_personas"	
+			
+	
+	* Se crea el script "migra_personas_hosp_ninos_zona_norte_rosario.sql" para migrar los datos de
+		dicho hospital
+		
+	* Se agrega el siguiente registro a la tabla "origen_info":
+		
+			INSERT IGNORE INTO origen_info(id_origen_info, origen_info) VALUES (9,"HOSPITAL DE NIÑOS ZONA NORTE ROSARIO");
+			
+	* Se agrega el siguiente registro a la tabla "sistemas_propietarios":
+	
+			INSERT IGNORE INTO sistemas_propietarios
+				(id_sistema_propietario, nom_corto, nom_largo, observacion) 
+			VALUES 
+				(4,
+				'H. NIÑOS ZONA NOR ROSARIO',
+				'HOSPITAL DE NIÑOS ZONA NORTE ROSARIO',
+				'Migración de los pacientes del sistema del hospital de niños zona norte rosario 30/07/2010');
+					
+	* Se migra los pacientes del Hospital San Javier del HMI
+	
+			
+Version 1.75a	20/07/2010
+--------------------------
+
+	* Se adopta la version myisam de la base "efectores v0.41a". Ver el release notes correspondiente de efectores
+		para ver los cambios
+		
+	* Se volvio a migrar los pacientes del hospital de reconquista porque se encontro que al tomar los datos
+		de los archivos del sistema del hospital, estaban codificados con cp850 y no con latin1. Esto hizo que
+		las eñes queden con simbolos raros
+		
+	* Se agregan las personas del sistema de turnos del hospital de venado tuerto.
+	
+		- Se crea el script "migra_turnos_venadotuerto.sql" para cargar los pacientes obtenidos en un txt
+			del sistema de venado tuerto a una tabla auxiliar para la migracion "pacientes_turnos_venadotuerto"
+			
+		- Se crea el script "migra_personas_turnos_venadotuerto.sql" para migrar de la tabla auxiliar anterior
+			a las tablas "personas" y "hc_personas"
+			
+		- Se agrega el siguiente registro a la tabla "origen_info":
+		
+			INSERT IGNORE INTO origen_info(id_origen_info, origen_info) VALUES (8,"TURNOS VENADO TUERTO");
+			
+		- Se agrega el campo "nro_paciente_turnos_venadotuerto" a la tabla "hc_personas" que referencia al campo
+			"Nropaciente" de la tabla "paciente_turnos_venadotuerto" del sistema de turnos de venado tuerto. 
+			Como no se encontro el numero de historia clinica, y el diagnose filtra por efector los pacientes, 
+			es que se agrego el numero de paciente de venado tuerto a la tabla de historias clinicas "hc_personas"
+			de la base "personas"
+		
+		- Se agrega el indice unico de "idx_unique_efector_nro_paciente_turnos_venadotuerto" a la tabla "hc_personas"
+			
+		- Se ejecutaron los siguientes comandos para la generacion de dicho campo e indice:
+			
+				ALTER TABLE hc_personas ADD COLUMN nro_paciente_turnos_venadotuerto INTEGER UNSIGNED NULL;
+
+				CREATE UNIQUE INDEX idx_unique_efector_nro_paciente_turnos_venadotuerto 
+							ON hc_personas (id_efector,nro_paciente_turnos_venadotuerto); 
+			
+		- Se hallaron 1785 documentos = 0 en la base de venado tuerto
+
+	
+
+		
+Version 1.72a	07/06/2010
+--------------------------
+
+	* Se modificó el script "migra_personas_turnos_evaperon.sql" para adoptar los datos de personas
+		fallecidas y se migro informacion del base de datos del eva peron a la fecha
+		
+	* Se volvio a correr el script "migra_personas_hosp_reconquista.sql" con informacion de junio 2010
+	
+		
+Version 1.71a	04/05/2010
+--------------------------
+
+	* se elimina el registro de la tabla "efectores" con id_efector=872, que por error entro a la base. ver
+		release 0.3b de efectores
+		
+	* se agregan los tipo_doc "DUF" y "DUM" que corresponden a "documento unico femenino" y 
+		"documento unico masculino" para cubrir los casos donde se migren datos de documentos
+		que tengan la letra "M" o "F" delante del nro de documento (solo migracion sicap).
+		
+		NOTA: el HMI no soporta numero de documentos con letras
+	
+	* se modifico el script "migra_personas_sicap.sql" para aceptar la nueva estructura y para poder ser
+		ejecutado para actualizacion. Tambien se agrega la informacion de personas fallecidas del
+		sicap al script tomando como marca "LEFT(CodEstadoReg,1) = 'F'" y considerando a las personas
+		activas las que tienen la marca "LEFT(CodEstadoReg,1)<>'B'"
+	
+	* se modifico el script "migra_personas_sihos.sql" para guardar las historias clinicas.
+		NOTA: debido a que se repiten los numeros de historias clinicas, solo se guarda el primer
+		registro encontrado, luego se ignoran
+		
+	* se hizo un dump de las tablas "paciente" e "historiasclinicas" el día 29/04/2010 y se ejecuto
+		el script "migra_personas_sicap.sql"
+	
+	* se agrega a la migración las bases de "sihos" de "san cristobal" y "laguna paiva"
+	
+	* se vuelve a la version 1.5a de personas, y de ahi el proceso de actualizacion y migracion fue
+		en el siguiente orden:
+		
+		"migra_personas_sicap.sql" con dump el dia 29/04/2010
+		"migra_personas_sihos.sql" con
+
+		
+	
+Version 1.7a	30/04/2010
+--------------------------
+		
+	* se modifico en el script "migra_personas_sihos.sql" tomando como modelo el nuevo script mencionado 
+		en el siguiente item
+	
+	* se crea el script "migra_personas_hosp_reconquista.sql" para la migracion del hospital de Reconquista
+	
+	* se agrega el campo "his_cli_hosp_reconquista" a la tabla "hc_personas" y se agrega el indice
+		unico "idx_unique_efector_his_cli_hosp_reconquista" a dicha tabla para la migracion del
+		sistema del hospital de Reconquista
+	
+		Se ejecutan los siguientes comandos:
+	
+			ALTER TABLE hc_personas ADD COLUMN his_cli_hosp_reconquista INTEGER UNSIGNED NULL;
+
+			CREATE UNIQUE INDEX idx_unique_efector_his_cli_hosp_reconquista 
+							ON hc_personas (id_efector,his_cli_hosp_reconquista); 
+							
+	* se agrega el registro "HOSPITAL RECONQUISTA" en la tabla "origen_info"
+	
+	* al igual que la migracion hecha con para el sistema de turnos del "Eva Peron", para la obtencion de 
+		las fecha julianas se utiliza la fecha "28/12/1800". La funcion MySql para
+		transformar las fechas quedo:
+	
+		DATE_ADD('1800-12-28',INTERVAL %fecha_juliana% DAY)
+		
+	* se encontro que los pacientes que siguen la regla:
+			
+		RIGHT(arc_nombre,6)='-OBITO'
+		
+		son los pacientes fallecidos
+		
+		
+	
+Version 1.6a 		16/02/2010
+------------------------------
+	
+	* se crea el script "migra_personas_sihos.sql" para la migracion del Sihos
+	
+	* se agrega el campo "his_cli_sihos" a la tabla "hc_personas" y se agrega el indice
+		unico "idx_unique_efector_his_cli_sihos" a dicha tabla para la migracion del
+		sistema SiHos
+	
+		Se ejecutan los siguientes comandos:
+	
+			ALTER TABLE hc_personas ADD COLUMN his_cli_sihos INTEGER UNSIGNED NULL;
+
+			CREATE UNIQUE INDEX idx_unique_efector_his_cli_sihos 
+							ON hc_personas (id_efector,his_cli_sihos); 
+							
+	* se agrega el registro "SIHOS" en la tabla "origen_info"
+	
+	* se hizo una prueba de la migracion del sihos con la base de datos de Arequito
+	
+	* se encontro que el sihos permite mismos numeros de historia clinicas para diferentes personas. En la
+		migracion se guarda en la tabla "hc_personas" el primer numero de historia clinica que se encuentre, para
+		el caso antes mencionado
+	
+	
+
+Version 1.5a		09/02/2010
+------------------------------
+
+* se agrega el campo "his_cli_turnos_evaperon" a la tabla "hc_personas" y se agrega el indice
+	unico "idx_unique_efector_his_cli_turnos_evaperon" a dicha tabla para la migracion del
+	sistema de turnos del hospital "Eva Peron"
+	
+	Se ejecutan los siguientes comandos:
+	
+		ALTER TABLE hc_personas ADD COLUMN his_cli_turnos_evaperon INTEGER UNSIGNED NULL;
+
+		CREATE UNIQUE INDEX idx_unique_efector_his_cli_turnos_evaperon 
+						ON hc_personas (id_efector,his_cli_turnos_evaperon);
+	
+* se agrega la migracion de pacientes del sistema de turnos del hospital "eva peron". Para la
+	migracion se crea en la carpeta "shu_inicio/scripts/personas/personas/" el archivo 
+	"migra_personas_turnos_evaperon.sql"
+	
+* se hace un dump de lo migrado del sql server de la base de turnos del hospital "eva peron" y se
+	guardan estructuras y datos en la carpeta "shu_inicio/scripts/personas/turnos_eva_peron", en 
+	el archivo "dump_turnos_evaperon.sql"
+
+* para la obtencion de las fecha julianas se utiliza la fecha "28/12/1800". La funcion MySql para
+	transformar las fechas quedo:
+	
+		DATE_ADD('1800-12-28',INTERVAL %fecha_juliana% DAY)
+	
+* se agrega el registro "TURNOS EVA PERON" en la tabla "origen_info"
+
+* se le crea indice unico al campo "origen_info" en la tabla "origen_info"
+
+* se cambia la tabla "version" por la estructura de la tabla "versiones" del hmi2
+
+* se adopta las tablas de "efectores" y de "localidades" del hmi2
+
+	ver efectores: release notes 0.3b
+	
+	ver localidades: release notes 0.1b
+	
+	pero en vez de usar las tabla como InnoDB, se pasan a MyISAM. 
+	Se crearon 2 bases de datos "efectores_myisam" y "localidades_myisam" para copiar las tablas
+
+* se cambiaron los registros de "personas" que tengan en el campo "estado_civil" igual a "" por
+	el valor de NULL
+	
+* se toma como descripciones estandar para estado civil las siguientes, las cuales vienen del SICAP
+
+	"NULL"
+	"dato no registrado"
+	"soltero"
+	"viudo"
+	"casado"
+	"separado"
+	"divorciado"
+	
+
+	
+Version 1.4b          25/11/2009
+--------------------------------
+ 
+* se agregan los campos "cod_prov" y "cod_pais" a la tabla "localidades"
+	
+* se elimina la tabla "servicios" y la tabla "efectores_servicios" porque ahora se van
+	a incluir en la base "hmi2"
+	
+* luego de la integracion se ejecuta un script para limpieza que realiza lo siguiente:
+	
+	- elimina las personas que vengan del padron electoral con tipo_doc = "DNR" y el nro_doc 
+		ya existe en la tabla personas
+	
+	- elimina documentos menores de 6 digitos que no sean "cedula de identidad" que sean del padron o del 
+		sistema de turnos del cullen
+		
+	- elimina las personas que tengan mismo nro_doc, mismo apellido, nombre, pero distinto tipo_doc y 
+		que sean del turnos del cullen o del padron electoral. El filtro se aplica entre registros que
+		provengan del HMI o del SICAP contra los registros del turnos de cullen y del padron electoral
+	
+	- elimina las personas que tengan mismo nro_doc, mismo apellido y nombre y distinto tipo_doc y sean
+		del hmi de un lado y del sicap del otro, asegurando que no se pierda la historia clinica correspondiente.
+		El criterio del registro que queda de la tabla "personas" es que sea del HMI y tipo_doc = 'DNI' y que tenga
+		un tipo_doc<>'DNI' en el SICAP
+		
+	- limpia los registros que empiecen con nombre = "* ". Estos registros se dieron porque en el iturraspe
+		se ha usado el asterisco para separar el apellido del nombre en el HMI
+		
+ 
+
+Version 1.4a
+--------------------------------
+
+* se agrega el cod_dpto, que es el codigo de departamento de mod_sims, a las localidades.
+
+* se agrega la tabla "dependencias_administrativas" que corresponde a la tabla "d_depenadm"
+	del "mod_sims"
+	
+* se agrega el campo "id_dependencia_adm" a la tabla "efectores" que identifica la dependencia administrativa del
+	del establecimiento(efector)
+ 
+* se agrega como prueba la tabla "efectores_servicios" y se inician las pruebas de migración.
+	se encontraron valores duplicados para la combinacion efector-servicio
+
+* se agrega el indice unico "idx_unique_servicios" al campo "cod_servicio" de la tabla "servicios". Este
+	campo corresponde al codigo de 3 digitos que se usa para estadistica.
+
+
+Version 1.2b
+--------------------------------
+
+* Se cambia el campo "fallecido_fecha" por "fecha_ultima_cond" de la tabla
+	"personas", que contiene el campo concatenado y transformado a tipo fecha 
+	de los campos FCANIO, FCMES y FCDIA del HMI.
+	Estos campos corresponden a la fecha de última condición, de manera que
+	en los casos que la persona tenga la marca de fallecida, este campo
+	tiene la fecha de defuncion y en caso contrario será la fecha de última
+	atención.
+
+* Se cambia tipo de dato del campo "tipo_doc" de la tabla "personas" a CHAR(3)
+
+* Se agregan los siguientes indices:
+
+	tabla "personas":
+		"idx_fallecido" para el campo "fallecido" 
+		"idx_fecha_ultima_cond" para el campo "fecha_ultima_cond"
+		
+	tabla "hc_personas"
+		indice único "idx_unique_efector_his_cli_internacion_hmi" para los campos 
+			"id_efector" y "his_cli_internacion_hmi"
+		indice único "idx_unique_efector_his_cli_ce_hmi" para los campos 
+			"id_efector" y "his_cli_ce_hmi"
+		
+* Debido a que se han encontrado números de historia clínica repetidos en el HMI para un mismo
+	hospital, esta versión ignorará los duplicados, de manera, que se guardará el primer
+	número de historia clinica encontrado para el caso mencionado.
+	
+* Se cambian en la tabla "hc_personas" los campos "his_cli_internacion_hmi" y 
+	"his_cli_ce_hmi" por la siguiente definición:
+	
+	his_cli_internacion_hmi		INTEGER UNSIGNED NULL,
+  	his_cli_ce_hmi 				INTEGER UNSIGNED NULL
+  	
+* Se cambia en el proceso de importación del HMI el tratamiento de los números 
+	de historias clinicas correspondiente a los campos S1HISCLI y S3HISCLICE,
+	donde a partir de esta versión, para valores '00000000' de dichos campos,
+	de pasará NULL a los campos de "hc_personas": "his_cli_internacion_hmi" y
+	"his_cli_ce_hmi", respectivamente. 
+
+* Se agrega la tabla "origen_info" que contiene la tabla de codigo de los diferentes
+	origenes de los datos integrados
+	
+* Se agrega el campo "id_origen" a la tabla "personas"
+
+* Se agrega la tabla "version" que tiene informacion de la creación de la base vigente. 
+	Posee los campos "version" y "fecha" que especifican lo dicho.
+	
+* Se corrigieron los nombres de indices de las tablas "personas" y "hc_personas" usando
+	la nombreclatura: 
+		idx_nombre_de_campo: para indices comunes
+		idx_unique_nombre_de_campo: para indices unicos
+		fk_nombre_de_campo: para indices de clave ajena

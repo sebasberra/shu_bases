@@ -1,0 +1,108 @@
+EFECTORES
+---------
+
+Release Notes 
+-------------
+
+Version 0.35a         20/05/2010 
+--------------------------------
+
+	* Se cambia la definicion del campo "tipo_efector" de la tabla "efectores" permitiendo datos NULL
+	
+		/* pasa el campo tipo_efector a NULL */
+		ALTER TABLE efectores
+			MODIFY tipo_efector	
+			CHAR(1)	NULL COMMENT 'tipo establecimiento para el informe de estadistica';
+			
+	* Se cambia el valor del campo "tipo_efector" que estaba como cadena vacia a NULL para la claveestd=08404445
+	
+	* Se agrega la tabla "regimen_juridico" tomada del mod_sims
+	
+	* Se actualiza la tabla "efectores" agregando el campo "id_regimen_juridico":
+	
+		/* agrega el campo de regimen juridico a efectores */
+		ALTER TABLE efectores
+			ADD id_regimen_juridico	
+			INTEGER		UNSIGNED	NULL
+			AFTER id_dependencia_adm;
+		
+		/* agrega la foreign key de regimen juridico a efectores */	
+		ALTER TABLE efectores
+			ADD FOREIGN KEY fk_id_regimen_juridico(id_regimen_juridico)
+				    REFERENCES regimenes_juridicos(id_regimen_juridico)
+				      ON DELETE NO ACTION
+				      ON UPDATE NO ACTION;
+	
+	* Se realiza un dump a la fecha del "10.3.1.193" con la informacion a la fecha y se ejecuta el
+		script "actualizacion_efectores.sql". Luego se modifica el campo "id_regimen_juridico" con
+		el siguiente comando:
+		
+		/* pasa a NOT NULL el campo id_regimen_juridico en efectores */
+		ALTER TABLE efectores
+			MODIFY id_regimen_juridico	
+			INTEGER		UNSIGNED	NOT NULL;
+
+
+Version 0.3b          30/04/2010
+--------------------------------
+
+	* Se elimina el registro id_efector = 872 que por error entro a la tabla. El error fue porque en el proceso
+		de actualizacion al hacer el dump de la tabla "d_establecimiento" del mod_sims, se trajo en la primer
+		linea los nombres de los campos y el script "actualizacion_efectores.sql" NO ignora la primer linea
+	
+	* Se crea la base de datos "efectores" para siempre tomar de ahi las tablas
+	
+
+Version 0.3a          08/01/2010
+--------------------------------
+
+	* Se separa del versionado de efectores la parte que involucra las tablas de localidades y se
+		crea para ello el archivo de "release_notes0_1.txt" de localidades para comenzar el versionado. 
+		Ver dicho archivo
+		
+	* Se agrega el campo "tipo_efector" a la tabla "efectores" cuyo valor es "coddigest" de la tabla 
+		"d_establecimiento" del mod_sims. Este campo corresponde al campo "tipo_establecimiento" 
+		que aparece en el informe "01" que genera el HMI a estadistica
+	
+	* Para poder adoptar este campo, la metodologia fue:
+		
+		crear el campo "tipo_efector" como NULL
+		
+		correr el script "actualizacion_efectores.sql"
+		
+		modificar "tipo_efector" a NOT NULL
+			
+	* Se actualiza el script "actualizacion_efectores.sql" para adoptar este nuevo campo, se hace un dump
+		al dia de la tabla "d_establecimiento" del mod_sims. Luego se corre el script de actualizacion
+		
+	* Se deja el mantenimiento del script "efectores.sql" por el de "actualizacion_efectores.sql" ya que no se
+		pueden cambiar los ids ya existentes
+		
+	* Se modificaron de NULL a NOT NULL, los campos "claveestd", "nom_efector", "nom_red_efector", "nodo" y
+		"subnodo"
+	
+		
+Version 0.2a          20/11/2009
+--------------------------------
+
+	* Se le cambia el tipo de tabla a InnoDB de las tablas "localidades", "paises", "provincias", "departamentos" 
+		y "efectores" 
+	
+	* Se cambia a VARCHAR(255) el campo "nom_efector" de la tabla "efectores"
+	
+	* Se agregan las provincias y paises que faltaban a lo existente en la base de personas en una base de datos
+		auxiliar para la migracion
+		
+	* Se hace un dump de la info actual en Personas 1.4b para cargar las tablas y mantener los ids de las localidades
+	
+	* Se eliminan los registros "LOCALIDAD NO ESPECIFICADA" que estaban en el dump anterior
+	
+	* Se agrega un unico registro de "LOCALIDAD NO ESPECIFICADA" a la tabla localidades
+	
+	* Se agregan a la tabla localidades las provincias y los paises
+	
+	* Se propone esta version de las tablas mensionadas seran las que se usen en las bases de datos
+		hmi2 y personas
+		
+	* Se establece para poder llevar un control de versiones dentro de las bases de datos, que se generen
+		registros en la tabla "version" de cada base de version de [efectores], [hmi2] y [personas]

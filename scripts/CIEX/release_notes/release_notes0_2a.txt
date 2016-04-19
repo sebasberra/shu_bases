@@ -1,0 +1,78 @@
+CIEX
+----
+
+
+Release Notes 
+-------------
+
+Version 0.2a				19/02/2010
+--------------------------------------
+
+	* Se agregaron registros de codigos de 3 digitos en el archivo "ciex3car.txt" que aparecian en el 
+		archivo de registros de	codigos de 4 digitos. La lista de estos codigos esta en el archivo 
+		"codigos_3digitos_faltantes.xml"
+		
+	* Se agregaron los siguientes registros a los titulos en el archivo "tx307.txt"
+	
+		22;00;00;U04;U89;CODIGOS PARA PROPOSITO ESPECIAL                                                                                        
+		22;01;00;U04;U04;ASIGNACION PROVISIONAL DE NUEVAS ENFERMEDADES DE ETIOLOGIA INCIERTA
+		22;02;00;U80;U89;AGENTES BACTERIANOS RESISTENTES A LOS ANTIBIOTICOS
+		
+		NOTA: se reemplazo por "U04" y por "U89" donde en realidad va "U00" y "U99", respetivamente. Los
+			rangos verdaderos son "U00-U99" y "U00-U49".
+			Esto fue asi porque no encontre descripcion para "U00" y "U99"
+
+	* Se agregaron los siguientes registros al archivo de codigo de 3 digitos en el archivo "ciex3car.txt"
+	
+		U04;SINDROME RESPIRATORIO AGUDO SEVERO (SARS)
+		U80;AGENTES RESISTENTES A PENICILINA Y ANTIBIOTICOS RELACIONADOS
+		U81;AGENTES RESISTENTES A VANCOMICINA Y ANTIBIOTICOS RELACIONADOS
+		U88;AGENTE RESISTENTE A MULTIPLES ANTIBIOTICOS
+		U89;AGENTE RESISTENTE A OTROS ANTIBIOTICOS Y ANTIBIOTICOS SIN ESPECIFICAR
+
+	* Se agregaron los siguientes registros al archivo de codigos de 4 digitos en el archivo "catego.txt"
+	
+		U04;9;SINDROME RESPIRATORIO AGUDO SEVERO, SIN ESPECIFICAR.
+		U80;0;AGENTE RESISTENTE A PENICILINA
+		U80;1;AGENTE RESISTENTE A METICILINA
+		U80;8;AGENTE RESISTENTE A OTROS ANTIBIOTICOS RELACIONADOS CON LA PENICILINA
+		U81;0;AGENTE RESISTENTE A VANCOMICINA
+		U81;8;AGENTE RESISTENTE A OTROS ANTIBIOTICOS RELACIONADOS CON LA VANCOMICINA
+		U89;8;AGENTE RESISTENTE A OTRO ANTIBIOTICO ESPECIFICADO
+		U89;9;AGENTE RESISTENTE A ANTIBIOTICO SIN ESPECIFICAR
+		
+	
+	* Se elimino del archivo "catego.txt" el codigo "I5_" que en realidad era el codigo "I51"
+	
+	* Se volvieron a generar las tablas ejecutando "auxiliares.sql" y luego "ciex.sql"
+	
+
+Version 0.1a		03/12/2009
+------------------------------
+
+	* Se crearon las siguientes 4 tablas:
+	
+		* Se agregan las tablas del CIE10
+	
+		- "ciex_4"				contiene los codigos y descripciones de la CIE10 con 4 digitos
+		
+		- "ciex_3"				contiene los codigos y descripciones de la CIE10 con 3 digitos
+		
+		- "ciex_titulos"		contiene las descripciones y rangos de los Capitulos, grupos y subgrupos
+		
+		- "ciex_restricciones"	contiene restricciones especificas para determinadas patologias
+		
+	* Se cargaron los datos con los siguiente problemas:
+		
+		- se encontraron codigos de 3 digitos que figuraban en la tabla "catego", la cual corresponde a las
+			descripciones de 4 digitos, las cuales no aparecen en la tabla "ciex3car" que es la tabla que
+			contiene las descripciones de 3 digitos
+			
+		- se encontraron en la tabla "tx307" que contiene las descripciones de los capitulos, grupos y 
+			subgrupos codigos desde y hasta, de 3 digitos, los cuales no figuran en la tabla "ciexcar" 
+			que es la que contiene las descripciones de codigos de 3 digitos
+			
+		- se eliminaron los registros mensionados anteriormente para migrar los datos y generar correctamente
+			los registros con integridad referencial
+			
+			

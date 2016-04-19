@@ -1,0 +1,141 @@
+005;ABLACION E IMPLANTE DE ORGANOS                                           
+006;ABLACION E IMPLANTE DE ORGANOS EN PEDIATRIA                              
+010;ADOLESCENCIA                                                             
+015;ALERGIA                                                                  
+016;ALERGIA PEDIATRICA                                                       
+020;ANESTESIOLOGIA                                                           
+025;ANGIOLOGIA                                                               
+030;ARTROSCOPIA                                                              
+031;ARTROSCOPIA PEDIATRICA                                                   
+035;CARDIOLOGIA                                                              
+036;CARDIOLOGIA PEDIATRICA                                                   
+040;CIRUGIA CARDIACA                                                         
+041;CIRUGIA CARDIACA PEDIATRICA                                              
+045;CIRUGIA CARDIOVASCULAR                                                   
+046;CIRUGIA CARDIOVASCULAR PEDIATRICA                                        
+050;CIRUGIA DE CABEZA Y CUELLO                                               
+051;CIRUGIA DE CABEZA Y CUELLO EN PEDIATRIA                                  
+055;CIRUGIA DE MANO                                                          
+056;CIRUGIA DE MANO EN PEDIATRIA                                             
+060;CIRUGIA PLASTICA DE QUEMADOS                                             
+061;CIRUGIA PLASTICA DE QUEMADOS EN PEDIATRIA                                
+065;CIRUGIA DENTOMAXILAR                                                     
+070;CLINICA QUIRURGICA - CIRUGIA GENERAL                                     
+071;CIRUGIA PEDIATRICA                                                       
+072;CIRUGIA NEONATOLOGICA - CIRUGIA DEL RECIEN NACIDO                        
+075;CIRUGIA LAPAROSCOPICA                                                    
+076;CIRUGIA LAPAROSCOPICA PEDIATRICA                                         
+080;CIRUGIA MAXILO FACIAL                                                    
+085;CIRUGIA REPARADORA - PLASTICA                                            
+090;CIRUGIA POR LASER                                                        
+091;CIRUGIA PEDIATRICA POR LASER                                             
+095;CIRUGIA DE TORAX Y CARDIOVASCULAR                                        
+096;CIRUGIA TORACICA PEDIATRICA                                              
+100;CLINICA MEDICA                                                           
+101;PEDIATRIA                                                                
+105;CRIOCIRUGIA                                                              
+110;DERMATOLOGIA                                                             
+111;DERMATOLOGIA PEDIATRICA                                                  
+115;EMERGENCIA - URGENCIAS                                                   
+120;ENDOCRINOLOGIA                                                           
+121;ENDOCRINOLOGIA PEDIATRICA                                                
+125;ENFERMEDADES TROPICALES                                                  
+130;ESTOMATOLOGIA                                                            
+135;FERTILIDAD - ESTERILIDAD CONYUGAL                                        
+140;GASTROENTEROLOGIA                                                        
+141;GASTROENTEROLOGIA PEDIATRICA                                             
+145;GENETICA                                                                 
+146;GENETICA PEDIATRICA                                                      
+150;GERIATRIA                                                                
+155;GINECOLOGIA                                                              
+156;GINECOLOGIA PEDIATRICA                                                   
+160;HEMATOLOGIA                                                              
+161;HEMATOLOGIA PEDIATRICA                                                   
+165;HEPATOLOGIA                                                              
+166;HEPATOLOGIA PEDIATRICA                                                   
+170;HOMEOPATIA                                                               
+175;INFECTOLOGIA                                                             
+176;INFECTOLOGIA PEDIATRICA                                                  
+180;INMUNOLOGIA                                                              
+181;INMUNOLOGIA PEDIATRICA                                                   
+185;INMUNOHEMATOLOGIA                                                        
+190;MEDICINA DEL DEPORTE                                                     
+195;MEDICINA FAMILIAR - GENERALISTA DE FAMILIA                               
+200;CLINICA GENERAL - MEDICINA GENERAL                                       
+205;MEDICINA LEGAL                                                                                                           
+210;MEDICINAS ALTERNATIVAS                                                   
+215;MICROCIRUGIA                                                             
+220;CLINICA RENAL                                                            
+221;NEFROLOGIA PEDIATRICA                                                    
+225;NEONATOLOGIA                                                             
+230;NEUMONOLOGIA                                                             
+231;NEUMONOLOGIA PEDIATRICA                                                  
+235;NEUROCIRUGIA                                                             
+236;NEUROCIRUGIA PEDIATRICA                                                  
+237;NEUROCIRUGIA NEONATAL                                                    
+240;NEUROLOGIA                                                               
+241;NEUROLOGIA PEDIATRICA                                                    
+245;OBSTETRICIA (INCLUYE PARTOS, MATERNIDAD)                                 
+250;OFTALMOLOGIA                                                             
+251;OFTALMOLOGIA PEDIATRICA                                                  
+255;ONCOLOGIA                                                                
+256;ONCOLOGIA PEDIATRICA                                                     
+260;GARGANTA, NARIZ Y OIDO - ORL - OTORRINOLARINGOLOGIA                      
+261;OTORRINOLARINGOLOGIA PEDIATRICA                                          
+265;PATOLOGIA REGIONAL                                                       
+270;PROCTOLOGIA                                                              
+275;QUEMADOS                                                                 
+276;QUEMADOS EN PEDIATRIA                                                    
+280;REUMATOLOGIA                                                             
+281;REUMATOLOGIA PEDIATRICA                                                  
+285;TOCOGINECOLOGIA                                                          
+290;TOXICOLOGIA                                                              
+291;TOXICOLOGIA PEDIATRICA                                                   
+295;TRAUMATOLOGIA                                                            
+296;TRAUMATOLOGIA PEDIATRICA                                                 
+300;UROLOGIA - URINARIAS                                                     
+301;UROLOGIA PEDIATRICA                                                      
+305;VASCULAR PERIFERICO                                                      
+310;AUTOCUIDADO                                                              
+315;TERAPIA INTERMEDIA                                                       
+316;TERAPIA INTERMEDIA PEDIATRICA                                            
+317;TERAPIA INTERMEDIA RECIEN NACIDOS                                        
+320;TERAPIA INTENSIVA                                                        
+321;TERAPIA INTENSIVA PEDIATRICA                                             
+322;TERAPIA INTENSIVA NEONATAL                                               
+325;TERAPIA INTENSIVA DE NEUROCIRUGIA                                        
+330;UNIDAD CORONARIA                                                         
+350;CRECIMIENTO Y DESARROLLO                                                 
+360;GERONTOLOGIA                                                             
+370;MEDICINA FISICA Y REHABILITACION                                         
+371;FISIATRIA INFANTIL                                                       
+380;MEDICINA RURAL                                                           
+390;NUTRICION                                                                
+391;NUTRICION EN PEDIATRIA                                                   
+400;PRIMEROS AUXILIOS                                                        
+410;SALUD COMUNITARIA                                                        
+420;SALUD MENTAL                                                             
+421;SALUD MENTAL EN PEDIATRIA                                                
+422;SALUD MENTAL (AGUDOS AGUDO AVILA)                                        
+423;PSIQUIATRIA (INTERNACIN DE TRANSITO)                                     
+430;SALUD REPRODUCTIVA                                                       
+500;ODONTOLOGIA                                                              
+501;ODONTOPEDIATRIA                                                          
+510;ENDODONCIA                                                               
+520;PERIODONCIA                                                              
+530;ORTODONCIA Y ORTOPEDIA                                                   
+540;IMPLANTES DE ODONTOLOGIA                                                 
+550;PSICOLOGIA                                                               
+551;PSICOLOGIA PEDIATRICA                                                    
+646;ENDOSCOPIAS                                                              
+650;ESTIMULACION TEMPRANA                                                    
+725;TERAPIA DEL DOLOR                                                        
+735;RADIOTERAPIA                                                             
+740;ALCOHOLISMO                                                              
+805;INTERNACION DOMICILIARIA                                                 
+830;HOSPITAL DE DIA                                                          
+831;HOSPITAL DIA PEDIATRICO                                                  
+833;HOSPITAL DIA ONCOHEMATOLOGIA                                             
+834;HOSPITAL DIA PSIQUIATRICO                                                
+845;RECONOCIMIENTOS MEDICOS                                                  
+999;IGNORADO                                                                 

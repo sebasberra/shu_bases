@@ -1,0 +1,30 @@
+OBRAS SOCIALES
+--------------
+
+Release Notes 
+-------------
+
+Version 0.1a         27/07/2011
+-------------------------------
+
+	/* !!!!!!!!!!! faltaria agregar !!!!!!!!!!!! */
+/* 988888 Otras no incluidas en tabla */
+
+	
+	* Se incluye en la base la version 0.11b de localidades
+	
+	* Se hace un dump del listado de obras sociales de plan del seguro de salud de la superintendencia de la pagina
+	
+		hppt://sssalud.gov.ar | Menu->Beneficiarios->listado
+		
+		y se carga con esta información la tabla de obras_sociales
+		
+	* Se agregan obras sociales obtenidas de un archivo obras sociales del gobierno de cordoba
+	
+	* Actualiza los codigos de rnos del IAPOS y de PROFE para compatibilidad con el padron de obras sociales implementado 
+		actualmente
+		
+	* Se agrega el "Plan nacer" a la tabla con el codigo que se usa en padron de obras sociales del punto anterior
+	
+	
+		

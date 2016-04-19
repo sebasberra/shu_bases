@@ -1,0 +1,94 @@
+HMI 2
+-----
+
+
+Release Notes 
+-------------
+
+Version 0.2b		20/11/2009
+------------------------------
+
+	* Se crean los scripts para crear las tablas "efectores" y "dependencias_administrativas", junto
+		con las tablas de "localidades", "departamentos", "provincias" y "paises" como tablas
+		InnoDB para poder trabajar con claves foraneas, ya que han sido trabajadas como
+		MyISAM en la base de personas v1.4b
+		VER release_notes_0_2a.txt de [efectores]
+		
+	* Se crea la tabla "efectores_servicios" y se carga la información de los servicios de
+		internacion y consultorio externo obtenidos del sipes. Tiene la siguiente estructura:
+		
+			id_efector_servicio				INTEGER    
+		    id_efector 						INTEGER	         
+		    id_servicio_estadistica			INTEGER	
+		    claveestd						CHAR(8)	           
+		    cod_servicio					CHAR(3)	         
+		    sector							CHAR(1)	             
+		    subsector						CHAR(1)	           
+		    fecha_apertura					DATE	          
+		    fecha_cierre					DATE	            
+		
+				
+		
+	* Se agrega la tabla "condicion_os_hmi" con los datos correspondientes
+	
+	* Se agrega la relacion entre la tabla "servicios_salas" y "efectores_servicios" unidas
+		por el campo "id_efector_servicio"
+		
+			
+Version 0.2a		18/11/2009
+------------------------------
+
+	* Se quito la relacion entre "servicios_salas" y la tabla "common" del diagnose
+		
+	* Se agregan las tabla "operaciones" con codigos 2008 obtenida del sistema "sihos". Dentro
+		de esta tabla se creo un campo "nom_red_operacion" que se inicializó cortando el nombre
+		original en 30 caracteres sin tomar un criterio
+		
+	* Se copian las tablas de "efectores", "dependencias_administrativas", "localidades", 
+		"departamentos", "provincias" y	"paises" de la base de datos personas v1.4b
+		nota: estas tablas son MyISAM
+		
+	* Se crea tabla "servicios" con los codigos y descripciones del servicio nuclear establecido por nacion
+	
+		- se genera la tabla "servicios" con codigos 2008 obtenida del sistema sihos, con 
+			los siguientes campos:
+			
+				id_servicio			integer
+				cod_servicio		char(3)
+				nom_servicio		varchar(255)
+				nom_red_servicio	varchar(30)
+	
+		- se carga el campo "nom_red_servicio" cortando la descripcion que se utiliza en el campo 
+			"nom_servicio", sin tomar ningun criterio. Este campo debe ser cargado con una descripcion
+			adecuada
+
+	* Se crea la tabla "servicios_estadistica" con los codigos de servicio, sector y subsector que
+		maneja la direccion de estadistica de la provincia con los siguientes campos:
+		
+			id_servicio_estadistica			integer		pk
+			id_servicio						integer		fk
+			cod_servicio					char(3)
+			sector							char(1)
+			subsector						char(1)
+			nom_servicio_estadistica		varchar(255)
+			nom_red_servicio_estadistica	varchar(30)
+			
+			unique index idx_unique_cod_sector_subsector (cod_servicio,sector,subsector)
+		
+	
+
+Version 0.0a
+------------
+
+	* Se define el motor de base de datos MySql y el tipo de tablas InnoDB para trabajar
+	
+	* Se crearon las tablas "camas", "habitaciones", "salas", "servicios_salas" para
+		manejo de la configuracion edilicia
+	
+	* Se crearon la tablas de codigo "instruccion_hmi", "situacion_laboral_hmi",
+		"asociado_hmi", "tipo_edad"
+		
+	* Se creo una tabla "version" donde se guarda la version y la fecha de creacion
+		de la base de datos
+	
+	* Se cargo la tabla "common" para prueba con la información a la fecha del Cullen

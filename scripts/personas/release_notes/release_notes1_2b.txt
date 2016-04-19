@@ -1,0 +1,57 @@
+PERSONAS
+--------
+
+Release Notes - Version beta 1.2
+--------------------------------
+
+* Se cambia el campo "fallecido_fecha" por "fecha_ultima_cond" de la tabla
+	"personas", que contiene el campo concatenado y transformado a tipo fecha 
+	de los campos FCANIO, FCMES y FCDIA del HMI.
+	Estos campos corresponden a la fecha de última condición, de manera que
+	en los casos que la persona tenga la marca de fallecida, este campo
+	tiene la fecha de defuncion y en caso contrario será la fecha de última
+	atención.
+
+* Se cambia tipo de dato del campo "tipo_doc" de la tabla "personas" a CHAR(3)
+
+* Se agregan los siguientes indices:
+
+	tabla "personas":
+		"idx_fallecido" para el campo "fallecido" 
+		"idx_fecha_ultima_cond" para el campo "fecha_ultima_cond"
+		
+	tabla "hc_personas"
+		indice único "idx_unique_efector_his_cli_internacion_hmi" para los campos 
+			"id_efector" y "his_cli_internacion_hmi"
+		indice único "idx_unique_efector_his_cli_ce_hmi" para los campos 
+			"id_efector" y "his_cli_ce_hmi"
+		
+* Debido a que se han encontrado números de historia clínica repetidos en el HMI para un mismo
+	hospital, esta versión ignorará los duplicados, de manera, que se guardará el primer
+	número de historia clinica encontrado para el caso mencionado.
+	
+* Se cambian en la tabla "hc_personas" los campos "his_cli_internacion_hmi" y 
+	"his_cli_ce_hmi" por la siguiente definición:
+	
+	his_cli_internacion_hmi		INTEGER UNSIGNED NULL,
+  	his_cli_ce_hmi 				INTEGER UNSIGNED NULL
+  	
+* Se cambia en el proceso de importación del HMI el tratamiento de los números 
+	de historias clinicas correspondiente a los campos S1HISCLI y S3HISCLICE,
+	donde a partir de esta versión, para valores '00000000' de dichos campos,
+	de pasará NULL a los campos de "hc_personas": "his_cli_internacion_hmi" y
+	"his_cli_ce_hmi", respectivamente. 
+
+* Se agrega la tabla "origen_info" que contiene la tabla de codigo de los diferentes
+	origenes de los datos integrados
+	
+* Se agrega el campo "id_origen" a la tabla "personas"
+
+* Se agrega la tabla "version" que tiene informacion de la creación de la base vigente. 
+	Posee los campos "version" y "fecha" que especifican lo dicho.
+	
+* Se corrigieron los nombres de indices de las tablas "personas" y "hc_personas" usando
+	la nombreclatura: 
+		idx_nombre_de_campo: para indices comunes
+		idx_unique_nombre_de_campo: para indices unicos
+		fk_nombre_de_campo: para indices de clave ajena
