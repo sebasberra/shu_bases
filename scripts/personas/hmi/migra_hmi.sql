@@ -32,7 +32,7 @@
 /* Hospital Totaras							->	id_efector = 45		*/
 
 
-SET @id_efector := 340;
+SET @id_efector := 251;
 
 	/*CREATE DATABASE IF NOT EXISTS hmi_alassia_18_10_2012;
 	CREATE DATABASE IF NOT EXISTS hmi_casilda_30_08_2011; 
@@ -82,7 +82,7 @@ CREATE TABLE migra_hmi_personas.asociado_hmi (
 	id_asociado		CHAR(1) NOT NULL,
 	desc_asociado	VARCHAR(50) NOT NULL,
 	PRIMARY KEY (id_asociado)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 INSERT INTO migra_hmi_personas.asociado_hmi VALUES ('1','obra social'),('2','plan de salud privado o laboral'),
 	('3','plan o seguro publico'),('4','mas de uno'),('5','ninguno'),('6','se ignora');
@@ -91,7 +91,7 @@ CREATE TABLE migra_hmi_personas.instruccion_hmi (
 	id_instruccion		CHAR(2) 	NOT NULL,
 	desc_instruccion	VARCHAR(50)	NOT NULL,
 	PRIMARY KEY (id_instruccion)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 INSERT INTO migra_hmi_personas.instruccion_hmi (id_instruccion,desc_instruccion) VALUES ('01','nunca asistio'),('02','primaria incompleta'),
 	('03','primaria completa'),('04','secundario incompleto'),('05','secundario completo'),('06','universitario incompleto'),
@@ -102,7 +102,7 @@ CREATE TABLE migra_hmi_personas.situacion_laboral_hmi (
 	id_sit_lab		CHAR(1) NOT NULL,
 	desc_sit_lab	VARCHAR(50) NOT NULL,
 	PRIMARY KEY (id_sit_lab)
-) TYPE=MyISAM;
+) ENGINE=MyISAM;
 
 INSERT INTO migra_hmi_personas.situacion_laboral_hmi VALUES ('1','trabaja o esta de licencia'),('2','busca trabajo'),
 	('3','no busca trabajo');
@@ -148,7 +148,7 @@ PRIMARY KEY (ptipdoc,nrodoc))
 ENGINE=MyISAM;
 
 /* carga los datos de los archivos de texto de datos generales de pacientes */
-LOAD DATA LOCAL INFILE './hvera/hmidg.txt' 
+LOAD DATA LOCAL INFILE './sjavier/hmidg.txt' 
 	INTO TABLE dg_pacientes_hmi_cruda
 	FIELDS	TERMINATED BY '|'
 	IGNORE 1 LINES;
@@ -181,7 +181,7 @@ PRIMARY KEY (ptipdoc,nrodoc))
 ENGINE=MyISAM;
 
 /* carga los datos de extension de datos generales de pacientes de los archivos de texto */
-LOAD DATA LOCAL INFILE './hvera/hmidg5.txt'
+LOAD DATA LOCAL INFILE './sjavier/hmidg5.txt'
 	INTO TABLE dg5_pacientes_hmi_cruda
 	FIELDS	TERMINATED BY ';'
 	IGNORE 1 LINES;
@@ -239,7 +239,7 @@ PRIMARY KEY (ptipdoc,nrodoc))
 ENGINE=MyISAM;
 
 /* Carga los datos de la primer tabla datos generales de pacientes dg a la tabla definitiva */
-LOAD DATA LOCAL INFILE './hvera/hmidg.txt' 
+LOAD DATA LOCAL INFILE './sjavier/hmidg.txt' 
 	INTO TABLE dg_pacientes_hmi
 	FIELDS	TERMINATED BY '|'
 	IGNORE 1 LINES;

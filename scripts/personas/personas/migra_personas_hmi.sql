@@ -30,7 +30,7 @@
 /* Hospital Totaras							->	id_efector = 45		*/
 /* Hospital Protomedico						->	id_efector = 63		*/
 
-SET @id_efector := 340;
+SET @id_efector := 251;
 
 
 

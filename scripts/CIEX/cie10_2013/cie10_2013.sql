@@ -64,7 +64,15 @@ SELECT
 	cx13.cod_4dig AS '2013 4d',
 	c4.descripcion,
 	c4.cod_3dig AS 'actual 3d',
-	c4.cod_4dig AS 'actual 4d'
+	c4.cod_4dig AS 'actual 4d',
+	(CASE cr.frecuencia
+	WHEN 0 THEN 'sin restriccion'
+	WHEN 1 THEN 'poco frecuente'
+	WHEN 2 THEN 'bloqueado'
+	WHEN 3 THEN 'asterisco'
+	WHEN 4 THEN 'daga'
+	WHEN 5 THEN 'solo CE'
+	END) AS 'frecuencia'
 	
 FROM
 
@@ -79,6 +87,11 @@ ON
 	cx13.cod_3dig = c4.cod_3dig
 AND cx13.cod_4dig = c4.cod_4dig
 
+LEFT JOIN
+	ciex_0_87a.ciex_restricciones cr
+ON
+	c4.id_ciex_4 = cr.id_ciex_4
+	
 WHERE
 
 	cx13.cod_3dig IS NULL
@@ -91,7 +104,8 @@ UNION
 	cx13.cod_4dig,
 	cx13.descripcion,
 	c4.cod_3dig,
-	c4.cod_4dig
+	c4.cod_4dig,
+	'' AS 'frecuencia'
 	
 FROM
 
