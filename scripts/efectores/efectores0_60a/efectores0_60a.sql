@@ -147,7 +147,7 @@ CREATE TABLE regimenes_juridicos (
 	PRIMARY KEY (id_regimen_juridico),
 	UNIQUE KEY idx_unique_codigo (codigo)
 ) 
-ENGINE=InnoDB AUTO_INCREMENT=9
+ENGINE=InnoDB
 DEFAULT CHARSET=latin1 
 COMMENT='regimenes juridicos de los efectores';
 
@@ -176,8 +176,8 @@ FROM
 DROP TABLE IF EXISTS subnodos;
 
 CREATE TABLE subnodos (
-	id_subnodo INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-	id_nodo INT(10) UNSIGNED NOT NULL,
+	id_subnodo SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+	id_nodo SMALLINT UNSIGNED NOT NULL,
 	nom_subnodo VARCHAR(255) NOT NULL,
 	numregion TINYINT(3) UNSIGNED NOT NULL,
 	numsubregion SMALLINT(5) UNSIGNED NOT NULL,
@@ -224,7 +224,7 @@ FROM
 CREATE TABLE IF NOT EXISTS efectores (
 	id_efector INT UNSIGNED NOT NULL,
 	id_nodo SMALLINT UNSIGNED NOT NULL,
-	id_subnodo INT UNSIGNED NOT NULL,
+	id_subnodo SMALLINT UNSIGNED NOT NULL,
 	id_localidad INT UNSIGNED NOT NULL,
 	id_dependencia_adm TINYINT UNSIGNED NULL DEFAULT NULL,
 	id_regimen_juridico TINYINT UNSIGNED NOT NULL,
