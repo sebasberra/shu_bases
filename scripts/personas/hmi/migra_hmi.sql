@@ -32,7 +32,7 @@
 /* Hospital Totaras							->	id_efector = 45		*/
 
 
-SET @id_efector := 251;
+SET @id_efector := 450;
 
 	/*CREATE DATABASE IF NOT EXISTS hmi_alassia_18_10_2012;
 	CREATE DATABASE IF NOT EXISTS hmi_casilda_30_08_2011; 
@@ -148,7 +148,7 @@ PRIMARY KEY (ptipdoc,nrodoc))
 ENGINE=MyISAM;
 
 /* carga los datos de los archivos de texto de datos generales de pacientes */
-LOAD DATA LOCAL INFILE './sjavier/hmidg.txt' 
+LOAD DATA LOCAL INFILE './rafaela/hmidg.txt' 
 	INTO TABLE dg_pacientes_hmi_cruda
 	FIELDS	TERMINATED BY '|'
 	IGNORE 1 LINES;
@@ -181,7 +181,7 @@ PRIMARY KEY (ptipdoc,nrodoc))
 ENGINE=MyISAM;
 
 /* carga los datos de extension de datos generales de pacientes de los archivos de texto */
-LOAD DATA LOCAL INFILE './sjavier/hmidg5.txt'
+LOAD DATA LOCAL INFILE './rafaela/hmidg5.txt'
 	INTO TABLE dg5_pacientes_hmi_cruda
 	FIELDS	TERMINATED BY ';'
 	IGNORE 1 LINES;
@@ -239,7 +239,7 @@ PRIMARY KEY (ptipdoc,nrodoc))
 ENGINE=MyISAM;
 
 /* Carga los datos de la primer tabla datos generales de pacientes dg a la tabla definitiva */
-LOAD DATA LOCAL INFILE './sjavier/hmidg.txt' 
+LOAD DATA LOCAL INFILE './rafaela/hmidg.txt' 
 	INTO TABLE dg_pacientes_hmi
 	FIELDS	TERMINATED BY '|'
 	IGNORE 1 LINES;
