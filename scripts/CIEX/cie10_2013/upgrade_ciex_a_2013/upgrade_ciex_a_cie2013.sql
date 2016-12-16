@@ -34,7 +34,8 @@ UPDATE
 	
 SET
 
-	descripcion = 'SINDROME RESPIRATORIO AGUDO GRAVE [SRAG]'
+	descripcion = 'SINDROME RESPIRATORIO AGUDO GRAVE [SRAG]',
+	desc_red = 'SINDROME RESPIRATORIO AGUDO GRAVE [SRAG]'
 
 WHERE 
 
@@ -42,7 +43,7 @@ WHERE
 	
 	
 /* U06 */
-INSERT IGNORE
+INSERT
 
 	ciex_3
 	
@@ -62,7 +63,7 @@ VALUES (
 	);
 	
 /* U07 */
-INSERT IGNORE
+INSERT
 
 	ciex_3
 	
@@ -104,7 +105,7 @@ WHERE
 	id_ciex_titulo = 293;
 
 /* U06.0 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -134,7 +135,7 @@ VALUES (
 
 
 /* U06.1 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -164,7 +165,7 @@ VALUES (
 
 
 /* U06.2 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -194,7 +195,7 @@ VALUES (
 
 
 /* U06.3 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -224,7 +225,7 @@ VALUES (
 
 
 /* U06.4 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -254,7 +255,7 @@ VALUES (
 
 
 /* U06.5 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -284,7 +285,7 @@ VALUES (
 
 
 /* U06.6 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -314,7 +315,7 @@ VALUES (
 
 
 /* U06.7 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -344,7 +345,7 @@ VALUES (
 
 
 /* U06.8 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -374,7 +375,7 @@ VALUES (
 
 
 /* U06.9 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -404,7 +405,7 @@ VALUES (
 
 
 /* U07.0 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -434,7 +435,7 @@ VALUES (
 
 
 /* U07.1 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -464,7 +465,7 @@ VALUES (
 
 
 /* U07.2 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -494,7 +495,7 @@ VALUES (
 
 
 /* U07.3 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -524,7 +525,7 @@ VALUES (
 
 
 /* U07.4 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -554,7 +555,7 @@ VALUES (
 
 
 /* U07.5 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -584,7 +585,7 @@ VALUES (
 
 
 /* U07.6 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -614,7 +615,7 @@ VALUES (
 
 
 /* U07.7 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -644,7 +645,7 @@ VALUES (
 
 
 /* U07.8 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -674,7 +675,7 @@ VALUES (
 
 
 /* U07.9 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -704,7 +705,7 @@ VALUES (
 
 
 /* baja grupo (U80-U82) */
-INSERT IGNORE 
+INSERT 
 
 	ciex_restricciones
 	
@@ -759,7 +760,7 @@ VALUES
 	0,
 	   
 	/* fecha_vigencia_desde */
-	'2016-01-01',
+	'2017-01-01',
 	
 	/* fecha_vigencia_hasta */
 	NULL
@@ -770,7 +771,7 @@ VALUES
 /* capitulo XXII (U00-U99) */
 
 /* 01-01-2010 al 01-01-2016 */
-INSERT IGNORE 
+INSERT 
 
 	ciex_restricciones
 	
@@ -828,13 +829,13 @@ VALUES
 	'2010-01-01',
 	
 	/* fecha_vigencia_hasta */
-	'2015-12-31'
+	'2016-12-31'
 
 );
 
 
 /* 01-01-2016 al presente */
-INSERT IGNORE 
+INSERT 
 
 	ciex_restricciones
 	
@@ -889,7 +890,7 @@ VALUES
 	0,
 	   
 	/* fecha_vigencia_desde */
-	'2016-01-01',
+	'2017-01-01',
 	
 	/* fecha_vigencia_hasta */
 	NULL
@@ -899,7 +900,7 @@ VALUES
 
 
 /* U82 */
-INSERT IGNORE
+INSERT
 
 	ciex_3
 	
@@ -920,7 +921,7 @@ VALUES (
 	
 	
 /* U83 */
-INSERT IGNORE
+INSERT
 
 	ciex_3
 	
@@ -941,7 +942,7 @@ VALUES (
 	
 
 /* U84 */
-INSERT IGNORE
+INSERT
 
 	ciex_3
 	
@@ -962,7 +963,7 @@ VALUES (
 	
 	
 /* U85 */
-INSERT IGNORE
+INSERT
 
 	ciex_3
 	
@@ -1087,7 +1088,7 @@ VALUES (
 
 
 /* U82.0 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -1117,7 +1118,7 @@ VALUES (
 
 
 /* U82.1 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -1147,7 +1148,7 @@ VALUES (
 
 
 /* U82.2 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -1177,7 +1178,7 @@ VALUES (
 
 
 /* U82.8 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -1207,7 +1208,7 @@ VALUES (
 
 
 /* U82.9 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -1237,7 +1238,7 @@ VALUES (
 
 
 /* U83.0 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -1267,7 +1268,7 @@ VALUES (
 
 
 /* U83.1 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -1297,7 +1298,7 @@ VALUES (
 
 
 /* U83.2 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -1327,7 +1328,7 @@ VALUES (
 
 
 /* U83.7 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -1357,7 +1358,7 @@ VALUES (
 
 
 /* U83.8 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -1387,7 +1388,7 @@ VALUES (
 
 
 /* U83.9 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -1417,7 +1418,7 @@ VALUES (
 
 
 /* U84.0 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -1447,7 +1448,7 @@ VALUES (
 
 
 /* U84.1 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -1477,7 +1478,7 @@ VALUES (
 
 
 /* U84.2 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -1507,7 +1508,7 @@ VALUES (
 
 
 /* U84.3 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -1537,7 +1538,7 @@ VALUES (
 
 
 /* U84.7 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -1567,7 +1568,7 @@ VALUES (
 
 
 /* U84.8 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -1598,7 +1599,7 @@ VALUES (
 
 
 /* U84.9 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -1628,7 +1629,7 @@ VALUES (
 
 
 /* U85.X */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -1733,7 +1734,7 @@ WHERE
 	
 	
 /* Z99.4 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -1807,7 +1808,7 @@ WHERE
 	
 	
 /* R95.0 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -1837,7 +1838,7 @@ VALUES (
 
 
 /* R95.9 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -1927,7 +1928,7 @@ WHERE
 	
 	
 /* X34.2 */
-INSERT IGNORE 
+INSERT 
 
 	ciex_restricciones
 	
@@ -1982,7 +1983,7 @@ VALUES
 	0,
 	   
 	/* fecha_vigencia_desde */
-	'2016-01-01',
+	'2017-01-01',
 	
 	/* fecha_vigencia_hasta */
 	NULL
@@ -1991,7 +1992,7 @@ VALUES
 	
 
 /* X34.3 */
-INSERT IGNORE 
+INSERT 
 
 	ciex_restricciones
 	
@@ -2046,7 +2047,7 @@ VALUES
 	0,
 	   
 	/* fecha_vigencia_desde */
-	'2016-01-01',
+	'2017-01-01',
 	
 	/* fecha_vigencia_hasta */
 	NULL
@@ -2055,7 +2056,7 @@ VALUES
 
 
 /* X34.4 */
-INSERT IGNORE 
+INSERT 
 
 	ciex_restricciones
 	
@@ -2110,7 +2111,7 @@ VALUES
 	0,
 	   
 	/* fecha_vigencia_desde */
-	'2016-01-01',
+	'2017-01-01',
 	
 	/* fecha_vigencia_hasta */
 	NULL
@@ -2119,7 +2120,7 @@ VALUES
 
 
 /* X34.5 */
-INSERT IGNORE 
+INSERT 
 
 	ciex_restricciones
 	
@@ -2174,7 +2175,7 @@ VALUES
 	0,
 	   
 	/* fecha_vigencia_desde */
-	'2016-01-01',
+	'2017-01-01',
 	
 	/* fecha_vigencia_hasta */
 	NULL
@@ -2183,7 +2184,7 @@ VALUES
 
 
 /* X34.6 */
-INSERT IGNORE 
+INSERT 
 
 	ciex_restricciones
 	
@@ -2238,7 +2239,7 @@ VALUES
 	0,
 	   
 	/* fecha_vigencia_desde */
-	'2016-01-01',
+	'2017-01-01',
 	
 	/* fecha_vigencia_hasta */
 	NULL
@@ -2247,7 +2248,7 @@ VALUES
 
 
 /* X34.7 */
-INSERT IGNORE 
+INSERT 
 
 	ciex_restricciones
 	
@@ -2302,7 +2303,7 @@ VALUES
 	0,
 	   
 	/* fecha_vigencia_desde */
-	'2016-01-01',
+	'2017-01-01',
 	
 	/* fecha_vigencia_hasta */
 	NULL
@@ -2311,7 +2312,7 @@ VALUES
 
 
 /* R65 */
-INSERT IGNORE
+INSERT
 
 	ciex_3
 	
@@ -2332,7 +2333,7 @@ VALUES (
 	
 	
 /* R65.0 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -2362,7 +2363,7 @@ VALUES (
 
 
 /* R65.1 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -2392,7 +2393,7 @@ VALUES (
 
 
 /* R65.2 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -2422,7 +2423,7 @@ VALUES (
 
 
 /* R65.3 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -2452,7 +2453,7 @@ VALUES (
 
 
 /* R65.9 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -2482,7 +2483,7 @@ VALUES (
 
 
 /* R63.6 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -2512,7 +2513,7 @@ VALUES (
 
 
 /* R57.2 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -2542,7 +2543,7 @@ VALUES (
 
 
 /* R26.3 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -2601,7 +2602,7 @@ WHERE
 
 
 /* O98.7 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -2631,7 +2632,7 @@ VALUES (
 
 
 /* O97.X */
-INSERT IGNORE 
+INSERT 
 
 	ciex_restricciones
 	
@@ -2686,7 +2687,7 @@ VALUES
 	0,
 	   
 	/* fecha_vigencia_desde */
-	'2016-01-01',
+	'2017-01-01',
 	
 	/* fecha_vigencia_hasta */
 	NULL
@@ -2710,7 +2711,7 @@ WHERE
 	
 	
 /* O97.0 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -2740,7 +2741,7 @@ VALUES (
 
 
 /* O97.1 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -2770,7 +2771,7 @@ VALUES (
 
 
 /* O97.9 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -2815,7 +2816,7 @@ WHERE
 	
 
 /* O96.X */
-INSERT IGNORE 
+INSERT 
 
 	ciex_restricciones
 	
@@ -2870,7 +2871,7 @@ VALUES
 	0,
 	   
 	/* fecha_vigencia_desde */
-	'2016-01-01',
+	'2017-01-01',
 	
 	/* fecha_vigencia_hasta */
 	NULL
@@ -2879,7 +2880,7 @@ VALUES
 
 
 /* O96.0 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -2909,7 +2910,7 @@ VALUES (
 
 
 /* O96.1 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -2939,7 +2940,7 @@ VALUES (
 
 
 /* O96.9 */
-INSERT IGNORE
+INSERT
 
 	ciex_4
 	
@@ -2997,7 +2998,7 @@ WHERE
 	id_ciex_4 = 5801;
 
 
-/* O62.2 */
+/* O69.2 */
 UPDATE
 	
 	ciex_4
@@ -3027,7 +3028,7 @@ WHERE
 	
 	
 /* O60.X */
-INSERT IGNORE 
+INSERT 
 
 	ciex_restricciones
 	
@@ -3118,3 +3119,6257 @@ SET
 WHERE
 
 	id_ciex_4 = 5734;
+	
+	
+/* O60.3 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12529,
+	
+	/* id_ciex_3 */
+	1035,
+	
+	/* cod_3dig */
+	'O60',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* descripcion */
+	'PARTO PREMATURO SIN TRABAJO DE PARTO ESPONTANEO',
+	
+	/* desc_red */
+	'PARTO PREMATURO SIN TRABAJO DE PARTO ESPONTANEO',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* O43.2 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12530,
+	
+	/* id_ciex_3 */
+	1029,
+	
+	/* cod_3dig */
+	'O43',
+	
+	/* cod_4dig */
+	'2',
+	
+	/* descripcion */
+	'PLACENTA ANORMALMENTE ADHERIDA',
+	
+	/* desc_red */
+	'PLACENTA ANORMALMENTE ADHERIDA',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* O22 */
+UPDATE
+
+	ciex_3
+	
+SET
+
+	descripcion = "COMPLICACIONES VENOSAS Y HEMORROIDES EN EL EMBARAZO",
+	desc_red = "COMPLICACIONES VENOSAS Y HEMORROIDES EN EL EMBARAZ"
+	
+WHERE
+
+	id_ciex_3 = 1012;
+	
+
+/* O14 */
+UPDATE
+
+	ciex_3
+	
+SET
+
+	descripcion = "PREECLAMPSIA",
+	desc_red = "PREECLAMPSIA"
+	
+WHERE
+
+	id_ciex_3 = 1007;
+	
+	
+/* O14.0 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = "PREECLAMPSIA LEVE A MODERADA",
+	desc_red = "PREECLAMPSIA LEVE A MODERADA"
+	
+WHERE
+
+	id_ciex_4 = 5584;
+
+
+/* O14.2 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12531,
+	
+	/* id_ciex_3 */
+	1007,
+	
+	/* cod_3dig */
+	'O14',
+	
+	/* cod_4dig */
+	'2',
+	
+	/* descripcion */
+	'SINDROME HELLP',
+	
+	/* desc_red */
+	'SINDROME HELLP',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* O13 */
+UPDATE
+
+	ciex_3
+	
+SET
+
+	descripcion = "HIPERTENSION GESTACIONAL (INDUCIDA POR EL EMBARAZO)",
+	desc_red = "HIPERTENSION GESTACIONAL (INDUCIDA POR EL EMBARAZO"
+	
+WHERE
+
+	id_ciex_3 = 1006;
+	
+	
+/* O11 */
+UPDATE
+
+	ciex_3
+	
+SET
+
+	descripcion = "PREECLAMPSIA SUPERPUESTA EN HIPERTENSION CRONICA",
+	desc_red = "PREECLAMPSIA SUPERPUESTA EN HIPERTENSION CRONICA"
+	
+WHERE
+
+	id_ciex_3 = 1004;
+
+
+/* N42.3 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12532,
+	
+	/* id_ciex_3 */
+	954,
+	
+	/* cod_3dig */
+	'N42',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* descripcion */
+	'DISPLASIA DE LA PROSTATA',
+	
+	/* desc_red */
+	'DISPLASIA DE LA PROSTATA',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* N18 */
+UPDATE
+
+	ciex_3
+	
+SET
+
+	descripcion = "ENFERMEDAD RENAL CRONICA",
+	desc_red = "ENFERMEDAD RENAL CRONICA"
+	
+WHERE
+
+	id_ciex_3 = 936;
+	
+	
+/* N18.9 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = "ENFERMEDAD RENAL CRONICA, NO ESPECIFICADA",
+	desc_red = "ENFERMEDAD RENAL CRONICA, NO ESPECIFICADA"
+	
+WHERE
+
+	id_ciex_4 = 5193;
+	
+	
+/* N18.0 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	663,
+	
+	/* id_ciex_4 */
+	5191,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'N18',
+	
+	/* cod_4dig */
+	'0',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2017-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+/* N18.1 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12533,
+	
+	/* id_ciex_3 */
+	936,
+	
+	/* cod_3dig */
+	'N18',
+	
+	/* cod_4dig */
+	'1',
+	
+	/* descripcion */
+	'ENFERMEDAD RENAL CRONICA, ETAPA 1',
+	
+	/* desc_red */
+	'ENFERMEDAD RENAL CRONICA, ETAPA 1',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* N18.2 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12534,
+	
+	/* id_ciex_3 */
+	936,
+	
+	/* cod_3dig */
+	'N18',
+	
+	/* cod_4dig */
+	'2',
+	
+	/* descripcion */
+	'ENFERMEDAD RENAL CRONICA, ETAPA 2',
+	
+	/* desc_red */
+	'ENFERMEDAD RENAL CRONICA, ETAPA 2',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* N18.3 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12535,
+	
+	/* id_ciex_3 */
+	936,
+	
+	/* cod_3dig */
+	'N18',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* descripcion */
+	'ENFERMEDAD RENAL CRONICA, ETAPA 3',
+	
+	/* desc_red */
+	'ENFERMEDAD RENAL CRONICA, ETAPA 3',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* N18.4 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12536,
+	
+	/* id_ciex_3 */
+	936,
+	
+	/* cod_3dig */
+	'N18',
+	
+	/* cod_4dig */
+	'4',
+	
+	/* descripcion */
+	'ENFERMEDAD RENAL CRONICA, ETAPA 4',
+	
+	/* desc_red */
+	'ENFERMEDAD RENAL CRONICA, ETAPA 4',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* N18.5 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12537,
+	
+	/* id_ciex_3 */
+	936,
+	
+	/* cod_3dig */
+	'N18',
+	
+	/* cod_4dig */
+	'5',
+	
+	/* descripcion */
+	'ENFERMEDAD RENAL CRONICA, ETAPA 5',
+	
+	/* desc_red */
+	'ENFERMEDAD RENAL CRONICA, ETAPA 5',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* N18.8 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	664,
+	
+	/* id_ciex_4 */
+	5192,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'N18',
+	
+	/* cod_4dig */
+	'8',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2017-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* M10.3 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = "GOTA DEBIDA A ALTERACION DE LA FUNCION RENAL",
+	desc_red = "GOTA DEBIDA A ALTERACION DE LA FUNCION RENAL"
+	
+WHERE
+
+	id_ciex_4 = 4578;
+	
+
+/* L91.0 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = "CICATRIZ HIPERTROFICA",
+	desc_red = "CICATRIZ HIPERTROFICA"
+	
+WHERE
+
+	id_ciex_4 = 4484;
+
+
+/* L89 */
+UPDATE
+
+	ciex_3
+	
+SET
+
+	descripcion = "ULCERA DE DECUBITO Y POR AREA DE PRESION",
+	desc_red = "ULCERA DE DECUBITO Y POR AREA DE PRESION"
+	
+WHERE
+
+	id_ciex_3 = 845;
+
+
+/* L89.X */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	665,
+	
+	/* id_ciex_4 */
+	4474,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'L89',
+	
+	/* cod_4dig */
+	'X',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2017-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* L89.0 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12538,
+	
+	/* id_ciex_3 */
+	845,
+	
+	/* cod_3dig */
+	'L89',
+	
+	/* cod_4dig */
+	'0',
+	
+	/* descripcion */
+	'ULCERA DE DECUBITO Y POR AREA DE PRESION, ETAPA I',
+	
+	/* desc_red */
+	'ULCERA DE DECUBITO Y POR AREA DE PRESION, ETAPA I',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* L89.1 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12539,
+	
+	/* id_ciex_3 */
+	845,
+	
+	/* cod_3dig */
+	'L89',
+	
+	/* cod_4dig */
+	'1',
+	
+	/* descripcion */
+	'ULCERA DE DECUBITO, ETAPA II',
+	
+	/* desc_red */
+	'ULCERA DE DECUBITO, ETAPA II',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* L89.2 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12540,
+	
+	/* id_ciex_3 */
+	845,
+	
+	/* cod_3dig */
+	'L89',
+	
+	/* cod_4dig */
+	'2',
+	
+	/* descripcion */
+	'ULCERA DE DECUBITO, ETAPA III',
+	
+	/* desc_red */
+	'ULCERA DE DECUBITO, ETAPA III',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* L89.3 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12541,
+	
+	/* id_ciex_3 */
+	845,
+	
+	/* cod_3dig */
+	'L89',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* descripcion */
+	'ULCERA DE DECUBITO, ETAPA IV',
+	
+	/* desc_red */
+	'ULCERA DE DECUBITO, ETAPA IV',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* L89.9 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12542,
+	
+	/* id_ciex_3 */
+	845,
+	
+	/* cod_3dig */
+	'L89',
+	
+	/* cod_4dig */
+	'9',
+	
+	/* descripcion */
+	'ULCERA DE DECUBITO Y POR AREA DE PRESION, NO ESPECIFICADA',
+	
+	/* desc_red */
+	'ULCERA DE DECUBITO Y POR AREA DE PRESION, NO ESPEC',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* L41.2 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	666,
+	
+	/* id_ciex_4 */
+	4303,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'L41',
+	
+	/* cod_4dig */
+	'2',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2017-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* K64 */
+INSERT
+
+	ciex_3
+	
+VALUES (
+	
+	/* id_ciex_3 */
+	2053,
+	
+	/* cod_3dig */
+	'K64',
+	
+	/* descripcion */
+	'HEMORROIDES Y TROMBOSIS VENOSA PERIANAL',
+	
+	/* desc_red */
+	'HEMORROIDES Y TROMBOSIS VENOSA PERIANAL'
+	);
+
+
+/* K64 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	667,
+	
+	/* id_ciex_4 */
+	NULL,
+	
+	/* id_ciex_3 */
+	2053,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'K64',
+	
+	/* cod_4dig */
+	NULL,
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* K64.0 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12543,
+	
+	/* id_ciex_3 */
+	2053,
+	
+	/* cod_3dig */
+	'K64',
+	
+	/* cod_4dig */
+	'0',
+	
+	/* descripcion */
+	'HEMORROIDES DE PRIMER GRADO',
+	
+	/* desc_red */
+	'HEMORROIDES DE PRIMER GRADO',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* K64.1 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12544,
+	
+	/* id_ciex_3 */
+	2053,
+	
+	/* cod_3dig */
+	'K64',
+	
+	/* cod_4dig */
+	'1',
+	
+	/* descripcion */
+	'HEMORROIDES DE SEGUNDO GRADO',
+	
+	/* desc_red */
+	'HEMORROIDES DE SEGUNDO GRADO',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* K64.2 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12545,
+	
+	/* id_ciex_3 */
+	2053,
+	
+	/* cod_3dig */
+	'K64',
+	
+	/* cod_4dig */
+	'2',
+	
+	/* descripcion */
+	'HEMORROIDES DE TERCER GRADO',
+	
+	/* desc_red */
+	'HEMORROIDES DE TERCER GRADO',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* K64.3 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12546,
+	
+	/* id_ciex_3 */
+	2053,
+	
+	/* cod_3dig */
+	'K64',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* descripcion */
+	'HEMORROIDES DE CUARTO GRADO',
+	
+	/* desc_red */
+	'HEMORROIDES DE CUARTO GRADO',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* K64.4 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12547,
+	
+	/* id_ciex_3 */
+	2053,
+	
+	/* cod_3dig */
+	'K64',
+	
+	/* cod_4dig */
+	'4',
+	
+	/* descripcion */
+	'MARCAS RESIDUALES EN LA PIEL, DE HEMORROIDES',
+	
+	/* desc_red */
+	'MARCAS RESIDUALES EN LA PIEL, DE HEMORROIDES',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* K64.5 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12548,
+	
+	/* id_ciex_3 */
+	2053,
+	
+	/* cod_3dig */
+	'K64',
+	
+	/* cod_4dig */
+	'5',
+	
+	/* descripcion */
+	'TROMBOSIS VENOSA PERIANAL',
+	
+	/* desc_red */
+	'TROMBOSIS VENOSA PERIANAL',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* K64.8 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12549,
+	
+	/* id_ciex_3 */
+	2053,
+	
+	/* cod_3dig */
+	'K64',
+	
+	/* cod_4dig */
+	'8',
+	
+	/* descripcion */
+	'OTRAS HEMORROIDES ESPECIFICADAS',
+	
+	/* desc_red */
+	'OTRAS HEMORROIDES ESPECIFICADAS',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* K64.9 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12550,
+	
+	/* id_ciex_3 */
+	2053,
+	
+	/* cod_3dig */
+	'K64',
+	
+	/* cod_4dig */
+	'9',
+	
+	/* descripcion */
+	'HEMORROIDES, SIN OTRA ESPECIFICACION',
+	
+	/* desc_red */
+	'HEMORROIDES, SIN OTRA ESPECIFICACION',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* K55-K64 */
+UPDATE
+
+	ciex_titulos
+	
+SET
+
+	id_ciex_3_hasta = 2053,
+	cod_3dig_hasta = 'K64'
+	
+WHERE
+
+	id_ciex_titulo = 128;
+	
+	
+/* K52.3 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12551,
+	
+	/* id_ciex_3 */
+	760,
+	
+	/* cod_3dig */
+	'K52',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* descripcion */
+	'COLITIS DE ETIOLOGIA INDETERMINADO',
+	
+	/* desc_red */
+	'COLITIS DE ETIOLOGIA INDETERMINADO',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* K52.3 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	668,
+	
+	/* id_ciex_4 */
+	12551,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'K52',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+/* K51.0 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'PANCOLITIS ULCERATIVA (CRONICA)',
+	desc_red = 'PANCOLITIS ULCERATIVA (CRONICA)'
+
+WHERE
+
+	id_ciex_4 = 3986;
+	
+
+/* K51.1 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	669,
+	
+	/* id_ciex_4 */
+	3987,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'K51',
+	
+	/* cod_4dig */
+	'1',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2017-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* K51.4 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'POLIPOS INFLAMATORIOS',
+	desc_red = 'POLIPOS INFLAMATORIOS'
+
+WHERE
+
+	id_ciex_4 = 3990;
+
+
+/* K51.5 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'COLITIS DEL LADO IZQUIERDO',
+	desc_red = 'COLITIS DEL LADO IZQUIERDO'
+
+WHERE
+
+	id_ciex_4 = 3991;
+	
+
+/* K43.9 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'OTRAS HERNIAS VENTRALES Y LAS NO ESPECIFICADAS SIN OBSTRUCCION O GANGRENA',
+	desc_red = 'OTRAS HERNIAS VENTRALES Y LAS NO ESPECIFICADAS SIN'
+
+WHERE
+
+	id_ciex_4 = 3972;
+
+
+/* K43.7 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12552,
+	
+	/* id_ciex_3 */
+	754,
+	
+	/* cod_3dig */
+	'K43',
+	
+	/* cod_4dig */
+	'7',
+	
+	/* descripcion */
+	'OTRAS HERNIAS VENTRALES Y LAS NO ESPECIFICADAS CON GANGRENA',
+	
+	/* desc_red */
+	'OTRAS HERNIAS VENTRALES Y LAS NO ESPECIFICADAS CON',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* K43.7 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	670,
+	
+	/* id_ciex_4 */
+	12552,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'K43',
+	
+	/* cod_4dig */
+	'7',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* K43.1 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'HERNIA INCISIONAL CON GANGRENA',
+	desc_red = 'HERNIA INCISIONAL CON GANGRENA'
+
+WHERE
+
+	id_ciex_4 = 3971;
+
+
+/* K43.2 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12553,
+	
+	/* id_ciex_3 */
+	754,
+	
+	/* cod_3dig */
+	'K43',
+	
+	/* cod_4dig */
+	'2',
+	
+	/* descripcion */
+	'HERNIA INCISIONAL SIN OBSTRUCCION O GANGRENA',
+	
+	/* desc_red */
+	'HERNIA INCISIONAL SIN OBSTRUCCION O GANGRENA',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* K43.2 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	671,
+	
+	/* id_ciex_4 */
+	12553,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'K43',
+	
+	/* cod_4dig */
+	'2',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* K43.3 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12554,
+	
+	/* id_ciex_3 */
+	754,
+	
+	/* cod_3dig */
+	'K43',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* descripcion */
+	'HERNIA PARAESTOMAL CON OBSTRUCCION, SIN GANGRENA',
+	
+	/* desc_red */
+	'HERNIA PARAESTOMAL CON OBSTRUCCION, SIN GANGRENA',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* K43.3 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	672,
+	
+	/* id_ciex_4 */
+	12554,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'K43',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* K43.4 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12555,
+	
+	/* id_ciex_3 */
+	754,
+	
+	/* cod_3dig */
+	'K43',
+	
+	/* cod_4dig */
+	'4',
+	
+	/* descripcion */
+	'HERNIA PARAESTOMAL CON GANGRENA',
+	
+	/* desc_red */
+	'HERNIA PARAESTOMAL CON GANGRENA',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* K43.4 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	673,
+	
+	/* id_ciex_4 */
+	12555,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'K43',
+	
+	/* cod_4dig */
+	'4',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* K43.5 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12556,
+	
+	/* id_ciex_3 */
+	754,
+	
+	/* cod_3dig */
+	'K43',
+	
+	/* cod_4dig */
+	'5',
+	
+	/* descripcion */
+	'HERNIA PARAESTOMAL SIN OBSTRUCCION O GANGRENA',
+	
+	/* desc_red */
+	'HERNIA PARAESTOMAL SIN OBSTRUCCION O GANGRENA',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* K43.5 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	674,
+	
+	/* id_ciex_4 */
+	12556,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'K43',
+	
+	/* cod_4dig */
+	'5',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* K43.6 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12557,
+	
+	/* id_ciex_3 */
+	754,
+	
+	/* cod_3dig */
+	'K43',
+	
+	/* cod_4dig */
+	'6',
+	
+	/* descripcion */
+	'OTRAS HERNIAS VENTRALES Y LAS NOS ESPECIFICADAS CON OBSTRUCCION, SIN GANGRENA',
+	
+	/* desc_red */
+	'OTRAS HERNIAS VENTRALES Y LAS NOS ESPECIFICADAS CO',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* K43.6 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	675,
+	
+	/* id_ciex_4 */
+	12557,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'K43',
+	
+	/* cod_4dig */
+	'6',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* K43.0 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'HERNIA INCISIONAL CON OBSTRUCCION, SIN GANGRENA',
+	desc_red = 'HERNIA INCISIONAL CON OBSTRUCCION, SIN GANGRENA'
+
+WHERE
+
+	id_ciex_4 = 3970;
+	
+
+/* K35.0 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	676,
+	
+	/* id_ciex_4 */
+	3944,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'K35',
+	
+	/* cod_4dig */
+	'0',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2017-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);	
+	
+
+/* K35.1 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	677,
+	
+	/* id_ciex_4 */
+	3945,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'K35',
+	
+	/* cod_4dig */
+	'1',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2017-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* K35.2 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12558,
+	
+	/* id_ciex_3 */
+	747,
+	
+	/* cod_3dig */
+	'K35',
+	
+	/* cod_4dig */
+	'2',
+	
+	/* descripcion */
+	'APENDICITIS AGUDA CON PERITONITIS GENERALIZADA',
+	
+	/* desc_red */
+	'APENDICITIS AGUDA CON PERITONITIS GENERALIZADA',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* K35.2 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	678,
+	
+	/* id_ciex_4 */
+	12558,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'K35',
+	
+	/* cod_4dig */
+	'2',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* K35.3 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12559,
+	
+	/* id_ciex_3 */
+	747,
+	
+	/* cod_3dig */
+	'K35',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* descripcion */
+	'APENDICITIS AGUDA CON PERITONITIS LOCALIZADA',
+	
+	/* desc_red */
+	'APENDICITIS AGUDA CON PERITONITIS LOCALIZADA',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* K35.3 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	679,
+	
+	/* id_ciex_4 */
+	12559,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'K35',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* K35.8 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12560,
+	
+	/* id_ciex_3 */
+	747,
+	
+	/* cod_3dig */
+	'K35',
+	
+	/* cod_4dig */
+	'8',
+	
+	/* descripcion */
+	'OTRAS APENDICITIS AGUDAS, Y LAS NO ESPECIFICADAS',
+	
+	/* desc_red */
+	'OTRAS APENDICITIS AGUDAS, Y LAS NO ESPECIFICADAS',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* K35.8 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	680,
+	
+	/* id_ciex_4 */
+	12560,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'K35',
+	
+	/* cod_4dig */
+	'8',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* K35.9 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	681,
+	
+	/* id_ciex_4 */
+	3946,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'K35',
+	
+	/* cod_4dig */
+	'9',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* K30 */
+UPDATE
+	
+	ciex_3
+	
+SET
+
+	descripcion = 'DISPEPSIA FUNCIONAL',
+	desc_red = 'DISPEPSIA FUNCIONAL'
+
+WHERE 
+
+	id_ciex_3 = 745;
+
+
+/* K12.3 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12561,
+	
+	/* id_ciex_3 */
+	734,
+	
+	/* cod_3dig */
+	'K12',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* descripcion */
+	'MUCOSITIS ORAL (ULCERATIVA)',
+	
+	/* desc_red */
+	'MUCOSITIS ORAL (ULCERATIVA)',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* K12.3 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	682,
+	
+	/* id_ciex_4 */
+	12561,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'K12',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* K09.1 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'QUISTES DE LAS FISURAS DE LA REGION ORAL (NO ODONTOGENICOS)',
+	desc_red = 'QUISTES DE LAS FISURAS DE LA REGION ORAL (NO ODONT'
+
+WHERE
+
+	id_ciex_4 = 3832;
+
+
+/* K02.5 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12562,
+	
+	/* id_ciex_3 */
+	724,
+	
+	/* cod_3dig */
+	'K02',
+	
+	/* cod_4dig */
+	'5',
+	
+	/* descripcion */
+	'CARIES CON EXPOSICION PULṔAR',
+	
+	/* desc_red */
+	'CARIES CON EXPOSICION PULṔAR',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* K02.5 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	683,
+	
+	/* id_ciex_4 */
+	12562,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'K02',
+	
+	/* cod_4dig */
+	'5',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* J21.1 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12563,
+	
+	/* id_ciex_3 */
+	678,
+	
+	/* cod_3dig */
+	'J21',
+	
+	/* cod_4dig */
+	'1',
+	
+	/* descripcion */
+	'BRONQUIOLITIS AGUDA DEBIDA A METANEUMOVIRUS HUMANO',
+	
+	/* desc_red */
+	'BRONQUIOLITIS AGUDA DEBIDA A METANEUMOVIRUS HUMANO',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* K21.1 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	684,
+	
+	/* id_ciex_4 */
+	12563,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'J21',
+	
+	/* cod_4dig */
+	'1',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* J12.3 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12564,
+	
+	/* id_ciex_3 */
+	671,
+	
+	/* cod_3dig */
+	'J12',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* descripcion */
+	'NEUMONIA DEBIDA A METANEUMOVIRUS HUMANO',
+	
+	/* desc_red */
+	'NEUMONIA DEBIDA A METANEUMOVIRUS HUMANO',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* K12.3 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	685,
+	
+	/* id_ciex_4 */
+	12564,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'J12',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* J09 */
+UPDATE
+
+	ciex_3
+	
+SET
+
+	descripcion = 'INFLUENZA DEBIDA A CIERTOS VIRUS DE LA INFLUENZA IDENTIFICADOS',
+	desc_red = 'INFLUENZA DEBIDA A CIERTOS VIRUS DE LA INFLUENZA I'
+	
+WHERE
+
+	id_ciex_3 = 668;
+	
+	
+/* I98.2* */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'VARICES ESOFAGICAS SIN HEMORRAGIA EN ENFERMEDADES CLASIFICADAS EN OTRA PARTE',
+	desc_red = 'VARICES ESOFAGICAS SIN HEMORRAGIA EN ENFERMEDADES'
+	
+WHERE
+
+	id_ciex_4 = 3530;
+
+
+/* I98.3* */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12565,
+	
+	/* id_ciex_3 */
+	2004,
+	
+	/* cod_3dig */
+	'I98',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* descripcion */
+	'VARICES ESOFAGICAS CON HEMORRAGIA EN ENFERMEDADES CLASIFICADAS EN OTRA PARTE',
+	
+	/* desc_red */
+	'VARICES ESOFAGICAS CON HEMORRAGIA EN ENFERMEDADES',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* I87.0 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'SINDROME POSTROMBOTICO',
+	desc_red = 'SINDROME POSTROMBOTICO'
+	
+WHERE
+
+	id_ciex_4 = 3505;
+
+/* I84 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	686,
+	
+	/* id_ciex_4 */
+	NULL,
+	
+	/* id_ciex_3 */
+	652,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'I84',
+	
+	/* cod_4dig */
+	NULL,
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2017-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* I72.6 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12566,
+	
+	/* id_ciex_3 */
+	643,
+	
+	/* cod_3dig */
+	'I72',
+	
+	/* cod_4dig */
+	'6',
+	
+	/* descripcion */
+	'ANEURISMA Y DISECCION DE ARTERIA VERTEBRAL',
+	
+	/* desc_red */
+	'ANEURISMA Y DISECCION DE ARTERIA VERTEBRAL',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* I72.6 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	687,
+	
+	/* id_ciex_4 */
+	12566,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'I72',
+	
+	/* cod_4dig */
+	'6',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* I72 */
+UPDATE
+
+	ciex_3
+	
+SET
+
+	descripcion = 'OTROS ANEURISMAS Y ANEURISMAS DISECANTES',
+	desc_red = 'OTROS ANEURISMAS Y ANEURISMAS DISECANTES'
+	
+WHERE
+
+	id_ciex_3 = 643;
+	
+	
+/* I72.0 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'ANEURISMA Y DISECCION DE LA ARTERIA CAROTIDA',
+	desc_red = 'ANEURISMA Y DISECCION DE LA ARTERIA CAROTIDA'
+	
+WHERE
+
+	id_ciex_4 = 3434;
+
+
+/* I72.1 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'ANEURISMA Y DISECCION DE ARTERIA DEL MIEMBRO SUPERIOR',
+	desc_red = 'ANEURISMA Y DISECCION DE ARTERIA DEL MIEMBRO SUPER'
+	
+WHERE
+
+	id_ciex_4 = 3435;
+	
+	
+/* I72.2 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'ANEURISMA Y DISECCION DE ARTERIA RENAL',
+	desc_red = 'ANEURISMA Y DISECCION DE ARTERIA DEL RENAL'
+	
+WHERE
+
+	id_ciex_4 = 3436;
+	
+	
+/* I72.3 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'ANEURISMA Y DISECCION DE ARTERIA ILIACA',
+	desc_red = 'ANEURISMA Y DISECCION DE ARTERIA ILIACA'
+	
+WHERE
+
+	id_ciex_4 = 3437;
+	
+	
+/* I72.4 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'ANEURISMA Y DISECCION DE ARTERIA DEL MIEMBRO INFERIOR',
+	desc_red = 'ANEURISMA Y DISECCION DE ARTERIA DEL MI'
+	
+WHERE
+
+	id_ciex_4 = 3438;
+
+
+/* I72.5 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12567,
+	
+	/* id_ciex_3 */
+	643,
+	
+	/* cod_3dig */
+	'I72',
+	
+	/* cod_4dig */
+	'5',
+	
+	/* descripcion */
+	'ANEURISMA Y DISECCION DE OTRAS ARTERIAS PRECEREBRALES',
+	
+	/* desc_red */
+	'ANEURISMA Y DISECCION DE OTRAS ARTERIAS PRECEREBRA',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* I72.5 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	688,
+	
+	/* id_ciex_4 */
+	12567,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'I72',
+	
+	/* cod_4dig */
+	'5',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* I72.8 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'ANEURISMA Y DISECCION DE OTRAS ARTERIAS ESPECIFICADAS',
+	desc_red = 'ANEURISMA Y DISECCION DE OTRAS ARTERIAS ESPECIFICA'
+	
+WHERE
+
+	id_ciex_4 = 3439;
+	
+	
+/* I72.9 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'ANEURISMA Y DISECCION DE SITIO NO ESPECIFICADO',
+	desc_red = 'ANEURISMA Y DISECCION DE SITIO NO ESPECIFICADO'
+	
+WHERE
+
+	id_ciex_4 = 3440;
+
+
+/* I48.X */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	689,
+	
+	/* id_ciex_4 */
+	3330,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'I48',
+	
+	/* cod_4dig */
+	'X',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2017-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* I48.0 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12568,
+	
+	/* id_ciex_3 */
+	628,
+	
+	/* cod_3dig */
+	'I48',
+	
+	/* cod_4dig */
+	'0',
+	
+	/* descripcion */
+	'FIBRILACION AURICULAR PAROXISTICA',
+	
+	/* desc_red */
+	'FIBRILACION AURICULAR PAROXISTICA',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* I48.0 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	690,
+	
+	/* id_ciex_4 */
+	12568,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'I48',
+	
+	/* cod_4dig */
+	'0',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* I48.1 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12569,
+	
+	/* id_ciex_3 */
+	628,
+	
+	/* cod_3dig */
+	'I48',
+	
+	/* cod_4dig */
+	'1',
+	
+	/* descripcion */
+	'FIBRILACION AURICULAR PERSISTENTE',
+	
+	/* desc_red */
+	'FIBRILACION AURICULAR PERSISTENTE',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* I48.1 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	691,
+	
+	/* id_ciex_4 */
+	12569,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'I48',
+	
+	/* cod_4dig */
+	'1',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* I48.2 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12570,
+	
+	/* id_ciex_3 */
+	628,
+	
+	/* cod_3dig */
+	'I48',
+	
+	/* cod_4dig */
+	'2',
+	
+	/* descripcion */
+	'FIBRILACION AURICULAR CRONICA',
+	
+	/* desc_red */
+	'FIBRILACION AURICULAR CRONICA',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* I48.2 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	692,
+	
+	/* id_ciex_4 */
+	12570,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'I48',
+	
+	/* cod_4dig */
+	'2',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* I48.3 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12571,
+	
+	/* id_ciex_3 */
+	628,
+	
+	/* cod_3dig */
+	'I48',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* descripcion */
+	'ALETEO AURICULAR TIPICO',
+	
+	/* desc_red */
+	'ALETEO AURICULAR TIPICO',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* I48.3 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	693,
+	
+	/* id_ciex_4 */
+	12571,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'I48',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* I48.4 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12572,
+	
+	/* id_ciex_3 */
+	628,
+	
+	/* cod_3dig */
+	'I48',
+	
+	/* cod_4dig */
+	'4',
+	
+	/* descripcion */
+	'ALETEO AURICULAR ATIPICO',
+	
+	/* desc_red */
+	'ALETEO AURICULAR ATIPICO',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* I48.4 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	694,
+	
+	/* id_ciex_4 */
+	12572,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'I48',
+	
+	/* cod_4dig */
+	'4',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* I48.9 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12573,
+	
+	/* id_ciex_3 */
+	628,
+	
+	/* cod_3dig */
+	'I48',
+	
+	/* cod_4dig */
+	'9',
+	
+	/* descripcion */
+	'FIBRILACION Y ALETEO AURICULAR, NO ESPECIFICADO',
+	
+	/* desc_red */
+	'FIBRILACION Y ALETEO AURICULAR, NO ESPECIFICADO',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* I48.9 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	695,
+	
+	/* id_ciex_4 */
+	12573,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'I48',
+	
+	/* cod_4dig */
+	'9',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* H59.0 */
+UPDATE
+
+	ciex_4
+	
+SET
+	
+	descripcion = 'QUERATOPATIA (BULLOSA AFAQUICA) CONSECUTIVA A CIRUGIA DE CATARATA',
+	desc_red = 'QUERATOPATIA (BULLOSA AFAQUICA) CONSECUTIVA A CIRU'
+	
+WHERE
+
+	id_ciex_4 = 3033;
+	
+
+/* H54.5 */
+UPDATE
+
+	ciex_4
+	
+SET
+	
+	descripcion = 'DEFICIENCIA VISUAL SEVERA, MONOCULAR',
+	desc_red = 'DEFICIENCIA VISUAL SEVERA, MONOCULAR'
+	
+WHERE
+
+	id_ciex_4 = 3022;	
+
+
+/* H54.6 */
+UPDATE
+
+	ciex_4
+	
+SET
+	
+	descripcion = 'DEFICIENCIA VISUAL MODERADA, MONOCULAR',
+	desc_red = 'DEFICIENCIA VISUAL MODERADA, MONOCULAR'
+	
+WHERE
+
+	id_ciex_4 = 3023;
+	
+	
+/* H54.7 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	696,
+	
+	/* id_ciex_4 */
+	3024,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'H54',
+	
+	/* cod_4dig */
+	'7',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2017-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* H54.9 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12574,
+	
+	/* id_ciex_3 */
+	569,
+	
+	/* cod_3dig */
+	'H54',
+	
+	/* cod_4dig */
+	'9',
+	
+	/* descripcion */
+	'DEFICIENCIA VISUAL NO ESPECIFICADAD (BINOCULAR)',
+	
+	/* desc_red */
+	'DEFICIENCIA VISUAL NO ESPECIFICADAD (BINOCULAR)',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* H54.9 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	697,
+	
+	/* id_ciex_4 */
+	12574,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'H54',
+	
+	/* cod_4dig */
+	'9',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* H54 */
+UPDATE
+
+	ciex_3
+	
+SET
+	
+	descripcion = 'CEGUERA Y DEFICIENCIA VISUAL (BINOCULAR O MONOCULAR)',
+	desc_red = 'CEGUERA Y DEFICIENCIA VISUAL (BINOCULAR'
+	
+WHERE
+
+	id_ciex_3 = 569;
+	
+	
+/* H54.0 */
+UPDATE
+
+	ciex_4
+	
+SET
+	
+	descripcion = 'CEGUERA BINOCULAR',
+	desc_red = 'CEGUERA BINOCULAR'
+	
+WHERE
+
+	id_ciex_4 = 3017;
+	
+	
+/* H54.1 */
+UPDATE
+
+	ciex_4
+	
+SET
+	
+	descripcion = 'DEFICIENCIA VISUAL SEVERA, BINOCULAR',
+	desc_red = 'DEFICIENCIA VISUAL SEVERA, BINOCULAR'
+	
+WHERE
+
+	id_ciex_4 = 3018;
+	
+	
+/* H54.2 */
+UPDATE
+
+	ciex_4
+	
+SET
+	
+	descripcion = 'DEFICIENCIA VISUAL MODERADA, BINOCULAR',
+	desc_red = 'DEFICIENCIA VISUAL MODERADA, BINOCULAR'
+	
+WHERE
+
+	id_ciex_4 = 3019;
+	
+	
+/* H54.3 */
+UPDATE
+
+	ciex_4
+	
+SET
+	
+	descripcion = 'DEFICIENCIA VISUAL LEVE O AUSENTE, BINOCULAR',
+	desc_red = 'DEFICIENCIA VISUAL LEVE O AUSENTE, BINOCULAR'
+	
+WHERE
+
+	id_ciex_4 = 3020;
+	
+	
+/* H54.3 */
+UPDATE
+
+	ciex_4
+	
+SET
+	
+	descripcion = 'CEGUERA MONOCULAR',
+	desc_red = 'CEGUERA MONOCULAR'
+	
+WHERE
+
+	id_ciex_4 = 3021;
+
+
+/* G73.1* */
+UPDATE
+
+	ciex_4
+	
+SET
+	
+	descripcion = 'SINDROME DE EATON-LAMBERT (C00-D48(+))',
+	desc_red = 'CEGUERA MONOCULAR'
+	
+WHERE
+
+	id_ciex_4 = 2697;
+
+
+/* G21.4 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12575,
+	
+	/* id_ciex_3 */
+	497,
+	
+	/* cod_3dig */
+	'G21',
+	
+	/* cod_4dig */
+	'4',
+	
+	/* descripcion */
+	'PARKINSONISMO VASCULAR',
+	
+	/* desc_red */
+	'PARKINSONISMO VASCULAR',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* G14 */
+INSERT
+
+	ciex_3
+	
+VALUES (
+	
+	/* id_ciex_3 */
+	2054,
+	
+	/* cod_3dig */
+	'G14',
+	
+	/* descripcion */
+	'SINDROME POSTPOLIO',
+	
+	/* desc_red */
+	'SINDROME POSTPOLIO'
+	);
+
+
+/* G14 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	668,
+	
+	/* id_ciex_4 */
+	NULL,
+	
+	/* id_ciex_3 */
+	2054,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'G14',
+	
+	/* cod_4dig */
+	NULL,
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* G14.X */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12576,
+	
+	/* id_ciex_3 */
+	2054,
+	
+	/* cod_3dig */
+	'G14',
+	
+	/* cod_4dig */
+	'X',
+	
+	/* descripcion */
+	'SINDROME POSTPOLIO',
+	
+	/* desc_red */
+	'SINDROME POSTPOLIO',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* capitulo VI-02 [G10-G14] */
+UPDATE
+
+	ciex_titulos
+	
+SET
+
+	id_ciex_3_hasta = 2054,
+	cod_3dig_hasta = 'G14'
+	
+WHERE
+
+	id_ciex_titulo = 73;
+	
+	
+/* E88.3 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12577,
+	
+	/* id_ciex_3 */
+	409,
+	
+	/* cod_3dig */
+	'E88',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* descripcion */
+	'SINDROME DE LISIS TUMORAL',
+	
+	/* desc_red */
+	'SINDROME DE LISIS TUMORAL',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* E88.3 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	669,
+	
+	/* id_ciex_4 */
+	12577,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'E88',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* E83.3 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'TRASTORNOS DEL METABOLISMO DEL FOSFORO Y FOSFATASA',
+	desc_red = 'TRASTORNOS DEL METABOLISMO DEL FOSFORO Y FOSFATASA'
+	
+WHERE
+
+	id_ciex_4 = 1994;
+	
+	
+/* D89.3 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12578,
+	
+	/* id_ciex_3 */
+	339,
+	
+	/* cod_3dig */
+	'D89',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* descripcion */
+	'SINDROME DE RECONSTRUCCION INMUNE',
+	
+	/* desc_red */
+	'SINDROME DE RECONSTRUCCION INMUNE',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* D89.3 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	670,
+	
+	/* id_ciex_4 */
+	12578,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'D89',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* D75.2 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	671,
+	
+	/* id_ciex_4 */
+	1626,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'D75',
+	
+	/* cod_4dig */
+	'2',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2017-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* D76 */
+UPDATE
+
+	ciex_3
+	
+SET
+
+	descripcion = 'OTRAS ENFERMEDADES ESPECIFICADAS CON PARTICIPACION DEL TEJIDO LINFORRECTICULAR Y DEL TEJIDO RETICULOHISTIOCITICO',
+	desc_red = 'OTRAS ENFERMEDADES ESPECIFICADAS CON PARTICIPACION'
+	
+WHERE
+
+	id_ciex_3 = 332;
+
+
+/* D76.0 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	672,
+	
+	/* id_ciex_4 */
+	1629,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'D76',
+	
+	/* cod_4dig */
+	'0',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2017-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* D68.5 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12579,
+	
+	/* id_ciex_3 */
+	324,
+	
+	/* cod_3dig */
+	'D68',
+	
+	/* cod_4dig */
+	'5',
+	
+	/* descripcion */
+	'TROMBOFILIA PRIMARIA',
+	
+	/* desc_red */
+	'TROMBOFILIA PRIMARIA',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* D68.5 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	673,
+	
+	/* id_ciex_4 */
+	12579,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'D68',
+	
+	/* cod_4dig */
+	'5',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* D68.6 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12580,
+	
+	/* id_ciex_3 */
+	324,
+	
+	/* cod_3dig */
+	'D68',
+	
+	/* cod_4dig */
+	'6',
+	
+	/* descripcion */
+	'OTRA TROMBOFILIA',
+	
+	/* desc_red */
+	'OTRA TROMBOFILIA',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* D68.5 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	674,
+	
+	/* id_ciex_4 */
+	12580,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'D68',
+	
+	/* cod_4dig */
+	'6',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* D47.2 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'GAMMOPATIA MONOCLONAL DE SIGNIFICADO INCIERTO [GMSI]',
+	desc_red ='GAMMOPATIA MONOCLONAL DE SIGNIFICADO INCIERTO [GMS'
+	
+WHERE
+
+	id_ciex_4 = 1504;
+	
+	
+/* D47.4 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12581,
+	
+	/* id_ciex_3 */
+	306,
+	
+	/* cod_3dig */
+	'D47',
+	
+	/* cod_4dig */
+	'4',
+	
+	/* descripcion */
+	'OSTEOMIELOFIBROSIS',
+	
+	/* desc_red */
+	'OSTEOMIELOFIBROSIS',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* D47.4 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	675,
+	
+	/* id_ciex_4 */
+	12581,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'D47',
+	
+	/* cod_4dig */
+	'4',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* D47.5 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12582,
+	
+	/* id_ciex_3 */
+	306,
+	
+	/* cod_3dig */
+	'D47',
+	
+	/* cod_4dig */
+	'5',
+	
+	/* descripcion */
+	'LEUCEMIA EOSINOFILICA CRONICA [SINDROME HIPEREOSINOFILICO]',
+	
+	/* desc_red */
+	'LEUCEMIA EOSINOFILICA CRONICA [SINDROME HIPEREOSIN',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* D47.5 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	676,
+	
+	/* id_ciex_4 */
+	12582,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'D47',
+	
+	/* cod_4dig */
+	'5',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* D46.1 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'ANEMIA REFRACTARIA CON SIDEROBLASTOS EN FORMA DE ANILLO',
+	desc_red ='ANEMIA REFRACTARIA CON SIDEROBLASTOS EN FORMA DE A'
+	
+WHERE
+
+	id_ciex_4 = 1496;
+
+
+/* D46.3 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	677,
+	
+	/* id_ciex_4 */
+	1498,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'D46',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2017-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* D46.5 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12583,
+	
+	/* id_ciex_3 */
+	305,
+	
+	/* cod_3dig */
+	'D46',
+	
+	/* cod_4dig */
+	'5',
+	
+	/* descripcion */
+	'ANEMIA REFRACTARIA CON DISPLASIA MULTILINAJE',
+	
+	/* desc_red */
+	'ANEMIA REFRACTARIA CON DISPLASIA MULTILINAJE',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* D46.5 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	678,
+	
+	/* id_ciex_4 */
+	12583,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'D46',
+	
+	/* cod_4dig */
+	'5',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* D46.6 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12584,
+	
+	/* id_ciex_3 */
+	305,
+	
+	/* cod_3dig */
+	'D46',
+	
+	/* cod_4dig */
+	'6',
+	
+	/* descripcion */
+	'SINDROME MIELODISPLASICO CON ANORMALIDAD CROMOSOMICA AISLADA DEL (5Q)',
+	
+	/* desc_red */
+	'SINDROME MIELODISPLASICO CON ANORMALIDAD CROMOSOMI',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* D46.6 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	679,
+	
+	/* id_ciex_4 */
+	12584,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'D46',
+	
+	/* cod_4dig */
+	'6',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2016-12-31'
+
+);
+
+
+/* C81 */
+UPDATE
+
+	ciex_3
+	
+SET
+
+	descripcion = 'LINFOMA DE HODGKIN',
+	desc_red = 'LINFOMA DE HODGKIN'
+	
+WHERE
+
+	id_ciex_3 = 246;
+
+
+/* C81.0 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'LINFOMA DE HODGKIN NODULAR CON PREDOMINIO LINFOCITICO',
+	desc_red = 'LINFOMA DE HODGKIN NODULAR CON PREDOMINIO LINFOCIT'
+	
+WHERE
+
+	id_ciex_4 = 1149;
+	
+	
+/* C81.1 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'LINFOMA DE HODGKIN (CLASICO) CON ESCLEROSIS NODULAR',
+	desc_red = 'LINFOMA DE HODGKIN (CLASICO) CON ESCLEROSIS NODULA'
+	
+WHERE
+
+	id_ciex_4 = 1150;
+	
+
+/* C81.2 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'LINFOMA DE HODGKIN (CLASICO) CON CELULARIDAD MIXTA',
+	desc_red = 'LINFOMA DE HODGKIN (CLASICO) CON CELULARIDAD MIXTA'
+	
+WHERE
+
+	id_ciex_4 = 1151;
+	
+		
+/* C81.3 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'LINFOMA DE HODGKIN (CLASICO) CON DEPLECION LINFOCITICA',
+	desc_red = 'LINFOMA DE HODGKIN (CLASICO) CON DEPLECION LINFOCITI'
+	
+WHERE
+
+	id_ciex_4 = 1152;
+	
+
+/* C81.4 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12585,
+	
+	/* id_ciex_3 */
+	246,
+	
+	/* cod_3dig */
+	'C81',
+	
+	/* cod_4dig */
+	'4',
+	
+	/* descripcion */
+	'LINFOMA DE HODGKIN (CLASICO) RICO EN LINFOCITOS',
+	
+	/* desc_red */
+	'LINFOMA DE HODGKIN (CLASICO) RICO EN LINFOCITOS',
+	
+	/* informa_c2 */
+	'0'
+);
+	
+
+/* C81.7 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'OTROS LINFOMAS DE HODGKIN (CLASICOS)',
+	desc_red = 'OTROS LINFOMAS DE HODGKIN (CLASICOS)'
+	
+WHERE
+
+	id_ciex_4 = 1153;
+	
+
+/* C81.9 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'LINFOMA DE HODGKIN, NO ESPECIFICADO',
+	desc_red = 'LINFOMA DE HODGKIN, NO ESPECIFICADO'
+	
+WHERE
+
+	id_ciex_4 = 1154;
+	
+
+/* C82 */
+UPDATE
+
+	ciex_3
+	
+SET
+
+	descripcion = 'LINFOMA FOLICULAR',
+	desc_red = 'LINFOMA FOLICULAR'
+	
+WHERE
+
+	id_ciex_3 = 247;
+	
+	
+/* C82.0 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'LINFOMA FOLICULAR GRADO I',
+	desc_red = 'LINFOMA FOLICULAR GRADO I'
+	
+WHERE
+
+	id_ciex_4 = 1155;
+		
+
+/* C82.1 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'LINFOMA FOLICULAR GRADO II',
+	desc_red = 'LINFOMA FOLICULAR GRADO II'
+	
+WHERE
+
+	id_ciex_4 = 1156;
+
+
+/* C82.2 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'LINFOMA FOLICULAR GRADO III, NO ESPECIFICADO',
+	desc_red = 'LINFOMA FOLICULAR GRADO III, NO ESPECIFICADO'
+	
+WHERE
+
+	id_ciex_4 = 1157;
+
+
+/* C82.3 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12586,
+	
+	/* id_ciex_3 */
+	247,
+	
+	/* cod_3dig */
+	'C82',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* descripcion */
+	'LINFOMA FOLICULAR GRADO IIIA',
+	
+	/* desc_red */
+	'LINFOMA FOLICULAR GRADO IIIA',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* C82.4 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12587,
+	
+	/* id_ciex_3 */
+	247,
+	
+	/* cod_3dig */
+	'C82',
+	
+	/* cod_4dig */
+	'4',
+	
+	/* descripcion */
+	'LINFOMA FOLICULAR GRADO IIIB',
+	
+	/* desc_red */
+	'LINFOMA FOLICULAR GRADO IIIB',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* C82.5 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12588,
+	
+	/* id_ciex_3 */
+	247,
+	
+	/* cod_3dig */
+	'C82',
+	
+	/* cod_4dig */
+	'5',
+	
+	/* descripcion */
+	'LINFOMA CENTRO FOLICULAR DIFUSO',
+	
+	/* desc_red */
+	'LINFOMA CENTRO FOLICULAR DIFUSO',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* C82.6 */
+INSERT
+
+	ciex_4
+	
+VALUES (
+
+	/* id_ciex_4 */
+	12589,
+	
+	/* id_ciex_3 */
+	247,
+	
+	/* cod_3dig */
+	'C82',
+	
+	/* cod_4dig */
+	'6',
+	
+	/* descripcion */
+	'LINFOMA CENTRO FOLICULAR CUTANEO',
+	
+	/* desc_red */
+	'LINFOMA CENTRO FOLICULAR CUTANEO',
+	
+	/* informa_c2 */
+	'0'
+);
+
+
+/* C82.7 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'OTROS TIPOS ESPECIFICADOS DE LINFOMA FOLICULAR',
+	desc_red = 'OTROS TIPOS ESPECIFICADOS DE LINFOMA FOLICULAR'
+	
+WHERE
+
+	id_ciex_4 = 1158;
+	
+	
+/* C82.9 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'LINFOMA FOLICULAR, SIN OTRA ESPECIFICACION',
+	desc_red = 'LINFOMA FOLICULAR, SIN OTRA ESPECIFICACION'
+	
+WHERE
+
+	id_ciex_4 = 1159;
+	
+		
+/* C83 */
+UPDATE
+
+	ciex_3
+	
+SET
+
+	descripcion = 'LINFOMA NO FOLICULAR',
+	desc_red = 'LINFOMA NO FOLICULAR'
+	
+WHERE
+
+	id_ciex_3 = 248;		
+		
+		
+/* C83.0 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'LINFOMA DE CELULAS B PEQUEÑAS',
+	desc_red = 'LINFOMA DE CELULAS B PEQUEÑAS'
+	
+WHERE
+
+	id_ciex_4 = 1160;
+	
+
+/* C83.1 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'LINFOMA DE CELULAS DEL MANTO',
+	desc_red = 'LINFOMA DE CELULAS DEL MANTO'
+	
+WHERE
+
+	id_ciex_4 = 1161;
+	
+
+/* C83.2 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	680,
+	
+	/* id_ciex_4 */
+	1162,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'C83',
+	
+	/* cod_4dig */
+	'2',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+	
+/* C83.3 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'LINFOMA DE CELULAS B GRANDES (DIFUSO)',
+	desc_red = 'LINFOMA DE CELULAS B GRANDES (DIFUSO)'
+	
+WHERE
+
+	id_ciex_4 = 1163;
+	
+	
+/* C83.4 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	681,
+	
+	/* id_ciex_4 */
+	1164,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'C83',
+	
+	/* cod_4dig */
+	'4',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);	
+		
+
+/* C83.5 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'LINFOMA LINFOBLASTICO (DIFUSO)',
+	desc_red = 'LINFOMA DE CELULAS B GRANDES (DIFUSO)'
+	
+WHERE
+
+	id_ciex_4 = 1165;
+	
+	
+/* C83.6 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	682,
+	
+	/* id_ciex_4 */
+	1166,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'C83',
+	
+	/* cod_4dig */
+	'6',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* C83.7 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'LINFOMA DE BURKITT',
+	desc_red = 'LINFOMA DE BURKITT'
+	
+WHERE
+
+	id_ciex_4 = 1167;
+	
+	
+/* C83.8 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'OTROS TIPOS ESPECIFICADOS DE LINFOMA NO FOLICULAR',
+	desc_red = 'OTROS TIPOS ESPECIFICADOS DE LINFOMA NO FOLICULAR'
+	
+WHERE
+
+	id_ciex_4 = 1168;
+	
+
+/* C83.9 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'LINFOMA NO FOLICULAR (DIFUSO), SIN OTRA ESPECIFICACION',
+	desc_red = 'LINFOMA NO FOLICULAR (DIFUSO), SIN OTRA ESPECIFICA'
+	
+WHERE
+
+	id_ciex_4 = 1169;
+	
+
+/* C84 */
+UPDATE
+
+	ciex_3
+	
+SET
+
+	descripcion = 'LINFOMA DE CELULAR T/NK MADURAS',
+	desc_red = 'LINFOMA DE CELULAR T/NK MADURAS'
+	
+WHERE
+
+	id_ciex_3 = 249;
+	
+
+/* C84.2 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	683,
+	
+	/* id_ciex_4 */
+	1172,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'C84',
+	
+	/* cod_4dig */
+	'2',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* C84.3 */
+INSERT 
+
+	ciex_restricciones
+	
+VALUES
+
+	/* id_ciex_restriccion */
+	684,
+	
+	/* id_ciex_4 */
+	1173,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'C84',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+
+/* C84.0 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'LINFOMA NO FOLICULAR (DIFUSO), SIN OTRA ESPECIFICACION',
+	desc_red = 'LINFOMA NO FOLICULAR (DIFUSO), SIN OTRA ESPECIFICA'
+	
+WHERE
+
+	id_ciex_4 = 1169;
+	
+											
+/* C91.5 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'LEUCEMIA/LINFOMA DE CELULAS T ADULTAS [HTLV-1-ASOCIADO]',
+	desc_red = 'LEUCEMIA/LINFOMA DE CELULAS T ADULTAS [HTLV-1-ASOC'
+	
+WHERE
+
+	id_ciex_4 = 1194;
+	
+	
+/* C88.9 */
+UPDATE
+
+	ciex_4
+	
+SET
+
+	descripcion = 'LINFOMA NO FOLICULAR (DIFUSO), SIN OTRA ESPECIFICACION',
+	desc_red = 'LINFOMA NO FOLICULAR (DIFUSO), SIN OTRA ESPECIFICA'
+	
+WHERE
+
+	id_ciex_4 = 1169;
+	
+	
+
+	
+	
+		
