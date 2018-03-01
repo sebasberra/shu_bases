@@ -18,7 +18,7 @@ WHERE
 	
 	
 /* U06 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_3
 	
@@ -38,7 +38,7 @@ VALUES (
 	);
 	
 /* U07 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_3
 	
@@ -80,7 +80,7 @@ WHERE
 	id_ciex_titulo = 293;
 
 /* U06.0 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -110,7 +110,7 @@ VALUES (
 
 
 /* U06.1 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -140,7 +140,7 @@ VALUES (
 
 
 /* U06.2 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -170,7 +170,7 @@ VALUES (
 
 
 /* U06.3 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -200,7 +200,7 @@ VALUES (
 
 
 /* U06.4 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -230,7 +230,7 @@ VALUES (
 
 
 /* U06.5 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -260,7 +260,7 @@ VALUES (
 
 
 /* U06.6 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -290,7 +290,7 @@ VALUES (
 
 
 /* U06.7 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -320,7 +320,7 @@ VALUES (
 
 
 /* U06.8 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -350,7 +350,7 @@ VALUES (
 
 
 /* U06.9 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -369,10 +369,10 @@ VALUES (
 	'9',
 	
 	/* descripcion */
-	'USO EMERGENTE DE U06.9',
+	'ENFERMEDAD POR VIRUS ZIKA',
 	
 	/* desc_red */
-	'USO EMERGENTE DE U06.9',
+	'ENFERMEDAD POR VIRUS ZIKA',
 	
 	/* informa_c2 */
 	'0'
@@ -380,7 +380,7 @@ VALUES (
 
 
 /* U07.0 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -410,7 +410,7 @@ VALUES (
 
 
 /* U07.1 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -440,7 +440,7 @@ VALUES (
 
 
 /* U07.2 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -470,7 +470,7 @@ VALUES (
 
 
 /* U07.3 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -500,7 +500,7 @@ VALUES (
 
 
 /* U07.4 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -530,7 +530,7 @@ VALUES (
 
 
 /* U07.5 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -560,7 +560,7 @@ VALUES (
 
 
 /* U07.6 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -590,7 +590,7 @@ VALUES (
 
 
 /* U07.7 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -620,7 +620,7 @@ VALUES (
 
 
 /* U07.8 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -650,7 +650,7 @@ VALUES (
 
 
 /* U07.9 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -746,7 +746,7 @@ VALUES (
 /* capitulo XXII (U00-U99) */
 
 /* 01-01-2010 al 01-01-2016 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -810,7 +810,7 @@ VALUES (
 
 
 /* 01-01-2016 al presente */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -875,7 +875,7 @@ VALUES (
 
 
 /* U82 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_3
 	
@@ -896,7 +896,7 @@ VALUES (
 	
 	
 /* U83 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_3
 	
@@ -917,7 +917,7 @@ VALUES (
 	
 
 /* U84 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_3
 	
@@ -938,7 +938,7 @@ VALUES (
 	
 	
 /* U85 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_3
 	
@@ -976,7 +976,7 @@ WHERE
 /*			*/
 /* --------	*/
 	
-INSERT INTO  
+INSERT IGNORE INTO  
 
 	ciex_titulos
 	
@@ -1023,7 +1023,7 @@ VALUES (
 /*			*/
 /* --------	*/
 
-INSERT INTO  
+INSERT IGNORE INTO  
 
 	ciex_titulos
 	
@@ -1063,7 +1063,7 @@ VALUES (
 
 
 /* U82.0 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -1093,7 +1093,7 @@ VALUES (
 
 
 /* U82.1 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -1123,7 +1123,7 @@ VALUES (
 
 
 /* U82.2 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -1153,7 +1153,7 @@ VALUES (
 
 
 /* U82.8 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -1183,7 +1183,7 @@ VALUES (
 
 
 /* U82.9 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -1213,7 +1213,7 @@ VALUES (
 
 
 /* U83.0 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -1243,7 +1243,7 @@ VALUES (
 
 
 /* U83.1 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -1273,7 +1273,7 @@ VALUES (
 
 
 /* U83.2 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -1303,7 +1303,7 @@ VALUES (
 
 
 /* U83.7 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -1333,7 +1333,7 @@ VALUES (
 
 
 /* U83.8 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -1363,7 +1363,7 @@ VALUES (
 
 
 /* U83.9 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -1393,7 +1393,7 @@ VALUES (
 
 
 /* U84.0 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -1423,7 +1423,7 @@ VALUES (
 
 
 /* U84.1 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -1453,7 +1453,7 @@ VALUES (
 
 
 /* U84.2 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -1483,7 +1483,7 @@ VALUES (
 
 
 /* U84.3 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -1513,7 +1513,7 @@ VALUES (
 
 
 /* U84.7 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -1543,7 +1543,7 @@ VALUES (
 
 
 /* U84.8 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -1574,7 +1574,7 @@ VALUES (
 
 
 /* U84.9 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -1604,7 +1604,7 @@ VALUES (
 
 
 /* U85.X */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -1709,7 +1709,7 @@ WHERE
 	
 	
 /* Z99.4 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -1783,7 +1783,7 @@ WHERE
 	
 	
 /* R95.0 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -1813,7 +1813,7 @@ VALUES (
 
 
 /* R95.9 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -1903,7 +1903,7 @@ WHERE
 	
 	
 /* X34.2 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -1967,7 +1967,7 @@ VALUES (
 	
 
 /* X34.3 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -2031,7 +2031,7 @@ VALUES (
 
 
 /* X34.4 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -2095,7 +2095,7 @@ VALUES (
 
 
 /* X34.5 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -2159,7 +2159,7 @@ VALUES (
 
 
 /* X34.6 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -2223,7 +2223,7 @@ VALUES (
 
 
 /* X34.7 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -2287,7 +2287,7 @@ VALUES (
 
 
 /* R65 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_3
 	
@@ -2308,7 +2308,7 @@ VALUES (
 	
 	
 /* R65.0 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -2338,7 +2338,7 @@ VALUES (
 
 
 /* R65.1 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -2368,7 +2368,7 @@ VALUES (
 
 
 /* R65.2 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -2398,7 +2398,7 @@ VALUES (
 
 
 /* R65.3 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -2428,7 +2428,7 @@ VALUES (
 
 
 /* R65.9 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -2458,7 +2458,7 @@ VALUES (
 
 
 /* R63.6 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -2488,7 +2488,7 @@ VALUES (
 
 
 /* R57.2 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -2518,7 +2518,7 @@ VALUES (
 
 
 /* R26.3 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -2577,7 +2577,7 @@ WHERE
 
 
 /* O98.7 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -2607,7 +2607,7 @@ VALUES (
 
 
 /* O97.X */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -2686,7 +2686,7 @@ WHERE
 	
 	
 /* O97.0 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -2716,7 +2716,7 @@ VALUES (
 
 
 /* O97.1 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -2746,7 +2746,7 @@ VALUES (
 
 
 /* O97.9 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -2791,7 +2791,7 @@ WHERE
 	
 
 /* O96.X */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -2855,7 +2855,7 @@ VALUES (
 
 
 /* O96.0 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -2885,7 +2885,7 @@ VALUES (
 
 
 /* O96.1 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -2915,7 +2915,7 @@ VALUES (
 
 
 /* O96.9 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -3003,7 +3003,7 @@ WHERE
 	
 	
 /* O60.X */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -3097,7 +3097,7 @@ WHERE
 	
 	
 /* O60.3 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -3127,7 +3127,7 @@ VALUES (
 
 
 /* O43.2 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -3202,7 +3202,7 @@ WHERE
 
 
 /* O14.2 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -3262,7 +3262,7 @@ WHERE
 
 
 /* N42.3 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -3322,7 +3322,7 @@ WHERE
 	
 	
 /* N18.0 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -3385,7 +3385,7 @@ VALUES (
 );
 
 /* N18.1 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -3415,7 +3415,7 @@ VALUES (
 
 
 /* N18.2 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -3445,7 +3445,7 @@ VALUES (
 
 
 /* N18.3 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -3475,7 +3475,7 @@ VALUES (
 
 
 /* N18.4 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -3505,7 +3505,7 @@ VALUES (
 
 
 /* N18.5 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -3535,7 +3535,7 @@ VALUES (
 
 
 /* N18.8 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -3644,7 +3644,7 @@ WHERE
 
 
 /* L89.X */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -3708,7 +3708,7 @@ VALUES (
 
 
 /* L89.0 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -3738,7 +3738,7 @@ VALUES (
 
 
 /* L89.1 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -3768,7 +3768,7 @@ VALUES (
 
 
 /* L89.2 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -3798,7 +3798,7 @@ VALUES (
 
 
 /* L89.3 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -3828,7 +3828,7 @@ VALUES (
 
 
 /* L89.9 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -3858,7 +3858,7 @@ VALUES (
 
 
 /* L41.2 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -3922,7 +3922,7 @@ VALUES (
 
 
 /* K64 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_3
 	
@@ -3943,7 +3943,7 @@ VALUES (
 
 
 /* K64 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -4007,7 +4007,7 @@ VALUES (
 
 
 /* K64.0 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -4037,7 +4037,7 @@ VALUES (
 
 
 /* K64.1 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -4067,7 +4067,7 @@ VALUES (
 
 
 /* K64.2 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -4097,7 +4097,7 @@ VALUES (
 
 
 /* K64.3 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -4127,7 +4127,7 @@ VALUES (
 
 
 /* K64.4 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -4157,7 +4157,7 @@ VALUES (
 
 
 /* K64.5 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -4187,7 +4187,7 @@ VALUES (
 
 
 /* K64.8 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -4217,7 +4217,7 @@ VALUES (
 
 
 /* K64.9 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -4262,7 +4262,7 @@ WHERE
 	
 	
 /* K52.3 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -4292,7 +4292,7 @@ VALUES (
 
 
 /* K52.3 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -4370,7 +4370,7 @@ WHERE
 	
 
 /* K51.1 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -4479,7 +4479,7 @@ WHERE
 
 
 /* K43.7 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -4509,7 +4509,7 @@ VALUES (
 
 
 /* K43.7 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -4588,7 +4588,7 @@ WHERE
 
 
 /* K43.2 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -4618,7 +4618,7 @@ VALUES (
 
 
 /* K43.2 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -4682,7 +4682,7 @@ VALUES (
 
 
 /* K43.3 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -4712,7 +4712,7 @@ VALUES (
 
 
 /* K43.3 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -4776,7 +4776,7 @@ VALUES (
 
 
 /* K43.4 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -4806,7 +4806,7 @@ VALUES (
 
 
 /* K43.4 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -4870,7 +4870,7 @@ VALUES (
 
 
 /* K43.5 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -4900,7 +4900,7 @@ VALUES (
 
 
 /* K43.5 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -4964,7 +4964,7 @@ VALUES (
 
 
 /* K43.6 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -4994,7 +4994,7 @@ VALUES (
 
 
 /* K43.6 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -5073,7 +5073,7 @@ WHERE
 	
 
 /* K35.0 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -5137,7 +5137,7 @@ VALUES (
 	
 
 /* K35.1 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -5201,7 +5201,7 @@ VALUES (
 
 
 /* K35.2 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -5231,7 +5231,7 @@ VALUES (
 
 
 /* K35.2 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -5295,7 +5295,7 @@ VALUES (
 
 
 /* K35.3 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -5325,7 +5325,7 @@ VALUES (
 
 
 /* K35.3 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -5389,7 +5389,7 @@ VALUES (
 
 
 /* K35.8 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -5419,7 +5419,7 @@ VALUES (
 
 
 /* K35.8 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -5483,7 +5483,7 @@ VALUES (
 
 
 /* K35.9 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -5562,7 +5562,7 @@ WHERE
 
 
 /* K12.3 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -5592,7 +5592,7 @@ VALUES (
 
 
 /* K12.3 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -5671,7 +5671,7 @@ WHERE
 
 
 /* K02.5 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -5701,7 +5701,7 @@ VALUES (
 
 
 /* K02.5 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -5765,7 +5765,7 @@ VALUES (
 
 
 /* J21.1 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -5795,7 +5795,7 @@ VALUES (
 
 
 /* K21.1 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -5859,7 +5859,7 @@ VALUES (
 
 
 /* J12.3 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -5889,7 +5889,7 @@ VALUES (
 
 
 /* K12.3 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -5983,7 +5983,7 @@ WHERE
 
 
 /* I98.3* */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -6027,7 +6027,7 @@ WHERE
 	id_ciex_4 = 3505;
 
 /* I84 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -6091,7 +6091,7 @@ VALUES (
 
 
 /* I72.6 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -6121,7 +6121,7 @@ VALUES (
 
 
 /* I72.6 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -6275,7 +6275,7 @@ WHERE
 
 
 /* I72.5 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -6305,7 +6305,7 @@ VALUES (
 
 
 /* I72.5 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -6399,7 +6399,7 @@ WHERE
 
 
 /* I48.X */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -6463,7 +6463,7 @@ VALUES (
 
 
 /* I48.0 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -6493,7 +6493,7 @@ VALUES (
 
 
 /* I48.0 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -6557,7 +6557,7 @@ VALUES (
 
 
 /* I48.1 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -6587,7 +6587,7 @@ VALUES (
 
 
 /* I48.1 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -6651,7 +6651,7 @@ VALUES (
 
 
 /* I48.2 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -6681,7 +6681,7 @@ VALUES (
 
 
 /* I48.2 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -6745,7 +6745,7 @@ VALUES (
 
 
 /* I48.3 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -6775,7 +6775,7 @@ VALUES (
 
 
 /* I48.3 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -6839,7 +6839,7 @@ VALUES (
 
 
 /* I48.4 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -6869,7 +6869,7 @@ VALUES (
 
 
 /* I48.4 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -6933,7 +6933,7 @@ VALUES (
 
 
 /* I48.9 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -6963,7 +6963,7 @@ VALUES (
 
 
 /* I48.9 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -7072,7 +7072,7 @@ WHERE
 	
 	
 /* H54.7 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -7136,7 +7136,7 @@ VALUES (
 
 
 /* H54.9 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -7166,7 +7166,7 @@ VALUES (
 
 
 /* H54.9 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -7335,7 +7335,7 @@ WHERE
 
 
 /* G21.4 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -7365,7 +7365,7 @@ VALUES (
 
 
 /* G14 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_3
 	
@@ -7386,7 +7386,7 @@ VALUES (
 
 
 /* G14 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -7450,7 +7450,7 @@ VALUES (
 
 
 /* G14.X */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -7495,7 +7495,7 @@ WHERE
 	
 	
 /* E88.3 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -7525,7 +7525,7 @@ VALUES (
 
 
 /* E88.3 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -7604,7 +7604,7 @@ WHERE
 	
 	
 /* D89.3 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -7634,7 +7634,7 @@ VALUES (
 
 
 /* D89.3 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -7698,7 +7698,7 @@ VALUES (
 
 
 /* D75.2 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -7777,7 +7777,7 @@ WHERE
 
 
 /* D76.0 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -7841,7 +7841,7 @@ VALUES (
 
 
 /* D68.5 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -7871,7 +7871,7 @@ VALUES (
 
 
 /* D68.5 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -7935,7 +7935,7 @@ VALUES (
 
 
 /* D68.6 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -7965,7 +7965,7 @@ VALUES (
 
 
 /* D68.5 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -8044,7 +8044,7 @@ WHERE
 	
 	
 /* D47.4 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -8074,7 +8074,7 @@ VALUES (
 
 
 /* D47.4 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -8138,7 +8138,7 @@ VALUES (
 
 
 /* D47.5 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -8168,7 +8168,7 @@ VALUES (
 
 
 /* D47.5 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -8247,7 +8247,7 @@ WHERE
 
 
 /* D46.3 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -8311,7 +8311,7 @@ VALUES (
 
 
 /* D46.5 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -8341,7 +8341,7 @@ VALUES (
 
 
 /* D46.5 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -8405,7 +8405,7 @@ VALUES (
 
 
 /* D46.6 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -8435,7 +8435,7 @@ VALUES (
 
 
 /* D46.6 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -8739,7 +8739,7 @@ WHERE
 	
 
 /* C83.2 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -8818,7 +8818,7 @@ WHERE
 	
 	
 /* C83.4 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -8897,7 +8897,7 @@ WHERE
 	
 	
 /* C83.6 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -9021,7 +9021,7 @@ WHERE
 	
 
 /* C84.2 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -9085,7 +9085,7 @@ VALUES (
 
 
 /* C84.3 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -9179,7 +9179,7 @@ WHERE
 
 
 /* C85.0 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -9243,7 +9243,7 @@ VALUES (
 
 
 /* C86 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_3
 	
@@ -9264,7 +9264,7 @@ VALUES (
 	
 	
 /* C86.0 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -9294,7 +9294,7 @@ VALUES (
 
 
 /* C86.1 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -9324,7 +9324,7 @@ VALUES (
 
 
 /* C86.2 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -9354,7 +9354,7 @@ VALUES (
 
 
 /* C86.3 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -9384,7 +9384,7 @@ VALUES (
 
 
 /* C86.4 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -9414,7 +9414,7 @@ VALUES (
 
 
 /* C86.5 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -9444,7 +9444,7 @@ VALUES (
 
 
 /* C86.6 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -9489,7 +9489,7 @@ WHERE
 	
 
 /* C88.1 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -9613,7 +9613,7 @@ WHERE
 	
 	
 /* C96.1 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -9677,7 +9677,7 @@ VALUES (
 	
 		
 /* C96.3 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -9741,7 +9741,7 @@ VALUES (
 
 
 /* C96.4 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -9771,7 +9771,7 @@ VALUES (
 
 
 /* C96.4 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -9835,7 +9835,7 @@ VALUES (
 
 
 /* C96.5 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -9865,7 +9865,7 @@ VALUES (
 
 
 /* C96.5 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -9929,7 +9929,7 @@ VALUES (
 
 
 /* C96.6 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -9959,7 +9959,7 @@ VALUES (
 
 
 /* C96.6 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -10024,7 +10024,7 @@ VALUES (
 
 
 /* C96.8 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -10054,7 +10054,7 @@ VALUES (
 
 
 /* C96.8 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -10118,7 +10118,7 @@ VALUES (
 
 
 /* C95.2 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -10182,7 +10182,7 @@ VALUES (
 
 
 /* C94.5 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -10246,7 +10246,7 @@ VALUES (
 
 
 /* C94.6 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -10276,7 +10276,7 @@ VALUES (
 
 
 /* C94.6 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -10355,7 +10355,7 @@ WHERE
 
 
 /* C94.1 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -10434,7 +10434,7 @@ WHERE
 
 
 /* C93.3 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -10464,7 +10464,7 @@ VALUES (
 
 
 /* C93.3 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -10528,7 +10528,7 @@ VALUES (
 
 
 /* C93.2 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -10622,7 +10622,7 @@ WHERE
 
 
 /* C92.8 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -10652,7 +10652,7 @@ VALUES (
 
 
 /* C92.8 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -10716,7 +10716,7 @@ VALUES (
 
 
 /* C92.6 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -10746,7 +10746,7 @@ VALUES (
 
 
 /* C92.6 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -10855,7 +10855,7 @@ WHERE
 
 
 /* C91.8 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -10885,7 +10885,7 @@ VALUES (
 
 
 /* C91.8 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -10949,7 +10949,7 @@ VALUES (
 
 
 /* C91.6 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -10979,7 +10979,7 @@ VALUES (
 
 
 /* C91.6 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -11058,7 +11058,7 @@ WHERE
 
 
 /* C91.2 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -11152,7 +11152,7 @@ WHERE
 
 
 /* C90.3 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -11182,7 +11182,7 @@ VALUES (
 
 
 /* C90.3 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -11246,7 +11246,7 @@ VALUES (
 
 
 /* C88.4 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -11276,7 +11276,7 @@ VALUES (
 
 
 /* C88.4 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -11340,7 +11340,7 @@ VALUES (
 
 
 /* C86 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -11404,7 +11404,7 @@ VALUES (
 
 
 /* C85.2 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -11434,7 +11434,7 @@ VALUES (
 
 
 /* C85.2 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -11498,7 +11498,7 @@ VALUES (
 
 
 /* C84.6 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -11528,7 +11528,7 @@ VALUES (
 
 
 /* C84.6 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -11592,7 +11592,7 @@ VALUES (
 
 
 /* C84.7 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -11622,7 +11622,7 @@ VALUES (
 
 
 /* C84.7 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -11686,7 +11686,7 @@ VALUES (
 
 
 /* C84.8 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -11716,7 +11716,7 @@ VALUES (
 
 
 /* C84.8 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -11779,7 +11779,7 @@ VALUES (
 );
 
 /* C84.9 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -11809,7 +11809,7 @@ VALUES (
 
 
 /* C84.9 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -11873,7 +11873,7 @@ VALUES (
 
 
 /* C82.3 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -11903,7 +11903,7 @@ VALUES (
 
 
 /* C82.3 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -11967,7 +11967,7 @@ VALUES (
 
 
 /* C82.4 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -11997,7 +11997,7 @@ VALUES (
 
 
 /* C82.4 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -12061,7 +12061,7 @@ VALUES (
 
 
 /* C82.5 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -12091,7 +12091,7 @@ VALUES (
 
 
 /* C82.5 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -12155,7 +12155,7 @@ VALUES (
 
 
 /* C82.6 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -12185,7 +12185,7 @@ VALUES (
 
 
 /* C82.6 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -12249,7 +12249,7 @@ VALUES (
 
 
 /* C81.4 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -12279,7 +12279,7 @@ VALUES (
 
 
 /* C81.4 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -12343,7 +12343,7 @@ VALUES (
 
 
 /* C80.0 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -12373,7 +12373,7 @@ VALUES (
 
 
 /* C80.0 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -12437,7 +12437,7 @@ VALUES (
 
 
 /* C80.9 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -12467,7 +12467,7 @@ VALUES (
 
 
 /* C80.9 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -12531,7 +12531,7 @@ VALUES (
 
 
 /* C80.X */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -12595,7 +12595,7 @@ VALUES (
 
 
 /* C79.9 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -12625,7 +12625,7 @@ VALUES (
 
 
 /* C79.9 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -12749,7 +12749,7 @@ WHERE
 
 	
 /* B98 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_3
 	
@@ -12784,7 +12784,7 @@ WHERE
 	
 	
 /* B98.0 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -12814,7 +12814,7 @@ VALUES (
 
 
 /* B98.1 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -12844,7 +12844,7 @@ VALUES (
 
 
 /* B98 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -12953,7 +12953,7 @@ WHERE
 
 
 /* B17.9 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -12983,7 +12983,7 @@ VALUES (
 
 
 /* B17.9 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -13377,7 +13377,7 @@ WHERE
 
 	
 /* A09.0 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -13407,7 +13407,7 @@ VALUES (
 
 
 /* A09.0 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -13471,7 +13471,7 @@ VALUES (
 
 
 /* A09.9 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -13501,7 +13501,7 @@ VALUES (
 
 
 /* A09.9 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -13523,7 +13523,7 @@ VALUES (
 	'A09',
 	
 	/* cod_4dig */
-	'0',
+	'9',
 	
 	/* sexo */
 	0,
@@ -13565,7 +13565,7 @@ VALUES (
 
 
 /* A09.X */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -13644,7 +13644,7 @@ WHERE
 	
 
 /* Z92.2 */
-INSERT INTO
+INSERT IGNORE INTO
 
 	ciex_4
 	
@@ -13674,7 +13674,7 @@ VALUES (
 
 
 /* Z92.2 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -13738,7 +13738,7 @@ VALUES (
 
 
 /* X59.1 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -13802,7 +13802,7 @@ VALUES (
 
 
 /* X59.2 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -13866,7 +13866,7 @@ VALUES (
 
 
 /* X59.3 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -13930,7 +13930,7 @@ VALUES (
 
 
 /* X59.4 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -13994,7 +13994,7 @@ VALUES (
 
 
 /* X59.5 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -14058,7 +14058,7 @@ VALUES (
 
 
 /* X59.6 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -14122,7 +14122,7 @@ VALUES (
 
 
 /* X59.7 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -14186,7 +14186,7 @@ VALUES (
 
 
 /* X59.8 */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -14250,7 +14250,7 @@ VALUES (
 
 
 /* R95.X */
-INSERT INTO 
+INSERT IGNORE INTO 
 
 	ciex_restricciones
 	
@@ -14341,6 +14341,3995 @@ DELETE FROM
 WHERE
 
 	id_ciex_3 = 2001;
+
+
+
+
+/* O98.7 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	766,
+	
+	/* id_ciex_4 */
+	12522,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'O98',
+	
+	/* cod_4dig */
+	'7',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2017-03-31'
+
+);
+
+
+/* R26.3 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	767,
+	
+	/* id_ciex_4 */
+	12521,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'R26',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2017-03-31'
+
+);
+
+
+
+/* R57.2 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	768,
+	
+	/* id_ciex_4 */
+	12520,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'R57',
+	
+	/* cod_4dig */
+	'2',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2017-03-31'
+
+);
+
+
+/* R63.6 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	769,
+	
+	/* id_ciex_4 */
+	12519,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'R63',
+	
+	/* cod_4dig */
+	'6',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2017-03-31'
+
+);
+
+
+/* R65 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	770,
+	
+	/* id_ciex_4 */
+	NULL,
+	
+	/* id_ciex_3 */
+	2052,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'R65',
+	
+	/* cod_4dig */
+	NULL,
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2017-03-31'
+
+);
+
+
+/* R99.4 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	771,
+	
+	/* id_ciex_4 */
+	12511,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'Z99',
+	
+	/* cod_4dig */
+	'4',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2017-03-31'
+
+);
+
+
+/* U06.9 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	772,
+	
+	/* id_ciex_4 */
+	12481,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'U06',
+	
+	/* cod_4dig */
+	'9',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2016-06-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* L89.X */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	773,
+	
+	/* id_ciex_4 */
+	4474,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'L89',
+	
+	/* cod_4dig */
+	'X',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2017-03-31'
+
+);
+
+
+/* L89 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	774,
+	
+	/* id_ciex_4 */
+	NULL,
+	
+	/* id_ciex_3 */
+	845,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'L89',
+	
+	/* cod_4dig */
+	NULL,
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2017-03-31'
+
+);
+
+
+/* N18.1 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	775,
+	
+	/* id_ciex_4 */
+	12533,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'N18',
+	
+	/* cod_4dig */
+	'1',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2017-03-31'
+
+);
+
+
+/* N18.2 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	776,
+	
+	/* id_ciex_4 */
+	12534,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'N18',
+	
+	/* cod_4dig */
+	'2',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2017-03-31'
+
+);
+
+
+/* N18.3 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	777,
+	
+	/* id_ciex_4 */
+	12535,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'N18',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2017-03-31'
+
+);
+
+
+/* N18.4 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	778,
+	
+	/* id_ciex_4 */
+	12536,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'N18',
+	
+	/* cod_4dig */
+	'4',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2017-03-31'
+
+);
+
+
+/* N18.5 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	779,
+	
+	/* id_ciex_4 */
+	12537,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'N18',
+	
+	/* cod_4dig */
+	'5',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2017-03-31'
+
+);
+
+
+/* N42.3 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	780,
+	
+	/* id_ciex_4 */
+	12532,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'N42',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2017-03-31'
+
+);
+
+
+/* O14.2 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	781,
+	
+	/* id_ciex_4 */
+	12531,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'O14',
+	
+	/* cod_4dig */
+	'2',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2017-03-31'
+
+);
+
+
+/* G21.4 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	782,
+	
+	/* id_ciex_4 */
+	12575,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'G21',
+	
+	/* cod_4dig */
+	'4',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2017-03-31'
+
+);
+
+
+/* O43.2 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	783,
+	
+	/* id_ciex_4 */
+	12530,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'O43',
+	
+	/* cod_4dig */
+	'2',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2017-03-31'
+
+);
+
+
+/* O60.3 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	784,
+	
+	/* id_ciex_4 */
+	12529,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'O60',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* sexo */
+	0,
+	
+	/* frecuencia */
+	2,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	'2017-03-31'
+
+);
+
+
+/* B26.0 */
+UPDATE
+	ciex_restricciones
+SET
+	sexo=1
+WHERE 
+	id_ciex_restriccion=602;
+	
+
+/* D17.6 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	785,
+	
+	/* id_ciex_4 */
+	1344,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'D17',
+	
+	/* cod_4dig */
+	'6',
+	
+	/* sexo */
+	1,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* E89.5 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	786,
+	
+	/* id_ciex_4 */
+	2030,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'E89',
+	
+	/* cod_4dig */
+	'5',
+	
+	/* sexo */
+	1,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* F52.4 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	787,
+	
+	/* id_ciex_4 */
+	2298,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'F52',
+	
+	/* cod_4dig */
+	'4',
+	
+	/* sexo */
+	1,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* I86.1 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	788,
+	
+	/* id_ciex_4 */
+	3500,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'I86',
+	
+	/* cod_4dig */
+	'1',
+	
+	/* sexo */
+	1,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* L29.1 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	789,
+	
+	/* id_ciex_4 */
+	4280,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'L29',
+	
+	/* cod_4dig */
+	'1',
+	
+	/* sexo */
+	1,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* S31.1 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	790,
+	
+	/* id_ciex_4 */
+	7414,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'S31',
+	
+	/* cod_4dig */
+	'1',
+	
+	/* sexo */
+	1,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	1,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* S31.3 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	791,
+	
+	/* id_ciex_4 */
+	7416,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'S31',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* sexo */
+	1,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	1,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* Z12.5 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	792,
+	
+	/* id_ciex_4 */
+	11914,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'Z12',
+	
+	/* cod_4dig */
+	'5',
+	
+	/* sexo */
+	1,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* B37.3 */
+UPDATE
+	ciex_restricciones
+SET
+	sexo=2
+WHERE
+	id_ciex_restriccion = 610;
+	
+
+/* C79.6 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	793,
+	
+	/* id_ciex_4 */
+	1145,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'C79',
+	
+	/* cod_4dig */
+	'6',
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* D06 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	794,
+	
+	/* id_ciex_4 */
+	NULL,
+	
+	/* id_ciex_3 */
+	266,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'D06',
+	
+	/* cod_4dig */
+	NULL,
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* D07.0 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	795,
+	
+	/* id_ciex_4 */
+	1273,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'D07',
+	
+	/* cod_4dig */
+	'0',
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* E89.4 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	796,
+	
+	/* id_ciex_4 */
+	2029,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'E89',
+	
+	/* cod_4dig */
+	'4',
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* F52.5 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	797,
+	
+	/* id_ciex_4 */
+	2299,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'F52',
+	
+	/* cod_4dig */
+	'5',
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* I86.3 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	798,
+	
+	/* id_ciex_4 */
+	3502,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'I86',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* L29.2 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	799,
+	
+	/* id_ciex_4 */
+	4281,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'L29',
+	
+	/* cod_4dig */
+	'2',
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* L70.5 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	800,
+	
+	/* id_ciex_4 */
+	4418,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'L70',
+	
+	/* cod_4dig */
+	'5',
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* M80.0 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	801,
+	
+	/* id_ciex_4 */
+	4933,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'M80',
+	
+	/* cod_4dig */
+	'0',
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	1,
+	
+	/* edad_min */
+	30,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	2,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+	
+/* M80.1 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	802,
+	
+	/* id_ciex_4 */
+	4934,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'M80',
+	
+	/* cod_4dig */
+	'1',
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	1,
+	
+	/* edad_min */
+	30,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	2,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* M81.0 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	803,
+	
+	/* id_ciex_4 */
+	4941,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'M81',
+	
+	/* cod_4dig */
+	'0',
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* M81.1 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	804,
+	
+	/* id_ciex_4 */
+	4942,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'M81',
+	
+	/* cod_4dig */
+	'1',
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* M83.0 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	805,
+	
+	/* id_ciex_4 */
+	4953,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'M83',
+	
+	/* cod_4dig */
+	'0',
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	1,
+	
+	/* edad_min */
+	12,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	2,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* N99.2 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	806,
+	
+	/* id_ciex_4 */
+	5495,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'N99',
+	
+	/* cod_4dig */
+	'2',
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* N99.3 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	807,
+	
+	/* id_ciex_4 */
+	5496,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'N99',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* S31.4 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	808,
+	
+	/* id_ciex_4 */
+	7417,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'S31',
+	
+	/* cod_4dig */
+	'4',
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	1,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* S37.4 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	809,
+	
+	/* id_ciex_4 */
+	7468,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'S37',
+	
+	/* cod_4dig */
+	'4',
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	1,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* S37.6 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	810,
+	
+	/* id_ciex_4 */
+	7470,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'S37',
+	
+	/* cod_4dig */
+	'6',
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	1,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* T19.2 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	811,
+	
+	/* id_ciex_4 */
+	7937,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'T19',
+	
+	/* cod_4dig */
+	'2',
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	1,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* T19.3 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	812,
+	
+	/* id_ciex_4 */
+	7938,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'T19',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	1,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* T83.3 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	813,
+	
+	/* id_ciex_4 */
+	8400,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'T83',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	1,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* Z01.4 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	814,
+	
+	/* id_ciex_4 */
+	11847,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'Z01',
+	
+	/* cod_4dig */
+	'4',
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* Z12.4 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	815,
+	
+	/* id_ciex_4 */
+	11913,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'Z12',
+	
+	/* cod_4dig */
+	'4',
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* Z30.1 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	816,
+	
+	/* id_ciex_4 */
+	11988,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'Z30',
+	
+	/* cod_4dig */
+	'1',
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* Z30.3 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	817,
+	
+	/* id_ciex_4 */
+	11990,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'Z30',
+	
+	/* cod_4dig */
+	'3',
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* Z30.5 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	818,
+	
+	/* id_ciex_4 */
+	11992,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'Z30',
+	
+	/* cod_4dig */
+	'5',
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* Z31.1 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	819,
+	
+	/* id_ciex_4 */
+	11996,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'Z31',
+	
+	/* cod_4dig */
+	'1',
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* Z31.2 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	820,
+	
+	/* id_ciex_4 */
+	11997,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'Z31',
+	
+	/* cod_4dig */
+	'2',
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* Z32 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	821,
+	
+	/* id_ciex_4 */
+	NULL,
+	
+	/* id_ciex_3 */
+	1896,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'Z32',
+	
+	/* cod_4dig */
+	NULL,
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* Z37 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	822,
+	
+	/* id_ciex_4 */
+	NULL,
+	
+	/* id_ciex_3 */
+	1901,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'Z37',
+	
+	/* cod_4dig */
+	NULL,
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* Z38 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	823,
+	
+	/* id_ciex_4 */
+	NULL,
+	
+	/* id_ciex_3 */
+	1902,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'Z38',
+	
+	/* cod_4dig */
+	NULL,
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* Z39 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	824,
+	
+	/* id_ciex_4 */
+	NULL,
+	
+	/* id_ciex_3 */
+	1903,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'Z39',
+	
+	/* cod_4dig */
+	NULL,
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* Z43.7 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	825,
+	
+	/* id_ciex_4 */
+	12072,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'Z43',
+	
+	/* cod_4dig */
+	'7',
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* Z87.5 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	826,
+	
+	/* id_ciex_4 */
+	12358,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'Z87',
+	
+	/* cod_4dig */
+	'5',
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
+
+
+/* Z97.5 */
+INSERT IGNORE INTO 
+
+	ciex_restricciones
+	
+VALUES (
+
+	/* id_ciex_restriccion */
+	827,
+	
+	/* id_ciex_4 */
+	12449,
+	
+	/* id_ciex_3 */
+	NULL,
+	
+	/* id_ciex_titulo */
+	NULL,
+	
+	/* cod_3dig */
+	'Z97',
+	
+	/* cod_4dig */
+	'5',
+	
+	/* sexo */
+	2,
+	
+	/* frecuencia */
+	0,
+	
+	/* tipoedad_min */
+	9,
+	
+	/* edad_min */
+	0,
+	
+	/* tipoedad_max */
+	0,
+	
+	/* edad_max */
+	99,
+	
+	/* restriccion_edad */
+	0,
+	
+	/* obstetricia */
+	9,
+	
+	/* defuncion */
+	9,
+	
+	/* causa_externa */
+	0,
+	   
+	/* fecha_vigencia_desde */
+	'2010-01-01',
+	
+	/* fecha_vigencia_hasta */
+	NULL
+
+);
 
 
 DROP TEMPORARY TABLE IF EXISTS ciex_3_2013_modif;
@@ -19040,3 +23029,7 @@ SET
 WHERE
 
 	ciex_3.cod_3dig = ciex_3_2013_modif.cod_3dig;
+
+
+/* actualiza tabla versiones */		
+REPLACE INTO versiones VALUES ("ciex","v 0.90a",NOW());
